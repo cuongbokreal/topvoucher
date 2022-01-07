@@ -11,8 +11,9 @@ if (innerMainVoucher.length > 3){mainVoucher.innerHTML = innerMainVoucher}
 
 var newMemberVoucher = document.getElementById('new-member-voucher');
 
-if(updateDate.length == 1){updateDate = `0${updateDate}`}
-if(updateMonth.length == 1){updateMonth = `0${updateMonth}`}
+if(updateDate < 10 ){updateDate = `0${updateDate}`}
+if(updateMonth < 10){updateMonth = `0${updateMonth}`}
+
 var codeGiamBan20k = `${updateDate}${updateMonth}GIAMBAN20K`;
 var giamBan20k = `<div class="row mb-3">
            <div class="col-4">
