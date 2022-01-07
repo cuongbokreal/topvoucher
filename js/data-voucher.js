@@ -8,3 +8,5 @@ if (innerHeadingImg.length > 3){headingImg.src = innerHeadingImg}
 
 
 if (innerMainVoucher.length > 3){mainVoucher.innerHTML = innerMainVoucher}
+
+var newMemberVoucher = document.getElementById('new-member-voucher');
