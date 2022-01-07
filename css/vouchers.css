@@ -6,7 +6,7 @@ a {text-decoration:none;}
 a:hover {text-decoration:none;color:#fe495d;}
 .section-heading {font-size: 21px;letter-spacing: -0.3px;font-weight: 300;margin-bottom: 14px;}
 .coupons-list{width: 75%;margin: auto;}
-.store-offer-item {padding: 20px 20px 16px 20px;margin-bottom: 15px;display:block;}
+.store-offer-item {padding: 20px 20px 16px 20px;margin-bottom: 15px;display:block;border: 1px solid #e0e0e0;}
 .store-offer-item:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;  }
 .shadow-box {box-shadow: 0 1px 1px rgba(0, 0, 0, 0.02);background: #FFFFFF;}
 .store-offer-item .store-thumb-link {float: left;margin-right: 20px;}
