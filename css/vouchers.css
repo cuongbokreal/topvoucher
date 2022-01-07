@@ -1,13 +1,6 @@
-.clear {
-  zoom: 1;
-}
-.clear:before, .clear:after {
-  display: table;
-  content: "";
-}
-.clear:after {
-  clear: both;
-}
+.clear {zoom: 1;}
+.clear:before, .clear:after {display: table;content: "";}
+.clear:after {clear: both;}
 p {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
     font-size: 13.5px;
@@ -26,6 +19,7 @@ a:hover {
     font-weight: 300;
     margin-bottom: 14px;
 }
+.coupons-list{width: 75%;margin: auto;}
 .store-offer-item {
   padding: 20px 20px 16px 20px;
   margin-bottom: 15px;
