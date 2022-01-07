@@ -6,103 +6,24 @@ a {text-decoration:none;}
 a:hover {text-decoration:none;color:#fe495d;}
 .section-heading {font-size: 21px;letter-spacing: -0.3px;font-weight: 300;margin-bottom: 14px;}
 .coupons-list{width: 75%;margin: auto;}
-.store-offer-item {
-  padding: 20px 20px 16px 20px;
-  margin-bottom: 15px;
-  display:block;
-}
-.store-offer-item:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-  
-}
-.shadow-box {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.02);
-  background: #FFFFFF;
-}
-
-.store-offer-item .store-thumb-link {
-    float: left;
-    margin-right: 20px;
-}
-.store-offer-item .store-thumb-link .offer-image {
-    max-width: 126px;
-    line-height: 0px;
-    margin-bottom: 5px;
-  text-align:center;
-}
-.offer-image a {
-  border: 2px solid #f5f5f5;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  display: block;
-}
-.offer-image a:hover {
-  border-color: #fe495d;
-}
-.offer-image img {
-    width: 80%;
-}
-.offer-text {
-  display:block;
-  width:100%;
-  height:100px;
-  font-size:42px;
-  line-height:36px;
-  margin:10px 0 0 0;
-  display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-  font-family: 'Passion One', cursive;
-}
-.store-offer-item .store-thumb-link .store-name a {
-    display: inline-block;
-    line-height: 1;
-    font-size: 13px;
-    color: #1c9ab3;
-    text-align: center;
-    width:100%;
-}
-.store-offer-item .store-thumb-link .store-name a:hover {
-  color:#fe495d;
-}
-.store-offer-item .store-thumb-link .store-name a span {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 85%;
-    display: block;
-    float: left;
-    white-space: nowrap;
-}
+.store-offer-item {padding: 20px 20px 16px 20px;margin-bottom: 15px;display:block;}
+.store-offer-item:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;  }
+.shadow-box {box-shadow: 0 1px 1px rgba(0, 0, 0, 0.02);background: #FFFFFF;}
+.store-offer-item .store-thumb-link {float: left;margin-right: 20px;}
+.store-offer-item .store-thumb-link .offer-image {max-width: 126px;line-height: 0px;margin-bottom: 5px;text-align:center;}
+.offer-image a {border: 2px solid #f5f5f5;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px;display: block;}
+.offer-image a:hover {border-color: #fe495d;}
+.offer-image img {width: 80%;}
+.offer-text {display:block;width:100%;height:100px;font-size:42px;line-height:36px;margin:10px 0 0 0;display: table-cell;vertical-align: middle;text-align: center;font-family: 'Passion One', cursive;}
+.store-offer-item .store-thumb-link .store-name a {display: inline-block;line-height: 1;font-size: 13px;color: #1c9ab3;text-align: center;width:100%;}
+.store-offer-item .store-thumb-link .store-name a:hover {color:#fe495d;}
+.store-offer-item .store-thumb-link .store-name a span {overflow: hidden;text-overflow: ellipsis;width: 85%;display: block;float: left;white-space: nowrap;}
 .store-offer-item .store-thumb-link .store-name a i,
-.des-more i{
-  font-size:9px;
-}
-.store-offer-item .store-thumb-link .store-name a i {
-  
-}
-.store-offer-item .latest-coupon {
-    max-width: 300px;
-    margin-right: 20px;
-  float: left;
-  width: 100%;
-  }
-.latest-coupon .coupon-title {
-  font-size: 16px;
-  margin-bottom: 5px;
-  font-weight: 500;
-  margin-top: -2px;
-  line-height: 1.5;
-}
-.latest-coupon .coupon-des {
-    font-size: 13px;
-    line-height: 1.7;
-    position: relative;
-}
+.des-more i{font-size:9px;}
+.store-offer-item .store-thumb-link .store-name a i { }
+.store-offer-item .latest-coupon {max-width: 300px;margin-right: 20px;float: left;width: 100%;}
+.latest-coupon .coupon-title {font-size: 16px;margin-bottom: 5px;font-weight: 500;margin-top: -2px;line-height: 1.5;}
+.latest-coupon .coupon-des {font-size: 13px;line-height: 1.7;position: relative;}
 .store-offer-item .coupon-detail {
     float: right;
   margin-top: 25px;
