@@ -31,7 +31,7 @@ var giamBan20k = `<div class="row mb-3">
                <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth}</span></small></div>
            </div>
            <div class="col-2">
-               <center><button data-href="https://trumgiamgia.tk/voucher-details/?vc_title=[SHOPEE]%20Giảm%20tối%20đa%2020K%20cho%20đơn%20hàng%20hợp%20lệ%20từ%200Đ%20trên%20ứng%20dụng%20Shopee&vc_des=Mã%20giảm%20tối%20đa%2020K%20cho%20đơn%20hàng%20hợp%20lệ%20từ%200Đ%20trên%20ứng%20dụng%20Shopee%20%20HSD:%2007/01/2022%2000:00%20-%2007/01/2022%2023:59%20%20Số%20lượng%20có%20hạn%20%20Mỗi%20khách%20hàng%20chỉ%20sử%20dụng%201%20lần.&vc_brand=Shopee.vn&vc_code=${window.btoa(codeGiamBan20k)}=&vc_brand_image=https://content.accesstrade.vn/adv/1639583427_avatar_1639583427.gif&vc_href=aHR0cHM6Ly9zaG9wZWUudm4v" onclick="getCode(this)" type="button" class="btn btn-danger">Nhận</button></center>
+               <center><button data-href="https://trumgiamgia.tk/voucher-details/?vc_title=[SHOPEE]%20Giảm%20tối%20đa%2020K%20cho%20đơn%20hàng%20hợp%20lệ%20từ%200Đ%20trên%20ứng%20dụng%20Shopee&vc_des=Mã%20giảm%20tối%20đa%2020K%20cho%20đơn%20hàng%20hợp%20lệ%20từ%200Đ%20trên%20ứng%20dụng%20Shopee%20%20HSD:%20${updateDate}/${updateMonth}/2022%2000:00%20-%20${updateDate}/${updateMonth}/2022%2023:59%20%20Số%20lượng%20có%20hạn%20%20Mỗi%20khách%20hàng%20chỉ%20sử%20dụng%201%20lần.&vc_brand=Shopee.vn&vc_code=${window.btoa(codeGiamBan20k)}=&vc_brand_image=https://content.accesstrade.vn/adv/1639583427_avatar_1639583427.gif&vc_href=aHR0cHM6Ly9zaG9wZWUudm4v" onclick="getCode(this)" type="button" class="btn btn-danger">Nhận</button></center>
            </div>
        </div>`
 newMemberVoucher.innerHTML = giamBan20k;
