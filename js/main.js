@@ -38,5 +38,5 @@ var giamBan20k = `<div class="row mb-3">
 newMemberVoucher.innerHTML = giamBan20k;
 
 function getCode(){
-window.open(this.getAttribute(data-href));
+window.open(this.getAttribute('data-href'));
 }
