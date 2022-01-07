@@ -6,7 +6,7 @@ a {text-decoration:none;}
 a:hover {text-decoration:none;color:#fe495d;}
 .heading{width: 75%;margin: auto;}
 
-#heading-img{margin: 0 auto;}
+#heading-img{margin: 0 auto;border-radius: 0.25rem!important;}
 
 .section-heading {font-size: 21px;letter-spacing: -0.3px;font-weight: 300;margin-bottom: 14px;}
 .coupons-list{width: 75%;margin: auto;}
