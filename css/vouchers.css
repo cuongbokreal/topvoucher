@@ -1,6 +1,6 @@
 .heading{margin: auto;}
 .menu-top-flex{display: flex;}
-.menu-top-flex a{width:33.333%;margin: 10px;padding: 20px;font-size: 30px;}
+.menu-top-flex a{width:33.333%; text-align:center; margin: 10px; padding: 5px; font-size: 20px;}
 .menu-top-active{border-bottom:1px solid #ee4d2d; color:#ee4d2d}
 #heading-img{margin: 0 auto; text-align:center; border-radius: 0.25rem!important;}
 
