@@ -26,7 +26,7 @@ var giamBan20k = `<div class="row mb-3">
                <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth}</span></small></div>
            </div>
            <div class="col-2">
-               <center><button data-href="" type="button" class="btn btn-danger">Nhận</button></center>
+               <center><button data-href="" onclick="getCode(this)" type="button" class="btn btn-danger">Nhận</button></center>
            </div>
        </div>`
 
