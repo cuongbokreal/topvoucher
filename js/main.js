@@ -1,6 +1,6 @@
 var mainVoucher = document.getElementById('main-voucher');
 var headingImg = document.getElementById('heading-img');
-var innerHeadingImg = '';
+var innerHeadingImg = 'https://cf.shopee.vn/file/5f1f66bbcaab9cceea56f19aada91730';
 if (innerHeadingImg.length > 3){headingImg.src = innerHeadingImg}
 var innerMainVoucher = ``;
 if (innerMainVoucher.length > 3){mainVoucher.innerHTML = innerMainVoucher}
