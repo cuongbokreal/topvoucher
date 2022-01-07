@@ -28,22 +28,11 @@ a:hover {text-decoration:none;color:#fe495d;}
     float: right;
   margin-top: 25px;
 }
-.coupon-button-type .coupon-deal, .coupon-button-type .coupon-print, .coupon-button-type .coupon-code {
-    line-height: 1;
-    padding: 14px 38px;
-    background: #fc8c99;
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: 600;
-    display: inline-block;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    margin-bottom: 2px;
-    min-width: 195px;
-    text-align: center;
+.get-code{background-color: rgb(238, 77, 45);color: rgb(255, 255, 255);border: 0;display: inline-block;vertical-align: middle;font-size: 13px;outline: none;border-radius: 0;}
+
+.coupon-button-type .coupon-deal, .coupon-button-type .coupon-print, .coupon-button-type .coupon-code {line-height: 1;padding: 14px 38px;background: #fc8c99;color: #FFFFFF;
+font-size: 16px;font-weight: 600;display: inline-block;letter-spacing: 1px;text-transform: uppercase;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;
+margin-bottom: 2px;min-width: 195px;text-align: center;
 }
 .coupon-button-type .coupon-code {
   color: #444444;
