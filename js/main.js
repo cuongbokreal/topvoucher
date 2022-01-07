@@ -1,7 +1,13 @@
 var mainVoucher = document.getElementById('main-voucher');
+
 var headingImg = document.getElementById('heading-img');
-var innerHeadingImg = 'https://cf.shopee.vn/file/5f1f66bbcaab9cceea56f19aada91730';
-if (innerHeadingImg.length > 3){headingImg.src = innerHeadingImg}
+var listInnerHeadingImg = [
+           {"title":"Khung gio san sale","imgUrl":"https://cf.shopee.vn/file/5f1f66bbcaab9cceea56f19aada91730","href":"#"},
+           {"title":"Tien Linh","imgUrl":"https://cf.shopee.vn/file/ff05de1b35567f98747bc661d3386637","href":"https://shorten.asia/RNaBWz64"},
+]
+var randomHeadingImg = Math.floor(Math.random() * listInnerHeadingImg.length);
+document.getElementById('heading-banner').innerHTML = `<a alt="${listInnerHeadingImg[randomHeadingImg].title}" title="${listInnerHeadingImg[randomHeadingImg].title}" href="${listInnerHeadingImg[randomHeadingImg].href}"><img id="heading-img" src="${listInnerHeadingImg[randomHeadingImg].imgUrl}" class="mt-3 d-block w-100 rounded"></a>`;
+
 var innerMainVoucher = ``;
 if (innerMainVoucher.length > 3){mainVoucher.innerHTML = innerMainVoucher}
 
