@@ -6,7 +6,7 @@ var listInnerHeadingImg = [
            {"title":"Tien Linh","imgUrl":"https://cf.shopee.vn/file/ff05de1b35567f98747bc661d3386637","href":"https://shorten.asia/RNaBWz64"},
 ]
 var randomHeadingImg = Math.floor(Math.random() * listInnerHeadingImg.length);
-document.getElementById('heading-banner').innerHTML = `<a alt="${listInnerHeadingImg[randomHeadingImg].title}" title="${listInnerHeadingImg[randomHeadingImg].title}" href="${listInnerHeadingImg[randomHeadingImg].href}"><img id="heading-img" src="${listInnerHeadingImg[randomHeadingImg].imgUrl}" class="mt-3 d-block w-100 rounded"></a>`;
+document.getElementById('heading-banner').innerHTML = `<a target="_blank" alt="${listInnerHeadingImg[randomHeadingImg].title}" title="${listInnerHeadingImg[randomHeadingImg].title}" href="${listInnerHeadingImg[randomHeadingImg].href}"><img id="heading-img" src="${listInnerHeadingImg[randomHeadingImg].imgUrl}" class="mt-3 d-block w-100 rounded"></a>`;
 
 var innerMainVoucher = ``;
 if (innerMainVoucher.length > 3){mainVoucher.innerHTML = innerMainVoucher}
