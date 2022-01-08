@@ -101,6 +101,9 @@ innerBanner1.innerHTML = `<a target="_blank" alt="Tet nhan lixi" title="Tet nhan
 var goiSieuVoucher = document.getElementById('goiSieuVoucher');
 goiSieuVoucher.innerHTML = `<a target="_blank" alt="Sieu Voucher" title="Sieu Voucher" href="https://shorten.asia/yycw6ufr"><img id="heading-img" src="https://cf.shopee.vn/file/729a370af21e5eae8040ec72bba1d3ab" class="mt-3 d-block w-100 rounded"></a>`;
 
+var hoanXu = document.getElementById('hoanXu');
+hoanXu.innerHTML = `<a target="_blank" alt="Sieu Voucher Hoan Xu" title="Sieu Voucher Hoan Xu" href="https://shorten.asia/yPqzggQF"><img id="heading-img" src="https://cf.shopee.vn/file/257cdfbc400423ad1f231c334e6b5983" class="mt-3 d-block w-100 rounded"></a>`;
+
 function getCode(){
 window.open(this.getAttribute('data-href'));
 }
