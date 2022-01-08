@@ -98,6 +98,9 @@ freeshipVoucher.innerHTML += `<div class="row mb-3">
 var innerBanner1 = document.getElementBtId('innerBanner1');
 innerBanner1.innerHTML = `<a target="_blank" alt="Tet nhan lixi" title="Tet nhan lixi" href="https://shorten.asia/dHb3r2Jb"><img id="heading-img" src="https://cf.shopee.vn/file/de21a0b8a05855c0009d71aa396be50b" class="mt-3 d-block w-100 rounded"></a>`;
 
+var goiSieuVoucher = document.getElementBtId('goiSieuVoucher');
+goiSieuVoucher.innerHTML = `<a target="_blank" alt="Sieu Voucher" title="Sieu Voucher" href="https://shorten.asia/yycw6ufr"><img id="heading-img" src="https://cf.shopee.vn/file/729a370af21e5eae8040ec72bba1d3ab" class="mt-3 d-block w-100 rounded"></a>`;
+
 function getCode(){
 window.open(this.getAttribute('data-href'));
 }
