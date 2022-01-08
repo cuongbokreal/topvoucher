@@ -81,6 +81,7 @@ freeshipHomNay.innerHTML = `<div class="row mb-3"><div class="col-4"><div class=
                <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - 31.01</span></small></div></div>
            <div class="col-2">
                <center><button data-href="https://go.isclix.com/deep_link/5353514789844343379?url=https://shopee.vn/m/mien-phi-van-chuyen-${updateDate}${updateMonth}22" onclick="window.open(this.getAttribute('data-href'))" type="button" class="btn btn-danger">Nhận</button></center></div></div>
+               
                <div class="row mb-3"><div class="col-4"><div class="voucher">
                    ${logoShopee}
                  <div>Freeship</div></div></div>
@@ -96,6 +97,27 @@ goiSieuVoucher.innerHTML = `<a target="_blank" alt="Sieu Voucher" title="Sieu Vo
 
 var hoanXu = document.getElementById('hoanXu');
 hoanXu.innerHTML = `<a target="_blank" alt="Sieu Voucher Hoan Xu" title="Sieu Voucher Hoan Xu" href="https://shorten.asia/yPqzggQF"><img id="heading-img" src="https://cf.shopee.vn/file/257cdfbc400423ad1f231c334e6b5983" class="mt-3 d-block w-100 rounded"></a>`;
+
+var sanThemHoanXu = document.getElementById('sanThemHoanXu');
+sanThemHoanXu.innerHTML = `<div class="row mb-3"><div class="col-4"><div class="voucher">
+                   ${logoShopee}
+                 <div>Toàn ngành hàngFreeship</div></div></div>
+           <div class="col-6">
+               <div><b>Hoàn 20% xu Tối đa 50k Xu</b></div>
+               <div class="mt-2"><span class="badge bg-danger">Tất cả các hình thức thanh toán</span></div>
+               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - ${updateDate}.${updateMonth+1}</span></small></div></div>
+           <div class="col-2">
+               <center><button data-href="https://go.isclix.com/deep_link/5353514789844343379?url=https://shopee.vn/m/shopee-cashback?utm-source=topvoucher" onclick="window.open(this.getAttribute('data-href'))" type="button" class="btn btn-danger">Nhận</button></center></div></div>
+               
+            <div class="row mb-3"><div class="col-4"><div class="voucher">
+                   ${logoShopee}
+                 <div>Toàn ngành hàngFreeship</div></div></div>
+           <div class="col-6">
+               <div><b>Hoàn 100% xu Tối đa 50k Xu</b></div>
+               <div class="mt-2"><span class="badge bg-danger">Tất cả các hình thức thanh toán</span></div>
+               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - ${updateDate}.${updateMonth+1}</span></small></div></div>
+           <div class="col-2">
+               <center><button data-href="https://go.isclix.com/deep_link/5353514789844343379?url=https://shopee.vn/m/shopee-cashback?utm-source=topvoucher" onclick="window.open(this.getAttribute('data-href'))" type="button" class="btn btn-danger">Nhận</button></center></div></div>`;
 
 function getCode(){
 window.open(this.getAttribute('data-href'));
