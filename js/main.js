@@ -69,7 +69,7 @@ newMemberVoucher.innerHTML += giamBan20k+ `<div class="row mb-3">
            <div class="col-6">
                <div><b>Giảm tối đa 20K cho đơn hàng hợp lệ từ 50k</b></div>
                <div class="mt-2"><span class="badge bg-danger">Khách hàng mới</span></div>
-               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth}</span></small></div>
+               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - 31.01</span></small></div>
            </div>
            <div class="col-2">
                <center><button data-href="https://trumgiamgia.tk/voucher-details/?vc_title=Giảm%20tối%20đa%2020K%20cho%20đơn%20hàng%20từ%2050K%20trên%20app%20Shopee&vc_des=Thời%20hạn%20áp%20dụng:%20đến%2030/11/2021,%2023H59%20-%20Lưu%20ý:%20Số%20lượng%20có%20hạn.%20Mỗi%20khách%20hàng%20chỉ%20sử%20dụng%201%20lần.%20Chỉ%20áp%20dụng%20cho%20Khách%20hàng%20mới.&vc_brand=shopee.vn&vc_code=VDAxTkFGTkI=&vc_brand_image=https://i.imgur.com/efrP7pQ.png&vc_href=aHR0cHM6Ly9zaG9wZWUudm4v" onclick="window.open(this.getAttribute('data-href'))" type="button" class="btn btn-danger">Nhận</button></center>
