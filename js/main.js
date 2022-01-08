@@ -33,7 +33,7 @@ var giamBan20k = `<div class="row mb-3">
               </div>
            </div>
            <div class="col-6">
-               <div><b>Giảm tối đa 20K cho đơn hàng hợp lệ từ 0Đ</b></div>
+               <div><b>Giảm tối đa 20K cho đơn hàng từ 0Đ</b></div>
                <div class="mt-2"><span class="badge bg-danger">Khách hàng mới</span></div>
                <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth}</span></small></div>
            </div>
@@ -50,7 +50,7 @@ var giamBan25k = `<div class="row mb-3">
               </div>
            </div>
            <div class="col-6">
-               <div><b>Giảm tối đa 25K cho đơn hàng hợp lệ từ 99k</b></div>
+               <div><b>Giảm tối đa 25K cho đơn hàng từ 99k</b></div>
                <div class="mt-2"><span class="badge bg-danger">Khách hàng mới</span></div>
                <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth}</span></small></div>
            </div>
@@ -67,7 +67,7 @@ newMemberVoucher.innerHTML += giamBan20k+ `<div class="row mb-3">
               </div>
            </div>
            <div class="col-6">
-               <div><b>Giảm tối đa 20K cho đơn hàng hợp lệ từ 50k</b></div>
+               <div><b>Giảm tối đa 20K cho đơn hàng từ 50k</b></div>
                <div class="mt-2"><span class="badge bg-danger">Khách hàng mới</span></div>
                <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - 31.01</span></small></div>
            </div>
