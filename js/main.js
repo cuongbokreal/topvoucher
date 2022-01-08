@@ -101,7 +101,7 @@ hoanXu.innerHTML = `<a target="_blank" alt="Sieu Voucher Hoan Xu" title="Sieu Vo
 var sanThemHoanXu = document.getElementById('sanThemHoanXu');
 sanThemHoanXu.innerHTML = `<div class="row mb-3"><div class="col-4"><div class="voucher">
                    ${logoShopee}
-                 <div>Toàn ngành hàngFreeship</div></div></div>
+                 <div>Toàn ngành hàng</div></div></div>
            <div class="col-6">
                <div><b>Hoàn 20% xu Tối đa 50k Xu</b></div>
                <div class="mt-2"><span class="badge bg-danger">Tất cả các hình thức thanh toán</span></div>
@@ -111,7 +111,7 @@ sanThemHoanXu.innerHTML = `<div class="row mb-3"><div class="col-4"><div class="
                
             <div class="row mb-3"><div class="col-4"><div class="voucher">
                    ${logoShopee}
-                 <div>Toàn ngành hàngFreeship</div></div></div>
+                 <div>Toàn ngành hàng</div></div></div>
            <div class="col-6">
                <div><b>Hoàn 100% xu Tối đa 50k Xu</b></div>
                <div class="mt-2"><span class="badge bg-danger">Tất cả các hình thức thanh toán</span></div>
