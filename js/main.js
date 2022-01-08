@@ -91,7 +91,7 @@ freeshipVoucher.innerHTML += `<div class="row mb-3">
                <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - 31.01</span></small></div>
            </div>
            <div class="col-2">
-               <center><button data-href="https://go.isclix.com/deep_link/5353514789844343379?url=https://shopee.vn/m/mien-phi-van-chuyen-${updateDate}${updateMonth}${updateYear}" onclick="window.open(this.getAttribute('data-href'))" type="button" class="btn btn-danger">Nhận</button></center>
+               <center><button data-href="https://go.isclix.com/deep_link/5353514789844343379?url=https://shopee.vn/m/mien-phi-van-chuyen-${updateDate}${updateMonth}22" onclick="window.open(this.getAttribute('data-href'))" type="button" class="btn btn-danger">Nhận</button></center>
            </div>
        </div>`
            
