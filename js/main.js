@@ -11,11 +11,14 @@ document.getElementById('heading-banner').innerHTML = `<a target="_blank" alt="$
 var innerMainVoucher = ``;
 if (innerMainVoucher.length > 3){mainVoucher.innerHTML = innerMainVoucher}
 
-
 var updateTime = new Date(); //updateTime
 var updateDate = updateTime.getDate();
 var updateMonth = updateTime.getMonth() + 1;
 var updateYear = updateTime.getFullYear();
+var hetHan = "";
+if(updateMonth == 1 || updateMonth == 3 || updateMonth == 5 || updateMonth == 7 || updateMonth == 8 || updateMonth == 10 || updateMonth == 12) {hetHan = 31}
+if(updateMonth == 4 || updateMonth == 6 || updateMonth == 9 || updateMonth == 11) {hetHan = 30}
+if(updateMonth == 2 ){hetHan = 28}
 
 var date = document.querySelector('#date');
 date.innerText = `${updateTime.getDate()}.${updateTime.getMonth() + 1}`
@@ -53,7 +56,7 @@ newMemberVoucher.innerHTML += giamBan20k+ `<div class="row mb-3"><div class="col
            <div class="col-6">
                <div><b>Giảm tối đa 20K cho đơn hàng từ 50k</b></div>
                <div class="mt-2"><span class="badge bg-danger">Khách hàng mới</span></div>
-               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - 31.01</span></small></div></div>
+               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - ${hetHan}.${updateMonth}</span></small></div></div>
            <div class="col-2">
                <center><button data-href="https://trumgiamgia.tk/voucher-details/?vc_title=Giảm%20tối%20đa%2020K%20cho%20đơn%20hàng%20từ%2050K%20trên%20app%20Shopee&vc_des=Thời%20hạn%20áp%20dụng:%20đến%2030/11/2021,%2023H59%20-%20Lưu%20ý:%20Số%20lượng%20có%20hạn.%20Mỗi%20khách%20hàng%20chỉ%20sử%20dụng%201%20lần.%20Chỉ%20áp%20dụng%20cho%20Khách%20hàng%20mới.&vc_brand=shopee.vn&vc_code=VDAxTkFGTkI=&vc_brand_image=https://i.imgur.com/efrP7pQ.png&vc_href=aHR0cHM6Ly9zaG9wZWUudm4v" onclick="window.open(this.getAttribute('data-href'))" type="button" class="btn btn-danger">Nhận</button></center></div></div>` + giamBan25k;
 
@@ -64,7 +67,7 @@ freeshipVoucher.innerHTML += `<div class="row mb-3"><div class="col-4"><div clas
            <div class="col-6">
                <div><b>Tất cả hình thức thanh toán</b></div>
                <div class="mt-2"><span class="badge bg-danger">Giảm đến 70K</span></div>
-               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - 31.01</span></small></div></div>
+               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - ${hetHan}.${updateMonth}</span></small></div></div>
            <div class="col-2">
                <center><button data-href="https://go.isclix.com/deep_link/5353514789844343379?url=https://shopee.vn/m/mien-phi-van-chuyen-${updateDate}${updateMonth}22" onclick="window.open(this.getAttribute('data-href'))" type="button" class="btn btn-danger">Nhận</button></center></div></div>`;
            
@@ -78,7 +81,7 @@ freeshipHomNay.innerHTML = `<div class="row mb-3"><div class="col-4"><div class=
            <div class="col-6">
                <div><b>Đơn hàng đầu tiên</b></div>
                <div class="mt-2"><span class="badge bg-danger">Tối đa 40K</span></div>
-               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - 31.01</span></small></div></div>
+               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - ${hetHan}.${updateMonth}</span></small></div></div>
            <div class="col-2">
                <center><button data-href="https://go.isclix.com/deep_link/5353514789844343379?url=https://shopee.vn/m/mien-phi-van-chuyen-${updateDate}${updateMonth}22" onclick="window.open(this.getAttribute('data-href'))" type="button" class="btn btn-danger">Nhận</button></center></div></div>
                
@@ -88,7 +91,7 @@ freeshipHomNay.innerHTML = `<div class="row mb-3"><div class="col-4"><div class=
            <div class="col-6">
                <div><b>Đơn hàng đầu tiên</b></div>
                <div class="mt-2"><span class="badge bg-danger">Áp dụng cho một số shop nhất định</span></div>
-               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - 31.01</span></small></div></div>
+               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - ${hetHan}.${updateMonth}</span></small></div></div>
            <div class="col-2">
                <center><button data-href="https://go.isclix.com/deep_link/5353514789844343379?url=https://shopee.vn/m/mien-phi-van-chuyen-${updateDate}${updateMonth}22" onclick="window.open(this.getAttribute('data-href'))" type="button" class="btn btn-danger">Nhận</button></center></div></div>`;
 
@@ -105,7 +108,7 @@ sanThemHoanXu.innerHTML = `<div class="row mb-3"><div class="col-4"><div class="
            <div class="col-6">
                <div><b>Hoàn 20% xu Tối đa 50k Xu</b></div>
                <div class="mt-2"><span class="badge bg-danger">Tất cả các hình thức thanh toán</span></div>
-               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - ${updateDate}.${updateMonth+1}</span></small></div></div>
+               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - ${hetHan}.${updateMonth}</span></small></div></div>
            <div class="col-2">
                <center><button data-href="https://go.isclix.com/deep_link/5353514789844343379?url=https://shopee.vn/m/shopee-cashback?utm-source=topvoucher" onclick="window.open(this.getAttribute('data-href'))" type="button" class="btn btn-danger">Nhận</button></center></div></div>
                
@@ -115,7 +118,7 @@ sanThemHoanXu.innerHTML = `<div class="row mb-3"><div class="col-4"><div class="
            <div class="col-6">
                <div><b>Hoàn 100% xu Tối đa 50k Xu</b></div>
                <div class="mt-2"><span class="badge bg-danger">Tất cả các hình thức thanh toán</span></div>
-               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - ${updateDate}.${updateMonth+1}</span></small></div></div>
+               <div class="mt-2"><small class="text-muted">Có hiệu lực từ <span id="hieuluc3">${updateDate}.${updateMonth} - ${hetHan}.${updateMonth}</span></small></div></div>
            <div class="col-2">
                <center><button data-href="https://go.isclix.com/deep_link/5353514789844343379?url=https://shopee.vn/m/shopee-cashback?utm-source=topvoucher" onclick="window.open(this.getAttribute('data-href'))" type="button" class="btn btn-danger">Nhận</button></center></div></div>`;
 
