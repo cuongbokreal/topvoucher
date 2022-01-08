@@ -2,7 +2,7 @@ var mainVoucher = document.getElementById('main-voucher');
 
 var headingImg = document.getElementById('heading-img');
 var listInnerHeadingImg = [
-           {"title":"Khung gio san sale","imgUrl":"https://cf.shopee.vn/file/5f1f66bbcaab9cceea56f19aada91730","href":"#"},
+           {"title":"Mien phi van chuyen","imgUrl":"https://cf.shopee.vn/file/55487fac40d08e60abb91b5f650fff2c","href":"https://shorten.asia/ERxKgXxe"},
            {"title":"Tien Linh","imgUrl":"https://cf.shopee.vn/file/ff05de1b35567f98747bc661d3386637","href":"https://shorten.asia/RNaBWz64"},
 ]
 var randomHeadingImg = Math.floor(Math.random() * listInnerHeadingImg.length);
