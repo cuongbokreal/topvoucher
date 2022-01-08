@@ -93,8 +93,11 @@ freeshipVoucher.innerHTML += `<div class="row mb-3">
            <div class="col-2">
                <center><button data-href="https://go.isclix.com/deep_link/5353514789844343379?url=https://shopee.vn/m/mien-phi-van-chuyen-${updateDate}${updateMonth}22" onclick="window.open(this.getAttribute('data-href'))" type="button" class="btn btn-danger">Nhận</button></center>
            </div>
-       </div>`
+       </div>`;
            
+var innerBanner1 = document.getElementBtId('innerBanner1');
+innerBanner1.innerHTML = `<a target="_blank" alt="Tet nhan lixi" title="Tet nhan lixi" href="https://shorten.asia/dHb3r2Jb"><img id="heading-img" src="https://cf.shopee.vn/file/de21a0b8a05855c0009d71aa396be50b" class="mt-3 d-block w-100 rounded"></a>`;
+
 function getCode(){
 window.open(this.getAttribute('data-href'));
 }
