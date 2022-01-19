@@ -18,6 +18,7 @@ var loginTk = document.getElementById('loginTk');
 var loginMk = document.getElementById('loginMk');
 
 function login(){
+    var loginAction = `./payment/${parseInt(tk.value)}?ctv=true`;
 
   if(a == 'report'){loginAction = `./report/${parseInt(tk.value)}?ctv=true`;}else
   if(a == 'payment'){loginAction = `./payment/${parseInt(tk.value)}?ctv=true`;}
@@ -28,4 +29,5 @@ function login(){
   }else{
     document.getElementById('thbao').innerHTML = 'Sai thông tin đăng nhập, vui lòng nhập lại!'
   }
+    
 }
