@@ -14,20 +14,21 @@ var getUrlParameter = function getUrlParameter(sParam) {
 var a = getUrlParameter('a');
 
 var thbao = document.getElementById('thbao').value;
-var loginTk = document.getElementById('loginTk');
-var loginMk = document.getElementById('loginMk');
+
 
 function login(){
+    var loginTk = document.getElementById('loginTk');
+    var loginMk = document.getElementById('loginMk');
     var loginAction = `./payment/${parseInt(tk.value)}?ctv=true`;
-
-  if(a == 'report'){loginAction = `./report/${parseInt(tk.value)}?ctv=true`;}else
-  if(a == 'payment'){loginAction = `./payment/${parseInt(tk.value)}?ctv=true`;}
-  //look tk
-  if(dataUser[parseInt(loginTk.value)].mk == loginMk.value){
-    document.getElementById('thbao').innerHTML = 'Đăng nhập thành công!'
-    window.location.replace(loginAction);
-  }else{
-    document.getElementById('thbao').innerHTML = 'Sai thông tin đăng nhập, vui lòng nhập lại!'
-  }
+    
+    if(a == 'report'){loginAction = `./report/${parseInt(tk.value)}?ctv=true`;}else
+    if(a == 'payment'){loginAction = `./payment/${parseInt(tk.value)}?ctv=true`;}
+    //look tk
+    if(dataUser[parseInt(loginTk.value)].mk == loginMk.value){
+      document.getElementById('thbao').innerHTML = 'Đăng nhập thành công!'
+      window.location.replace(loginAction);
+    }else{
+      document.getElementById('thbao').innerHTML = 'Sai thông tin đăng nhập, vui lòng nhập lại!'
+    }
     
 }
