@@ -13,11 +13,11 @@
     </style>
   </head>
   <body>
-    <input id="inputId" placeholder="Nhập id của bạn"/>
-    <input id="inputLink" placeholder="Nhập link muốn thêm id"/>
+    <input id="inputId" placeholder="Nhập id của bạn" onclick="this.select()"/>
+    <input id="inputLink" placeholder="Nhập link muốn thêm id" onclick="this.select()"/>
     
     <button class="button" onclick="convert()">Thêm id</button>
-    <textarea id="ketqua"></textarea>
+    <textarea id="ketqua" onclick="this.select()"></textarea>
     <script>
       var ketqua = document.getElementById('ketqua');
       function convert(){
