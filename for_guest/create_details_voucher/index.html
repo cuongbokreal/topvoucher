@@ -363,7 +363,7 @@ var xemTruoc = document.getElementById('xemTruoc');
 		iframeTitle = iframeTitle.replaceAll("&","%26");
 		iframeDes = iframeDes.replaceAll("&","%26");
 		
-		xemTruoc.src = `https://trumgiamgia.tk/voucher-details/?vc_title=${iframeTitle}&vc_des=${iframeDes}&vc_brand=${iframeBrand}&vc_code=${window.btoa(iframeCode)}&vc_brand_image=${iframeImgUrl}&vc_href=${window.btoa(iframeLinkHref)}&ctvId=${id}&id=${id}`;
+		xemTruoc.src = `https://topvoucher.tk/voucher-details/?vc_title=${iframeTitle}&vc_des=${iframeDes}&vc_brand=${iframeBrand}&vc_code=${window.btoa(iframeCode)}&vc_brand_image=${iframeImgUrl}&vc_href=${window.btoa(iframeLinkHref)}&ctvId=${id}&id=${id}`;
 	}
 </script>
 
@@ -493,7 +493,7 @@ if (max_width <= 767){
 			getDesVoucher = getDesVoucher.replaceAll("&","%26");
 			var regLinkVoucherDetails =  /^.*(https:\/\/go\.isclix\.com\/deep_link\/5353514789844343379\/[0-9]{19})\??url?=?([^\#\&\?]*).*/;
 			var regLinkAff = getHrefVoucher.match(regLinkVoucherDetails);
-			var ketQuaVoucherDetails = `https://trumgiamgia.tk/voucher-details/?vc_title=${getTitleVoucher}&vc_des=${getDesVoucher}&vc_brand=${brandVoucher}&vc_code=${window.btoa(getCodeVoucher)}&vc_brand_image=${getImgUrl}&vc_href=${window.btoa(regLinkAff[2])}&ctvId=${id}&id=${id}`;
+			var ketQuaVoucherDetails = `https://topvoucher.tk/voucher-details/?vc_title=${getTitleVoucher}&vc_des=${getDesVoucher}&vc_brand=${brandVoucher}&vc_code=${window.btoa(getCodeVoucher)}&vc_brand_image=${getImgUrl}&vc_href=${window.btoa(regLinkAff[2])}&ctvId=${id}&id=${id}`;
 			ketQuaVoucherDetails = ketQuaVoucherDetails.replaceAll(" ","%20");
 			hrefDetails.href = ketQuaVoucherDetails;
 			document.getElementById('inputVoucherDetailsLink').value = ketQuaVoucherDetails;
@@ -527,7 +527,7 @@ if (max_width > 767){
 			getDesVoucher = getDesVoucher.replaceAll("&","%26");
 			var regLinkVoucherDetails =  /^.*(https:\/\/go\.isclix\.com\/deep_link\/5353514789844343379\/[0-9]{19})\??url?=?([^\#\&\?]*).*/;
 			var regLinkAff = getHrefVoucher.match(regLinkVoucherDetails);
-			var ketQuaVoucherDetails = `https://trumgiamgia.tk/voucher-details/?vc_title=${getTitleVoucher}&vc_des=${getDesVoucher}&vc_brand=${brandVoucher}&vc_code=${window.btoa(getCodeVoucher)}&vc_brand_image=${getImgUrl}&vc_href=${window.btoa(regLinkAff[2])}&ctvId=${id}&id=${id}`;
+			var ketQuaVoucherDetails = `https://topvoucher.tk/voucher-details/?vc_title=${getTitleVoucher}&vc_des=${getDesVoucher}&vc_brand=${brandVoucher}&vc_code=${window.btoa(getCodeVoucher)}&vc_brand_image=${getImgUrl}&vc_href=${window.btoa(regLinkAff[2])}&ctvId=${id}&id=${id}`;
 			ketQuaVoucherDetails = ketQuaVoucherDetails.replaceAll(" ","%20");
 			hrefDetails.href = ketQuaVoucherDetails;
 			document.getElementById('inputVoucherDetailsLink').value = ketQuaVoucherDetails;
