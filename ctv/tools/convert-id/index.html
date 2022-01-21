@@ -4,5 +4,15 @@
     <input id="inputId" />
     <input id="inputLink" />
     
+    <button onclick="convert()">Thêm id</button>
+    <textarea id="ketqua"></textarea>
+    <script>
+      var ketqua = document.getElementById('ketqua');
+      function convert(){
+        var inputId = document.getElementById('inputId');
+        var inputLink = document.getElementById('inputLink');
+        ketqua.value = `${inputLink.value}&ctvId=${inputId.value}`;
+      }
+    </script>
   </body>
 </html>
