@@ -1,0 +1,550 @@
+
+
+<meta charset='UTF-8'/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+<meta name="HandheldFriendly" content="true" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, content-fix=cover">
+<meta name="robots" content="noindex,nofollow"/>
+<title>Admin TrumGG</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">  
+<link rel="stylesheet" type="text/css" href="https://static.accesstrade.vn/coupon/v2/css/bootstrap.min.css" media="all" /> 
+<link rel="stylesheet" type="text/css" href="https://static.accesstrade.vn/coupon/v2/css/css-voucher_at_v2.css" media="all" /> 
+<link rel="stylesheet" type="text/css" href="https://static.accesstrade.vn/coupon/v2/js/slick/slick.css" media="all" /> 
+<link rel="stylesheet" type="text/css" href="https://static.accesstrade.vn/coupon/v2/js/slick/slick-theme.css" media="all" />
+    <!--main voucher-->
+<style>.atEQPOIVFSDFSDG-at-modal-content {width: 60%;}</style>
+<!--select id="idCtv" onchange="getIdCtv(this)">
+            <option value=""> -- Chọn -- </option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+	    <option value="03">03</option>
+</select-->
+<p>Id Access của bạn là: <span id="innerId" style="color:red">Chưa nhập</span></p>
+<p>Đây là trang tạo Voucher cụ thể, chỉ dùng trong nội bộ, <span style="color:red; margin-top:10px;">TUYỆT ĐỐI KHÔNG SHARE LINK NÀY RA BÊN NGOÀI</span>, nếu ai share, phải chịu toàn bộ trách nhiệm!</p>
+<script>
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),sURLVariables = sPageURL.split('&'),sParameterName,i;
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};
+const accessKey1 = "5353514789844343379";
+const accessKey2 = "5768026262774830477"; 
+var id = getUrlParameter('id');
+var innerId = document.getElementById('innerId');
+if (id != 'undefined'){console.log(id)}
+            else{id = accessKey1}
+            if(!id){id = accessKey1}
+            if (id.length < 19){id = accessKey1}
+            if (id.length > 19){id = accessKey1}
+            if (id.length == 19){console.log('id là: ' + id)}
+if(id != accessKey1 && id.length == 19){
+	innerId.innerText = id;
+	document.title = id + ' | Admin TrumGG'
+}
+var idCtv = document.getElementById('idCtv');
+/*
+function getIdCtv(obj){
+	var value = obj.value;
+	window.location.href = `//${window.location.hostname}${window.location.pathname}?id=${value}`;
+}*/
+</script>
+<div id="hand">
+<label>Tên voucher:</label>
+<input id="title" class="input" onblur="viewIframe()"/>
+<label>Mã voucher:</label>
+<input id="code" class="input" onblur="viewIframe()"/>
+<label>Mô tả voucher</label>
+<input id="des" class="input" onblur="viewIframe()"/>
+<label>Chọn sàn TMDT:</label>
+<select id="href" style="height: auto;" onchange="change(this)">
+      <option id="shopeeHref" value="https://shopee.vn" data-name="Shopee">SHOPEE</option>
+      <option id="lazadaHref" value="https://lazada.vn" data-name="Lazada">LAZADA</option>
+      <option id="tikiHref" value="https://tiki.vn" data-name="Tiki">TIKI</option>
+      <option id="sendoHref" value="https://sendo.vn" data-name="Sendo">Sendo</option>
+</select></br>
+<label>Brand:</label>
+<input id="brand" class="input" value="Shopee" onblur="viewIframe()"/>	
+<label>Link Href:</label>
+<input id="linkHref" class="input" value="https://shopee.vn" onblur="viewIframe()"/>
+<label>Link ảnh:</label>
+<input id="imgUrl" class="input" value="https://i.imgur.com/M2oMDZP.png" onblur="viewIframe()"/>
+	<button id="createHand" onclick="createHand()" class="button">Tạo link</button>
+<a id="hrefHand" target="_blank">Mở link đã tạo</a>
+<textarea id="innerKetQuaHand">Ket qua hien thi o day!</textarea>
+Xem trước: <span><a id="openIframe" onclick="iframeVoucher('open')" href="#">Mở</a></span>
+<iframe id="xemTruoc" width="100%" height="500px" style="display:none"></iframe>
+</div>
+<script>
+	var openIframe = document.getElementById('openIframe');
+	function iframeVoucher(get){
+		if(get == 'close'){xemTruoc.style.display = 'none'; openIframe.innerText = 'Mở'; openIframe.setAttribute("onclick", "iframeVoucher('open')");}
+		if(get == 'open'){xemTruoc.style.display = ''; openIframe.innerText = 'Đóng'; openIframe.setAttribute("onclick", "iframeVoucher('close')");}
+	}
+</script>
+      <div id="layout-wrapper">
+      <main class="atEQPOIVFSDFSDG-voucher-main">
+        <div class="container">
+          <div class='atEQPOIVFSDFSDG-search'>
+            <div class='atEQPOIVFSDFSDG-filter-keyword'>
+                <ul class='atEQPOIVFSDFSDG-tags'>
+                </ul>
+            </div>
+            <div class='atEQPOIVFSDFSDG-input-main-search'>
+              <div class='atEQPOIVFSDFSDG-input-search'>
+                <input class="form-control" id="atEQPOIVFSDFSDG-search" placeholder="Nhập link sản phẩm, tên nhãn hàng, tên sản phẩm để tìm kiếm" type="text" value="">
+                <span class='atEQPOIVFSDFSDG-search-clear'>
+                  <i class="fas fa-times-circle" aria-hidden="true"></i>
+                </span>
+              </div>
+              <button class='atEQPOIVFSDFSDG-btn-search'>
+                <label class='atEQPOIVFSDFSDG-label-search'>Tìm kiếm</label>
+                <span class='atEQPOIVFSDFSDG-icon-search'><i class="fas fa-search"></i></span>
+              </button>
+            </div>
+          </div>
+          <div class="atEQPOIVFSDFSDG-voucher-dealhot">
+              <div class="atEQPOIVFSDFSDG-title-filter">
+                  <div class="atEQPOIVFSDFSDG-title-total">
+                      <img src="https://static.accesstrade.vn/coupon/v2/images/icon-coupon.svg" alt="">
+                      <div class="atEQPOIVFSDFSDG-dealhot-title">
+                          <h2 class="atEQPOIVFSDFSDG-title">Deal Hot</h2>
+                      </div>
+                  </div>
+              </div>
+              <div class="atEQPOIVFSDFSDG-dealitem-body">
+              </div>
+           </div>
+          <div class='atEQPOIVFSDFSDG-voucher-dealcoupon'>
+            <div class='atEQPOIVFSDFSDG-title-tabs'>
+              <div class='atEQPOIVFSDFSDG-title'>
+                <span style='margin-right:8px;'>
+                  <img src="https://static.accesstrade.vn/coupon/v2/images/Vector.png">
+                </span>
+                <div class="atEQPOIVFSDFSDG-dealcouponlist-title">
+                  <div class="atEQPOIVFSDFSDG-list-title">
+                    <h4>DANH SÁCH COUPON</h4>
+                    <button class='atEQPOIVFSDFSDG-delete-search' style="">
+                    <span style='margin-right:8px;'>
+                      <img src="https://static.accesstrade.vn/coupon/v2/images/arrow-left.png">
+                    </span>
+                    <span style='color:red; font-weight: bold;'>Hủy tìm kiếm</span>
+                  </button>
+                </div>
+                </div>
+              </div>
+              <div class='atEQPOIVFSDFSDG-title-tabslist'>
+                <ul class="nav nav-tabs" id="tabsdeal--link" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="history-tabs" data-toggle="tab" href="#deal-opening" style="font-weight: bold;"  role="tab">Đang mở <em></em></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="record-tabs" data-toggle="tab" href="#deal-soon" style="font-weight: bold;" role="tab">Sắp mở <em></em></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class='atEQPOIVFSDFSDG-filters-and-delete-search'>
+              <div class="atEQPOIVFSDFSDG-at-filters">
+                <div class="dropdown atEQPOIVFSDFSDG-filter-sort">
+                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span>Mới nhất</span>
+                        <i class="icon-down"><img src="https://static.accesstrade.vn/coupon/v2/images/icon-caret.svg" alt=""></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownMenuSort">
+                        <a class="dropdown-item" data-sort="0" href="#" style="display: none">Mới nhất</a>
+                        <a class="dropdown-item" data-sort="4" href="#">Deal hot</a>
+                        <a class="dropdown-item" data-sort="2" href="#">Dùng nhiều</a>
+                        <a class="dropdown-item" data-sort="3" href="#">Thời gian còn lại</a>
+                    </div>
+                </div>
+                <div class="dropdown atEQPOIVFSDFSDG-filter-sort">
+                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span>Tất cả nhà cung cấp</span>
+                        <i class="icon-down"><img src="https://static.accesstrade.vn/coupon/v2/images/icon-caret.svg" alt=""></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownMenuMerchant" style="">
+                    </div>
+                </div>
+              </div>
+              <button class='atEQPOIVFSDFSDG-delete-search'>
+                <span style='margin-right:8px;'>
+                  <img src="https://static.accesstrade.vn/coupon/v2/images/arrow-left.png">
+                </span>
+                <span style='color:red; font-weight: bold;'>Hủy tìm kiếm</span>
+              </button>
+            </div>
+            <div class="tab-content" id="tabsdeal--content">
+                <div class="tab-pane fade show active" id="deal-opening" role="tabpanel">
+                    <div id="no-coupon-link" style="display: none;text-align: center;padding: 1em;">
+                        <h4>Đang cập nhật</h4>
+                    </div>
+                    <div class='atEQPOIVFSDFSDG-dealpromo-body'>
+                    </div>
+                    <div class="atEQPOIVFSDFSDG-coupon-pagination">
+                      <nav>
+                        <ul class="pagination" name='pagination'>
+                          <li class="page-item" style="display: none">
+                            <a onclick="prev(event,1)" class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-double-left"></i></a>
+                          </li>
+                          <li class="page-item" style="display: none">
+                            <a onclick="prev(event)" class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-left"></i></a>
+                          </li>
+                          <li  class="page-item" style="display: none">
+                            <a onclick="prev(event)" class="page-link" id="prev-page-active" href="#"></a>
+                          </li>
+                          <li class="page-item active">
+                            <a class="page-link" href="#"><span class="sr-only"></span>1</a>
+                          </li>
+                          <li class="page-item" style="display: none" >
+                            <a onclick="next(event)" class="page-link" id="next-page-active" href="#"></a>
+                          </li>
+                          <li class="page-item" style="display: none">
+                            <a onclick="next(event)" class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-right"></i></a>
+                          </li>
+                          <li class="page-item" style="display: none">
+                            <a  class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-double-right"></i></a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <div class="page-box">
+                        <span class="p-0" style="display: none"> <input class="page-selected" type="text"></span>
+                        <span class="text-muted" name="text-muted">Trên  trang</span>
+                      </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="deal-soon" role="tabpanel">
+                    <div id="no-coupon" style="display: none;text-align: center;padding: 1em;">
+                        <h4>Đang cập nhật</h4>
+                    </div>
+                    <div class='atEQPOIVFSDFSDG-dealpromo-body'>
+                    </div>
+                    <div class="atEQPOIVFSDFSDG-coupon-pagination">
+                        <nav>
+                            <ul class="pagination" name="pagination-soon">
+                                <li class="page-item" style="display: none">
+                                    <a onclick="prev(event,1,true)" class="page-link" href="#" tabindex="-1"><i
+                                            class="fas fa-angle-double-left"></i></a>
+                                </li>
+                                <li class="page-item" style="display: none">
+                                    <a onclick="prev(event,null,true)" class="page-link" href="#" tabindex="-1"><i
+                                            class="fas fa-angle-left"></i></a>
+                                </li>
+                                <li class="page-item" style="display: none">
+                                    <a onclick="prev(event,null,true)" class="page-link" id="prev-soon-page-active"
+                                       href="#"></a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" href="#"><span class="sr-only"></span>1</a>
+                                </li>
+                                <li class="page-item" style="display: none">
+                                    <a onclick="next(event,null,true)" class="page-link" id="next-soon-page-active"
+                                       href="#"></a>
+                                </li>
+                                <li class="page-item" style="display: none">
+                                    <a onclick="next(event,null,true)" class="page-link" href="#" tabindex="-1"><i
+                                            class="fas fa-angle-right"></i></a>
+                                </li>
+                                <li class="page-item" style="display: none">
+                                    <a class="page-link" href="#" tabindex="-1"><i
+                                            class="fas fa-angle-double-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="page-box">
+                         <span class="p-0" style="display: none">
+                            <input class="page-selected" type="text">
+                         </span>
+                         <span class="text-muted" name="text-muted-soon">Trên trang</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      </main>
+      </div>
+
+<script>
+		var getTitle = document.getElementById('title');
+		var getCode = document.getElementById('code');
+		var getDes = document.getElementById('des');
+		var getLinkHref= document.getElementById('linkHref');
+		var getImgUrl= document.getElementById('imgUrl');
+		var getBrand = document.getElementById('brand');
+		var hrefHand = document.getElementById('hrefHand');
+var brandName = 'Shopee';
+var linkHref = 'https://shopee.vn';
+var imgUrl = 'https://i.imgur.com/M2oMDZP.png';
+var innerKetQuaHand = document.getElementById('innerKetQuaHand');
+var createHandButton = document.getElementById('createHand');
+
+var replaceTitle = '';
+var replaceDes = '';	
+var replaceLinkHref = '';
+var replaceCode = '';
+	function createHand(){
+		getTitle.value = getTitle.value.replaceAll(` ${getCode.value}`,"");
+		getDes.value = getDes.value.replaceAll(` ${getCode.value}`,"");
+		
+		replaceTitle = getTitle.value.replaceAll("%","%25");
+		replaceDes = getDes.value.replaceAll("%","%25");
+		replaceTitle = replaceTitle.replaceAll("&","%26");
+		replaceDes = replaceDes.replaceAll("&","%26");
+		//replaceTitle = getTitle.value.replaceAll(" ","%20");
+		//replaceDes = getDes.value.replaceAll(" ","%20");
+		replaceLinkHref = window.btoa(getLinkHref.value);
+		replaceCode = window.btoa(getCode.value);
+		replaceBrand = getBrand.value;
+		
+		var ketQuaHand = `https://topvoucher.tk/voucher-details/?vc_title=${replaceTitle}&vc_des=${replaceDes}&vc_brand=${replaceBrand}&vc_code=${replaceCode}&vc_brand_image=${imgUrl}&vc_href=${replaceLinkHref}&ctvId=${id}&id=${id}`;
+		//ketQuaHand = ketQuaHand.replaceAll("%","%25");
+		//ketQuaHand = ketQuaHand.replaceAll("&","%26");
+		//ketQuaHand = ketQuaHand.replaceAll(" ","%20");
+		
+		innerKetQuaHand.value = ketQuaHand;
+		hrefHand.href = ketQuaHand;
+		
+		var copyText = document.getElementById("innerKetQuaHand");
+		copyText.select();
+		copyText.setSelectionRange(0, 99999);
+		navigator.clipboard.writeText(copyText.value);
+		console.log("Copied the text: " + copyText.value);
+	}
+	function change(){
+          var option = document.getElementById('href');
+          if (option.value === 'https://shopee.vn'){
+		brandName = 'Shopee';
+		linkHref = 'https://shopee.vn';
+		imgUrl = 'https://i.imgur.com/M2oMDZP.png';
+            }
+            else if (option.value === 'https://lazada.vn'){
+		brandName = 'Lazada';
+		linkHref = 'https://lazada.vn';
+		imgUrl = 'https://i.imgur.com/9pMjF3h.jpg';
+            }
+            else if (option.value === 'https://tiki.vn'){
+		brandName = 'Tiki';
+		linkHref = 'https://tiki.vn';
+		imgUrl = 'https://i.imgur.com/oznhdud.png'; //tiki
+            }
+          else if (option.value === 'https://sendo.vn'){
+		brandName = 'Sendo';
+		linkHref = 'https://sendo.vn';
+		imgUrl = 'https://i.imgur.com/JJNWIj7.png'; //sendo
+            }
+		getBrand.value = brandName;
+		getLinkHref.value = linkHref;
+		getImgUrl.value = imgUrl;
+		viewIframe()
+          }
+createHandButton.addEventListener("click", createHand());
+var xemTruoc = document.getElementById('xemTruoc');
+	getTitle.addEventListener("blur", viewIframe());
+	getCode.addEventListener("blur", viewIframe());
+	getDes.addEventListener("blur", viewIframe());
+	getLinkHref.addEventListener("blur", viewIframe());
+	getImgUrl.addEventListener("blur", viewIframe());
+	getBrand.addEventListener("blur", viewIframe());
+
+	function viewIframe(){
+		var iframeTitle = document.getElementById('title').value;
+		var iframeCode = document.getElementById('code').value;
+		var iframeDes = document.getElementById('des').value;
+		var iframeLinkHref= document.getElementById('linkHref').value;
+		var iframeImgUrl= document.getElementById('imgUrl').value;
+		var iframeBrand = document.getElementById('brand').value;
+		
+		iframeTitle = iframeTitle.replaceAll("%","%25");
+		iframeDes = iframeDes.replaceAll("%","%25");
+		iframeTitle = iframeTitle.replaceAll("&","%26");
+		iframeDes = iframeDes.replaceAll("&","%26");
+		
+		xemTruoc.src = `https://trumgiamgia.tk/voucher-details/?vc_title=${iframeTitle}&vc_des=${iframeDes}&vc_brand=${iframeBrand}&vc_code=${window.btoa(iframeCode)}&vc_brand_image=${iframeImgUrl}&vc_href=${window.btoa(iframeLinkHref)}&ctvId=${id}&id=${id}`;
+	}
+</script>
+
+<style>
+	#inputVoucherDetailsLink, #inputTitleVoucher, #inputDesVoucher, #inputKetQua{width:100%}
+	input{margin-bottom:5px}
+	#inputKetQua{height:250px}
+	.button{font-family: "Roboto", sans-serif;text-transform: uppercase;outline: 0;background: #4CAF50;border: 1px solid #f44296;width: 100%;padding: 12px;color: #FFFFFF;-webkit-transition: all 0.3 ease;transition: all 0.3 ease;cursor: pointer;margin-bottom: 5px;}
+	.button:hover {box-shadow: 0 12px 16px 0 rgba(0,0,0,0.09), 0 17px 50px 0 rgba(0,0,0,0.09);}
+	textarea{width:100%}
+	#mainTools{border:1px solid black;margin-top:10px}
+	.atEQPOIVFSDFSDG-img-cover {max-width: 70px;}
+	.dealdetails-body .details-footer {margin-top: 5px;}
+	.dealdetails-body .details-info .info-desp p p{margin-bottom:0px;height: 0px;}
+	.dealdetails-body .details-heading{padding-bottom:0;}
+	.atEQPOIVFSDFSDG-voucher-main {padding: 0px 0 80px;}
+	@media only screen and (max-width: 640px) {
+		#inputKetQua{height:60px}
+		.atEQPOIVFSDFSDG-at-modal-content {width: 100%;}
+	}
+	.input{width:100%}
+</style>
+    <!--end-main voucher-->
+    <script type="text/javascript" src="https://static.accesstrade.vn/coupon/v2/js/jquery-1.11.1.min.js"></script> 
+    <script type="text/javascript" src="https://static.accesstrade.vn/coupon/v2/js/popper.min.js"></script> 
+    <script type="text/javascript" src="https://static.accesstrade.vn/coupon/v2/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="https://static.accesstrade.vn/coupon/v2/js/slick/slick.min.js"></script>
+    <script type="text/javascript" id="atScript6626" data-sub1="" data-sub2="" data-sub3="" data-sub4="" data-sub5="" data-utm-source="adminTrumGG" data-utm-medium="home" data-utm-campaign="" data-utm-content="" 
+	    data-filters='{"merchant":"4742147753565840242,4348611690224153209,5127139956446111602,4348611682079477428,","category":"E-COMMERCE,","campaign":"4751584435713464237,4348614231480407268,5127144557053758578,4348614229221512955,"}' 
+	    data-accesskey="5353514789844343379" 
+	    src="https://static.accesstrade.vn/coupon/v2/js/main_at_v2.js"></script>
+<script>
+var inputTitleVoucher = document.createElement('INPUT');
+inputTitleVoucher.setAttribute("id", "inputTitleVoucher");
+inputTitleVoucher.setAttribute("onclick", "copyTitle()");
+var inputDesVoucher = document.createElement('INPUT');
+inputDesVoucher.setAttribute("id", "inputDesVoucher");
+inputDesVoucher.setAttribute("onclick", "copyDes()");
+	
+function copyTitle(){
+	var copyText = document.getElementById("inputTitleVoucher");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+        console.log("Copied the title: " + copyText.value);
+}
+function copyDes(){
+	var copyText = document.getElementById("inputDesVoucher");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+        console.log("Copied the des: " + copyText.value);
+}	
+	
+var inputVoucherDetailsLink = document.createElement('INPUT');
+inputVoucherDetailsLink.setAttribute("id", "inputVoucherDetailsLink");
+inputVoucherDetailsLink.setAttribute("onclick", "this.select()");
+var createVoucherDetailsButton = document.createElement('BUTTON');
+//createVoucherDetailsButton.setAttribute("onclick", "getVoucherDetailsLink()");
+createVoucherDetailsButton.setAttribute("id", "createDetails");
+createVoucherDetailsButton.setAttribute("class", "button");
+createVoucherDetailsButton.innerHTML = 'Tạo Link Voucher Deatils (Tự động copy khi click tạo)';
+var openVoucherDetailsButton = document.createElement('A');
+openVoucherDetailsButton.setAttribute("id", "hrefDetails");
+openVoucherDetailsButton.setAttribute("target", "_blank");
+openVoucherDetailsButton.innerText = 'Mở link đã tạo';
+	
+setTimeout(function(){ 
+var max_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+console.log(max_width);	
+if (max_width <= 767){
+var modelContent = document.querySelector('.atEQPOIVFSDFSDG-at-body');
+}
+if (max_width > 767){
+var modelContent = document.querySelector('.atEQPOIVFSDFSDG-at-modal-content');
+}
+	//var modelContent = document.querySelector('.atEQPOIVFSDFSDG-at-modal-content');
+	modelContent.innerHTML += `<div id="mainTools">`;
+	modelContent.innerHTML += `<p>Đây là trang tạo Voucher cụ thể, <span style="color:red; margin-top:10px;">TUYỆT ĐỐI KHÔNG SHARE LINK NÀY RA BÊN NGOÀI</span></p>`;
+	modelContent.innerHTML += `<label>Kết quả:</label>`;
+	modelContent.appendChild(inputVoucherDetailsLink);
+	modelContent.appendChild(createVoucherDetailsButton);
+	modelContent.appendChild(openVoucherDetailsButton);
+	modelContent.innerHTML += `<br/><label>Tiêu đề Voucher:</label>`;
+	modelContent.appendChild(inputTitleVoucher);
+	modelContent.innerHTML += `<label>Mô tả Voucher:</label>`;
+	modelContent.appendChild(inputDesVoucher);
+	modelContent.innerHTML += `</div>`;
+}, 2200);
+/*
+function getVoucherDetailsLinkDesktop(){
+	var getTitleVoucher = document.querySelector('.atEQPOIVFSDFSDG-heading--title > p').innerText;
+    	var getCodeVoucher = document.querySelector('.atEQPOIVFSDFSDG-code-coupon').innerText;
+    	var getDesVoucher = document.querySelector('.atEQPOIVFSDFSDG-details-description > p').innerText;
+    	var getHrefVoucher = document.querySelector('.atEQPOIVFSDFSDG-details-dealact-copy').href;
+	var getImgUrl = document.querySelector('.atEQPOIVFSDFSDG-heading--img > .atEQPOIVFSDFSDG-img-cover').src;
+	var brandVoucher = document.querySelector('.atEQPOIVFSDFSDG-heading--label > span').innerText;
+	getVoucherDetailsLink()
+}
+function getVoucherDetailsLinkMobile(){
+	var getTitleVoucher = document.querySelector('.atEQPOIVFSDFSDG-heading--title > p').innerText;
+    	var getCodeVoucher = document.querySelector('.atEQPOIVFSDFSDG-code-coupon-mb').innerText;
+    	var getDesVoucher = document.querySelector('.atEQPOIVFSDFSDG-details-description > p').innerText;
+    	var getHrefVoucher = document.querySelector('.atEQPOIVFSDFSDG-btnGoToLinkAff').href;
+	var getImgUrl = document.querySelector('.atEQPOIVFSDFSDG-heading--img > .atEQPOIVFSDFSDG-img-cover').src;
+	var brandVoucher = document.querySelector('.atEQPOIVFSDFSDG-heading--label > span').innerText;
+	getVoucherDetailsLink()
+}
+*/
+	
+var max_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+if (max_width <= 767){
+	function getVoucherDetailsLinkMobile(){
+			var getTitleVoucher = document.querySelector('.atEQPOIVFSDFSDG-at-body > .atEQPOIVFSDFSDG-details > .atEQPOIVFSDFSDG-details-header > .atEQPOIVFSDFSDG-heading--title > p').innerText;
+			var getCodeVoucher = document.querySelector('.atEQPOIVFSDFSDG-code-coupon-mb').innerText;
+			var getDesVoucher = document.querySelector('.atEQPOIVFSDFSDG-at-body > .atEQPOIVFSDFSDG-details-content > .atEQPOIVFSDFSDG-details-description > p').innerText;
+			var getHrefVoucher = document.querySelector('.atEQPOIVFSDFSDG-btnGoToLinkAff').href;
+			var getImgUrl = document.querySelector('.atEQPOIVFSDFSDG-at-body > .atEQPOIVFSDFSDG-details > .atEQPOIVFSDFSDG-details-header > .atEQPOIVFSDFSDG-heading--img > .atEQPOIVFSDFSDG-img-cover').src;
+			var brandVoucher = document.querySelector('.atEQPOIVFSDFSDG-at-body > .atEQPOIVFSDFSDG-details > .atEQPOIVFSDFSDG-details-header > .atEQPOIVFSDFSDG-heading--label > span').innerText;
+			getTitleVoucher = getTitleVoucher.replaceAll(getCodeVoucher,"");
+			getDesVoucher = getDesVoucher.replaceAll(getCodeVoucher,"");
+			document.getElementById('inputTitleVoucher').value = getTitleVoucher;
+			document.getElementById('inputDesVoucher').value = getDesVoucher;
+			getTitleVoucher = getTitleVoucher.replaceAll("%","%25");
+			getDesVoucher = getDesVoucher.replaceAll("%","%25");
+			getTitleVoucher = getTitleVoucher.replaceAll("&","%26");
+			getDesVoucher = getDesVoucher.replaceAll("&","%26");
+			var regLinkVoucherDetails =  /^.*(https:\/\/go\.isclix\.com\/deep_link\/5353514789844343379\/[0-9]{19})\??url?=?([^\#\&\?]*).*/;
+			var regLinkAff = getHrefVoucher.match(regLinkVoucherDetails);
+			var ketQuaVoucherDetails = `https://trumgiamgia.tk/voucher-details/?vc_title=${getTitleVoucher}&vc_des=${getDesVoucher}&vc_brand=${brandVoucher}&vc_code=${window.btoa(getCodeVoucher)}&vc_brand_image=${getImgUrl}&vc_href=${window.btoa(regLinkAff[2])}&ctvId=${id}&id=${id}`;
+			ketQuaVoucherDetails = ketQuaVoucherDetails.replaceAll(" ","%20");
+			hrefDetails.href = ketQuaVoucherDetails;
+			document.getElementById('inputVoucherDetailsLink').value = ketQuaVoucherDetails;
+			var copyText = document.getElementById("inputVoucherDetailsLink");
+			copyText.select();
+			copyText.setSelectionRange(0, 99999);
+			navigator.clipboard.writeText(copyText.value);
+			console.log("Copied the Link Details Voucher: " + copyText.value);
+			openVoucherDetailsButton.innerText += `: ${getTitleVoucher}`;
+	};
+	setTimeout(function(){		
+		var createDetails = document.getElementById('createDetails');
+		createDetails.setAttribute("onclick", "getVoucherDetailsLinkMobile()");
+	}, 2600);
+}
+if (max_width > 767){
+	function getVoucherDetailsLinkDesktop(){
+			var getTitleVoucher = document.querySelector('.atEQPOIVFSDFSDG-heading--title > p').innerText;
+			var getCodeVoucher = document.querySelector('.atEQPOIVFSDFSDG-code-coupon').innerText;
+			var getDesVoucher = document.querySelector('.atEQPOIVFSDFSDG-details-description > p').innerText;
+			var getHrefVoucher = document.querySelector('.atEQPOIVFSDFSDG-details-dealact-copy').href;
+			var getImgUrl = document.querySelector('.atEQPOIVFSDFSDG-heading--img > .atEQPOIVFSDFSDG-img-cover').src;
+			var brandVoucher = document.querySelector('.atEQPOIVFSDFSDG-heading--label > span').innerText;
+			getTitleVoucher = getTitleVoucher.replaceAll(getCodeVoucher,"");
+			getDesVoucher = getDesVoucher.replaceAll(getCodeVoucher,"");
+			document.getElementById('inputTitleVoucher').value = getTitleVoucher;
+			document.getElementById('inputDesVoucher').value = getDesVoucher;
+			getTitleVoucher = getTitleVoucher.replaceAll("%","%25");
+			getDesVoucher = getDesVoucher.replaceAll("%","%25");
+			getTitleVoucher = getTitleVoucher.replaceAll("&","%26");
+			getDesVoucher = getDesVoucher.replaceAll("&","%26");
+			var regLinkVoucherDetails =  /^.*(https:\/\/go\.isclix\.com\/deep_link\/5353514789844343379\/[0-9]{19})\??url?=?([^\#\&\?]*).*/;
+			var regLinkAff = getHrefVoucher.match(regLinkVoucherDetails);
+			var ketQuaVoucherDetails = `https://trumgiamgia.tk/voucher-details/?vc_title=${getTitleVoucher}&vc_des=${getDesVoucher}&vc_brand=${brandVoucher}&vc_code=${window.btoa(getCodeVoucher)}&vc_brand_image=${getImgUrl}&vc_href=${window.btoa(regLinkAff[2])}&ctvId=${id}&id=${id}`;
+			ketQuaVoucherDetails = ketQuaVoucherDetails.replaceAll(" ","%20");
+			hrefDetails.href = ketQuaVoucherDetails;
+			document.getElementById('inputVoucherDetailsLink').value = ketQuaVoucherDetails;
+			var copyText = document.getElementById("inputVoucherDetailsLink");
+			copyText.select();
+			copyText.setSelectionRange(0, 99999);
+			navigator.clipboard.writeText(copyText.value);
+			console.log("Copied the Link Details Voucher: " + copyText.value);
+			openVoucherDetailsButton.innerText += `: ${getTitleVoucher}`;
+	};
+	setTimeout(function(){	
+		var createDetails = document.getElementById('createDetails');
+		createDetails.setAttribute("onclick", "getVoucherDetailsLinkDesktop()");
+	}, 2600);
+}
+/*function getVoucherDetailsLink(){
+}
+*/
+</script>
+</html>
