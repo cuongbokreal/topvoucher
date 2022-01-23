@@ -28,7 +28,8 @@ totalDoanhThu.innerHTML = `<tr>
                 <td><span class="text-red font-w-500">${totalDaHuy.toLocaleString()}</span></td>
                 <td><span class="text-orange font-w-500">${totalChoXuly.toLocaleString()}</span></td>
               </tr>`;
-
+document.getElementById('innerHoaHong').innerHTML = parseFloat(totalHoaHong.toFixed(0)).toLocaleString() +' VNĐ';
+document.getElementById('innerChuyenDoi').innerHTML = (totalGiaTriDonHang.toLocaleString())+' VNĐ';
 
 var innerThanhToan = document.getElementById('innerThanhToan');
 let dataInnerThanhToan = "";
