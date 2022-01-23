@@ -2,12 +2,12 @@ var innerDoanhThu = document.getElementById('innerDoanhThu');
 let dataInnerDoanhThu = "";
 for(let i=0; i<dataDoanhThu.length;i++){
   dataInnerDoanhThu += `<tr>
-                <th>${dataDoanhThu[i].nhaQuangCao}</th>
-                <th>${dataDoanhThu[i].giaTriDonHang}</th>
-                <th>${dataDoanhThu[i].hoaHong}</th>
-                <th>${dataDoanhThu[i].duocThanhToan}</th>
-                <th>${dataDoanhThu[i].daHuy}</th>
-                <th>${dataDoanhThu[i].choXuly}</th>
+                <td>${dataDoanhThu[i].nhaQuangCao}</td>
+                <td>${dataDoanhThu[i].giaTriDonHang}</td>
+                <td>${dataDoanhThu[i].hoaHong}</td>
+                <td>${dataDoanhThu[i].duocThanhToan}</td>
+                <td>${dataDoanhThu[i].daHuy}</td>
+                <td>${dataDoanhThu[i].choXuly}</td>
               </tr>`;
 }
 innerDoanhThu.innerHTML = dataInnerDoanhThu;
@@ -16,10 +16,10 @@ var innerThanhToan = document.getElementById('innerThanhToan');
 let dataInnerThanhToan = "";
 for(let i=0; i<dataThanhToan.length;i++){
   dataInnerThanhToan += `<tr>
-                <th>${dataThanhToan[i].thangDoiSoat}</th>
-                <th>${dataThanhToan[i].hoaHongDuocDuyet}</th>
-                <th>${dataThanhToan[i].daThanhToan}</th>
-                <th>${dataThanhToan[i].soDu}</th>
+                <td>${dataThanhToan[i].thangDoiSoat}</td>
+                <td>${dataThanhToan[i].hoaHongDuocDuyet}</td>
+                <td>${dataThanhToan[i].daThanhToan}</td>
+                <td>${dataThanhToan[i].soDu}</td>
               </tr>`;
 }
 innerThanhToan.innerHTML = dataInnerThanhToan;
