@@ -11,6 +11,8 @@ for(let i=0; i<dataDoanhThu.length;i++){
               </tr>`;
 }
 innerDoanhThu.innerHTML = dataInnerDoanhThu;
+var totalDoanhThu = document.getElementById('totalDoanhThu');
+
 
 var innerThanhToan = document.getElementById('innerThanhToan');
 let dataInnerThanhToan = "";
