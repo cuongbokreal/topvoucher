@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset='UTF-8'/>
+  <meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+  <meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+  <title>Overview Doanh Thu</title>
+  <link href="../main.css" rel="stylesheet">
+</head>
+<body translate="no">
+  <div class="bg-gray-100 dark:bg-gray-900 dark:text-white text-gray-600 h-screen flex overflow-hidden text-sm">
+  <div class="flex-grow overflow-hidden h-full flex flex-col">
+    <div id="navmobile">
+        <header class="block">
+                <ul class="header-menu horizontal-list">
+                    <li>
+                        <a class="header-menu-tab" href="/"><span class="icon entypo-cog scnd-font-color"></span>Trang chủ</a>
+                    </li>
+                    <li class="active">
+                        <a class="header-menu-tab" href="#2"><span class="icon fontawesome-user scnd-font-color"></span>Báo cáo</a>
+                    </li>
+                </ul>
+            </header>
+      </div>
+    <div class="flex-grow flex overflow-x-hidden">
+      <div class="flex-grow bg-white dark:bg-gray-900 overflow-y-auto">
+        <div class="sm:px-7 sm:pt-7 px-4 pt-4 flex flex-col w-full border-b border-gray-200 bg-white dark:bg-gray-900 dark:text-white dark:border-gray-800 sticky top-0">
+          <div class="flex w-full items-center">
+            <div class="flex items-center text-lg text-gray-900 dark:text-white">
+              <!--img src="https://assets.codepen.io/344846/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1582611188&width=512" class="w-12 mr-4 rounded-full" alt="profile" /-->
+              Overview (PubId: 00)
+            </div>
+            <div class="ml-auto items-center justify-end">
+              <div class="text-right total">
+                <div class="text-xs text-gray-400 dark:text-gray-400">Tổng hoa hồng:</div>
+                <div id="innerHoaHong" class="text-gray-900 text-lg dark:text-white"> VNĐ</div>
+                <div class="text-xs text-gray-400 dark:text-gray-400">Giá trị chuyển đổi phát sinh:</div>
+                <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white"> VNĐ</div>
+              </div>
+            </div>
+          </div><br/>
+          <div class="flex items-center space-x-3 sm:mt-7 mt-4">
+            <a href="#" class="px-3 border-b-2 border-blue-500 text-blue-500 dark:text-white dark:border-white pb-1.5" onclick="donhang()" id="donhang">Đơn hàng</a>
+            <a href="#" class="px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5" onclick="doanhthu()" id="doanhthu">Doanh thu</a>
+          </div>
+        </div>
+        <div class="sm:p-7 p-4">
+
+          <table class="table-wrapper donhang">
+            <thead id="tableTop">
+              <tr>
+                <th>Thời gian mua</th>
+                <th>Mã đơn hàng</th>
+                <th>Mã danh mục</th>
+                <th>Giá trị đơn hàng</th>
+                <th>Hoa hồng</th>
+                <th>Advertisers</th>
+                <th>Ngày duyệt dự kiến</th>
+                <th>Lý do bị hủy</th>
+                <th>Loại thiết bị	</th>
+              </tr>
+            </thead>
+            <thead id="innerDonHang"></thead>
+          </table>
+          
+           <table class="table-wrapper doanhthu" style="display:none">
+            <thead id="tableTop">
+              <tr>
+                <th>Tháng đối soát</th>
+                <th>Tổng hoa hồng được duyệt</th>
+                <th>Phát sinh trong tháng đã duyệt</th>
+                <th>Tạm Ứng Đã Thanh Toán</th>
+                <th>Tồn đọng cũ được duyệt</th>
+              </tr>
+            </thead>
+            <thead id="innerDoanhThu">
+              <tr>
+                <td>2021/09/26 20:06:55</td>
+                <td class="text-blue">210926AG131H5X</td>
+                <td>Thiet_Bi_Dien_Gia_Dung</td>
+                <td>163,000</td>
+                <td>1,826</td>
+              </tr>
+            </thead>
+          </table><br/>
+          <div class="doanhthu ">
+            <p class="text-gray-900 text-lg dark:text-white">Chính sách thanh toán:</p>
+            <p>Để thanh toán, doanh thu của Publisher chỉ cần đạt tối thiểu hạn mức 100.000 VNĐ/1 kỳ thanh toán. Sẽ cộng dồn vào tháng tiếp theo nếu chưa đủ hạn mức thanh toán.</p>
+            <p>Được thanh toán doanh thu phát sinh trực tiếp từ các Dịch vụ hợp tác cùng Bên A trong tháng T0 (từ ngày 1 -30 của tháng) vào ngày T1+22 (vào ngày 22 tháng sau).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="./data.js" defer></script>  
+<script src="../main.js" defer></script>
+</body>
+</html>
