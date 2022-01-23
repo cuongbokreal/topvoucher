@@ -19,7 +19,7 @@ for(let i=0; i<dataDoanhThu.length;i++){
 innerDoanhThu.innerHTML = dataInnerDoanhThu;
 var totalDoanhThu = document.getElementById('totalDoanhThu');
 totalDoanhThu.innerHTML = `<tr>
-                <td>Tổng</td>
+                <td><span class="font-w-500">Tổng</span></td>
                 <td><span class="font-w-500">${totalGiaTriDonHang}</span></td>
                 <td><span class="font-w-500">${totalHoaHong}</span></td>
                 <td><span class="text-green font-w-500">${totalDuocThanhToan}</span></td>
