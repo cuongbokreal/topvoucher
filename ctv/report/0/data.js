@@ -28,7 +28,9 @@ var dataDoanhThu = [
 ];
 
 var dataThanhToan = [
-  {"":"",
-   "":"",
+  {"thangDoiSoat":"1-2022",
+   "hoaHongDuocDuyet":"0",
+   "daThanhToan":"0",
+   "soDu":"0",
   }
 ]
