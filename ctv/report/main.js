@@ -1,20 +1,22 @@
 var innerDoanhThu = document.getElementById('innerDoanhThu');
 let dataInnerDoanhThu = "";
 var totalGiaTriDonHang =0;var totalHoaHong =0;var totalDuocThanhToan =0;var totalDaHuy =0;var totalChoXuly =0;
+var choXuly = 0;
 for(let i=0; i<dataDoanhThu.length;i++){
+  choXuly = dataDoanhThu[i].hoaHong - dataDoanhThu[i].duocThanhToan - dataDoanhThu[i].daHuy;
   dataInnerDoanhThu += `<tr>
                 <td>${dataDoanhThu[i].nhaQuangCao}</td>
                 <td>${dataDoanhThu[i].giaTriDonHang}</td>
                 <td>${dataDoanhThu[i].hoaHong}</td>
                 <td><span class="text-green">${dataDoanhThu[i].duocThanhToan}</span></td>
                 <td><span class="text-red">${dataDoanhThu[i].daHuy}</span></td>
-                <td><span class="text-orange">${dataDoanhThu[i].choXuly}</span></td>
+                <td><span class="text-orange">${choXuly}</span></td>
               </tr>`;
   totalGiaTriDonHang += dataDoanhThu[i].giaTriDonHang;
   totalHoaHong += dataDoanhThu[i].hoaHong;
   totalDuocThanhToan += dataDoanhThu[i].duocThanhToan;
   totalDaHuy += dataDoanhThu[i].daHuy;
-  totalChoXuly += dataDoanhThu[i].choXuly;
+  totalChoXuly += choXuly;
 }
 innerDoanhThu.innerHTML = dataInnerDoanhThu;
 var totalDoanhThu = document.getElementById('totalDoanhThu');
