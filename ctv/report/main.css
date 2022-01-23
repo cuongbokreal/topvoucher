@@ -1,3 +1,6 @@
+.text-green, .text-success {color: #1dd1a1!important;}
+.text-danger, .text-red {color: #e55039!important;}
+.text-orange, .text-warning {color: #fa983a!important;}
 /*custom*/
 *,*::before,*::after{box-sizing:border-box}
 .block {margin-bottom: 0.25rem;background: #fbfbfb;border-radius: 5px;}
