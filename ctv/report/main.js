@@ -1,5 +1,6 @@
 var innerDoanhThu = document.getElementById('innerDoanhThu');
 let dataInnerDoanhThu = "";
+var totalGiaTriDonHang, totalHoaHong, totalDuocThanhToan, totalDaHuy, totalChoXuly;
 for(let i=0; i<dataDoanhThu.length;i++){
   dataInnerDoanhThu += `<tr>
                 <td>${dataDoanhThu[i].nhaQuangCao}</td>
@@ -9,9 +10,22 @@ for(let i=0; i<dataDoanhThu.length;i++){
                 <td><span class="text-red">${dataDoanhThu[i].daHuy}</span></td>
                 <td><span class="text-orange">${dataDoanhThu[i].choXuly}</span></td>
               </tr>`;
+  totalGiaTriDonHang += dataDoanhThu[i].giaTriDonHang;
+  totalHoaHong += dataDoanhThu[i].hoaHong;
+  totalDuocThanhToan += dataDoanhThu[i].duocThanhToan;
+  totalDaHuy += dataDoanhThu[i].daHuy;
+  totalChoXuly += dataDoanhThu[i].choXuly;
 }
 innerDoanhThu.innerHTML = dataInnerDoanhThu;
 var totalDoanhThu = document.getElementById('totalDoanhThu');
+totalDoanhThu.innerHTML = `<tr>
+                <td>Tổng</td>
+                <td>${totalGiaTriDonHang}</td>
+                <td>${totalHoaHong}</td>
+                <td><span class="text-green font-w-500">${totalDuocThanhToan}</span></td>
+                <td><span class="text-red font-w-500">${totalDaHuy}</span></td>
+                <td><span class="text-orange font-w-500">${totalChoXuly}</span></td>
+              </tr>`;
 
 
 var innerThanhToan = document.getElementById('innerThanhToan');
