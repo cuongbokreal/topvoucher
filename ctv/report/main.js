@@ -20,8 +20,8 @@ innerDoanhThu.innerHTML = dataInnerDoanhThu;
 var totalDoanhThu = document.getElementById('totalDoanhThu');
 totalDoanhThu.innerHTML = `<tr>
                 <td>Tổng</td>
-                <td>${totalGiaTriDonHang}</td>
-                <td>${totalHoaHong}</td>
+                <td><span class="font-w-500">${totalGiaTriDonHang}</span></td>
+                <td><span class="font-w-500">${totalHoaHong}</span></td>
                 <td><span class="text-green font-w-500">${totalDuocThanhToan}</span></td>
                 <td><span class="text-red font-w-500">${totalDaHuy}</span></td>
                 <td><span class="text-orange font-w-500">${totalChoXuly}</span></td>
