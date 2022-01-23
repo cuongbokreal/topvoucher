@@ -13,8 +13,16 @@ for(let i=0; i<dataDoanhThu.length;i++){
 innerDoanhThu.innerHTML = dataInnerDoanhThu;
 
 var innerThanhToan = document.getElementById('innerThanhToan');
-
-
+let dataInnerThanhToan = "";
+for(let i=0; i<dataThanhToan.length;i++){
+  dataInnerThanhToan += `<tr>
+                <th>${dataThanhToan[i].thangDoiSoat}</th>
+                <th>${dataThanhToan[i].hoaHongDuocDuyet}</th>
+                <th>${dataThanhToan[i].daThanhToan}</th>
+                <th>${dataThanhToan[i].soDu}</th>
+              </tr>`;
+}
+innerThanhToan.innerHTML = dataInnerThanhToan;
 
 
 function doanhthu(){
