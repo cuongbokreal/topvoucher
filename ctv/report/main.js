@@ -1,6 +1,6 @@
 var innerDoanhThu = document.getElementById('innerDoanhThu');
 let dataInnerDoanhThu = "";
-var totalGiaTriDonHang, totalHoaHong, totalDuocThanhToan, totalDaHuy, totalChoXuly;
+var totalGiaTriDonHang =0;var totalHoaHong =0;var totalDuocThanhToan =0;var totalDaHuy =0;var totalChoXuly =0;
 for(let i=0; i<dataDoanhThu.length;i++){
   dataInnerDoanhThu += `<tr>
                 <td>${dataDoanhThu[i].nhaQuangCao}</td>
