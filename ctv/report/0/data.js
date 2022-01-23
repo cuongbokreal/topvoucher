@@ -18,7 +18,7 @@ var dataDoanhThu = [
    "choXuly":"0",
   },
   {
-    "nhaQuangCao":"0",
+    "nhaQuangCao":"Tiki",
    "giaTriDonHang":"0",
    "hoaHong":"0",
    "duocThanhToan":"0",
