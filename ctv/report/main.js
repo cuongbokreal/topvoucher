@@ -5,9 +5,9 @@ for(let i=0; i<dataDoanhThu.length;i++){
                 <td>${dataDoanhThu[i].nhaQuangCao}</td>
                 <td>${dataDoanhThu[i].giaTriDonHang}</td>
                 <td>${dataDoanhThu[i].hoaHong}</td>
-                <td>${dataDoanhThu[i].duocThanhToan}</td>
-                <td>${dataDoanhThu[i].daHuy}</td>
-                <td>${dataDoanhThu[i].choXuly}</td>
+                <td><span class="text-green">${dataDoanhThu[i].duocThanhToan}</span></td>
+                <td><span class="text-red">${dataDoanhThu[i].daHuy}</span></td>
+                <td><span class="text-orange">${dataDoanhThu[i].choXuly}</span></td>
               </tr>`;
 }
 innerDoanhThu.innerHTML = dataInnerDoanhThu;
