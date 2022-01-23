@@ -25,4 +25,10 @@ var dataDoanhThu = [
    "daHuy":"0",
    "choXuly":"0",
   },
+];
+
+var dataThanhToan = [
+  {"":"",
+   "":"",
+  }
 ]
