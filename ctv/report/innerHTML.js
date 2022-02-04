@@ -26,11 +26,11 @@ document.getElementById('main').innerHTML = `
               <div class="text-right total">
                 <div id="total-1">
                   <div class="text-xs text-gray-400 dark:text-gray-400">Hoa hồng phát sinh:</div>
-                  <div id="innerHoaHong" class="text-gray-900 text-lg dark:text-white"> VNĐ</div>
+                  <div id="innerHoaHong" class="text-gray-900 text-lg dark:text-white"> </div>
                 </div>
                 <div id="total-2">
                   <div class="text-xs text-gray-400 dark:text-gray-400">Giá trị chuyển đổi phát sinh:</div>
-                  <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white"> VNĐ</div>
+                  <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white"> </div>
                 </div>  
               </div>
             </div>
