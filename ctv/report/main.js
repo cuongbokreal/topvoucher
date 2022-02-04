@@ -1,7 +1,5 @@
 function innerData(){
   document.getElementById('innerPubName'). innerText = pubName;
-  var total1 = document.getElementById('total-1');
-  var total2 = document.getElementById('total-2');
   //=== DOANH THU ===
   var innerDoanhThu = document.getElementById('innerDoanhThu');
   var totalGiaTriDonHang =0;var totalHoaHong =0;var totalDuocThanhToan =0;var totalDaHuy =0;var totalChoXuly =0;
@@ -64,6 +62,8 @@ function innerData(){
                   <td><span class="text-green font-w-500">${totalDaThanhToan.toLocaleString()}</span></td>
                   <td><span class="font-w-500">${totalSoDuTrongThang.toLocaleString()}</span></td>
                 </tr>`;
+  var total1 = document.getElementById('total-1');
+  var total2 = document.getElementById('total-2');
 }
 
 setTimeout(innerData, 500);
