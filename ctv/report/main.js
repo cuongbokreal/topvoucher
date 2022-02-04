@@ -1,7 +1,7 @@
 function innerData(){
+  document.getElementById('innerPubName'). innerText = pubName;
   var total1 = document.getElementById('total-1');
   var total2 = document.getElementById('total-2');
-  document.getElementById('innerPubName'). innerText = pubName;
   //=== DOANH THU ===
   var innerDoanhThu = document.getElementById('innerDoanhThu');
   var totalGiaTriDonHang =0;var totalHoaHong =0;var totalDuocThanhToan =0;var totalDaHuy =0;var totalChoXuly =0;
