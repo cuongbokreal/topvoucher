@@ -1,6 +1,7 @@
 .text-green, .text-success {color: #1dd1a1!important;}
 .text-danger, .text-red {color: #e55039!important;}
 .text-orange, .text-warning {color: #fa983a!important;}
+.bg-info {background-color: #2e86de!important; color: #ffffff}
 .font-w-500{font-weight:500}
 /*custom*/
 *,*::before,*::after{box-sizing:border-box}
