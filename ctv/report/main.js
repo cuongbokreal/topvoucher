@@ -1,4 +1,6 @@
 function innerData(){
+  var total1 = document.getElementById('total-1');
+  var total2 = document.getElementById('total-2');
   document.getElementById('innerPubName'). innerText = pubName;
   //=== DOANH THU ===
   var innerDoanhThu = document.getElementById('innerDoanhThu');
@@ -81,9 +83,6 @@ function thanhtoan(){
   document.getElementsByClassName("thanhtoan")[0].style.display='block';
   innerSoDuTotal2()
 }
-
-var total1 = document.getElementById('total-1');
-var total2 = document.getElementById('total-2');
 
 function innerChuyenDoiTotal2(){
   total2.innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Giá trị chuyển đổi phát sinh:</div>
