@@ -56,7 +56,7 @@ document.getElementById('main').innerHTML = `
               </tr>
             </thead>
             <thead id="innerDoanhThu"></thead>
-            <thead id="totalDoanhThu"></thead>
+            <thead id="totalDoanhThu" class="bg-info"></thead>
           </table>
           
            <table class="table-wrapper thanhtoan" style="display:none">
@@ -69,7 +69,7 @@ document.getElementById('main').innerHTML = `
               </tr>
             </thead>
             <thead id="innerThanhToan"></thead>
-            <thead id="totalThanhToan"></thead>
+            <thead id="totalThanhToan" class="bg-info"></thead>
           </table><br/>
           <div class="doanhthu ">
             <p class="text-gray-900 text-lg dark:text-white">Chính sách thanh toán:</p>
