@@ -45,12 +45,7 @@ for(let i=0; i<dataThanhToan.length;i++){
 innerThanhToan.innerHTML = dataInnerThanhToan;
 
 
-var totalSoDu = 0;
-for(let i=0; i<dataThanhToan.length; i++){
-  totalSoDu += dataThanhToan[i].soDu;
-}
-
-
+//function chuyển tab
 function doanhthu(){
   document.getElementById("doanhthu").className = "px-3 border-b-2 border-blue-500 text-blue-500 dark:text-white dark:border-white pb-1.5";
   document.getElementById("thanhtoan").className = "px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5";
@@ -66,9 +61,13 @@ function thanhtoan(){
   innerSoDuTotal2()
 }
 
-
 var total1 = document.getElementById('total-1');
 var total2 = document.getElementById('total-2');
+var totalSoDu = 0;
+for(let i=0; i<dataThanhToan.length; i++){
+  totalSoDu += dataThanhToan[i].soDu;
+}
+
 function innerChuyenDoiTotal2(){
   total2.innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Giá trị chuyển đổi phát sinh:</div>
   <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalGiaTriDonHang.toLocaleString()} VNĐ</div>`;
