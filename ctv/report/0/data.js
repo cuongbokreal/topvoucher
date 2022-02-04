@@ -32,5 +32,10 @@ var dataThanhToan = [
    "hoaHongDuocDuyet": 0 ,
    "daThanhToan": 0 ,
    "soDu": 0 ,
-  }
+  },
+  {"thangDoiSoat":"12-2021",
+   "hoaHongDuocDuyet": 248000 ,
+   "daThanhToan": 20000 ,
+   "soDu": 48000 ,
+  },
 ]
