@@ -63,7 +63,8 @@ function innerData(){
                   <td><span class="font-w-500">${totalSoDuTrongThang.toLocaleString()}</span></td>
                 </tr>`;
 }
-setTimeout(innerData, 500);
+
+setTimeout(innerData, 100);
 
 //function chuyển tab
 function doanhthu(){
