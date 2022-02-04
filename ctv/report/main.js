@@ -2,6 +2,9 @@ var innerDoanhThu = document.getElementById('innerDoanhThu');
 let dataInnerDoanhThu = "";
 var totalGiaTriDonHang =0;var totalHoaHong =0;var totalDuocThanhToan =0;var totalDaHuy =0;var totalChoXuly =0;
 var choXuly = 0;
+
+//=== DOANH THU ===
+
 for(let i=0; i<dataDoanhThu.length;i++){
   choXuly = dataDoanhThu[i].hoaHong - dataDoanhThu[i].duocThanhToan - dataDoanhThu[i].daHuy;
   dataInnerDoanhThu += `<tr>
@@ -29,8 +32,13 @@ totalDoanhThu.innerHTML = `<tr>
                 <td><span class="text-orange font-w-500">${totalChoXuly.toLocaleString()}</span></td>
               </tr>`;
 
+//=== TOTAL TOP ===
 document.getElementById('innerHoaHong').innerHTML = parseFloat(totalHoaHong.toFixed(0)).toLocaleString() +' VNĐ';
 document.getElementById('innerChuyenDoi').innerHTML = (totalGiaTriDonHang.toLocaleString())+' VNĐ';
+
+
+//=== THANH TOÁN ===
+var totalHoaHongDuocDuyet=0; var totalDaThanhToan=0; var totalSoDuTrongThang=0;
 
 var innerThanhToan = document.getElementById('innerThanhToan');
 let dataInnerThanhToan = "";
@@ -41,8 +49,19 @@ for(let i=0; i<dataThanhToan.length;i++){
                 <td>${dataThanhToan[i].daThanhToan.toLocaleString()}</td>
                 <td>${dataThanhToan[i].soDu.toLocaleString()}</td>
               </tr>`;
+  totalHoaHongDuocDuyet += dataThanhToan[i].hoaHongDuocDuyet;
+  totalDaThanhToan += dataThanhToan[i].daThanhToan;
+  totalSoDuTrongThang += dataThanhToan[i].soDu;
 }
 innerThanhToan.innerHTML = dataInnerThanhToan;
+var totalThanhToan = document.getElementById('totalThanhToan');
+totalThanhToan.innerHTML = `<tr>
+                <td><span class="font-w-500">Tổng</span></td>
+                <td><span class="text-green font-w-500">${totalHoaHongDuocDuyet.toLocaleString()}</span></td>
+                <td><span class="text-green font-w-500">${totalDaThanhToan.toLocaleString()}</span></td>
+                <td><span class="font-w-500">${totalSoDuTrongThang.toLocaleString()}</span></td>
+              </tr>`;
+
 
 
 //function chuyển tab
