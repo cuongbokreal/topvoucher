@@ -36,10 +36,10 @@ var innerThanhToan = document.getElementById('innerThanhToan');
 let dataInnerThanhToan = "";
 for(let i=0; i<dataThanhToan.length;i++){
   dataInnerThanhToan += `<tr>
-                <td>${dataThanhToan[i].thangDoiSoat}</td>
-                <td>${dataThanhToan[i].hoaHongDuocDuyet}</td>
-                <td>${dataThanhToan[i].daThanhToan}</td>
-                <td>${dataThanhToan[i].soDu}</td>
+                <td>${dataThanhToan[i].thangDoiSoat.toLocaleString()}</td>
+                <td>${dataThanhToan[i].hoaHongDuocDuyet.toLocaleString()}</td>
+                <td>${dataThanhToan[i].daThanhToan.toLocaleString()}</td>
+                <td>${dataThanhToan[i].soDu.toLocaleString()}</td>
               </tr>`;
 }
 innerThanhToan.innerHTML = dataInnerThanhToan;
