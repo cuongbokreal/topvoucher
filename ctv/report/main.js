@@ -66,7 +66,7 @@ function innerData(){
                 </tr>`;
 }
 
-setTimeout(innerData, 100);
+setTimeout(innerData, 500);
 
 //function chuyển tab
 function doanhthu(){
