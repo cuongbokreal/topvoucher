@@ -31,8 +31,8 @@ totalDoanhThu.innerHTML = `<tr>
               </tr>`;
 
 //=== TOTAL TOP ===
-document.getElementById('innerHoaHong').innerHTML = parseFloat(totalHoaHong.toFixed(0)).toLocaleString() +' VNĐ';
-document.getElementById('innerChuyenDoi').innerHTML = (totalGiaTriDonHang.toLocaleString())+' VNĐ';
+document.getElementById('innerHoaHong').innerHTML = parseFloat(totalHoaHong.toFixed(0)).toLocaleString();
+document.getElementById('innerChuyenDoi').innerHTML = (totalGiaTriDonHang.toLocaleString());
 
 
 //=== THANH TOÁN ===
@@ -84,9 +84,9 @@ var total2 = document.getElementById('total-2');
 
 function innerChuyenDoiTotal2(){
   total2.innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Giá trị chuyển đổi phát sinh:</div>
-  <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalGiaTriDonHang.toLocaleString()} VNĐ</div>`;
+  <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalGiaTriDonHang.toLocaleString()}</div>`;
 }
 function innerSoDuTotal2(){
   total2.innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Số dư::</div>
-  <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalSoDuTrongThang.toLocaleString()} VNĐ</div>`;
+  <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalSoDuTrongThang.toLocaleString()}</div>`;
 }
