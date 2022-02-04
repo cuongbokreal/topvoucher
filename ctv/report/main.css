@@ -3,6 +3,8 @@
 .text-orange, .text-warning {color: #fa983a!important;}
 .bg-info {background-color: #2e86de!important; color: #ffffff}
 .font-w-500{font-weight:500}
+.font-w-700{font-weight:700}
+.font-w-900{font-weight:900}
 /*custom*/
 *,*::before,*::after{box-sizing:border-box}
 .block {margin-bottom: 0.25rem;background: #fbfbfb;border-radius: 5px;}
