@@ -1,6 +1,4 @@
-function innerData(){
-  document.getElementById('innerPubName'). innerText = pubName;
-  //=== DOANH THU ===
+//=== DOANH THU ===
   var innerDoanhThu = document.getElementById('innerDoanhThu');
   var totalGiaTriDonHang =0;var totalHoaHong =0;var totalDuocThanhToan =0;var totalDaHuy =0;var totalChoXuly =0;
   var choXuly = 0;
@@ -21,23 +19,8 @@ function innerData(){
     totalDaHuy += dataDoanhThu[i].daHuy;
     totalChoXuly += choXuly;
   }
-  innerDoanhThu.innerHTML = dataInnerDoanhThu;
-  var totalDoanhThu = document.getElementById('totalDoanhThu');
-  totalDoanhThu.innerHTML = `<tr>
-                  <td><span class="font-w-500">Tổng</span></td>
-                  <td><span class="font-w-500">${totalGiaTriDonHang.toLocaleString()}</span></td>
-                  <td><span class="font-w-500">${totalHoaHong.toLocaleString()}</span></td>
-                  <td><span class="text-green font-w-500">${totalDuocThanhToan.toLocaleString()}</span></td>
-                  <td><span class="text-red font-w-500">${totalDaHuy.toLocaleString()}</span></td>
-                  <td><span class="text-orange font-w-500">${totalChoXuly.toLocaleString()}</span></td>
-                </tr>`;
 
-  //=== TOTAL TOP ===
-  document.getElementById('innerHoaHong').innerHTML = parseFloat(totalHoaHong.toFixed(0)).toLocaleString();
-  document.getElementById('innerChuyenDoi').innerHTML = (totalGiaTriDonHang.toLocaleString());
-
-
-  //=== THANH TOÁN ===
+//=== THANH TOÁN ===
   var innerThanhToan = document.getElementById('innerThanhToan');
   var totalHoaHongDuocDuyet=0; var totalDaThanhToan=0; var totalSoDuTrongThang=0;
   var soDu = 0;
@@ -54,6 +37,26 @@ function innerData(){
     totalDaThanhToan += dataThanhToan[i].daThanhToan;
     totalSoDuTrongThang += soDu;
   }
+
+function innerData(){
+  document.getElementById('innerPubName'). innerText = pubName;
+//=== DOANH THU ===
+  innerDoanhThu.innerHTML = dataInnerDoanhThu;
+  var totalDoanhThu = document.getElementById('totalDoanhThu');
+  totalDoanhThu.innerHTML = `<tr>
+                  <td><span class="font-w-500">Tổng</span></td>
+                  <td><span class="font-w-500">${totalGiaTriDonHang.toLocaleString()}</span></td>
+                  <td><span class="font-w-500">${totalHoaHong.toLocaleString()}</span></td>
+                  <td><span class="text-green font-w-500">${totalDuocThanhToan.toLocaleString()}</span></td>
+                  <td><span class="text-red font-w-500">${totalDaHuy.toLocaleString()}</span></td>
+                  <td><span class="text-orange font-w-500">${totalChoXuly.toLocaleString()}</span></td>
+                </tr>`;
+
+  //=== TOTAL TOP ===
+  document.getElementById('innerHoaHong').innerHTML = parseFloat(totalHoaHong.toFixed(0)).toLocaleString();
+  document.getElementById('innerChuyenDoi').innerHTML = (totalGiaTriDonHang.toLocaleString());
+
+//=== DOANH THU ===
   innerThanhToan.innerHTML = dataInnerThanhToan;
   var totalThanhToan = document.getElementById('totalThanhToan');
   totalThanhToan.innerHTML = `<tr>
@@ -62,18 +65,8 @@ function innerData(){
                   <td><span class="text-green font-w-500">${totalDaThanhToan.toLocaleString()}</span></td>
                   <td><span class="font-w-500">${totalSoDuTrongThang.toLocaleString()}</span></td>
                 </tr>`;
-  
-  //=== Inner TOP ===
   var total1 = document.getElementById('total-1');
   var total2 = document.getElementById('total-2');
-  function innerChuyenDoiTotal2(){
-  document.getElementById('total-2').innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Giá trị chuyển đổi phát sinh:</div>
-  <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalGiaTriDonHang.toLocaleString()}</div>`;
-  }
-  function innerSoDuTotal2(){
-    document.getElementById('total-2').innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Số dư::</div>
-    <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalSoDuTrongThang.toLocaleString()}</div>`;
-  }
 }
 
 setTimeout(innerData, 500);
@@ -94,3 +87,12 @@ function thanhtoan(){
   innerSoDuTotal2()
 }
 
+//=== Inner TOP ===
+  function innerChuyenDoiTotal2(){
+  document.getElementById('total-2').innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Giá trị chuyển đổi phát sinh:</div>
+  <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalGiaTriDonHang.toLocaleString()}</div>`;
+  }
+  function innerSoDuTotal2(){
+    document.getElementById('total-2').innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Số dư::</div>
+    <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalSoDuTrongThang.toLocaleString()}</div>`;
+  }
