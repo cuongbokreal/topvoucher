@@ -56,17 +56,19 @@ function doanhthu(){
   document.getElementById("thanhtoan").className = "px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5";
   document.getElementsByClassName("doanhthu")[0].style.display='block';
   document.getElementsByClassName("thanhtoan")[0].style.display='none';
+  innerChuyenDoiTotal2()
 }
 function thanhtoan(){
   document.getElementById("thanhtoan").className = "px-3 border-b-2 border-blue-500 text-blue-500 dark:text-white dark:border-white pb-1.5";
   document.getElementById("doanhthu").className = "px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5";
   document.getElementsByClassName("doanhthu")[0].style.display='none';
   document.getElementsByClassName("thanhtoan")[0].style.display='block';
+  innerSoDuTotal2()
 }
+
 
 var total1 = document.getElementById('total-1');
 var total2 = document.getElementById('total-2');
-
 function innerChuyenDoiTotal2(){
   total2.innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Giá trị chuyển đổi phát sinh:</div>
   <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalGiaTriDonHang.toLocaleString()} VNĐ</div>`;
