@@ -62,8 +62,18 @@ function innerData(){
                   <td><span class="text-green font-w-500">${totalDaThanhToan.toLocaleString()}</span></td>
                   <td><span class="font-w-500">${totalSoDuTrongThang.toLocaleString()}</span></td>
                 </tr>`;
+  
+  //=== Inner TOP ===
   var total1 = document.getElementById('total-1');
   var total2 = document.getElementById('total-2');
+  function innerChuyenDoiTotal2(){
+  document.getElementById('total-2').innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Giá trị chuyển đổi phát sinh:</div>
+  <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalGiaTriDonHang.toLocaleString()}</div>`;
+  }
+  function innerSoDuTotal2(){
+    document.getElementById('total-2').innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Số dư::</div>
+    <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalSoDuTrongThang.toLocaleString()}</div>`;
+  }
 }
 
 setTimeout(innerData, 500);
@@ -84,11 +94,3 @@ function thanhtoan(){
   innerSoDuTotal2()
 }
 
-function innerChuyenDoiTotal2(){
-  document.getElementById('total-2').innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Giá trị chuyển đổi phát sinh:</div>
-  <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalGiaTriDonHang.toLocaleString()}</div>`;
-}
-function innerSoDuTotal2(){
-  document.getElementById('total-2').innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Số dư::</div>
-  <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalSoDuTrongThang.toLocaleString()}</div>`;
-}
