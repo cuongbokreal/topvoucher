@@ -28,6 +28,7 @@ totalDoanhThu.innerHTML = `<tr>
                 <td><span class="text-red font-w-500">${totalDaHuy.toLocaleString()}</span></td>
                 <td><span class="text-orange font-w-500">${totalChoXuly.toLocaleString()}</span></td>
               </tr>`;
+
 document.getElementById('innerHoaHong').innerHTML = parseFloat(totalHoaHong.toFixed(0)).toLocaleString() +' VNĐ';
 document.getElementById('innerChuyenDoi').innerHTML = (totalGiaTriDonHang.toLocaleString())+' VNĐ';
 
@@ -61,4 +62,16 @@ function thanhtoan(){
   document.getElementById("doanhthu").className = "px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5";
   document.getElementsByClassName("doanhthu")[0].style.display='none';
   document.getElementsByClassName("thanhtoan")[0].style.display='block';
+}
+
+var total1 = document.getElementById('total-1');
+var total2 = document.getElementById('total-2');
+
+function innerChuyenDoiTotal2(){
+  total2.innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Giá trị chuyển đổi phát sinh:</div>
+  <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalGiaTriDonHang.toLocaleString()} VNĐ</div>`;
+}
+function innerSoDuTotal2(){
+  total2.innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Số dư::</div>
+  <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalSoDu.toLocaleString()} VNĐ</div>`;
 }
