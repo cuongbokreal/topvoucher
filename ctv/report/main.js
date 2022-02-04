@@ -47,9 +47,9 @@ function innerData(){
                   <td><span class="font-w-500">Tổng</span></td>
                   <td><span class="font-w-500">${totalGiaTriDonHang.toLocaleString()}</span></td>
                   <td><span class="font-w-500">${totalHoaHong.toLocaleString()}</span></td>
-                  <td><span class="text-green font-w-500">${totalDuocThanhToan.toLocaleString()}</span></td>
-                  <td><span class="text-red font-w-500">${totalDaHuy.toLocaleString()}</span></td>
-                  <td><span class="text-orange font-w-500">${totalChoXuly.toLocaleString()}</span></td>
+                  <td><span class="font-w-500">${totalDuocThanhToan.toLocaleString()}</span></td>
+                  <td><span class="font-w-500">${totalDaHuy.toLocaleString()}</span></td>
+                  <td><span class="font-w-500">${totalChoXuly.toLocaleString()}</span></td>
                 </tr>`;
 
   //=== TOTAL TOP ===
@@ -61,8 +61,8 @@ function innerData(){
   var totalThanhToan = document.getElementById('totalThanhToan');
   totalThanhToan.innerHTML = `<tr>
                   <td><span class="font-w-500">Tổng</span></td>
-                  <td><span class="text-green font-w-500">${totalHoaHongDuocDuyet.toLocaleString()}</span></td>
-                  <td><span class="text-green font-w-500">${totalDaThanhToan.toLocaleString()}</span></td>
+                  <td><span class="font-w-500">${totalHoaHongDuocDuyet.toLocaleString()}</span></td>
+                  <td><span class="font-w-500">${totalDaThanhToan.toLocaleString()}</span></td>
                   <td><span class="font-w-500">${totalSoDuTrongThang.toLocaleString()}</span></td>
                 </tr>`;
   var total1 = document.getElementById('total-1');
