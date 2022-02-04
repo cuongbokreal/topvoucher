@@ -81,10 +81,6 @@ function thanhtoan(){
 
 var total1 = document.getElementById('total-1');
 var total2 = document.getElementById('total-2');
-var totalSoDu = 0;
-for(let i=0; i<dataThanhToan.length; i++){
-  totalSoDu += dataThanhToan[i].soDu;
-}
 
 function innerChuyenDoiTotal2(){
   total2.innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Giá trị chuyển đổi phát sinh:</div>
@@ -92,5 +88,5 @@ function innerChuyenDoiTotal2(){
 }
 function innerSoDuTotal2(){
   total2.innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Số dư::</div>
-  <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalSoDu.toLocaleString()} VNĐ</div>`;
+  <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalSoDuTrongThang.toLocaleString()} VNĐ</div>`;
 }
