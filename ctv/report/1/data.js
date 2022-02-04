@@ -3,8 +3,8 @@ var pubName = 'Trần Công Vinh';
 var dataDoanhThu = [
   {
    "nhaQuangCao":"Shopee",
-   "giaTriDonHang": 0 ,
-   "hoaHong": 0 ,
+   "giaTriDonHang": 5900 ,
+   "hoaHong": 12 ,
    "duocThanhToan": 0 ,
    "daHuy": 0 ,
    "choXuly": 0 ,
