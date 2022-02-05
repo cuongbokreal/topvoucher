@@ -17,8 +17,13 @@
             <option value="02">02</option>
 	    <option value="03">03</option>
 </select-->
-<p>Id của bạn là: <span id="innerId" style="color:red">Chưa nhập</span></p>
-<p>Đây là trang tạo Voucher cụ thể, chỉ dùng trong nội bộ, <span style="color:red; margin-top:10px;">TUYỆT ĐỐI KHÔNG SHARE LINK NÀY RA BÊN NGOÀI</span>, nếu ai share, phải chịu toàn bộ trách nhiệm!</p>
+<select id="idCtv" onchange="getIdCtv(this)">
+            <option value=""> -- Chọn -- </option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+	    <option value="03">03</option>
+</select>
+<p>Mã của bạn là: <span id="innerId" style="color:red">Chưa chọn</span></p>
 <script>
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1),sURLVariables = sPageURL.split('&'),sParameterName,i;
@@ -29,26 +34,17 @@ var getUrlParameter = function getUrlParameter(sParam) {
         }
     }
 };
-const accessKey1 = "5353514789844343379";
-const accessKey2 = "5768026262774830477"; 
 var id = getUrlParameter('id');
 var innerId = document.getElementById('innerId');
-if (id != 'undefined'){console.log(id)}
-            else{id = accessKey1}
-            if(!id){id = accessKey1}
-            if (id.length < 19){id = accessKey1}
-            if (id.length > 19){id = accessKey1}
-            if (id.length == 19){console.log('id là: ' + id)}
-if(id != accessKey1 && id.length == 19){
+if(id != 'undefined'){
 	innerId.innerText = id;
 	document.title = id + ' | Admin TrumGG'
 }
 var idCtv = document.getElementById('idCtv');
-/*
 function getIdCtv(obj){
 	var value = obj.value;
 	window.location.href = `//${window.location.hostname}${window.location.pathname}?id=${value}`;
-}*/
+}
 </script>
 
       <div id="layout-wrapper">
