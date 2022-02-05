@@ -1,18 +1,20 @@
 //=== DOANH THU ===
   var innerDoanhThu = document.getElementById('innerDoanhThu');
-  var totalGiaTriDonHang =0;var totalHoaHong =0;var totalDuocThanhToan =0;var totalDaHuy =0;var totalChoXuly =0;
+  var totalChuyenDoiPhatSinh =0; var totalGiaTriDonHang =0;var totalHoaHong =0;var totalDuocThanhToan =0;var totalDaHuy =0;var totalChoXuly =0;
   var choXuly = 0;
   let dataInnerDoanhThu = "";
   for(let i=0; i<dataDoanhThu.length;i++){
     choXuly = dataDoanhThu[i].hoaHong - dataDoanhThu[i].duocThanhToan - dataDoanhThu[i].daHuy;
     dataInnerDoanhThu += `<tr>
                   <td>${dataDoanhThu[i].nhaQuangCao}</td>
+                  <td>${dataDoanhThu[i].chuyenDoiPhatSinh}</td>
                   <td>${dataDoanhThu[i].giaTriDonHang.toLocaleString()}</td>
                   <td>${dataDoanhThu[i].hoaHong.toLocaleString()}</td>
                   <td><span class="text-green">${dataDoanhThu[i].duocThanhToan.toLocaleString()}</span></td>
                   <td><span class="text-red">${dataDoanhThu[i].daHuy.toLocaleString()}</span></td>
                   <td><span class="text-orange">${choXuly.toLocaleString()}</span></td>
                 </tr>`;
+    totalChuyenDoiPhatSinh += dataDoanhThu[i].chuyenDoiPhatSinh;
     totalGiaTriDonHang += dataDoanhThu[i].giaTriDonHang;
     totalHoaHong += dataDoanhThu[i].hoaHong;
     totalDuocThanhToan += dataDoanhThu[i].duocThanhToan;
@@ -45,6 +47,7 @@ function innerData(){
   var totalDoanhThu = document.getElementById('totalDoanhThu');
   totalDoanhThu.innerHTML = `<tr>
                   <td><span class="font-w-500">Tổng</span></td>
+                  <td><span class="font-w-500">${totalChuyenDoiPhatSinh.toLocaleString()}</span></td>
                   <td><span class="font-w-500">${totalGiaTriDonHang.toLocaleString()}</span></td>
                   <td><span class="font-w-500">${totalHoaHong.toLocaleString()}</span></td>
                   <td><span class="font-w-500">${totalDuocThanhToan.toLocaleString()}</span></td>
