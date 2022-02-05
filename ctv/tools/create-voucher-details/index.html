@@ -1,0 +1,130 @@
+
+<title>Tạo trang voucher chi tiết</title>
+<label>Title mã:</label>
+    <input placeholder="Nhập tiêu đề Voucher" onclick="this.select()" id="title"/>
+    <label>Mã voucher:</label>
+    <input placeholder="Nhập mã Voucher" onclick="this.select()" id="code"/>
+    <label>Mô tả mã:</label>
+    <input placeholder="Nhập mô tả Voucher" onclick="this.select()" id="des"/>
+    <label>Chọn sàn TMDT:</label>
+    <select id="href" style="height: auto;" onchange="change(this)">
+      <option id="shopeeHref" value="https://shopee.vn">SHOPEE</option>
+      <option id="lazadaHref" value="https://lazada.vn">LAZADA</option>
+      <option id="tikiHref" value="https://tiki.vn">TIKI</option>
+      <option id="sendoHref" value="https://sendo.vn">Sendo</option>
+     </select><br/><br/>
+    <label>Link Aff:</label>
+    <input value="https://shorten.asia/bp2tWYRP" placeholder="Nhập link Aff (Chọn sàn rồi thì tự động điền)" onclick="this.select()" id="link"/>
+    <label>Link Ảnh (nếu có):</label>  
+    <input placeholder="Link ảnh, chọn sàn rồi thì tự động link ảnh" onclick="this.select()" id="imgUrl"/>  
+	    <!--input id="inputVoucherDetailsLink" onclick="this.select()"-->
+	    <button onclick="getVoucherDetailsLink()" id="createDetails" class="button">Tạo Link Voucher Deatils (Tự động copy khi click tạo)</button>
+	    <a id="hrefDetails" target="_blank">Mở link đã tạo</a> 
+    <textarea id="inputVoucherDetailsLink" onclick="this.select()">Kết quả hiển thị ở đây, tự động sao chép khi bấm tạo link</textarea><br/>
+
+<script>
+  function getVoucherDetailsLink(){
+		var title = document.getElementById('title').value;
+	        var code = document.getElementById('code').value;
+	        var des = document.getElementById('des').value; 
+		var brand =  document.getElementById('href').value;
+		brand = brand.replaceAll("https://","");
+		title = title.replaceAll(code,"");
+		des = des.replaceAll(code,"");
+		document.getElementById('title').value = title;
+		document.getElementById('des').value = des;
+		title = title.replaceAll("%","%25");
+		des = des.replaceAll("%","%25");
+		title = title.replaceAll("&","%26");
+		des = des.replaceAll("&","%26");
+	        var imgUrl = document.getElementById('imgUrl').value; 
+		var link = document.getElementById('link').value;
+		ketQuaVoucherDetails = `https://trumgiamgia.tk/voucher-details/?vc_title=${title}&vc_des=${des}&vc_brand=${brand}&vc_code=${window.btoa(code)}&vc_brand_image=${imgUrl}&vc_href=${window.btoa(link)}`;
+		ketQuaVoucherDetails = ketQuaVoucherDetails.replaceAll(" ","%20");
+		hrefDetails.href = ketQuaVoucherDetails;
+		document.getElementById('inputVoucherDetailsLink').value = ketQuaVoucherDetails;
+		var copyText = document.getElementById("inputVoucherDetailsLink");
+		copyText.select();
+		copyText.setSelectionRange(0, 99999);
+		navigator.clipboard.writeText(copyText.value);
+		console.log("Copied the Link Details Voucher: " + copyText.value);
+	}
+	function change(){
+          var option = document.getElementById('href');
+          if (option.value === 'https://shopee.vn'){
+                link.value ="https://shorten.asia/bp2tWYRP";
+                imgSrc = listImgSrc[0];
+                imgUrl.value = listImgSrc[0];
+                hashTagBrand = `<a href="/search?q=shopee" target="_blank" alt="Mã giảm giá SHOPEE" title="shopee">#shopee</a>`;
+            }
+            else if (option.value === 'https://lazada.vn'){
+                link.value ="https://shorten.asia/YKhthjs1";
+                imgSrc = listImgSrc[1]; //lazada
+                imgUrl.value = listImgSrc[1];
+                hashTagBrand = `<a href="/search?q=lazada" target="_blank" alt="Mã giảm giá LAZADA" title="lazada">#lazada</a>`;
+            }
+            else if (option.value === 'https://tiki.vn'){
+                link.value ="https://shorten.asia/y4yWtUHc";
+                imgSrc = listImgSrc[2]; //tiki
+                imgUrl.value = listImgSrc[2];
+                hashTagBrand = `<a href="/search?q=tiki" target="_blank" alt="Mã giảm giá TIKI" title="tiki">#tiki</a>`;
+            }
+          else if (option.value === 'https://sendo.vn'){
+                link.value ="https://shorten.asia/yvmWMkvv";
+                imgSrc = listImgSrc[3]; //sendo
+                imgUrl.value = listImgSrc[3];
+                hashTagBrand = `<a href="/search?q=sendo" target="_blank" alt="Mã giảm giá SENDO" title="sendo">#sendo</a>`;
+            }
+          }
+</script>
+<style>
+img{max-width:200px;max-height:200px;margin-right:15px;border:1px solid black}
+          *{margin-top:10px;}
+          #href{height: 1.75rem;padding: 5px;margin-left: 10px;}
+          #ketqua{height:250px;width:100%;margin-top:10px;line-height: normal;}   
+            #4CAF50
+            div{padding:1px}
+          input {
+            font-family: "Roboto", sans-serif;
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+          }
+
+          .button {
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: #4CAF50;
+            border: 1px solid #f44296;
+            width: 100%;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            -webkit-transition: all 0.3 ease;
+            transition: all 0.3 ease;
+            cursor: pointer;
+          }
+          .button:hover,.button:active,.button:focus {
+            background: #43A047;
+          }
+          .button:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.09), 0 17px 50px 0 rgba(0,0,0,0.09);
+          }  
+
+          .message {
+            margin: 15px 0 0;
+            color: #b3b3b3;
+            font-size: 12px;
+          }
+          #trai{position:absolute;width:100%;overflow:hidden;max-width:100%;float:left;left:0}
+          #phai{position:absolute;width:100%;overflow:hidden;max-width:35%;float:right;right:0;border: 1px solid black;height: 100%;}
+          #phai iframe{overflow:hidden;max-height:fit-content;height: 100%;}
+          #linkButton{position:absolute;right:0;margin:10px;z-index:99}	
+</style>
+
