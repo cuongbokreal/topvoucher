@@ -29,6 +29,13 @@ var dataDoanhThu = [
    "duocThanhToan": 50000 ,
    "daHuy": 0 ,
   },
+  {
+   "nhaQuangCao":"Giới thiệu CTV",
+   "giaTriDonHang": 0 ,
+   "hoaHong": 0 ,
+   "duocThanhToan": 0 ,
+   "daHuy": 0 ,
+  },
 ];
 
 var dataThanhToan = [
