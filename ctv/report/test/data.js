@@ -19,9 +19,9 @@ var dataDoanhThu = [
   },
   {
    "nhaQuangCao":"Tiki",
-   "chuyenDoiPhatSinh": 0 ,
-   "giaTriDonHang": 0 ,
-   "hoaHong": 0 ,
+   "chuyenDoiPhatSinh": 1 ,
+   "giaTriDonHang": 22079000 ,
+   "hoaHong": 513000 ,
    "duocThanhToan": 0 ,
    "daHuy": 0 ,
   },
