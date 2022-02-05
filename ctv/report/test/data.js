@@ -6,8 +6,6 @@ var dataDoanhThu = [
    "giaTriDonHang": 0 ,
    "hoaHong": 0 ,
    "duocThanhToan": 0 ,
-   "daHuy": 0 ,
-   "choXuly": 0 ,
   },
   {
    "nhaQuangCao":"Lazada",
@@ -15,7 +13,6 @@ var dataDoanhThu = [
    "hoaHong": 0 ,
    "duocThanhToan": 0 ,
    "daHuy": 0 ,
-   "choXuly": 0 ,
   },
   {
    "nhaQuangCao":"Tiki",
@@ -23,7 +20,13 @@ var dataDoanhThu = [
    "hoaHong": 0 ,
    "duocThanhToan": 0 ,
    "daHuy": 0 ,
-   "choXuly": 0 ,
+  },
+  {
+   "nhaQuangCao":"Thưởng thêm (Bonus)",
+   "giaTriDonHang": 0 ,
+   "hoaHong": 50000 ,
+   "duocThanhToan": 50000 ,
+   "daHuy": 0 ,
   },
 ];
 
