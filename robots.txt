@@ -1,0 +1,12 @@
+User-agent: coccocbot-web
+User-agent: Mediapartners-Google
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: *
+Allow: /
+
+Disallow: /admin
+Disallow: /ctv/report/
+
+
+Sitemap: https://trumgiamgia.tk/feeds/sitemap.xml
