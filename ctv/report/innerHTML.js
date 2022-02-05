@@ -48,6 +48,7 @@ document.getElementById('main').innerHTML = `
             <thead id="tableTop">
               <tr>
                 <th>Advertisers</th>
+                <th>Chuyển đổi phát sinh</th>
                 <th>Giá trị đơn hàng</th>
                 <th>Hoa hồng</th>
                 <th>Được thanh toán</th>
