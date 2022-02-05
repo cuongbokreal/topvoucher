@@ -13,7 +13,7 @@ var dataDoanhThu = [
    "nhaQuangCao":"Lazada",
    "chuyenDoiPhatSinh": 31 ,
    "giaTriDonHang": 3113622 ,
-   "hoaHong": 113667 ,
+   "hoaHong": 125667 ,
    "duocThanhToan": 0 ,
    "daHuy": 33820 ,
   },
