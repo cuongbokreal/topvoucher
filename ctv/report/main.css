@@ -13,7 +13,7 @@ a {color: #2e86de;text-decoration: none;background-color: transparent;}
 header {height: 5rem; max-height:fit-content;}
 .header-menu {font-size: 1rem;line-height: 5rem;}
 .header-menu li {position: relative;-webkit-transform: translateZ(0); /** To avoid a flash when hover messages **/}
-.header-menu-tab {padding: 0 0.5rem;padding-right:1rem;display: block;font-size: 1.15rem;-webkit-transition: background .3s;transition: background .3s;}
+.header-menu-tab {padding: 0 0.5rem;padding-right:1rem;display: block;font-size: 1rem;-webkit-transition: background .3s;transition: background .3s;}
 .header-menu-tab:hover {background: #54a0ff;color:white;border-bottom: 3px solid #11a8ab;text-decoration: none;}
 .header-menu-tab .icon {padding-right: 15px;}
 .header-menu-number {position: absolute;line-height: 22px;padding: 0 6px;font-weight: 700;background: #e64c65;border-radius: 100%;top: 15px;right: 2px;-webkit-transition: all .3s linear;transition: all .3s linear;}
