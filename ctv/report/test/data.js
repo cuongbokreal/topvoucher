@@ -3,17 +3,17 @@ var pubName = 'Test hmu hmu';
 var dataDoanhThu = [
   {
    "nhaQuangCao":"Shopee",
-   "chuyenDoiPhatSinh": 0 ,
-   "giaTriDonHang": 0 ,
-   "hoaHong": 0 ,
+   "chuyenDoiPhatSinh": 76 ,
+   "giaTriDonHang": 6933287 ,
+   "hoaHong": 319897 ,
    "duocThanhToan": 0 ,
    "daHuy": 0 ,
   },
   {
    "nhaQuangCao":"Lazada",
-   "chuyenDoiPhatSinh": 0 ,
-   "giaTriDonHang": 0 ,
-   "hoaHong": 0 ,
+   "chuyenDoiPhatSinh": 31 ,
+   "giaTriDonHang": 3113622 ,
+   "hoaHong": 113667 ,
    "duocThanhToan": 0 ,
    "daHuy": 0 ,
   },
