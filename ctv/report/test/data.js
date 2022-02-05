@@ -6,6 +6,7 @@ var dataDoanhThu = [
    "giaTriDonHang": 0 ,
    "hoaHong": 0 ,
    "duocThanhToan": 0 ,
+   "daHuy": 0 ,
   },
   {
    "nhaQuangCao":"Lazada",
