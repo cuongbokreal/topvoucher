@@ -1,6 +1,7 @@
-
 <title>Tạo trang voucher chi tiết</title>
-<label>Title mã:</label>
+<label>CTV ID::</label>
+    <input placeholder="CTV ID" onclick="this.select()" id="ctvId"/>
+    <label>Title mã:</label>
     <input placeholder="Nhập tiêu đề Voucher" onclick="this.select()" id="title"/>
     <label>Mã voucher:</label>
     <input placeholder="Nhập mã Voucher" onclick="this.select()" id="code"/>
@@ -30,6 +31,7 @@
 		"https://content.accesstrade.vn/adv/1639727428_avatar_1639727428.png", //sendo
 	]
   function getVoucherDetailsLink(){
+	  	var ctvId = document.getElementById('ctvId').value;
 		var title = document.getElementById('title').value;
 	        var code = document.getElementById('code').value;
 	        var des = document.getElementById('des').value; 
@@ -45,7 +47,7 @@
 		des = des.replaceAll("&","%26");
 	        var imgUrl = document.getElementById('imgUrl').value; 
 		var link = document.getElementById('link').value;
-		ketQuaVoucherDetails = `https://trumgiamgia.tk/voucher-details/?vc_title=${title}&vc_des=${des}&vc_brand=${brand}&vc_code=${window.btoa(code)}&vc_brand_image=${imgUrl}&vc_href=${window.btoa(link)}`;
+		ketQuaVoucherDetails = `https://trumgiamgia.tk/voucher-details/?vc_title=${title}&vc_des=${des}&vc_brand=${brand}&vc_code=${window.btoa(code)}&vc_brand_image=${imgUrl}&vc_href=${window.btoa(link)}&ctvId=${ctvId}`;
 		ketQuaVoucherDetails = ketQuaVoucherDetails.replaceAll(" ","%20");
 		hrefDetails.href = ketQuaVoucherDetails;
 		document.getElementById('inputVoucherDetailsLink').value = ketQuaVoucherDetails;
