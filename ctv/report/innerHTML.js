@@ -75,7 +75,7 @@ document.getElementById('main').innerHTML = `
             <p class="text-gray-900 text-lg dark:text-white">Chính sách thanh toán:</p>
             <p>1. Để thanh toán, doanh thu của Publisher chỉ cần đạt tối thiểu hạn mức 100.000/1 kỳ thanh toán. Sẽ cộng dồn vào tháng tiếp theo nếu chưa đủ hạn mức thanh toán.</p>
             <p>2. Được thanh toán doanh thu phát sinh trực tiếp từ các Dịch vụ hợp tác cùng Bên A trong tháng T0 (từ ngày 1 -30 của tháng) vào ngày T1+22 (vào ngày 22 tháng sau).</p>
-            <p>Để thanh toán, hãy liên hệ <a target="_blank" href="https://www.facebook.com/107717958481657/?ref=cuongbokit.blogspot.com">Facebook Page</a> hoặc biểu tượng Messenger bên cạnh (T2-T7 8H-21H)</p>
+            <p>3. Để thanh toán, hãy liên hệ <a target="_blank" href="https://www.facebook.com/107717958481657/?ref=cuongbokit.blogspot.com">Facebook Page</a> hoặc biểu tượng Messenger bên cạnh (T2-T7 8H-21H)</p>
           </div>
         </div>
       </div>
