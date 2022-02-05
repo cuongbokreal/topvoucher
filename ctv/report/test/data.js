@@ -15,7 +15,7 @@ var dataDoanhThu = [
    "giaTriDonHang": 3113622 ,
    "hoaHong": 113667 ,
    "duocThanhToan": 0 ,
-   "daHuy": 0 ,
+   "daHuy": 33820 ,
   },
   {
    "nhaQuangCao":"Tiki",
