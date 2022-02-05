@@ -3,6 +3,7 @@ var pubName = 'Trần Công Vinh';
 var dataDoanhThu = [
   {
    "nhaQuangCao":"Shopee",
+   "chuyenDoiPhatSinh": 0 ,
    "giaTriDonHang": 5900 ,
    "hoaHong": 12 ,
    "duocThanhToan": 0 ,
@@ -11,6 +12,7 @@ var dataDoanhThu = [
   },
   {
    "nhaQuangCao":"Lazada",
+   "chuyenDoiPhatSinh": 0 ,
    "giaTriDonHang": 0 ,
    "hoaHong": 0 ,
    "duocThanhToan": 0 ,
@@ -19,11 +21,28 @@ var dataDoanhThu = [
   },
   {
    "nhaQuangCao":"Tiki",
+   "chuyenDoiPhatSinh": 0 ,
    "giaTriDonHang": 0 ,
    "hoaHong": 0 ,
    "duocThanhToan": 0 ,
    "daHuy": 0 ,
    "choXuly": 0 ,
+  },
+  {
+   "nhaQuangCao":"Thưởng thêm (Brand Bonus)",
+   "giaTriDonHang": 0 ,
+   "chuyenDoiPhatSinh":0 ,
+   "hoaHong": 0 ,
+   "duocThanhToan": 0 ,
+   "daHuy": 0 ,
+  },
+  {
+   "nhaQuangCao":"Giới thiệu CTV",
+   "chuyenDoiPhatSinh": 0 ,
+   "giaTriDonHang": 0 ,
+   "hoaHong": 0 ,
+   "duocThanhToan": 0 ,
+   "daHuy": 0 ,
   },
 ];
 
