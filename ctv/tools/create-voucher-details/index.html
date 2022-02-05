@@ -14,7 +14,7 @@
       <option id="sendoHref" value="https://sendo.vn">Sendo</option>
      </select><br/><br/>
     <label>Link Aff:</label>
-    <input value="https://shorten.asia/bp2tWYRP" placeholder="Nhập link Aff (Chọn sàn rồi thì tự động điền)" onclick="this.select()" id="link"/>
+    <input value="https://shopee.vn" placeholder="Nhập link Aff (Chọn sàn rồi thì tự động điền)" onclick="this.select()" id="link"/>
     <label>Link Ảnh (nếu có):</label>  
     <input placeholder="Link ảnh, chọn sàn rồi thì tự động link ảnh" onclick="this.select()" id="imgUrl"/>  
 	    <!--input id="inputVoucherDetailsLink" onclick="this.select()"-->
@@ -23,6 +23,12 @@
     <textarea id="inputVoucherDetailsLink" onclick="this.select()">Kết quả hiển thị ở đây, tự động sao chép khi bấm tạo link</textarea><br/>
 
 <script>
+	var listImgSrc = [
+		"https://content.accesstrade.vn/adv/1641888759_avatar_1641888759.gif", //shopee
+		"https://content.accesstrade.vn/adv/1640839741_avatar_1640839741.gif", //lazada
+		"https://content.accesstrade.vn/adv/1643343179_avatar_1643343179.gif", //tiki
+		"https://content.accesstrade.vn/adv/1639727428_avatar_1639727428.png", //sendo
+	]
   function getVoucherDetailsLink(){
 		var title = document.getElementById('title').value;
 	        var code = document.getElementById('code').value;
