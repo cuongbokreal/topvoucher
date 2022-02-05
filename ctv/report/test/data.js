@@ -23,7 +23,7 @@ var dataDoanhThu = [
    "daHuy": 0 ,
   },
   {
-   "nhaQuangCao":"Thưởng thêm (Bonus)",
+   "nhaQuangCao":"Thưởng thêm (Brand Bonus)",
    "giaTriDonHang": 0 ,
    "hoaHong": 50000 ,
    "duocThanhToan": 50000 ,
