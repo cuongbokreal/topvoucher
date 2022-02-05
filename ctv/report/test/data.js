@@ -3,6 +3,7 @@ var pubName = 'Test hmu hmu';
 var dataDoanhThu = [
   {
    "nhaQuangCao":"Shopee",
+   "chuyenDoiPhatSinh": 0 ,
    "giaTriDonHang": 0 ,
    "hoaHong": 0 ,
    "duocThanhToan": 0 ,
@@ -10,6 +11,7 @@ var dataDoanhThu = [
   },
   {
    "nhaQuangCao":"Lazada",
+   "chuyenDoiPhatSinh": 0 ,
    "giaTriDonHang": 0 ,
    "hoaHong": 0 ,
    "duocThanhToan": 0 ,
@@ -17,6 +19,7 @@ var dataDoanhThu = [
   },
   {
    "nhaQuangCao":"Tiki",
+   "chuyenDoiPhatSinh": 0 ,
    "giaTriDonHang": 0 ,
    "hoaHong": 0 ,
    "duocThanhToan": 0 ,
@@ -25,12 +28,14 @@ var dataDoanhThu = [
   {
    "nhaQuangCao":"Thưởng thêm (Brand Bonus)",
    "giaTriDonHang": 0 ,
+   "chuyenDoiPhatSinh": 1 ,
    "hoaHong": 50000 ,
    "duocThanhToan": 50000 ,
    "daHuy": 0 ,
   },
   {
    "nhaQuangCao":"Giới thiệu CTV",
+   "chuyenDoiPhatSinh": 2 ,
    "giaTriDonHang": 0 ,
    "hoaHong": 0 ,
    "duocThanhToan": 0 ,
