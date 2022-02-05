@@ -1,3 +1,4 @@
+*, ::after, ::before {box-sizing: border-box;}
 a {color: #2e86de;text-decoration: none;background-color: transparent;}
 .text-green, .text-success {color: #1dd1a1!important;}
 .text-danger, .text-red {color: #e55039!important;}
