@@ -4,7 +4,7 @@ var dataDoanhThu = [
   {
    "nhaQuangCao":"Shopee",
    "chuyenDoiPhatSinh": 2067 ,
-   "giaTriDonHang": 286933287 ,
+   "giaTriDonHang": 2856933287 ,
    "hoaHong": 128319897 ,
    "duocThanhToan": 0 ,
    "daHuy": 0 ,
