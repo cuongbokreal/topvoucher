@@ -49,7 +49,7 @@ header {height: 5rem; max-height:fit-content;}
   vertical-align:middle;
 }
 .total{position:absolute; top:2rem; right:2rem;font-size:1rem;display:block}
-.doanhthu #tableTop th{min-width:10rem;padding-right:0rem;padding-left:0rem;}
+.doanhthu #tableTop th{min-width:10.5rem;padding-right:0rem;padding-left:0rem;}
 #navmobile{display:block; position:relative}
 .table-wrapper  thead ,td {
   tetx-align:center;
