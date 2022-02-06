@@ -35,18 +35,18 @@ var dataDoanhThu = [
   },
   {
    "nhaQuangCao":"Giới thiệu CTV",
-   "chuyenDoiPhatSinh": 2 ,
+   "chuyenDoiPhatSinh": 150 ,
    "giaTriDonHang": 0 ,
-   "hoaHong": 50000 ,
-   "duocThanhToan": 50000 ,
+   "hoaHong": 3750000 ,
+   "duocThanhToan": 3750000 ,
    "daHuy": 0 ,
   },
 ];
 
 var dataThanhToan = [
   {"thangDoiSoat":"1-2022",
-   "hoaHongDuocDuyet": 0 ,
-   "daThanhToan": 0 ,
+   "hoaHongDuocDuyet": 3750000 ,
+   "daThanhToan": 3750000 ,
   },
   {"thangDoiSoat":"12-2021",
    "hoaHongDuocDuyet": 0 ,
