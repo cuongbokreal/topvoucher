@@ -50,7 +50,7 @@ function innerData(){
                   <td><span class="font-w-500">${totalChuyenDoiPhatSinh.toLocaleString()}</span></td>
                   <td><span class="font-w-500">${totalGiaTriDonHang.toLocaleString()}</span></td>
                   <td><span class="font-w-500">${totalHoaHong.toLocaleString()}</span></td>
-                  <td><span class="font-w-500">${totalDuocThanhToan.toLocaleString()}</span></td>
+                  <td><span class="font-w-500">${totalDuocDuyet.toLocaleString()}</span></td>
                   <td><span class="font-w-500">${totalDaHuy.toLocaleString()}</span></td>
                   <td><span class="font-w-500">${totalChoXuly.toLocaleString()}</span></td>
                 </tr>`;
