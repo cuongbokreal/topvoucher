@@ -27,7 +27,7 @@ var dataDoanhThu = [
   },
   {
    "nhaQuangCao":"Thưởng thêm (Brand Bonus)",
-   "giaTriDonHang": 0 ,
+   "giaTriDonHang": 70598246 ,
    "chuyenDoiPhatSinh": 168 ,
    "hoaHong": 6223000 ,
    "duocThanhToan": 0 ,
