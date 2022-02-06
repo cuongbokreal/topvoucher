@@ -46,7 +46,7 @@ var dataDoanhThu = [
 var dataThanhToan = [
   {"thangDoiSoat":"1-2022",
    "hoaHongDuocDuyet": 3750000 ,
-   "daThanhToan": 3750000 ,
+   "daThanhToan": 0 ,
   },
   {"thangDoiSoat":"12-2021",
    "hoaHongDuocDuyet": 0 ,
