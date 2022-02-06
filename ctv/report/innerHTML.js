@@ -51,7 +51,7 @@ document.getElementById('main').innerHTML = `
                 <th>Chuyển đổi phát sinh</th>
                 <th>Giá trị đơn hàng</th>
                 <th>Hoa hồng</th>
-                <th>Được thanh toán</th>
+                <th>Được duyệt</th>
                 <th>Đã hủy</th>
                 <th>Chờ xử lý</th>
               </tr>
