@@ -72,7 +72,7 @@ function innerData(){
   var total2 = document.getElementById('total-2');
 }
 
-setTimeout(innerData, 500);
+setTimeout(innerData, 100);
 
 //function chuyển tab
 function doanhthu(){
