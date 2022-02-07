@@ -67,7 +67,7 @@ document.getElementById('main').innerHTML = `
               <tr>
                 <th>Tháng đối soát</th>
                 <th>Tổng hoa hồng được duyệt</th>
-                <th>Đã Thanh Toán</th>
+                <th>Đã rút</th>
                 <th>Số dư trong tháng</th>
               </tr>
             </thead>
