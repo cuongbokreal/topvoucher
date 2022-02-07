@@ -3,6 +3,7 @@ a {color: #2e86de;text-decoration: none;background-color: transparent;}
 .text-green, .text-success {color: #1dd1a1!important;}
 .text-danger, .text-red {color: #e55039!important;}
 .text-orange, .text-warning {color: #fa983a!important;}
+.text-blue{color: #54a0ff!important;}
 .bg-info {background-color: #2e86de!important; color: #ffffff}
 .font-w-500{font-weight:500}
 .font-w-700{font-weight:700}
@@ -56,9 +57,9 @@ header {height: 5rem; max-height:fit-content;}
   padding:1rem 2rem 1rem 2rem;
   max-width: fit-content;
 }
-.text-blue{
-    color: #54a0ff!important;
-}
+#footer{text-align: center;font-size: 15px;font-weight: 600;margin-bottom: 10px;}
+
+/*=== Resivepone ===*/
 @media screen and (max-width: 640px){
   .table-wrapper:{position:relative; width:calc(100% + 40px);left:-20px;padding:0 20px; display:flex;overflow-x:scroll;overflow:scroll;}
   .table-wrapper:after{content:'';display:block;padding-left:20px}
