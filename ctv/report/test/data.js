@@ -3,7 +3,7 @@ var pubName = 'Test hmu hmu';
 var dataDoanhThu = [
   {
    "nhaQuangCao":"Shopee",
-   "chuyenDoiPhatSinh": 62067 ,
+   "chuyenDoiPhatSinh": 72067 ,
    "giaTriDonHang": 24856933287 ,
    "hoaHong": 928319897 ,
    "duocDuyet": 457624159 ,
@@ -11,7 +11,7 @@ var dataDoanhThu = [
   },
   {
    "nhaQuangCao":"Lazada",
-   "chuyenDoiPhatSinh": 19251 ,
+   "chuyenDoiPhatSinh": 22251 ,
    "giaTriDonHang": 7556913622 ,
    "hoaHong": 984425667 ,
    "duocDuyet": 514725486 ,
@@ -19,8 +19,8 @@ var dataDoanhThu = [
   },
   {
    "nhaQuangCao":"Tiki",
-   "chuyenDoiPhatSinh": 526 ,
-   "giaTriDonHang": 422079000 ,
+   "chuyenDoiPhatSinh": 1526 ,
+   "giaTriDonHang": 622079000 ,
    "hoaHong": 50513000 ,
    "duocDuyet": 25513000 ,
    "daHuy": 9045263 ,
