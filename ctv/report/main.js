@@ -1,5 +1,5 @@
 // === URL Product link ===
-var url_product_link = document.getElementBtId('url_product_link');
+var url_product_link = document.getElementById('url_product_link');
 var ctv_id = window.location.href.match(/\/[0-9].+\//g)[0].replaceAll(/\//g,'');
 url_product_link.innerHTML = `<a target="_blank" href="https://topvoucher.tk/ctv/tools/create/deep-link/?id=${ctv_id}">https://topvoucher.tk/ctv/tools/create/deep-link/?id=${ctv_id}</a>`;
 
