@@ -135,7 +135,9 @@
         navigator.clipboard.writeText(copyText.value);
         console.log("Copied: " + copyText.value);
         
-        document.getElementById('refreshFrame').click();
+        //document.getElementById('refreshFrame').click();
+        document.getElementById('short').src = '';
+        document.getElementById('short').src = 'https://bitly.com.vn/#short';
       }
       
       function refreshShort(){
