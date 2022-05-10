@@ -1,7 +1,7 @@
 // === URL Product link ===
 var url_product_link = document.getElementBtId('url_product_link');
-var product_link = window.location.href.match(/\/[0-9].+\//g)[0].replaceAll(/\//g,'');
-url_product_link.innerHTML = `<a target="_blank" href="${product_link}">${product_link}</a>`;
+var ctv_id = window.location.href.match(/\/[0-9].+\//g)[0].replaceAll(/\//g,'');
+url_product_link.innerHTML = `<a target="_blank" href="https://topvoucher.tk/ctv/tools/create/deep-link/?id=${ctv_id}">https://topvoucher.tk/ctv/tools/create/deep-link/?id=${ctv_id}</a>`;
 
 //=== DOANH THU ===
   var innerDoanhThu = document.getElementById('innerDoanhThu');
@@ -46,7 +46,7 @@ url_product_link.innerHTML = `<a target="_blank" href="${product_link}">${produc
   }
 
 function innerData(){
-  document.getElementById('innerPubName'). innerText = pubName;
+  document.getElementById('innerPubName').innerHTML = `${pubName}, id: <span class="text-red">${ctv_id}</span>`;
 //=== DOANH THU ===
   innerDoanhThu.innerHTML = dataInnerDoanhThu;
   var totalDoanhThu = document.getElementById('totalDoanhThu');
