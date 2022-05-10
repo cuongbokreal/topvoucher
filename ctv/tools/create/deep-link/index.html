@@ -85,7 +85,7 @@
             var evcode = linkSp.match(/evcode=?([a-zA-Z0-9]+)/g);
             var promotionId = linkSp.match(/&promotionId=?([0-9]+)/g);
             var signature = linkSp.match(/&signature=?([a-zA-Z0-9]+)/g);
-            finalLink = `https://shopee.vn/search?${evcode}${promotionId}${signature}`;
+            finalLink = encodeURIComponent(`https://shopee.vn/search?${evcode}${promotionId}${signature}`);
           }else 
           if(linkSp.match(/i\..+\?/g)){
             var idSp = linkSp.match(/i\..+\?/g)
