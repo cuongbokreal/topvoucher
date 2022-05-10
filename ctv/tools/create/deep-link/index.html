@@ -40,7 +40,7 @@
       var ctv_id = getUrlParameter('id');
       if (ctv_id.length >= 6){
         document.getElementById('ctv_id').innerHTML = ctv_id;
-      }
+      }else{window.location.href = 'https://topvoucher.tk/ctv/tools/create/deep-link/access/'}
       
       var source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=${window.location.href}&utm_content=createDeepLink`;
       
