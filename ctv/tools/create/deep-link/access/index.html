@@ -21,7 +21,7 @@
         var thbao = doucment.getElementById('thbao');
         
         function getIdCtv(){
-          var idCtv = doucment.getElementById('idCtv');
+          var idCtv = document.getElementById('idCtv');
           if(idCtv.value.length >= 6){
             window.location.replace(`https://topvoucher.tk/ctv/tools/create/deep-link/?id=${idCtv.value}`);
           }else{thbao.style.display = 'block';
