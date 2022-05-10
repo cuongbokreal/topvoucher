@@ -106,7 +106,7 @@
         if(linkSp.match(/lazada\.vn/g)){
           
           finalLink = linkSp.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g);
-          finalLink = finalLink[0].replace("laz_trackid"," ").replace(/(\?\s|&\s)/g,"");
+          finalLink = encodeURIComponent(finalLink[0].replace("laz_trackid"," ").replace(/(\?\s|&\s)/g,""));
           
           kq = `${deeplink}/${data_ad[1].camp_id}?url=${finalLink}${source}`;
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[1].name}</span></p> 
@@ -117,7 +117,7 @@
         if(linkSp.match(/tiki\.vn/g)){
           
           finalLink = linkSp.match(/http.+\?/g);
-          finalLink = finalLink[0].replaceAll("?","");
+          finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
           
           kq = `${deeplink}/${data_ad[2].camp_id}?url=${finalLink}${source}`;
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[2].name}</span></p> 
