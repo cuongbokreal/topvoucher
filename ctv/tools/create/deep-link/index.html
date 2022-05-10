@@ -15,7 +15,7 @@
         <button class="button" id="btnDeplink" onclick="createDeeplink()">Tạo</button>
         <textarea id="kqDeeplink" placeholder="Kết quả" onclick="this.select()"></textarea>
       
-      <p id="refreshFrame">Làm mới</p>
+      <p id="refreshFrame" onclick="refreshShort()">Làm mới</p>
       <div id="iframeShort">
         <iframe scrolling="no" id="short" src="https://bitly.com.vn/#short" ></iframe>
       </div>
@@ -86,11 +86,11 @@
         infor_camp.innerHTML = data_infor_camp;
       }
       
-      document.getElementById('refreshFrame').click() = function(){
+      function refreshShort(){
         //document.getElementById('short').contentWindow.location.reload();
         document.getElementById('short').src = '';
         document.getElementById('short').src = 'https://bitly.com.vn/#short';
-      })
+      }
     </script>
     <style>
       #main{padding:10px}
