@@ -12,7 +12,7 @@
         <p>Id CTV: <span class="text-danger" id="ctv_id"></span></p>
         <h4>Reg All TMDT</h4>
         <input id="linkSp" placeholder="Nhập link" onblur="createDeeplink()" onclick="this.select()"/>
-      <p id="thbao"></p>
+      <p id="thbao">Link sai hoặc lỗi nhập id</p>
         <button class="button" id="btnDeplink" onclick="createDeeplink()">Tạo</button>
         <textarea id="kqDeeplink" placeholder="Kết quả" onclick="this.select()"></textarea>
       
@@ -45,6 +45,7 @@
       var source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=${window.location.href}&utm_content=createDeepLink`;
       
       var deeplink = 'https://go.isclix.com/deep_link/5353514789844343379';
+      var thbao = document.getElementById('thbao');
       var btnDeplink = document.getElementById('btnDeplink');
       var kqDeeplink = document.getElementById('kqDeeplink');
       var infor_camp = document.getElementById('infor_camp');
@@ -65,6 +66,7 @@
       var kq = '';
       var data_infor_camp = '';
       function createDeeplink(){
+        thbao.style.display = 'none';
         var linkSp = document.getElementById('linkSp');
         if(linkSp.value.match(/shopee\.vn/g)){
           kq = `${deeplink}/${data_ad[0].camp_id}?url=${linkSp.value}${source}`;
@@ -83,7 +85,8 @@
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[2].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${linkSp.value}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
-        } else{document.getElementById('thbao').innerHTML = 'Link sai hoặc lỗi nhập id';}
+        } else{thbao.style.display = '';}
+        
         kqDeeplink.value = kq;
         infor_camp.innerHTML = data_infor_camp;
       }
