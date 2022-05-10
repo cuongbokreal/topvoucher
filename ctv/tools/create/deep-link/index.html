@@ -76,21 +76,49 @@
       var data_infor_camp = '';
       function createDeeplink(){
         thbao.style.display = 'none';
+        var finalLink = '';
         var linkSp = document.getElementById('linkSp');
         if(linkSp.value.match(/shopee\.vn/g)){
-          kq = `${deeplink}/${data_ad[0].camp_id}?url=${linkSp.value}${source}`;
+          
+          if(linkSp.match(/promotionId/g) || linkSp.match(/signature/g) || linkSp.match(/evcode/g)){
+            var evcode = linkSp.match(/evcode=?([a-zA-Z0-9]+)/g);
+            var promotionId = linkSp.match(/&promotionId=?([0-9]+)/g);
+            var signature = linkSp.match(/&signature=?([a-zA-Z0-9]+)/g);
+            finalLink = `https://shopee.vn/search?${evcode}${promotionId}${signature}`;
+          }else 
+          if(linkSp.match(/i\..+\?/g)){
+            var idSp = linkSp.match(/i\..+\?/g)
+            finalLink = `https://shopee.vn/TrumGiamGia.Tk-${idSp}`;
+            finalLink = finalLink.replaceAll("?","");
+          }else 
+          if(linkSp.match(/https:\/\/shopee.vn\/.+\?/)){
+            finalLink = linkSp.match(/https:\/\/shopee.vn\/.+\?/);
+            finalLink = finalLink.replaceAll("?","");
+          }
+          
+          kq = `${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`;
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[0].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${linkSp.value}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
         } else
+          
         if(linkSp.value.match(/lazada\.vn/g)){
-          kq = `${deeplink}/${data_ad[1].camp_id}?url=${linkSp.value}${source}`;
+          
+          finalLink = linkSp.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g);
+          finalLink = finalLink[0].replace("laz_trackid"," ").replace(/(\?\s|&\s)/g,"");
+          
+          kq = `${deeplink}/${data_ad[1].camp_id}?url=${finalLink}${source}`;
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[1].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${linkSp.value}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
         } else
+          
         if(linkSp.value.match(/tiki\.vn/g)){
-          kq = `${deeplink}/${data_ad[2].camp_id}?url=${linkSp.value}${source}`;
+          
+          finalLink = linkSp.match(/http.+\?/g);
+          finalLink = finalLink[0].replaceAll("?","");
+          
+          kq = `${deeplink}/${data_ad[2].camp_id}?url=${finalLink}${source}`;
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[2].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${linkSp.value}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
