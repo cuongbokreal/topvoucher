@@ -1,3 +1,8 @@
+// === URL Product link ===
+var url_product_link = document.getElementBtId('url_product_link');
+var product_link = window.location.href.match(/\/[0-9].+\//g)[0].replaceAll(/\//g,'');
+url_product_link.innerHTML = `<a target="_blank" href="${product_link}">${product_link}</a>`;
+
 //=== DOANH THU ===
   var innerDoanhThu = document.getElementById('innerDoanhThu');
   var totalChuyenDoiPhatSinh =0; var totalGiaTriDonHang =0;var totalHoaHong =0;var totalDuocDuyet =0;var totalDaHuy =0;var totalChoXuly =0;
