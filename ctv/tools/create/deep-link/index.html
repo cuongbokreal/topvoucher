@@ -37,7 +37,8 @@
           var btnGetId = document.getElementById('btnGetId');
           var thbao = document.getElementById('thbao');
           if(getCtvId.value.length >= 6){
-            window.location.replace(`${window.location.href.replaceAll(/\?.+/g,"")}?id=${getCtvId.value}`)
+            var url = window.location.href.replaceAll(/\?.+/g,"");
+            window.location.replace(`${url}?id=${getCtvId.value}`)
           }else{thbao.innerHTML = `<span style="color:red">Sai id</span>`;}
         </script>
         `;
