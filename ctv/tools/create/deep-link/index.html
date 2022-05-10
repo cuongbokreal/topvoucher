@@ -27,6 +27,21 @@
       }
   };
       var ctv_id = getUrlParameter('id');
+      if (ctv_id.length < 6){
+        document.getElementById('main').innerHTML = `
+        <input type="number" id="getCtvId" placeholder="Nhập id của bạn" />
+        <p id="thbao"></p>
+        <button class="button" id="btnGetId">Chuyển tới trang tạo link</button>
+        <script>
+          var getCtvId = document.getElementById('getCtvId');
+          var btnGetId = document.getElementById('btnGetId');
+          var thbao = document.getElementById('thbao');
+          if(getCtvId.value.length >= 6){
+            window.location.replace(`${window.location.href.replaceAll(/\?.+/g,"")}?id=${getCtvId.value}`)
+          }else{thbao.innerHTML = `<span style="color:red">Sai id</span>`;}
+        </script>
+        `;
+      }
       
       var source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=${window.location.href}&utm_content=createDeepLink`;
       
