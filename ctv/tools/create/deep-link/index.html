@@ -87,7 +87,7 @@
       }
       
       document.getElementById('refreshFrame').addEventListener("click", function(){
-        document.getElementById('short').setAttribute('src', 'https://bitly.com.vn/#short');
+        document.getElementById('short').contentWindow.location.reload();
       })
     </script>
     <style>
