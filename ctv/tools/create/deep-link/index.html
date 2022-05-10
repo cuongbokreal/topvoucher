@@ -16,8 +16,22 @@
     <div>
       
     <script>
+      var getUrlParameter = function getUrlParameter(sParam) {
+      var sPageURL = window.location.search.substring(1), sURLVariables = sPageURL.split('&'), sParameterName, i;
+      for (i = 0; i < sURLVariables.length; i++) {
+          sParameterName = sURLVariables[i].split('=');
+          if (sParameterName[0] === sParam) {
+              return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+          }
+      }
+  };
+      var ctv_id = getUrlParameter('id');
+      
+      var source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=${window.location.href}&utm_content=createDeepLink`;
+      
       const deeplink = 'https://go.isclix.com/deep_link/5353514789844343379';
       var btnDeplink = document.getElementById('btnDeplink');
+      var kqDeeplink = document.getElementById('kqDeeplink');
       var data_ad = [
         {"name":"Shopee",
          "reg":"shopee",
@@ -36,16 +50,15 @@
       function createDeeplink(){
         var linkSp = document.getElementById('linkSp');
         if(linkSp.value.match(/shopee\.vn/g)){
-          kq = `${deeplink}/${data_ad[0].camp_id}?url=${linkSp.value}`;
+          kq = `${deeplink}/${data_ad[0].camp_id}?url=${linkSp.value}${source}`;
         }
         if(linkSp.value.match(/lazada\.vn/g)){
-          kq = `${deeplink}/${data_ad[1].camp_id}?url=${linkSp.value}`;
+          kq = `${deeplink}/${data_ad[1].camp_id}?url=${linkSp.value}${source}`;
         }
         if(linkSp.value.match(/tiki\.vn/g)){
-          kq = `${deeplink}/${data_ad[2].camp_id}?url=${linkSp.value}`;
+          kq = `${deeplink}/${data_ad[2].camp_id}?url=${linkSp.value}${source}`;
         }
-        else{console.log('not')}
-        console.log(kq)
+        kqDeeplink.value = kq;
       }
     </script>
     <style>
