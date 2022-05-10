@@ -10,10 +10,44 @@
     <div id="main">
         <h4>Reg All TMDT</h4>
         <input id="linkSp" placeholder="Nhập link" onblur="createDeeplink()" onclick="this.select()"/>
-        <button class="button" id="" onclick="createDeeplink()">Tạo</button>
+        <button class="button" id="btnDeplink" onclick="createDeeplink()">Tạo</button>
         <textarea id="kqDeeplink" placeholder="Kết quả" onclick="this.select()"></textarea>
         </div>
     <div>
+      
+    <script>
+      const deeplink = 'https://go.isclix.com/deep_link/5353514789844343379';
+      var btnDeplink = document.getElementById('btnDeplink');
+      var data_ad = [
+        {"name":"Shopee",
+         "reg":"shopee",
+         "camp_id":"4751584435713464237"
+        },
+        {"name":"Lazada",
+         "reg":"lazada",
+         "camp_id":"5087153089503673507"
+        },
+        {"name":"Tiki",
+         "reg":"tiki",
+         "camp_id":"4348614231480407268"
+        },
+      ]
+      var kq = '';
+      function createDeeplink(){
+        var linkSp = document.getElementById('linkSp');
+        if(linkSp.value.match(/shopee\.vn/g)){
+          kq = `${deeplink}/${data_ad[0].camp_id}?url=${linkSp.value}`;
+        }
+        if(linkSp.value.match(/lazada\.vn/g)){
+          kq = `${deeplink}/${data_ad[1].camp_id}?url=${linkSp.value}`;
+        }
+        if(linkSp.value.match(/tiki\.vn/g)){
+          kq = `${deeplink}/${data_ad[2].camp_id}?url=${linkSp.value}`;
+        }
+        else{console.log('not')}
+        console.log(kq)
+      }
+    </script>
     <style>
       #main{padding:10px}
       input {font-family: "Roboto", sans-serif;outline: 0;background: #f2f2f2;width: 100%;height:80px;border: 0;margin: 10 0 35px;padding: 15px;box-sizing: border-box;font-size: 14px;}
