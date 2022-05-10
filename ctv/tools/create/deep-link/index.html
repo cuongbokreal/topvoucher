@@ -77,8 +77,9 @@
       function createDeeplink(){
         thbao.style.display = 'none';
         var finalLink = '';
-        var linkSp = document.getElementById('linkSp');
-        if(linkSp.value.match(/shopee\.vn/g)){
+        var linkSp = document.getElementById('linkSp').value;
+        
+        if(linkSp.match(/shopee\.vn/g)){
           
           if(linkSp.match(/promotionId/g) || linkSp.match(/signature/g) || linkSp.match(/evcode/g)){
             var evcode = linkSp.match(/evcode=?([a-zA-Z0-9]+)/g);
@@ -102,7 +103,7 @@
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
         } else
           
-        if(linkSp.value.match(/lazada\.vn/g)){
+        if(linkSp.match(/lazada\.vn/g)){
           
           finalLink = linkSp.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g);
           finalLink = finalLink[0].replace("laz_trackid"," ").replace(/(\?\s|&\s)/g,"");
@@ -113,7 +114,7 @@
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
         } else
           
-        if(linkSp.value.match(/tiki\.vn/g)){
+        if(linkSp.match(/tiki\.vn/g)){
           
           finalLink = linkSp.match(/http.+\?/g);
           finalLink = finalLink[0].replaceAll("?","");
