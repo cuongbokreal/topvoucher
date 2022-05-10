@@ -74,6 +74,8 @@ document.getElementById('main').innerHTML = `
             <thead id="innerThanhToan"></thead>
             <thead id="totalThanhToan" class="bg-info"></thead>
           </table><br/>
+          <p class="text-gray-900 text-lg dark:text-white">Tool Product link: <span id="url_product_link"></span></p>
+          <br/>
           <div class="doanhthu ">
             <p class="text-gray-900 text-lg dark:text-white">Chính sách thanh toán:</p>
             <p>1. Để thanh toán, doanh thu của Publisher chỉ cần đạt tối thiểu hạn mức 100.000/1 kỳ thanh toán. Sẽ cộng dồn vào tháng tiếp theo nếu chưa đủ hạn mức thanh toán.</p>
