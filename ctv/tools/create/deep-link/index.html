@@ -12,6 +12,7 @@
         <input id="linkSp" placeholder="Nhập link" onblur="createDeeplink()" onclick="this.select()"/>
         <button class="button" id="btnDeplink" onclick="createDeeplink()">Tạo</button>
         <textarea id="kqDeeplink" placeholder="Kết quả" onclick="this.select()"></textarea>
+        <div id="infor_camp"></div>
         </div>
     <div>
       
@@ -32,6 +33,7 @@
       const deeplink = 'https://go.isclix.com/deep_link/5353514789844343379';
       var btnDeplink = document.getElementById('btnDeplink');
       var kqDeeplink = document.getElementById('kqDeeplink');
+      var infor_camp = document.getElementById('infor_camp');
       var data_ad = [
         {"name":"Shopee",
          "reg":"shopee",
@@ -47,18 +49,23 @@
         },
       ]
       var kq = '';
+      var data_infor_camp = '';
       function createDeeplink(){
         var linkSp = document.getElementById('linkSp');
         if(linkSp.value.match(/shopee\.vn/g)){
           kq = `${deeplink}/${data_ad[0].camp_id}?url=${linkSp.value}${source}`;
+          data_infor_camp = `<p>Tên camp: ${data_ad[0].name}</p> <p>Link gốc: ${linkSp.value}</p> <p>Tracking link: ${kq}</p>`;
         }
         if(linkSp.value.match(/lazada\.vn/g)){
           kq = `${deeplink}/${data_ad[1].camp_id}?url=${linkSp.value}${source}`;
+          data_infor_camp = `<p>Tên camp: ${data_ad[1].name}</p> <p>Link gốc: ${linkSp.value}</p> <p>Tracking link: ${kq}</p>`;
         }
         if(linkSp.value.match(/tiki\.vn/g)){
           kq = `${deeplink}/${data_ad[2].camp_id}?url=${linkSp.value}${source}`;
+          data_infor_camp = `<p>Tên camp: ${data_ad[2].name}</p> <p>Link gốc: ${linkSp.value}</p> <p>Tracking link: ${kq}</p>`;
         }
         kqDeeplink.value = kq;
+        infor_camp.innerHTML = data_infor_camp;
       }
     </script>
     <style>
