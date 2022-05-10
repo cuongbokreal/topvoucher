@@ -69,15 +69,21 @@
         var linkSp = document.getElementById('linkSp');
         if(linkSp.value.match(/shopee\.vn/g)){
           kq = `${deeplink}/${data_ad[0].camp_id}?url=${linkSp.value}${source}`;
-          data_infor_camp = `<p>Tên camp: ${data_ad[0].name}</p> <p>Link gốc: ${linkSp.value}</p> <p>Tracking link: ${kq}</p>`;
+          data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[0].name}</span></p> 
+                             <p>Link gốc: <span style="color:red">${linkSp.value}</span></p> 
+                             <p>Tracking link: <span style="color:red">${kq}</span></p>`;
         }
         if(linkSp.value.match(/lazada\.vn/g)){
           kq = `${deeplink}/${data_ad[1].camp_id}?url=${linkSp.value}${source}`;
-          data_infor_camp = `<p>Tên camp: ${data_ad[1].name}</p> <p>Link gốc: ${linkSp.value}</p> <p>Tracking link: ${kq}</p>`;
+          data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[1].name}</span></p> 
+                             <p>Link gốc: <span style="color:red">${linkSp.value}</span></p> 
+                             <p>Tracking link: <span style="color:red">${kq}</span></p>`;
         }
         if(linkSp.value.match(/tiki\.vn/g)){
           kq = `${deeplink}/${data_ad[2].camp_id}?url=${linkSp.value}${source}`;
-          data_infor_camp = `<p>Tên camp: ${data_ad[2].name}</p> <p>Link gốc: ${linkSp.value}</p> <p>Tracking link: ${kq}</p>`;
+          data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[2].name}</span></p> 
+                             <p>Link gốc: <span style="color:red">${linkSp.value}</span></p> 
+                             <p>Tracking link: <span style="color:red">${kq}</span></p>`;
         }
         kqDeeplink.value = kq;
         infor_camp.innerHTML = data_infor_camp;
