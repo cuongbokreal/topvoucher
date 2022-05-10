@@ -11,6 +11,7 @@
         <p>Id CTV: <span class="text-danger" id="ctv_id"></span></p>
         <h4>Reg All TMDT</h4>
         <input id="linkSp" placeholder="Nhập link" onblur="createDeeplink()" onclick="this.select()"/>
+      <p id="thbao"></p>
         <button class="button" id="btnDeplink" onclick="createDeeplink()">Tạo</button>
         <textarea id="kqDeeplink" placeholder="Kết quả" onclick="this.select()"></textarea>
         <div id="infor_camp"></div>
@@ -61,19 +62,19 @@
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[0].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${linkSp.value}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
-        }
+        } else
         if(linkSp.value.match(/lazada\.vn/g)){
           kq = `${deeplink}/${data_ad[1].camp_id}?url=${linkSp.value}${source}`;
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[1].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${linkSp.value}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
-        }
+        } else
         if(linkSp.value.match(/tiki\.vn/g)){
           kq = `${deeplink}/${data_ad[2].camp_id}?url=${linkSp.value}${source}`;
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[2].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${linkSp.value}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
-        }
+        } else{document.getElementById('thbao').innerHTML = 'Link sai hoặc lỗi camp';}
         kqDeeplink.value = kq;
         infor_camp.innerHTML = data_infor_camp;
       }
