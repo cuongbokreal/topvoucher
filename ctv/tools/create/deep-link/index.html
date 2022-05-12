@@ -95,6 +95,8 @@
           if(linkSp.match(/https:\/\/shopee.vn\/.+\?/)){
             finalLink = linkSp.match(/https:\/\/shopee.vn\/.+\?/);
             finalLink = finalLink[0].replaceAll("?","");
+          }else{
+            finalLink = linkSp;
           }
           
           kq = `${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`;
