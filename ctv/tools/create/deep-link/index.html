@@ -95,13 +95,13 @@
           if(linkSp.match(/i\..+\?/g)){
             var idSp = linkSp.match(/i\..+\?/g)
             finalLink = `https://shopee.vn/TrumGiamGia.Tk-${idSp}`;
-            finalLink = finalLink.replaceAll("?","");
+            finalLink = encodeURIComponent(finalLink.replaceAll("?",""));
           }else 
           if(linkSp.match(/https:\/\/shopee.vn\/.+\?/)){
             finalLink = linkSp.match(/https:\/\/shopee.vn\/.+\?/);
-            finalLink = finalLink[0].replaceAll("?","");
+            finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
           }else{
-            finalLink = linkSp;
+            finalLink = encodeURIComponent(linkSp);
           }
           
           kq = `${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`;
