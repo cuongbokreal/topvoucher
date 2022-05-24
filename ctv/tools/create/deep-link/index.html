@@ -101,7 +101,8 @@
             finalLink = linkSp.match(/https:\/\/shopee.vn\/.+\?/);
             finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
           }else{
-            finalLink = encodeURIComponent(linkSp);
+            finalLink = linkSp.match(/http.+\?/g);
+            finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
           }
           
           kq = `${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`;
