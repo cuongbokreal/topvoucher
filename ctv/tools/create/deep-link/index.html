@@ -102,7 +102,7 @@
             finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
           }else{
             finalLink = linkSp.match(/http.+/g);
-            finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
+            finalLink = encodeURIComponent(finalLink[0].replaceAll(/\?.+/g,""));
           }
           
           kq = `${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`;
