@@ -123,6 +123,13 @@ var getUrlParameter = function getUrlParameter(sParam) {
         copyText.setSelectionRange(0, 99999);
         navigator.clipboard.writeText(copyText.value);
         console.log("Copied: " + copyText.value);
+            
+            toast({
+                  title: 'Thành công',
+                  message: `Đã copy Deeplink`,
+                  type: "success",
+                  duration: 3000
+            });
         
         //document.getElementById('refreshFrame').click();
         document.getElementById('short').src = '';
