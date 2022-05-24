@@ -10,7 +10,9 @@ input {font-family: "Roboto", sans-serif;
       box-sizing: border-box;
       font-size: 14px;
 }
-.button {font-family: "Roboto", sans-serif;
+.button {
+      font-family: "Roboto", sans-serif;
+      margin: 10px 0 10px 0;
       text-transform: uppercase;
       outline: 0;
       background: #4CAF50;
