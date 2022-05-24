@@ -106,7 +106,7 @@
           
           kq = `${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`;
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[0].name}</span></p> 
-                             <p>Link gốc: <span style="color:red">${finalLink}</span></p> 
+                             <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
         } else
           
@@ -133,7 +133,7 @@
           
           kq = `${deeplink}/${data_ad[1].camp_id}?url=${finalLink}${source}`;
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[1].name}</span></p> 
-                             <p>Link gốc: <span style="color:red">${finalLink}</span></p> 
+                             <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
         } else
           
@@ -144,7 +144,7 @@
           
           kq = `${deeplink}/${data_ad[2].camp_id}?url=${finalLink}${source}`;
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[2].name}</span></p> 
-                             <p>Link gốc: <span style="color:red">${finalLink}</span></p> 
+                             <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
         } else{thbao.style.display = '';}
         
