@@ -170,10 +170,12 @@
         document.getElementById('short').src = 'https://bitly.com.vn/#short';
       }
       function copyValue(s){
-        s.focus();
-        s.select();
-        document.execCommand("Copy");
-        console.log(`Copied: ${s.value}`);
+        if(s.value.length >= 1){
+          s.focus();
+          s.select();
+          document.execCommand("Copy");
+          console.log(`Copied: ${s.value}`);
+        }else{console.log('Không có dữ liệu để copy!' + s)}
       }
     </script>
     <style>
