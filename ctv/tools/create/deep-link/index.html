@@ -113,10 +113,23 @@
         if(linkSp.match(/lazada\.vn/g)){
           if(linkSp.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g)){
             finalLink = linkSp.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g);
+            //add '?referer=at-kol'
+            if(finalLink.match(/(\?|\&)referer=at-kol/g)){}
+            else{ 
+              if(finalLink.match(/\?/g)){finalLink += '&referer=at-kol';}
+              else{finalLink += '?referer=at-kol';}
+                }
             finalLink = encodeURIComponent(finalLink[0].replace("laz_trackid"," ").replace(/(\?\s|&\s)/g,""));
           }else{
+            //add '?referer=at-kol'
+            if(finalLink.match(/(\?|\&)referer=at-kol/g)){}
+            else{ 
+              if(finalLink.match(/\?/g)){finalLink += '&referer=at-kol';}
+              else{finalLink += '?referer=at-kol';}
+                }
             finalLink = encodeURIComponent(linkSp);
           }
+          
           
           kq = `${deeplink}/${data_ad[1].camp_id}?url=${finalLink}${source}`;
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[1].name}</span></p> 
