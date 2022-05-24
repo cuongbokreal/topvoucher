@@ -101,7 +101,7 @@
             finalLink = linkSp.match(/https:\/\/shopee.vn\/.+\?/);
             finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
           }else{
-            finalLink = linkSp.match(/http.+\?/g);
+            finalLink = linkSp.match(/http.+/g);
             finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
           }
           
