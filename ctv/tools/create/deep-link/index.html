@@ -12,7 +12,7 @@
         <p>Id CTV: <span class="text-danger" id="ctv_id"></span></p>
         <h4>Tạo Deeplink</h4>
         <input id="linkSp" placeholder="Nhập link gốc" onblur="createDeeplink()" onclick="this.select()"/>
-      <p id="thbao">Link sai hoặc lỗi nhập id</p>
+      <p id="thbao" class="text-red">Link sai hoặc lỗi nhập id</p>
         <button class="button" id="btnDeplink" onclick="createDeeplink()">Tạo</button>
         <textarea id="kqDeeplink" placeholder="Kết quả (Nhấn để copy)" onclick="copyValue(this)" readonly></textarea>
       
