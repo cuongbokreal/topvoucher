@@ -1,0 +1,20 @@
+#main{padding:10px}
+      input {font-family: "Roboto", sans-serif;outline: 0;background: #f2f2f2;width: 100%;height:65px; border: 1px solid #cecece; margin: 10 0 15px;padding: 15px;box-sizing: border-box;font-size: 14px;}
+      .button {font-family: "Roboto", sans-serif;text-transform: uppercase;outline: 0;background: #4CAF50;border: 1px solid #ffffff00 ;width: 25%;padding: 15px;color: #FFFFFF;font-size: 14px;-webkit-transition: all 0.3 ease;transition: all 0.3 ease;cursor: pointer;}
+      .button:hover,.button:active,.button:focus {background: #43A047;}
+      .button:hover {box-shadow: 0 12px 16px 0 rgba(0,0,0,0.09), 0 17px 50px 0 rgba(0,0,0,0.09);}  
+      textarea{width:100%;height:60px;margin-top:10px;background: #e5e5e5; border: 1px solid #cecece; max-width: 100%;}
+      .text-danger, .text-red {color: #e55039!important;}
+      
+      #linkSp{padding: 0.375rem 0.75rem;font-size: .875rem;font-weight: 400;line-height: 1.5;color: #4f5467;background-color: #fff;background-clip: padding-box;border: 1px solid #bfbfbf;border-radius: 2px;outline:none}
+      #kqDeeplink{background-color: #e9ecef;color: #4f5467;padding: 0.375rem 0.75rem;border: none;border-radius: 2px;outline: none; max-height: 3rem; min-width: 100%;}
+      
+      #thbao{display:none}
+      #refreshFrame{cursor:pointer; margin:10px 0 0 5px; color: #0abde3!important;}
+      #iframeShort{border: 1px solid #cecece;margin-top: 25px;}
+      #short{width:100%;height: 25%; border: 0; overflow: hidden;}
+      #infor_camp{line-break: anywhere;}
+      
+      @media screen and (max-width:640px){
+        #short{height: 30%}
+      }
