@@ -116,6 +116,8 @@ var getUrlParameter = function getUrlParameter(sParam) {
         
         kqDeeplink.value = kq;
         infor_camp.innerHTML = data_infor_camp;
+            
+            if(thbao.style.display = 'none'){toast({title: 'Thành công', message: `Đã copy Deeplink`, type: "success", duration: 5000});}
         
         //copy
         var copyText = document.getElementById('kqDeeplink');
@@ -124,13 +126,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
         navigator.clipboard.writeText(copyText.value);
         console.log("Copied: " + copyText.value);
             
-            toast({
-                  title: 'Thành công',
-                  message: `Đã copy Deeplink`,
-                  type: "success",
-                  duration: 3000
-            });
-        
+            
         //document.getElementById('refreshFrame').click();
         document.getElementById('short').src = '';
         document.getElementById('short').src = 'https://bitly.com.vn/#short';
