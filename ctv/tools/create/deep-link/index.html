@@ -14,7 +14,7 @@
         <input id="linkSp" placeholder="Nhập link gốc" onblur="createDeeplink()" onclick="this.select()"/>
       <p id="thbao">Link sai hoặc lỗi nhập id</p>
         <button class="button" id="btnDeplink" onclick="createDeeplink()">Tạo</button>
-        <textarea id="kqDeeplink" placeholder="Kết quả" onclick="this.select()"></textarea>
+        <textarea id="kqDeeplink" placeholder="Kết quả (Nhấn để copy)" onclick="copyValue(this)"></textarea>
       
       
       <div id="iframeShort">
@@ -24,8 +24,13 @@
       <!-- https://bom.so/#main-form -->
       
         <div id="infor_camp"></div>
+      <div>
+        <b>Lưu ý:</b>
+        <p>Khi nhấn tạo link đã tự động copy Deelink.</p>
+        <p>Link rút gọn chỉ tồn tại trong 20 ngày.</p>
+      </div>
         </div>
-    <div>
+
       
     <script>
       var getUrlParameter = function getUrlParameter(sParam) {
@@ -146,6 +151,12 @@
         //document.getElementById('short').contentWindow.location.reload();
         document.getElementById('short').src = '';
         document.getElementById('short').src = 'https://bitly.com.vn/#short';
+      }
+      function copyValue(s){
+        s.focus();
+        s.select();
+        document.execCommand("Copy");
+        console.log(s.value);
       }
     </script>
     <style>
