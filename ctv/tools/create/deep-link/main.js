@@ -117,7 +117,9 @@ var getUrlParameter = function getUrlParameter(sParam) {
             else {toast({title: 'Lỗi', message: `Đã có lỗi xảy ra`, type: "error", duration: 5000});}
         
         //copy
-        var copyText = document.getElementById('kqDeeplink');
+	      
+	if(kqShortlink.value >= 6){ var copyText = document.getElementById('kqShortlink');}
+	      else{var copyText = document.getElementById('kqDeeplink');}
         copyText.select();
         copyText.setSelectionRange(0, 99999);
         navigator.clipboard.writeText(copyText.value);
@@ -157,6 +159,7 @@ function get_short_url(bitly_token, longUrl){
   .then((response) => response.json())
   .then((data) => {
   	if(data.status_code == 200 && data.status_txt == 'OK' && data.data.url.length >= 8){kqShortlink.value = data.data.url}
+	  else{kqShortlink.value = '';}
 	console.log(data)
   })
 }
