@@ -28,6 +28,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
       var btnDeplink = document.getElementById('btnDeplink');
       var kqDeeplink = document.getElementById('kqDeeplink');
 	var kqShortlink = document.getElementById('kqShortlink');
+	var qrDeeplink = document.getElementById('qrDeeplink');
       var infor_camp = document.getElementById('infor_camp');
       var data_ad = [
         {"name":"Shopee",
@@ -118,8 +119,12 @@ var getUrlParameter = function getUrlParameter(sParam) {
         
         //copy
 	      
-	if(kqShortlink.value >= 6){ var copyText = document.getElementById('kqShortlink');}
-	      else{var copyText = document.getElementById('kqDeeplink');}
+	if(kqShortlink.value >= 6){ 
+		var copyText = document.getElementById('kqShortlink');
+	}
+	else{
+		var copyText = document.getElementById('kqDeeplink');
+	}
         copyText.select();
         copyText.setSelectionRange(0, 99999);
         navigator.clipboard.writeText(copyText.value);
@@ -160,6 +165,13 @@ function get_short_url(bitly_token, longUrl){
   .then((data) => {
   	if(data.status_code == 200 && data.status_txt == 'OK' && data.data.url.length >= 8){kqShortlink.value = data.data.url}
 	  else{kqShortlink.value = '';}
+	  
+	if(kqShortlink.value >= 6){ 
+		qrDeeplink.src = `https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${data.data.url}`
+	}
+	else{
+		qrDeeplink.src = `https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${kq}`
+	}
 	console.log(data)
   })
 }
