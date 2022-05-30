@@ -1,3 +1,5 @@
+html, body{font-family: 'Playfair Display';}
+
 #main{padding:10px}
 input {font-family: "Roboto", sans-serif;
       outline: 0;
