@@ -70,7 +70,8 @@ textarea{
       min-height: 3rem;
       min-width: 100%;
 }
-      
+#qrDeeplink{max-width:25%}
+
 #thbao{display:none}
 #refreshFrame{
        cursor:pointer;
