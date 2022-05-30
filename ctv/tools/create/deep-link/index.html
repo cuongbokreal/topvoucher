@@ -27,8 +27,11 @@
       
       <div id="ketqua">
         <label class="titleDiv">Kết quả (deeplink):</label>
-        <textarea id="kqDeeplink" placeholder="Link sản phẩm (Nhấn để copy)" onclick="copyValue(this)" readonly></textarea>
-        <textarea id="kqShortlink" placeholder="Link rút gọn (Nhấn để copy)" onclick="copyValue(this)" readonly></textarea>
+        <div>
+          <textarea id="kqDeeplink" placeholder="Link sản phẩm (Nhấn để copy)" onclick="copyValue(this)" readonly></textarea>
+          <textarea id="kqShortlink" placeholder="Link rút gọn (Nhấn để copy)" onclick="copyValue(this)" readonly></textarea>
+          <img id="qrDeeplink" src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=TopVoucher" />
+        </div>
       </div>
       
       <div id="createShort">
