@@ -76,7 +76,7 @@ document.getElementById('main').innerHTML = `
           </table>
           <p style="font-size: 10px;">* Đơn hàng sẽ được cập nhật vào 12H-22H hôm sau</p>
           <br/>
-          <p class="form-control text-gray-900 text-lg dark:text-white">Tool Product link: <span id="url_product_link"></span></p>
+          <p class="form-control text-gray-900 text-lg dark:text-white" style="background-color: #e9ecef">Tool Product link: <span id="url_product_link"></span></p>
           <br/>
           <div class="doanhthu ">
             <p class="text-gray-900 text-lg dark:text-white">Chính sách thanh toán:</p>
