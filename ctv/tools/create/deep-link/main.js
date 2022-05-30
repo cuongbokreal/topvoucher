@@ -74,12 +74,11 @@ var getUrlParameter = function getUrlParameter(sParam) {
 		kq = `${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`;
 		get_short_url(bitly_token, kq); //get shortlink nếu có
 		
-          data_infor_camp = `<div id="in4Camp"><label class="titleDiv">Thông tin chiến dịch:</label>
+          data_infor_camp = `<label class="titleDiv">Thông tin chiến dịch:</label>
 	  		     <p>Tên camp: <span style="color:red">${data_ad[0].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>
-			     <p>QR Code:</p><img id="qrDeeplink" src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${kq}" />
-			     </div>`;
+			     <p>QR Code:</p><img id="qrDeeplink" src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${kq}" />`;
         } else
           
         if(linkSp.match(/lazada\.vn/g)){
@@ -96,14 +95,12 @@ var getUrlParameter = function getUrlParameter(sParam) {
           	kq = `${deeplink}/${data_ad[1].camp_id}?url=${finalLink}${source}`;
 		get_short_url(bitly_token, kq); //get shortlink nếu có
 		
-          data_infor_camp = `<div id="in4Camp"><label class="titleDiv">Thông tin chiến dịch:</label>
+          data_infor_camp = `<label class="titleDiv">Thông tin chiến dịch:</label>
 	  		     <p>Tên camp: <span style="color:red">${data_ad[1].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>
-			     <p>QR Code:</p><img id="qrDeeplink" src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${kq}" />
-			     </div>`;
+			     <p>QR Code:</p><img id="qrDeeplink" src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${kq}" />`;
         } else
-          
         if(linkSp.match(/tiki\.vn/g)){
           
           finalLink = linkSp.match(/http.+\?/g);
@@ -112,12 +109,11 @@ var getUrlParameter = function getUrlParameter(sParam) {
           	kq = `${deeplink}/${data_ad[2].camp_id}?url=${finalLink}${source}`;
 		get_short_url(bitly_token, kq); //get shortlink nếu có
 		
-          data_infor_camp = `<div id="in4Camp"><label class="titleDiv">Thông tin chiến dịch:</label>
+          data_infor_camp = `<label class="titleDiv">Thông tin chiến dịch:</label>
 	  		     <p>Tên camp: <span style="color:red">${data_ad[2].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>
-			     <p>QR Code:</p><img id="qrDeeplink" src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${kq}" />
-			     </div>`;
+			     <p>QR Code:</p><img id="qrDeeplink" src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${kq}" />`;
         } else{thbao.style.display = 'block';}
         
         kqDeeplink.value = kq;
