@@ -27,6 +27,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
       var thbao = document.getElementById('thbao');
       var btnDeplink = document.getElementById('btnDeplink');
       var kqDeeplink = document.getElementById('kqDeeplink');
+	var kqShortlink = document.getElementById('kqShortlink');
       var infor_camp = document.getElementById('infor_camp');
       var data_ad = [
         {"name":"Shopee",
@@ -69,9 +70,8 @@ var getUrlParameter = function getUrlParameter(sParam) {
             finalLink = linkSp.match(/http.+/g);
             finalLink = encodeURIComponent(finalLink[0].replaceAll(/\?.+/g,""));
           }
-          
-	if(bitly_token.length >= 2){get_short_url(bitly_token,`${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`)}
-	else{kq = `${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`;}
+		kq = `${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`;
+		get_short_url(bitly_token, kq)
 		
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[0].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
@@ -149,10 +149,18 @@ function addRefKolLazada(c){
 }
 
 function get_short_url(bitly_token, longUrl){
+  fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token}&longUrl=${encodeURIComponent(longUrl)}&format=json`)
+  .then((response) => response.json())
+  .then((data) => {
+  	if(get_in4_short_url(bitly_token, kq).status_code == 200 && get_in4_short_url(bitly_token, kq).status_txt == 'OK' && get_in4_short_url(bitly_token, kq).data.url.length >= 8){kqShortlink.value == data.data.url}
+	console.log(data)
+  })
+}
+
+function get_in4_short_url(bitly_token, longUrl){
   fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token}&longUrl=${longUrl}&format=json`)
   .then((response) => response.json())
   .then((data) => {
-  	kq = data.data.url
-	console.log(data)
+  	return data
   })
 }
