@@ -71,7 +71,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
             finalLink = encodeURIComponent(finalLink[0].replaceAll(/\?.+/g,""));
           }
 		kq = `${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`;
-		get_short_url(bitly_token, kq)
+		get_short_url(bitly_token, kq); //get shortlink nếu có
 		
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[0].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
@@ -89,7 +89,9 @@ var getUrlParameter = function getUrlParameter(sParam) {
           }
           
           
-          kq = `${deeplink}/${data_ad[1].camp_id}?url=${finalLink}${source}`;
+          	kq = `${deeplink}/${data_ad[1].camp_id}?url=${finalLink}${source}`;
+		get_short_url(bitly_token, kq); //get shortlink nếu có
+		
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[1].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
@@ -100,7 +102,9 @@ var getUrlParameter = function getUrlParameter(sParam) {
           finalLink = linkSp.match(/http.+\?/g);
           finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
           
-          kq = `${deeplink}/${data_ad[2].camp_id}?url=${finalLink}${source}`;
+          	kq = `${deeplink}/${data_ad[2].camp_id}?url=${finalLink}${source}`;
+		get_short_url(bitly_token, kq); //get shortlink nếu có
+		
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[2].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
