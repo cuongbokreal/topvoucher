@@ -162,9 +162,12 @@ function get_short_url(bitly_token, longUrl){
 }
 
 function get_in4_short_url(bitly_token, longUrl){
-  fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token}&longUrl=${longUrl}&format=json`)
-  .then((response) => response.json())
-  .then((data) => {
-  	return data
-  })
+	if(longUrl.length >= 12 && longUrl != lastLongUrl){
+	  fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token}&longUrl=${longUrl}&format=json`)
+	  .then((response) => response.json())
+	  .then((data) => {
+		return data
+	  })
+	}
+	var lastLongUrl = longUrl;
 }
