@@ -26,18 +26,18 @@
         <textarea id="kqDeeplink" placeholder="Kết quả (Nhấn để copy)" onclick="copyValue(this)" readonly></textarea>
       </div>
       
-      <div id="iframeShort">
-        <p>Mở trong tab mới: (<a target="_blank" rel="nofollow" href="https://bitly.com/">https://bitly.com/</a>, <a target="_blank" rel="nofollow" href="https://bitly.com.vn/#short">https://bitly.com.vn/</a>)</p>
-        
+      <div id="createShort">
         <p>Tạo ShortLink:<span id="refreshFrame" onclick="refreshShort()">Làm mới <i class="fa-solid fa-arrows-rotate"></i></span>. </p>
-        
-        <iframe scrolling="no" id="short" src="#" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-        <script>
-          var short = document.getElementById('short');
-          short.setAttribute('sandbox','allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation');
-          short.src = 'https://bitly.com.vn/#short';
-          
-        </script>
+        <div id="iframeShort">
+          <p>Mở trong tab mới: (<a target="_blank" rel="nofollow" href="https://bitly.com/">https://bitly.com/</a>, <a target="_blank" rel="nofollow" href="https://bitly.com.vn/#short">https://bitly.com.vn/</a>)</p>
+
+          <iframe scrolling="no" id="short" src="#" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+          <script>
+            var short = document.getElementById('short');
+            short.setAttribute('sandbox','allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation');
+            short.src = 'https://bitly.com.vn/#short';
+          </script>
+        </div>
       </div>
       <!-- https://bom.so/#main-form -->
       
