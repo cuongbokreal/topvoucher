@@ -16,11 +16,14 @@
   <body>
     <div id="main">
         <p>Id CTV: <span class="text-danger" id="ctv_id"></span></p>
+      
+      <div id="form">
         <h4>Tạo link sản phẩm</h4>
         <textarea id="linkSp" placeholder="Nhập link gốc" onclick="this.select()"></textarea>
-      <p id="thbao" class="text-red">Link sai hoặc lỗi nhập id</p>
+        <p id="thbao" class="text-red">Link sai hoặc lỗi nhập id</p>
         <button class="button" id="btnDeplink" onclick="createDeeplink()">Tạo</button>
-     
+      </div>
+      
       <div id="ketqua">
         <label>Kết quả (deeplink):</label>
         <textarea id="kqDeeplink" placeholder="Kết quả (Nhấn để copy)" onclick="copyValue(this)" readonly></textarea>
