@@ -152,7 +152,7 @@ function get_short_url(bitly_token, longUrl){
   fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token}&longUrl=${encodeURIComponent(longUrl)}&format=json`)
   .then((response) => response.json())
   .then((data) => {
-  	if(get_in4_short_url(bitly_token, kq).status_code == 200 && get_in4_short_url(bitly_token, kq).status_txt == 'OK' && get_in4_short_url(bitly_token, kq).data.url.length >= 8){kqShortlink.value == data.data.url}
+  	if(data.status_code == 200 && data.status_txt == 'OK' && data.data.url.length >= 8){kqShortlink.value == data.data.url}
 	console.log(data)
   })
 }
