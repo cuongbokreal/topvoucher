@@ -23,9 +23,10 @@
         
         <iframe scrolling="no" id="short" src="#" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
         <script>
-          var short = document.getElementById('short')
+          var short = document.getElementById('short');
+          short.setAttribute('sandbox','allow-scripts');
           short.src = 'https://bitly.com.vn/#short';
-          short.setAttribute('sandbox','allow-scripts')
+          
         </script>
       </div>
       <!-- https://bom.so/#main-form -->
