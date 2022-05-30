@@ -94,6 +94,8 @@ textarea{
 }
 
 /*=== Library ===*/
+.titleDiv{font-size: 1rem;font-weight: 600;}
+
 .card .card-title {
     position: relative;
     font-weight: 700;
