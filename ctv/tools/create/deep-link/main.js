@@ -22,7 +22,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
         
       
       var source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=createDeepLink&utm_content=-`;
-      
+      var bitly_token = "cd15021711359cbef885c25913696f227a379883";
       var deeplink = 'https://go.isclix.com/deep_link/5353514789844343379';
       var thbao = document.getElementById('thbao');
       var btnDeplink = document.getElementById('btnDeplink');
@@ -70,7 +70,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
             finalLink = encodeURIComponent(finalLink[0].replaceAll(/\?.+/g,""));
           }
           
-          kq = `${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`;
+          kq = get_short_url(bitly_token,`${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`);
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[0].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
@@ -144,4 +144,12 @@ function addRefKolLazada(c){
         else{c += '?referer=at-kol';}
     }
     return c
+}
+
+function get_short_url(bitly_token, longUrl){
+  fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token}&longUrl=${longUrl}&format=json`)
+  .then((response) => response.json())
+  .then((data) => {
+  	return data.data.url
+  })
 }
