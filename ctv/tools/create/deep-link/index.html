@@ -18,19 +18,19 @@
         <p>Id CTV: <span class="text-danger" id="ctv_id"></span></p>
       
       <div id="form">
-        <h4>Tạo link sản phẩm</h4>
+        <h4 class="titleDiv">Tạo link sản phẩm</h4>
         <textarea id="linkSp" placeholder="Nhập link gốc" onclick="this.select()"></textarea>
         <p id="thbao" class="text-red">Link sai hoặc lỗi nhập id</p>
         <button class="button" id="btnDeplink" onclick="createDeeplink()">Tạo</button>
       </div>
       
       <div id="ketqua">
-        <label>Kết quả (deeplink):</label>
+        <label class="titleDiv">Kết quả (deeplink):</label>
         <textarea id="kqDeeplink" placeholder="Kết quả (Nhấn để copy)" onclick="copyValue(this)" readonly></textarea>
       </div>
       
       <div id="createShort">
-        <p>Tạo ShortLink:<span id="refreshFrame" onclick="refreshShort()">Làm mới <i class="fa-solid fa-arrows-rotate"></i></span>. </p>
+        <p class="titleDiv">Tạo ShortLink:<span id="refreshFrame" onclick="refreshShort()">Làm mới <i class="fa-solid fa-arrows-rotate"></i></span>. </p>
         <div id="iframeShort">
           <p>Mở trong tab mới: (<a target="_blank" rel="nofollow" href="https://bitly.com/">https://bitly.com/</a>, <a target="_blank" rel="nofollow" href="https://bitly.com.vn/#short">https://bitly.com.vn/</a>)</p>
 
