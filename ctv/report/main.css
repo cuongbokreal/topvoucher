@@ -59,6 +59,19 @@ header {height: 5rem; max-height:fit-content;}
 }
 #footer{text-align: center;font-size: 15px;font-weight: 600;margin-bottom: 10px;}
 
+
+.form-control{
+    padding: 0.375rem 0.75rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 2px;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
 /*=== Resivepone ===*/
 @media screen and (max-width: 640px){
   .table-wrapper:{position:relative; width:calc(100% + 40px);left:-20px;padding:0 20px; display:flex;overflow-x:scroll;overflow:scroll;}
