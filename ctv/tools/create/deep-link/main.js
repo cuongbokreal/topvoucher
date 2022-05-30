@@ -70,7 +70,9 @@ var getUrlParameter = function getUrlParameter(sParam) {
             finalLink = encodeURIComponent(finalLink[0].replaceAll(/\?.+/g,""));
           }
           
-          kq = get_short_url(bitly_token,`${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`);
+	if(bitly_token.length >= 2){get_short_url(bitly_token,`${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`)}
+	else{kq = `${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`;}
+		
           data_infor_camp = `<p>Tên camp: <span style="color:red">${data_ad[0].name}</span></p> 
                              <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>`;
@@ -150,6 +152,6 @@ function get_short_url(bitly_token, longUrl){
   fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token}&longUrl=${longUrl}&format=json`)
   .then((response) => response.json())
   .then((data) => {
-  	return data.data.url
+  	kq = data.data.url
   })
 }
