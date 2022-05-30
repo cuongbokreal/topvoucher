@@ -80,20 +80,10 @@ var getUrlParameter = function getUrlParameter(sParam) {
           if(linkSp.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g)){
             finalLink = linkSp.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g);
             //add '?referer=at-kol'
-            if(finalLink.match(/(\?|\&)referer=at-kol/g)){ finalLink = finalLink[0]}
-            else{ 
-              if(finalLink.match(/\?/g)){finalLink += '&referer=at-kol';}
-              else{finalLink += '?referer=at-kol';}
-                }
-            finalLink = encodeURIComponent(finalLink[0].replace("laz_trackid"," ").replace(/(\?\s|&\s)/g,""));
+            finalLink = encodeURIComponent(addRefKolLazada(finalLink[0].replace("laz_trackid"," ").replace(/(\?\s|&\s)/g,"")));
           }else{
             //add '?referer=at-kol'
-            if(finalLink.match(/(\?|\&)referer=at-kol/g)){}
-            else{ 
-              if(finalLink.match(/\?/g)){finalLink += '&referer=at-kol';}
-              else{finalLink += '?referer=at-kol';}
-                }
-            finalLink = encodeURIComponent(linkSp);
+            finalLink = encodeURIComponent(addRefKolLazada(linkSp));
           }
           
           
@@ -146,3 +136,12 @@ var getUrlParameter = function getUrlParameter(sParam) {
           console.log(`Copied: ${s.value}`);
         }else{console.log('Không có dữ liệu để copy!' + s)}
       }
+
+function addRefKolLazada(c){
+	if(c.match(/(\?|\&)referer=at-kol/g)){}
+    else{ 
+        if(c.match(/\?/g)){c += '&referer=at-kol';}
+        else{c += '?referer=at-kol';}
+    }
+    return c
+}
