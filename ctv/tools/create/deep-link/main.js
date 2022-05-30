@@ -80,7 +80,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
           if(linkSp.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g)){
             finalLink = linkSp.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g);
             //add '?referer=at-kol'
-            if(finalLink.match(/(\?|\&)referer=at-kol/g)){}
+            if(finalLink.match(/(\?|\&)referer=at-kol/g)){ finalLink = finalLink[0]}
             else{ 
               if(finalLink.match(/\?/g)){finalLink += '&referer=at-kol';}
               else{finalLink += '?referer=at-kol';}
