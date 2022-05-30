@@ -90,3 +90,10 @@ textarea{
 @media screen and (max-width:640px){
       #short{height: 30%}
 }
+
+/*=== Library ===*/
+.card .card-title {
+    position: relative;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
