@@ -131,10 +131,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
         console.log("Copied: " + copyText.value);
             
         //document.getElementById('refreshFrame').click();
-        document.getElementById('short').src = '';
-        document.getElementById('short').src = 'https://bitly.com.vn/#short';
-	window.location.hash = '';
-	window.location.hash = '#';
       }
       
       function refreshShort(){
