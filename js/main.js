@@ -95,6 +95,10 @@ e.parentNode.insertBefore(b,e)}();
 	var dongTag= ">";
     var updateTime = new Date(); //updateTime
     var today = `${updateTime.getDate()}/${updateTime.getMonth() + 1}`;
+
+var zaloGr = 'https://zalo.me/g/fqehfa279';
+document.getElementById('thbaoTop').innerHTML = `Mã cập nhật lúc <span style="color:red">${updateTime.getHours()}:${updateTime.getMinutes()} ${today}</span>, tham gia group nhắc săn Deal, Voucher hàng ngày tại <a href="${zaloGr}" target="_blank">${zaloGr}</a>`;
+
 var ldJson = document.createElement('DIV');
 //ldJson.type = 'application/ld+json';
     function createMariquee(){
@@ -144,23 +148,74 @@ var ldJson = document.createElement('DIV');
 		    console.log(ldJson);
 		    document.body.append(ldJson);
             }
-    	document.querySelector('.atEQPOIVFSDFSDG-list-title > h4').innerHTML += ` <span style='color:red;margin: 0px;'>(${today})</span>:`;
+
+		//update ngày + số lượng voucher coupon
+	var text_muted = document.querySelectorAll('.text-muted')[0].innerText;
+	
+	var history_tabs = document.querySelector('#history-tabs > em').innerText;
+	var record_tabs = document.querySelector('#record-tabs > em').innerText;
+	var quantityVoucher = parseInt(replaceBrackets(history_tabs)) + parseInt(replaceBrackets(record_tabs));
+		
+    	document.querySelector('.atEQPOIVFSDFSDG-list-title > h4').innerHTML = `HIỆN CÓ <span style='color:red;margin: 0px;'>${quantityVoucher.toLocaleString()}</span> MÃ <span style='color:red;margin: 0px;'>(${add0To1Length(updateTime.getHours())}:${add0To1Length(updateTime.getMinutes())} ${today})</span>:`;
         }, 3500);
     }    
     createMariquee();
+
+//location.hash coupon main when click next
+const pageItem = document.querySelectorAll('.pagination > .page-item');
+pageItem.forEach((element) => {element.addEventListener("click", couponTab);});
+function couponTab() {
+	location.hash = "";
+	location.hash = "couponTab"
+}
+
+//Sửa chữ lazadacps => Lazada
+if(document.querySelector("[data-merchant='5127139956446111602']")){
+	const dropdown_menu_lazada = document.querySelector("[data-merchant='5127139956446111602']");
+	dropdown_menu_lazada.innerText = 'Lazada';
+}
+
+
+function replaceBrackets(c){
+	return c.replaceAll('(','').replaceAll(')','')
+}
+function add0To1Length(c){
+	if(c < 10){c = parseInt(`0${c}`)}
+	return c
+}
+
+function updateQuantityVoucher(){
+	var history_tabs = document.querySelector('#history-tabs > em').innerText;
+	var record_tabs = document.querySelector('#record-tabs > em').innerText;
+	var quantityVoucher = parseInt(replaceBrackets(history_tabs)) + parseInt(replaceBrackets(record_tabs));
+		
+    	document.querySelector('.atEQPOIVFSDFSDG-list-title > h4').innerHTML = `DANH SÁCH <span style='color:red;margin: 0px;'>${quantityVoucher.toLocaleString()}</span> MÃ <span style='color:red;margin: 0px;'>(${today})</span>:`;
+}
+
+//search
+/*
+var searchButton = document.getElementsByClassName('atEQPOIVFSDFSDG-btn-search')[0];
+searchButton.addEventListener("click", function(){
+	var searchInput = document.getElementById('atEQPOIVFSDFSDG-search');
+        if(searchInput.value.length >= 1){
+    	    window.open(`${window.location.href.replaceAll(/\?.+/g,"")}/search?q=${searchInput.value}`)
+        }
+})
+*/
+
+/*
 var filter_keyword = document.getElementsByClassName('atEQPOIVFSDFSDG-filter-keyword')[0];
 var mainSearch = document.getElementsByClassName('atEQPOIVFSDFSDG-input-main-search')[0];
 var filter_and_delete = document.getElementsByClassName('atEQPOIVFSDFSDG-filters-and-delete-search')[0];
 var next_tab = document.getElementsByClassName('atEQPOIVFSDFSDG-coupon-pagination')[0];
 
-
-//filter_keyword.addEventListener("click", createMariquee() );
-//mainSearch.addEventListener("click", createMariquee() );
-//filter_and_delete.addEventListener("click", createMariquee() );
-//next_tab.addEventListener("click", createMariquee() );
-
+filter_keyword.addEventListener("click", createMariquee() );
+mainSearch.addEventListener("click", createMariquee() );
+filter_and_delete.addEventListener("click", createMariquee() );
+next_tab.addEventListener("click", createMariquee() );
+*/
     //cuongbokreal.github.io/api/voucher-blogger-site/inner-voucher-title/main.js
-eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k[c]||c;k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('0(2(){3},1);',4,4,'setInterval||function|debugger'.split('|'),0,{}))
+//eval(function(p,a,c,k,e,r){e=String;if(!''.replace(/^/,String)){while(c--)r[c]=k[c]||c;k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('0(2(){3},1);',4,4,'setInterval||function|debugger'.split('|'),0,{}))
 
 
 
