@@ -1,6 +1,8 @@
 html, body{font-family: 'Open Sans', sans-serif;}
 
 #main{padding:10px}
+#main > div {margin-top: 30px;}
+
 input {font-family: "Roboto", sans-serif;
       outline: 0;
       background: #f2f2f2;
