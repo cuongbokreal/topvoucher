@@ -133,14 +133,16 @@ var getUrlParameter = function getUrlParameter(sParam) {
         //document.getElementById('refreshFrame').click();
         document.getElementById('short').src = '';
         document.getElementById('short').src = 'https://bitly.com.vn/#short';
+	window.location.hash = '';
+	window.location.hash = '#';
       }
       
       function refreshShort(){
         //document.getElementById('short').contentWindow.location.reload();
         document.getElementById('short').src = '';
         document.getElementById('short').src = 'https://bitly.com.vn/#short';
-	      window.location.hash = '';
-	      window.location.hash = '#';
+	window.location.hash = '';
+	window.location.hash = '#';
       }
       function copyValue(s){
         if(s.value.length >= 1){
