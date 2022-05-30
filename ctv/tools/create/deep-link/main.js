@@ -153,5 +153,6 @@ function get_short_url(bitly_token, longUrl){
   .then((response) => response.json())
   .then((data) => {
   	kq = data.data.url
+	console.log(data)
   })
 }
