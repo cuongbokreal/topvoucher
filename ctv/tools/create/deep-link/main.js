@@ -22,7 +22,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
         
       
       var source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=createDeepLink&utm_content=-`;
-      var bitly_token = "31ae1cab212d8603378badec7a05ad2936a30c6b"; //tha em dung dung token tội em hmu hmu
+      var bitly_token = "31ae1cab212d8603378badec7a05ad2936a30c6b"; //tha em đừng dùng token tội em hmu hmu
       var deeplink = 'https://go.isclix.com/deep_link/5353514789844343379';
       var thbao = document.getElementById('thbao');
       var btnDeplink = document.getElementById('btnDeplink');
@@ -129,13 +129,14 @@ var getUrlParameter = function getUrlParameter(sParam) {
             else {toast({title: 'Lỗi', message: `Đã có lỗi xảy ra`, type: "error", duration: 5000});}
         
         //copy
+	      /*
 	if(kqShortlink.value >= 6){ var copyText = document.getElementById('kqShortlink');}
 	else{var copyText = document.getElementById('kqDeeplink');}
         copyText.select();
         copyText.setSelectionRange(0, 99999);
         navigator.clipboard.writeText(copyText.value);
         console.log("Copied: " + copyText.value);
-            
+            */
         //document.getElementById('refreshFrame').click();
       }
       
@@ -146,13 +147,16 @@ var getUrlParameter = function getUrlParameter(sParam) {
 	window.location.hash = '';
 	window.location.hash = '#';
       }
-      function copyValue(s){
-        if(s.value.length >= 1){
-          s.focus();
-          s.select();
+      function copyValue(c){
+        if(c.value.length >= 1){
+          c.focus();
+          c.select();
           document.execCommand("Copy");
-          console.log(`Copied: ${s.value}`);
-        }else{console.log('Không có dữ liệu để copy!' + s)}
+          console.log(`Copied: ${c.value}`);
+        }else{console.log('Không có dữ liệu để copy!' + c)}
+	      
+	    if(thbao.style.display == 'none'){toast({title: 'Thành công', message: `Đã copy <b>${c.value}</b>`, type: "success", duration: 5000});}
+            else {toast({title: 'Lỗi', message: `Đã có lỗi xảy ra`, type: "error", duration: 5000});}
       }
 function copyValueGroup(c){
 	var divCopyGroup = c.parentElement;
@@ -163,6 +167,9 @@ function copyValueGroup(c){
           document.execCommand("Copy");
           console.log(`Copied: ${valueCopyGroup.value}`);
         }else{console.log('Không có dữ liệu để copy!' + valueCopyGroup)}
+	
+	if(thbao.style.display == 'none'){toast({title: 'Thành công', message: `Đã copy <b>${valueCopyGroup.value}</b>`, type: "success", duration: 5000});}
+        else {toast({title: 'Lỗi', message: `Đã có lỗi xảy ra`, type: "error", duration: 5000});}
 }
 
 function addRefKolLazada(c){
