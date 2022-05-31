@@ -155,8 +155,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
           console.log(`Copied: ${c.value}`);
         }else{console.log('Không có dữ liệu để copy!' + c)}
 	      
-	    if(thbao.style.display == 'none'){toast({title: 'Thành công', message: `Đã copy <b>${c.value}</b>`, type: "success", duration: 5000});}
-            else {toast({title: 'Lỗi', message: `Đã có lỗi xảy ra`, type: "error", duration: 5000});}
+	toast({title: 'Thành công', message: `Đã copy <b>${c.value}</b>`, type: "success", duration: 5000});
       }
 function copyValueGroup(c){
 	var divCopyGroup = c.parentElement;
@@ -168,8 +167,7 @@ function copyValueGroup(c){
           console.log(`Copied: ${valueCopyGroup.value}`);
         }else{console.log('Không có dữ liệu để copy!' + valueCopyGroup)}
 	
-	if(thbao.style.display == 'none'){toast({title: 'Thành công', message: `Đã copy <b>${valueCopyGroup.value}</b>`, type: "success", duration: 5000});}
-        else {toast({title: 'Lỗi', message: `Đã có lỗi xảy ra`, type: "error", duration: 5000});}
+	toast({title: 'Thành công', message: `Đã copy <b>${valueCopyGroup.value}</b>`, type: "success", duration: 5000});
 }
 
 function addRefKolLazada(c){
