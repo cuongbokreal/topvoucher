@@ -154,6 +154,16 @@ var getUrlParameter = function getUrlParameter(sParam) {
           console.log(`Copied: ${s.value}`);
         }else{console.log('Không có dữ liệu để copy!' + s)}
       }
+function copyValueGroup(c){
+	var divCopyGroup = c.parentElement;
+    	var valueCopyGroup = divCopyGroup.children[1];
+    if(valueCopyGroup.value.length >= 1){
+          valueCopyGroup.focus();
+          valueCopyGroup.select();
+          document.execCommand("Copy");
+          console.log(`Copied: ${valueCopyGroup.value}`);
+        }else{console.log('Không có dữ liệu để copy!' + valueCopyGroup)}
+}
 
 function addRefKolLazada(c){
 	if(c.match(/(\?|\&)referer=at-kol/g)){}
