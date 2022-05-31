@@ -124,10 +124,10 @@ var getUrlParameter = function getUrlParameter(sParam) {
         
         kqDeeplink.value = kq;
         infor_camp.innerHTML = data_infor_camp;
-            /*
-            if(thbao.style.display == 'none'){toast({title: 'Thành công', message: `Đã copy Deeplink`, type: "success", duration: 5000});}
+	      
+            if(thbao.style.display == 'none'){toast({title: 'Thành công', message: `Đã tạo link`, type: "success", duration: 5000});}
             else {toast({title: 'Lỗi', message: `Đã có lỗi xảy ra`, type: "error", duration: 5000});}
-        	*/
+	      
         //copy
 	      /*
 	if(kqShortlink.value >= 6){ var copyText = document.getElementById('kqShortlink');}
@@ -153,9 +153,8 @@ var getUrlParameter = function getUrlParameter(sParam) {
           c.select();
           document.execCommand("Copy");
           console.log(`Copied: ${c.value}`);
-        }else{console.log('Không có dữ liệu để copy!' + c)}
-	      
 	toast({title: 'Thành công', message: `Đã copy <b>${c.value}</b>`, type: "success", duration: 5000});
+        }else{console.log('Không có dữ liệu để copy!' + c)}
       }
 function copyValueGroup(c){
 	var divCopyGroup = c.parentElement;
@@ -165,9 +164,8 @@ function copyValueGroup(c){
           valueCopyGroup.select();
           document.execCommand("Copy");
           console.log(`Copied: ${valueCopyGroup.value}`);
-        }else{console.log('Không có dữ liệu để copy!' + valueCopyGroup)}
-	
 	toast({title: 'Thành công', message: `Đã copy <b>${valueCopyGroup.value}</b>`, type: "success", duration: 5000});
+        }else{console.log('Không có dữ liệu để copy!' + valueCopyGroup)}
 }
 
 function addRefKolLazada(c){
