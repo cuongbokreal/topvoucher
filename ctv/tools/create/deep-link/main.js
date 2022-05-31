@@ -22,7 +22,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
         
       
       var source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=createDeepLink&utm_content=-`;
-      var bitly_token = "cd15021711359cbef885c25913696f227a379883";
+      var bitly_token = "31ae1cab212d8603378badec7a05ad2936a30c6b";
       var deeplink = 'https://go.isclix.com/deep_link/5353514789844343379';
       var thbao = document.getElementById('thbao');
       var btnDeplink = document.getElementById('btnDeplink');
