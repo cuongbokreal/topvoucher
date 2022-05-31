@@ -124,10 +124,10 @@ var getUrlParameter = function getUrlParameter(sParam) {
         
         kqDeeplink.value = kq;
         infor_camp.innerHTML = data_infor_camp;
-            
+            /*
             if(thbao.style.display == 'none'){toast({title: 'Thành công', message: `Đã copy Deeplink`, type: "success", duration: 5000});}
             else {toast({title: 'Lỗi', message: `Đã có lỗi xảy ra`, type: "error", duration: 5000});}
-        
+        	*/
         //copy
 	      /*
 	if(kqShortlink.value >= 6){ var copyText = document.getElementById('kqShortlink');}
