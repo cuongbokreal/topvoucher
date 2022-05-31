@@ -100,6 +100,18 @@ textarea{
       .button{width: 25%}
 }
 
+/*=== Custom ===*/
+.toast__msg{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      line-break: anywhere;
+      font-size: 10px;
+}
+
 /*=== Library ===*/
 .titleDiv{font-size: 1rem;font-weight: 600;}
 
@@ -112,3 +124,4 @@ textarea{
 
 p{margin-block-start: 0em;}
 .pointer{cursor: pointer}
+
