@@ -154,7 +154,10 @@ var getUrlParameter = function getUrlParameter(sParam) {
           document.execCommand("Copy");
           console.log(`Copied: ${c.value}`);
 	toast({title: 'Thành công', message: `Đã copy <b>${c.value}</b>`, type: "success", duration: 5000});
-        }else{console.log('Không có dữ liệu để copy!' + c)}
+        }else{
+		console.log('Không có dữ liệu để copy!' + c);
+		toast({title: 'Lỗi', message: `Không có dữ liệu để copy!`, type: "error", duration: 5000});
+	}
       }
 function copyValueGroup(c){
 	var divCopyGroup = c.parentElement;
@@ -165,7 +168,10 @@ function copyValueGroup(c){
           document.execCommand("Copy");
           console.log(`Copied: ${valueCopyGroup.value}`);
 	toast({title: 'Thành công', message: `Đã copy <b>${valueCopyGroup.value}</b>`, type: "success", duration: 5000});
-        }else{console.log('Không có dữ liệu để copy!' + valueCopyGroup)}
+        }else{
+		console.log('Không có dữ liệu để copy!' + valueCopyGroup);
+		toast({title: 'Lỗi', message: `Không có dữ liệu để copy!`, type: "error", duration: 5000});
+	}
 }
 
 function addRefKolLazada(c){
