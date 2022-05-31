@@ -102,9 +102,15 @@ var getUrlParameter = function getUrlParameter(sParam) {
 			     <p>QR Code:</p><img id="qrDeeplink" src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${kq}" />`;
         } else
         if(linkSp.match(/tiki\.vn/g)){
-          
-          finalLink = linkSp.match(/http.+\?/g);
-          finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
+		if(linkSp.match(/https:\/\/tiki.vn\/.+\?/)){
+		    finalLink = linkSp.match(/https:\/\/tiki.vn\/.+\?/);
+		    finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
+		  }else{
+		    finalLink = linkSp.match(/http.+/g);
+		    finalLink = encodeURIComponent(finalLink[0].replaceAll(/\?.+/g,""));
+		  }
+          //finalLink = linkSp.match(/http.+\?/g);
+          //finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
           
           	kq = `${deeplink}/${data_ad[2].camp_id}?url=${finalLink}${source}`;
 		get_short_url(bitly_token, kq); //get shortlink nếu có
