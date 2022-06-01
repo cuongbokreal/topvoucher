@@ -129,7 +129,7 @@ var innerChinhSachHoaHongShopee = `<tr><td>Category</td><td>Khách hàng mới (
   for(let i=0;i<dataChinhSachHoaHong[0].shopee.length;i++){
     innerChinhSachHoaHongShopee +=`<tr><td>${dataChinhSachHoaHong[0].shopee[i].cate}</td><td>${(dataChinhSachHoaHong[0].shopee[i].nc * tiLe).toFixed(1)}</td><td>${(dataChinhSachHoaHong[0].shopee[i].ec * tiLe).toFixed(1)}</td></tr>`;
   }
-camp_commission.innerHTML = `<table>${innerChinhSachHoaHongShopee}</table>Hoa hồng tối đa trên 1 đơn hàng: 202.000 VND`;
+elm_camp_commission.innerHTML = `<table>${innerChinhSachHoaHongShopee}</table>Hoa hồng tối đa trên 1 đơn hàng: 202.000 VND`;
 
 
 function getId(c){
