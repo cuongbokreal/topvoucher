@@ -135,4 +135,7 @@ elm_camp_commission.innerHTML = `<table>${innerChinhSachHoaHongShopee}</table>Ho
 function getId(c){
  return document.getElementById(c)
 }
-
+function replaceSpaceToBr(c){
+ return c.replaceAll(`
+`,'<br/>')
+}
