@@ -20,7 +20,9 @@
       
       <div id="form">
         <label class="titleDiv">Tạo link sản phẩm</label>
-        <input type="checkbox" id="createShortenLink"/> Tạo link rút gọn
+        <div>
+          <input type="checkbox" id="createShortenLink"/> Tạo link rút gọn
+        </div>
         <textarea id="linkSp" name="linkSp" placeholder="Nhập link gốc" onclick="this.select()"></textarea>
         <p id="thbao" class="text-red">Link sai hoặc lỗi nhập id</p>
         <button class="button" id="btnDeplink" onclick="createDeeplink()">Tạo</button>
