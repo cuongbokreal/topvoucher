@@ -53,7 +53,7 @@ var camp_cookie_policy = `Từ 0:00 ngày 28/11/2020 luật cookie sẽ như sau
 - Mua hàng trên Mobile App
 
  Giới hạn đơn hàng trong thời gian lưu cookie
-
+ 
 Cookie  bị ghi đè bởi các quảng cáo khác của Shopee.
 
 Cookie : 7 ngày
