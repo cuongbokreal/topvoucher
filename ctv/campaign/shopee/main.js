@@ -136,5 +136,6 @@ function getId(c){
  return document.getElementById(c)
 }
 function replaceSpaceToBr(c){
- return c.replaceAll(/(\r\n|\n|\r)/gm, "<br/>")
+ return c.replaceAll(`
+`, "<br/>")
 }
