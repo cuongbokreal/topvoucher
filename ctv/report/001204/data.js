@@ -3,10 +3,10 @@ var pubName = 'Cuongbok';
 var dataDoanhThu = [
   {
    "nhaQuangCao":"Shopee",
-   "chuyenDoiPhatSinh": 65 ,
+   "chuyenDoiPhatSinh": 165 ,
    "giaTriDonHang":  4486790,
-   "hoaHong": 65187 ,
-   "duocDuyet": 29419 ,
+   "hoaHong": 286187 ,
+   "duocDuyet": 99419 ,
    "daHuy": 27449 ,
   },
   {
