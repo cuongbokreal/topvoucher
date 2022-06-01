@@ -20,9 +20,9 @@ var getUrlParameter = function getUrlParameter(sParam) {
           window.location.href = 'https://topvoucher.tk/ctv/tools/create/deep-link/access/'
         }
         
-var time_thbao = 3000;
+const time_thbao = 3000;
       
-      var source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=createDeepLink&utm_content=-`;
+      const source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=createDeepLink&utm_content=-`;
       var bitly_token = "31ae1cab212d8603378badec7a05ad2936a30c6b"; //tha em đừng dùng token tội em hmu hmu
       var deeplink = 'https://go.isclix.com/deep_link/5353514789844343379';
       var thbao = document.getElementById('thbao');
