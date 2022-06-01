@@ -9,7 +9,7 @@ Thưởng theo nhãn hàng liên tục cập nhật: <a target="_blank" hre
 Danh sách sản phẩm bán chạy: <a target="_blank" href="https://docs.google.com/spreadsheets/d/1XaNEEcM-0AdzEnxjiMcCsSHv-j2AxKd5/edit#gid=1137356070">tại đây</a>`;
 
 
-var camp_des2 = `CHƯƠNG TRÌNH THƯỞNG THÁNG 5
+var camp_des2 = `<span style="backgroud: ##ffff00">CHƯƠNG TRÌNH THƯỞNG THÁNG 5</span>
 
 Chương trình Shopee Thường Cả Tháng 5
 
@@ -33,7 +33,7 @@ Chương trình thưởng khi tăng trưởng về qualified click trong tháng 
 🔶 Nếu publisher có từ 20 đơn được duyệt thuộc brand bonus trở lên, bonus thêm 10% trên tổng hoa hồng brand bonus được duyệt trong tháng 4`;
 
 
-var camp_recognition_conditions = `Từ 0:00  ngày 28/11/2020, chiến dịch sẽ thay đổi ghi nhận như sau:
+var camp_recognition_conditions = `<span class="note-title">Từ 0:00  ngày 28/11/2020, chiến dịch sẽ thay đổi ghi nhận như sau:</span>
 
 Áp dụng trên ứng dụng mua sắm trên điện thoại và webite của Shopee trên PC, đơn hàng đặt mua qua nền tảng web trên điện thoại vẫn sẽ được ghi nhận. 
 
