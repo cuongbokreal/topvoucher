@@ -104,3 +104,35 @@ LƯU Ý QUAN TRỌNG:
 
 + Sản phẩm user đã bỏ vào giỏ hàng trước đó, rồi mới nhấp vào link affliate và thực hiện thanh toán thường sẽ có tỉ lệ lost cao.`;
 
+
+var elm_camp_name = getId('camp_name');
+var elm_camp_des1 = getId('camp_des1');
+var elm_camp_des2 = getId('camp_des2');
+var elm_camp_recognition_conditions = getId('camp_recognition_conditions');
+var elm_camp_cancellation_reason = getId('camp_cancellation_reason');
+var elm_camp_commission = getId('camp_commission');
+var elm_camp_cookie_policy = getId('camp_cookie_policy');
+var elm_camp_note = getId('camp_note');
+
+
+elm_camp_name.innerHTML = camp_name;
+elm_camp_des1.innerHTML = camp_des1;
+elm_camp_des2.innerHTML = camp_des2;
+elm_camp_recognition_conditions.innerHTML = camp_recognition_conditions;
+elm_camp_cancellation_reason.innerHTML = camp_cancellation_reason;
+elm_camp_cookie_policy.innerHTML = camp_cookie_policy;
+elm_camp_note.innerHTML = camp_note;
+
+
+const tiLe = 55/100;
+var innerChinhSachHoaHongShopee = `<tr><td>Category</td><td>Khách hàng mới (%)</td><td>Khách hàng cũ (%)</td></tr>`;
+  for(let i=0;i<dataChinhSachHoaHong[0].shopee.length;i++){
+    innerChinhSachHoaHongShopee +=`<tr><td>${dataChinhSachHoaHong[0].shopee[i].cate}</td><td>${(dataChinhSachHoaHong[0].shopee[i].nc * tiLe).toFixed(1)}</td><td>${(dataChinhSachHoaHong[0].shopee[i].ec * tiLe).toFixed(1)}</td></tr>`;
+  }
+camp_commission.innerHTML = `<table>${innerChinhSachHoaHongShopee}</table>Hoa hồng tối đa trên 1 đơn hàng: 202.000 VND`;
+
+
+function getId(c){
+ return document.getElementById(c)
+}
+
