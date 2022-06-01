@@ -1,0 +1,15 @@
+.text-red{color:red}
+.text-orange{color:orange}
+
+.note-title{font-size: 10.5pt;
+    font-family: "Times New Roman";
+    background-color: transparent;
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal;
+    text-decoration: none;
+    vertical-align: baseline;
+    white-space: pre-wrap;
+    color: rgb(255, 156, 0);
+}
+
