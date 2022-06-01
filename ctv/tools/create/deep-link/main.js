@@ -20,6 +20,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
           window.location.href = 'https://topvoucher.tk/ctv/tools/create/deep-link/access/'
         }
         
+var time_thbao = 3000;
       
       var source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=createDeepLink&utm_content=-`;
       var bitly_token = "31ae1cab212d8603378badec7a05ad2936a30c6b"; //tha em đừng dùng token tội em hmu hmu
@@ -126,8 +127,8 @@ var getUrlParameter = function getUrlParameter(sParam) {
 		get_short_url(bitly_token, kq); //get shortlink nếu có
 	}else{kqShortlink.value = '';} //check có tạo short thì tạo, không thì kqShortLink value = '';
 	      
-            if(thbao.style.display == 'none'){toast({title: 'Thành công', message: `Đã tạo link`, type: "success", duration: 5000});}
-            else {toast({title: 'Lỗi', message: `Đã có lỗi xảy ra`, type: "error", duration: 5000});}
+            if(thbao.style.display == 'none'){toast({title: 'Thành công', message: `Đã tạo link`, type: "success", duration: time_thbao});}
+            else {toast({title: 'Lỗi', message: `Đã có lỗi xảy ra`, type: "error", duration: time_thbao});}
 	      
         //copy
 	      /*
@@ -154,10 +155,10 @@ var getUrlParameter = function getUrlParameter(sParam) {
           c.select();
           document.execCommand("Copy");
           console.log(`Copied: ${c.value}`);
-	toast({title: 'Thành công', message: `Đã copy <b>${c.value}</b>`, type: "success", duration: 5000});
+	toast({title: 'Thành công', message: `Đã copy <b>${c.value}</b>`, type: "success", duration: time_thbao});
         }else{
 		console.log('Không có dữ liệu để copy!' + c);
-		toast({title: 'Lỗi', message: `Không có dữ liệu để copy!`, type: "error", duration: 5000});
+		toast({title: 'Lỗi', message: `Không có dữ liệu để copy!`, type: "error", duration: time_thbao});
 	}
       }
 function copyValueGroup(c){
@@ -168,10 +169,10 @@ function copyValueGroup(c){
           valueCopyGroup.select();
           document.execCommand("Copy");
           console.log(`Copied: ${valueCopyGroup.value}`);
-	toast({title: 'Thành công', message: `Đã copy <b>${valueCopyGroup.value}</b>`, type: "success", duration: 5000});
+	toast({title: 'Thành công', message: `Đã copy <b>${valueCopyGroup.value}</b>`, type: "success", duration: time_thbao});
         }else{
 		console.log('Không có dữ liệu để copy!' + valueCopyGroup);
-		toast({title: 'Lỗi', message: `Không có dữ liệu để copy!`, type: "error", duration: 5000});
+		toast({title: 'Lỗi', message: `Không có dữ liệu để copy!`, type: "error", duration: time_thbao});
 	}
 }
 
