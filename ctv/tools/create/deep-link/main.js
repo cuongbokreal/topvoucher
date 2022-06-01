@@ -48,6 +48,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
       var data_infor_camp = '';
       function createDeeplink(){
         thbao.style.display = 'none';
+	      var createShortenLink = document.getElementById('createShortenLink');
         var finalLink = '';
         var linkSp = document.getElementById('linkSp').value;
         
@@ -72,7 +73,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
             finalLink = encodeURIComponent(finalLink[0].replaceAll(/\?.+/g,""));
           }
 		kq = `${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`;
-		get_short_url(bitly_token, kq); //get shortlink nếu có
 		
           data_infor_camp = `<label class="titleDiv">Thông tin chiến dịch:</label>
 	  		     <p>Tên camp: <span style="color:red">${data_ad[0].name}</span></p> 
@@ -93,7 +93,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
           
           
           	kq = `${deeplink}/${data_ad[1].camp_id}?url=${finalLink}${source}`;
-		get_short_url(bitly_token, kq); //get shortlink nếu có
 		
           data_infor_camp = `<label class="titleDiv">Thông tin chiến dịch:</label>
 	  		     <p>Tên camp: <span style="color:red">${data_ad[1].name}</span></p> 
@@ -113,7 +112,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
           //finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
           
           	kq = `${deeplink}/${data_ad[2].camp_id}?url=${finalLink}${source}`;
-		get_short_url(bitly_token, kq); //get shortlink nếu có
 		
           data_infor_camp = `<label class="titleDiv">Thông tin chiến dịch:</label>
 	  		     <p>Tên camp: <span style="color:red">${data_ad[2].name}</span></p> 
@@ -124,6 +122,9 @@ var getUrlParameter = function getUrlParameter(sParam) {
         
         kqDeeplink.value = kq;
         infor_camp.innerHTML = data_infor_camp;
+	if(createShortenLink.checked == true){
+		get_short_url(bitly_token, kq); //get shortlink nếu có
+	}
 	      
             if(thbao.style.display == 'none'){toast({title: 'Thành công', message: `Đã tạo link`, type: "success", duration: 5000});}
             else {toast({title: 'Lỗi', message: `Đã có lỗi xảy ra`, type: "error", duration: 5000});}
