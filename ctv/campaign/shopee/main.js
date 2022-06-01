@@ -116,8 +116,8 @@ var elm_camp_note = getId('camp_note');
 
 
 elm_camp_name.innerHTML = camp_name;
-elm_camp_des1.innerHTML = camp_des1;
-elm_camp_des2.innerHTML = camp_des2;
+elm_camp_des1.innerHTML = replaceSpaceToBr(camp_des1);
+elm_camp_des2.innerHTML = replaceSpaceToBr(camp_des2);
 elm_camp_recognition_conditions.innerHTML = replaceSpaceToBr(camp_recognition_conditions);
 elm_camp_cancellation_reason.innerHTML = replaceSpaceToBr(camp_cancellation_reason);
 elm_camp_cookie_policy.innerHTML = replaceSpaceToBr(camp_cookie_policy);
