@@ -118,10 +118,10 @@ var elm_camp_note = getId('camp_note');
 elm_camp_name.innerHTML = camp_name;
 elm_camp_des1.innerHTML = camp_des1;
 elm_camp_des2.innerHTML = camp_des2;
-elm_camp_recognition_conditions.innerHTML = camp_recognition_conditions;
-elm_camp_cancellation_reason.innerHTML = camp_cancellation_reason;
-elm_camp_cookie_policy.innerHTML = camp_cookie_policy;
-elm_camp_note.innerHTML = camp_note;
+elm_camp_recognition_conditions.innerHTML = replaceSpaceToBr(camp_recognition_conditions);
+elm_camp_cancellation_reason.innerHTML = replaceSpaceToBr(camp_cancellation_reason);
+elm_camp_cookie_policy.innerHTML = replaceSpaceToBr(camp_cookie_policy);
+elm_camp_note.innerHTML = replaceSpaceToBr(camp_note);
 
 
 const tiLe = 55/100;
@@ -136,6 +136,5 @@ function getId(c){
  return document.getElementById(c)
 }
 function replaceSpaceToBr(c){
- return c.replaceAll(`
-`,'<br/>')
+ return c.replaceAll(/(\r\n|\n|\r)/gm, "<br/>")
 }
