@@ -35,7 +35,7 @@ Chương trình thưởng khi tăng trưởng về qualified click trong tháng 
 
 var camp_recognition_conditions = `<span class="note-title">Từ 0:00  ngày 28/11/2020, chiến dịch sẽ thay đổi ghi nhận như sau:</span>
 
-Áp dụng trên ứng dụng mua sắm trên điện thoại và webite của Shopee trên PC, đơn hàng đặt mua qua nền tảng web trên điện thoại vẫn sẽ được ghi nhận. 
+Áp dụng trên ứng dụng mua sắm trên điện thoại và webite của Shopee trên PC, <b>đơn hàng đặt mua qua nền tảng web trên điện thoại vẫn sẽ được ghi nhận.</b>
 
 Khách hàng mua hàng và hoàn thành thanh toán, không đổi trả hàng (trong vòng 7 ngày). 
 
@@ -129,7 +129,9 @@ var innerChinhSachHoaHongShopee = `<tr><td>Category</td><td>Khách hàng mới (
   for(let i=0;i<dataChinhSachHoaHong[0].shopee.length;i++){
     innerChinhSachHoaHongShopee +=`<tr><td>${dataChinhSachHoaHong[0].shopee[i].cate}</td><td>${(dataChinhSachHoaHong[0].shopee[i].nc * tiLe).toFixed(1)}</td><td>${(dataChinhSachHoaHong[0].shopee[i].ec * tiLe).toFixed(1)}</td></tr>`;
   }
-elm_camp_commission.innerHTML = `<table>${innerChinhSachHoaHongShopee}</table>Hoa hồng tối đa trên 1 đơn hàng: 202.000 VND`;
+elm_camp_commission.innerHTML = `
+<span class="note-title">Từ 0:00 ngày 01/08/2021 trở đi áp dụng mức hoa hồng với các publisher như sau:</span><br/>
+<table>${innerChinhSachHoaHongShopee}</table>Hoa hồng tối đa trên 1 đơn hàng: 202.000 VND`;
 
 
 function getId(c){
