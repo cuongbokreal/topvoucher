@@ -124,7 +124,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
         infor_camp.innerHTML = data_infor_camp;
 	if(createShortenLink.checked == true){
 		get_short_url(bitly_token, kq); //get shortlink nếu có
-	}else{kqShortlink.value = '';}
+	}else{kqShortlink.value = '';} //check có tạo short thì tạo, không thì kqShortLink value = '';
 	      
             if(thbao.style.display == 'none'){toast({title: 'Thành công', message: `Đã tạo link`, type: "success", duration: 5000});}
             else {toast({title: 'Lỗi', message: `Đã có lỗi xảy ra`, type: "error", duration: 5000});}
