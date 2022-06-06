@@ -67,7 +67,7 @@ var totalDoanhThu = document.getElementById('totalDoanhThu');
 
 function fetch_doanhthu(merchant){
   innerDoanhThu.innerHTML = '';
-  var fetch_doanhthu_url = `https://api.accesstrade.vn/v1/transactions?since=${update_time_start.value}T00:00:00Z&until=${update_time_end.value}T00:00:00Z&merchant=${merchant}`;
+  var fetch_doanhthu_url = `https://api.accesstrade.vn/v1/transactions?since=${update_time_start.value}T00:00:00Z&until=${update_time_end.value}T00:00:00Z&utm_source=ctv&utm_medium=ctv_${ctv_id}&merchant=${merchant}`;
   fetch(fetch_doanhthu_url, { headers })
   .then(response => response.json())
   .then(data => {
