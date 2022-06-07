@@ -287,7 +287,7 @@ function padLeadingZeros(c, size) {
 //=== Inner TOP ===
 function innerChuyenDoiTotal2(){
       document.getElementById('total-2').innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Giá trị chuyển đổi phát sinh:</div>
-      <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalGiaTriDonHang.toLocaleString()}</div>`;
+      <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${total_camp_giaTriDonHang.toLocaleString()}</div>`;
 }
 function innerSoDuTotal2(){
       document.getElementById('total-2').innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Số dư:</div>
