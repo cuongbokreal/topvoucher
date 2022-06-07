@@ -16,6 +16,8 @@ var getUrlParameter = function getUrlParameter(sParam) {
       }
 };
 var ctv_id = getUrlParameter('ctv_id');
+var tab = getUrlParameter('tab');
+
 if(typeof ctv_id != 'undefined'){
   if (ctv_id.length >= 6){document.getElementById('innerPubName').innerHTML = ctv_id;
   }else
