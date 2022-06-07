@@ -24,6 +24,7 @@ if(typeof ctv_id != 'undefined'){
 if(typeof ctv_id == 'undefined'){window.location.href = '/'}
 
 var tab = getUrlParameter('tab');
+if(typeof tab == 'undefined'){tab = 'doanhthu'}
 if(tab == 'doanhthu'){doanhthu()}else
 if(tab == 'thanhtoan'){thanhtoan()}else{doanhthu()};
 
