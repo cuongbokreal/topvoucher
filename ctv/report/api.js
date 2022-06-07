@@ -175,7 +175,7 @@ function total(){
             //innerDoanhThu.innerHTML = `<span>Chưa có dữ liệu để hiển thị</span>`;
 
   document.getElementById('innerHoaHong').innerHTML = `${total_camp_hoaHong.toLocaleString()}`;
-  document.getElementById('innerChuyenDoi').innerHTML = `${total_camp_chuyenDoiPhatSinh.toLocaleString()}`;
+  document.getElementById('innerChuyenDoi').innerHTML = `${total_camp_giaTriDonHang.toLocaleString()}`;
 }
 setTimeout(total, 5000);
 
