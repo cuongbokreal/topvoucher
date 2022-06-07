@@ -69,13 +69,12 @@ if(param_time_start.match(matchTime)){update_time_start.setAttribute('value', `$
 function setTab(c){
       window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&tab=${c}`;
 }
-
 /*On change time*/
 function changeTimeStart(){
-  window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}`;
+  window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&tab=${tab}`;
 }
 function changeTimeEnd(){
-  window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}`;
+  window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&tab=${tab}`;
 }
 
 var doanhthu = document.getElementById('doanhthu');
