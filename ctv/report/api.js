@@ -33,14 +33,14 @@ function doanhthu(){
   document.getElementById("thanhtoan").className = "px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5";
   document.getElementsByClassName("doanhthu")[0].style.display='block';
   document.getElementsByClassName("thanhtoan")[0].style.display='none';
-  innerChuyenDoiTotal2()
+  //innerChuyenDoiTotal2()
 }
 function thanhtoan(){
   document.getElementById("thanhtoan").className = "px-3 border-b-2 border-blue-500 text-blue-500 dark:text-white dark:border-white pb-1.5";
   document.getElementById("doanhthu").className = "px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5";
   document.getElementsByClassName("doanhthu")[0].style.display='none';
   document.getElementsByClassName("thanhtoan")[0].style.display='block';
-  innerSoDuTotal2()
+  //innerSoDuTotal2()
 }
 
 var param_time_end = getUrlParameter('update_time_end');
@@ -145,7 +145,6 @@ function addDoanhThu(){
 addDoanhThu()
 addThanhToan()
 
-var totalGiaTriDonHang = 0;
 function total(){
   var elm_camp_chuyenDoiPhatSinh = document.querySelectorAll('.data_camp_chuyenDoiPhatSinh');
   var elm_camp_giaTriDonHang = document.querySelectorAll('.data_camp_giaTriDonHang');
@@ -168,7 +167,6 @@ function total(){
     total_camp_daHuy += parseInt(replaceDocToNone(elm_camp_daHuy[i].innerText));
     total_camp_choXuLy += parseInt(replaceDocToNone(elm_camp_choXuLy[i].innerText));
   }
-      totalGiaTriDonHang = total_camp_giaTriDonHang;
   totalDoanhThu.innerHTML = `<td>Tổng</td>
     <td><span class="total_camp_chuyenDoiPhatSinh">${total_camp_chuyenDoiPhatSinh}</span></td>
     <td><span class="total_camp_giaTriDonHang">${total_camp_giaTriDonHang.toLocaleString()}</span></td>
@@ -287,11 +285,14 @@ function padLeadingZeros(c, size) {
 }
 
 //=== Inner TOP ===
+var lastTotal2 = '';
 function innerChuyenDoiTotal2(){
-      document.getElementById('total-2').innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Giá trị chuyển đổi phát sinh:</div>
-      <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalGiaTriDonHang.toLocaleString()}</div>`;
+      document.getElementById('total-2').innerHTML = lastTotal2;
+      lastTotal2 = document.getElementById('total-2').innerHTML;
+      
 }
 function innerSoDuTotal2(){
+      lastTotal2 = document.getElementById('total-2').innerHTML;
       document.getElementById('total-2').innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Số dư:</div>
       <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalSoDuTrongThang.toLocaleString()}</div>`;
 }
