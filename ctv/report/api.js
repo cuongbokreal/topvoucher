@@ -79,7 +79,7 @@ function fetch_doanhthu(merchant){
     var data_camp_choXuLy = 0;
     
     console.log(data.data)
-      if(data.data.length == 0){is_data_have = 0; console.log('Chưa có dữ liệu để hiển thị')}
+      if(data.data.length == 0){is_data_have = 0; console.log('Chưa có dữ liệu để hiển thị')}else{is_data_have = 1}
     Object.keys(data.data).forEach(key => {
       data_camp_giaTriDonHang += data.data[key].product_price;
       data_camp_hoaHong += data.data[key].commission;
