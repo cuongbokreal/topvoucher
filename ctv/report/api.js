@@ -18,16 +18,15 @@ var getUrlParameter = function getUrlParameter(sParam) {
 //var ctv_id = getUrlParameter('ctv_id');
 var ctv_id = window.location.href.match(/\/[0-9].+\//g)[0].replaceAll(/\//g,'');
 if(typeof ctv_id != 'undefined'){
-  if (ctv_id.length >= 6){document.getElementById('innerPubName').innerHTML = ctv_id;
-  }else
+  if (ctv_id.length >= 6){document.getElementById('innerPubName').innerHTML = ctv_id;}else
   if(ctv_id.length < 6){window.location.href = '/'}
 }
-if(typeof ctv_id == 'undefined'){
-  window.location.href = '/'
-}
+if(typeof ctv_id == 'undefined'){window.location.href = '/'}
+
 var tab = getUrlParameter('tab');
 if(tab == 'doanhthu'){doanhthu()}else
-if(tab == 'thanhtoan'){thanhtoan()}else{doanhthu()}
+if(tab == 'thanhtoan'){thanhtoan()}else{doanhthu()};
+
 function doanhthu(){
   document.getElementById("doanhthu").className = "px-3 border-b-2 border-blue-500 text-blue-500 dark:text-white dark:border-white pb-1.5";
   document.getElementById("thanhtoan").className = "px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5";
