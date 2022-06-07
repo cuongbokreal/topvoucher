@@ -130,12 +130,12 @@ function addDoanhThu(){
     choXuly = dataDoanhThu[i].hoaHong - dataDoanhThu[i].duocDuyet - dataDoanhThu[i].daHuy;
     dataInnerDoanhThu += `<tr>
                   <td>${dataDoanhThu[i].nhaQuangCao}</td>
-                  <td>${dataDoanhThu[i].chuyenDoiPhatSinh}</td>
-                  <td>${dataDoanhThu[i].giaTriDonHang.toLocaleString()}</td>
-                  <td>${dataDoanhThu[i].hoaHong.toLocaleString()}</td>
-                  <td><span class="text-green">${dataDoanhThu[i].duocDuyet.toLocaleString()}</span></td>
-                  <td><span class="text-red">${dataDoanhThu[i].daHuy.toLocaleString()}</span></td>
-                  <td><span class="text-orange">${choXuly.toLocaleString()}</span></td>
+                  <td><span class="data_camp_chuyenDoiPhatSinh">${dataDoanhThu[i].chuyenDoiPhatSinh}</span></td>
+                  <td><span class="data_camp_giaTriDonHang">${dataDoanhThu[i].giaTriDonHang.toLocaleString()}</span></td>
+                  <td><span class="data_camp_hoaHong">${dataDoanhThu[i].hoaHong.toLocaleString()}</span></td>
+                  <td><span class="text-green data_camp_duocDuyet">${dataDoanhThu[i].duocDuyet.toLocaleString()}</span></td>
+                  <td><span class="text-red data_camp_daHuy">${dataDoanhThu[i].daHuy.toLocaleString()}</span></td>
+                  <td><span class="text-orange data_camp_choXuLy">${choXuly.toLocaleString()}</span></td>
                 </tr>`;
       }
       innerDoanhThu.innerHTML += dataInnerDoanhThu;
