@@ -137,9 +137,8 @@ function addDoanhThu(){
                   <td><span class="text-red data_camp_daHuy">${dataDoanhThu[i].daHuy.toLocaleString()}</span></td>
                   <td><span class="text-orange data_camp_choXuLy">${choXuly.toLocaleString()}</span></td>
                 </tr>`;
-      }
-      innerDoanhThu.innerHTML += dataInnerDoanhThu;
 }
+innerDoanhThu.innerHTML += dataInnerDoanhThu;
 addDoanhThu()
 addThanhToan()
 
