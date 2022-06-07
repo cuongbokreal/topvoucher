@@ -100,7 +100,7 @@ function fetch_doanhthu(merchant){
     <td><span class="text-green data_camp_duocDuyet">${(data_camp_duocDuyet * tile).toLocaleString()}</span></td>
     <td><span class="text-red data_camp_daHuy">${(data_camp_daHuy * tile).toLocaleString()}</span></td>
     <td><span class="text-orange data_camp_choXuLy">${(data_camp_choXuLy * tile).toLocaleString()}</span></td>`;
-    innerDoanhThu.innerHTML += data_doanhthu_camp;
+        innerDoanhThu.innerHTML += data_doanhthu_camp;
      
   })
 }
@@ -141,6 +141,8 @@ function total(){
     <td><span class="total_camp_duocDuyet">${total_camp_duocDuyet.toLocaleString()}</span></td>
     <td><span class="text-red total_camp_daHuy">${total_camp_daHuy.toLocaleString()}</span></td>
     <td><span class="text-orange total_camp_choXuLy">${total_camp_choXuLy.toLocaleString()}</span></td>`;
+      }else{
+            innerDoanhThu.innerHTML = `<span>Chưa có dữ liệu để hiển thị</span>`;
       }
   document.getElementById('innerHoaHong').innerHTML = `${total_camp_hoaHong.toLocaleString()}`;
   document.getElementById('innerChuyenDoi').innerHTML = `${total_camp_chuyenDoiPhatSinh.toLocaleString()}`;
