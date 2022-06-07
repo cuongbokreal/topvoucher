@@ -64,6 +64,7 @@ var innerDoanhThu = document.getElementById('innerDoanhThu');
 var totalDoanhThu = document.getElementById('totalDoanhThu');
 
 //&utm_source=ctv&utm_medium=ctv_${ctv_id}
+var is_data_have = 1;
 
 function fetch_doanhthu(merchant){
   innerDoanhThu.innerHTML = '';
@@ -78,6 +79,7 @@ function fetch_doanhthu(merchant){
     var data_camp_choXuLy = 0;
     
     console.log(data.data)
+      if(data.data.length == 0){is_data_have = 0; console.log('Chưa có dữ liệu để hiển thị')}
     Object.keys(data.data).forEach(key => {
       data_camp_giaTriDonHang += data.data[key].product_price;
       data_camp_hoaHong += data.data[key].commission;
@@ -91,7 +93,6 @@ function fetch_doanhthu(merchant){
           break;
       }
     });
-    console.log(data_camp_hoaHong)
     let data_doanhthu_camp = `<td>${data.data[0].merchant}</td>
     <td><span class="data_camp_chuyenDoiPhatSinh">${data.data.length}</span></td>
     <td><span class="data_camp_giaTriDonHang">${data_camp_giaTriDonHang.toLocaleString()}</span></td>
@@ -132,6 +133,7 @@ function total(){
     total_camp_daHuy += parseInt(replaceDocToNone(elm_camp_daHuy[i].innerText));
     total_camp_choXuLy += parseInt(replaceDocToNone(elm_camp_choXuLy[i].innerText));
   }
+      if(is_data_have == 0){
   totalDoanhThu.innerHTML = `<td>Tổng</td>
     <td><span class="total_camp_chuyenDoiPhatSinh">${total_camp_chuyenDoiPhatSinh}</span></td>
     <td><span class="total_camp_giaTriDonHang">${total_camp_giaTriDonHang.toLocaleString()}</span></td>
@@ -139,7 +141,7 @@ function total(){
     <td><span class="total_camp_duocDuyet">${total_camp_duocDuyet.toLocaleString()}</span></td>
     <td><span class="text-red total_camp_daHuy">${total_camp_daHuy.toLocaleString()}</span></td>
     <td><span class="text-orange total_camp_choXuLy">${total_camp_choXuLy.toLocaleString()}</span></td>`;
-  
+      }
   document.getElementById('innerHoaHong').innerHTML = `${total_camp_hoaHong.toLocaleString()}`;
   document.getElementById('innerChuyenDoi').innerHTML = `${total_camp_chuyenDoiPhatSinh.toLocaleString()}`;
 }
