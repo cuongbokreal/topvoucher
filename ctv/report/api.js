@@ -57,23 +57,23 @@ var matchTime = /[0-9]{4}-[0-9]{2}-[0-9]{2}/g;
 if(typeof param_time_end == 'undefined' || param_time_end.length < 10 || param_time_end.length <= 1){
   update_time_end.setAttribute('value', `${thisYear}-${padLeadingZeros(thisMonth,2)}-${padLeadingZeros(thisDate,2)}`);
   update_time_start.setAttribute('value', `${thisYear}-${padLeadingZeros(thisMonth,2)}-01`);
-  window.location.replace(`${window.location.href}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}`);
+  window.location.replace(`${window.location.href}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}`);
 }else
 if(param_time_end.match(matchTime)){update_time_end.setAttribute('value', `${param_time_end}`)}
 
 if(typeof param_time_start == 'undefined' || param_time_start.length < 10 || param_time_start.length <= 1){
   update_time_start.setAttribute('value', `${thisYear}-${padLeadingZeros(thisMonth,2)}-01`);
-  window.location.replace(`${window.location.href}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}`);
+  window.location.replace(`${window.location.href}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}`);
 }else
 if(param_time_start.match(matchTime)){update_time_start.setAttribute('value', `${param_time_start}`);}
 
 
 /*On change time*/
 function changeTimeStart(){
-  window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}`;
+  window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}`;
 }
 function changeTimeEnd(){
-  window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}`;
+  window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}`;
 }
 
 var doanhthu = document.getElementById('doanhthu');
