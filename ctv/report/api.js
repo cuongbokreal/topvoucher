@@ -77,7 +77,6 @@ function changeTimeEnd(){
 }
 
 var doanhthu = document.getElementById('doanhthu');
-
 var innerDoanhThu = document.getElementById('innerDoanhThu');
 var totalDoanhThu = document.getElementById('totalDoanhThu');
 
@@ -122,12 +121,27 @@ function fetch_doanhthu(merchant){
      
   })
 }
-
-
 fetch_doanhthu('shopee');
 fetch_doanhthu('tikivn');
 fetch_doanhthu('lazada_kol');
   
+function addDoanhThu(){
+      let dataInnerDoanhThu = "";
+      var choXuly = 0;
+      for(let i=0; i<dataDoanhThu.length;i++){
+    choXuly = dataDoanhThu[i].hoaHong - dataDoanhThu[i].duocDuyet - dataDoanhThu[i].daHuy;
+    dataInnerDoanhThu += `<tr>
+                  <td>${dataDoanhThu[i].nhaQuangCao}</td>
+                  <td>${dataDoanhThu[i].chuyenDoiPhatSinh}</td>
+                  <td>${dataDoanhThu[i].giaTriDonHang.toLocaleString()}</td>
+                  <td>${dataDoanhThu[i].hoaHong.toLocaleString()}</td>
+                  <td><span class="text-green">${dataDoanhThu[i].duocDuyet.toLocaleString()}</span></td>
+                  <td><span class="text-red">${dataDoanhThu[i].daHuy.toLocaleString()}</span></td>
+                  <td><span class="text-orange">${choXuly.toLocaleString()}</span></td>
+                </tr>`;
+      }
+      innerDoanhThu.innerHTML += dataInnerDoanhThu;
+}
 
 function total(){
   var elm_camp_chuyenDoiPhatSinh = document.querySelectorAll('.data_camp_chuyenDoiPhatSinh');
