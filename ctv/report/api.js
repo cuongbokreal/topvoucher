@@ -46,13 +46,12 @@ function thanhtoan(){
 var param_time_end = getUrlParameter('update_time_end');
 var param_time_start = getUrlParameter('update_time_start');
 
-/* Set thời gian bởi params*/
+
+/* === Set thời gian bởi params ===*/
 var update_time_start = document.getElementById('update_time_start');
 var update_time_end = document.getElementById('update_time_end');
 update_time_end.setAttribute('max', `${thisYear}-${padLeadingZeros(thisMonth,2)}-${padLeadingZeros(thisDate,2)}`);
 var matchTime = /[0-9]{4}-[0-9]{2}-[0-9]{2}/g;
-
-
 
 if(typeof param_time_end == 'undefined' || param_time_end.length < 10 || param_time_end.length <= 1){
   update_time_end.setAttribute('value', `${thisYear}-${padLeadingZeros(thisMonth,2)}-${padLeadingZeros(thisDate,2)}`);
@@ -66,6 +65,7 @@ if(typeof param_time_start == 'undefined' || param_time_start.length < 10 || par
   window.location.replace(`${window.location.href}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}`);
 }else
 if(param_time_start.match(matchTime)){update_time_start.setAttribute('value', `${param_time_start}`);}
+
 
 
 /*On change time*/
