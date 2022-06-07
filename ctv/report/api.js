@@ -65,7 +65,12 @@ if(typeof param_time_start == 'undefined' || param_time_start.length < 10 || par
 }else
 if(param_time_start.match(matchTime)){update_time_start.setAttribute('value', `${param_time_start}`);}
 
-
+function updateOption(){
+      var update_time_start = document.getElementById('update_time_start');
+      var update_time_end = document.getElementById('update_time_end');
+      var tab = getUrlParameter('tab');
+      window.location.href = `${window.location.href}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&tab=${tab}`;
+}
 
 /*On change time*/
 function changeTimeStart(){
