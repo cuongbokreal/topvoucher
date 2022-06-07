@@ -133,7 +133,7 @@ function total(){
     total_camp_daHuy += parseInt(replaceDocToNone(elm_camp_daHuy[i].innerText));
     total_camp_choXuLy += parseInt(replaceDocToNone(elm_camp_choXuLy[i].innerText));
   }
-      if(is_data_have == 0){
+      if(is_data_have == 1){
   totalDoanhThu.innerHTML = `<td>Tổng</td>
     <td><span class="total_camp_chuyenDoiPhatSinh">${total_camp_chuyenDoiPhatSinh}</span></td>
     <td><span class="total_camp_giaTriDonHang">${total_camp_giaTriDonHang.toLocaleString()}</span></td>
