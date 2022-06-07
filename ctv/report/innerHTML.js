@@ -40,8 +40,8 @@ document.getElementById('main').innerHTML = `
           <div id="innerPubName"></div>
           <br/>
           <div class="flex items-center space-x-3 sm:mt-7 mt-4">
-            <a href="#" class="px-3 border-b-2 border-blue-500 text-blue-500 dark:text-white dark:border-white pb-1.5" onclick="updateOption('doanhthu')" id="doanhthu">Doanh thu</a>
-            <a href="#" class="px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5" onclick="updateOption('thanhtoan')" id="thanhtoan">Thanh toán</a>
+            <a href="#" class="px-3 border-b-2 border-blue-500 text-blue-500 dark:text-white dark:border-white pb-1.5" onclick="setTab('doanhthu')" id="doanhthu">Doanh thu</a>
+            <a href="#" class="px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5" onclick="setTab('thanhtoan')" id="thanhtoan">Thanh toán</a>
           </div>
         </div>
         <div class="sm:p-7 p-4">
