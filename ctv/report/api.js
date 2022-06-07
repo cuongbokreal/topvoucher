@@ -15,7 +15,8 @@ var getUrlParameter = function getUrlParameter(sParam) {
           }
       }
 };
-var ctv_id = getUrlParameter('ctv_id');
+//var ctv_id = getUrlParameter('ctv_id');
+var ctv_id = window.location.href.match(/\/[0-9].+\//g)[0].replaceAll(/\//g,'');
 if(typeof ctv_id != 'undefined'){
   if (ctv_id.length >= 6){document.getElementById('innerPubName').innerHTML = ctv_id;
   }else
