@@ -141,6 +141,8 @@ function addDoanhThu(){
       innerDoanhThu.innerHTML += dataInnerDoanhThu;
 }
 addDoanhThu()
+addThanhToan()
+
 function total(){
   var elm_camp_chuyenDoiPhatSinh = document.querySelectorAll('.data_camp_chuyenDoiPhatSinh');
   var elm_camp_giaTriDonHang = document.querySelectorAll('.data_camp_giaTriDonHang');
@@ -178,6 +180,33 @@ function total(){
 setTimeout(total, 5000);
 
 
+
+/*=== THANH TOÁN ===*/
+function addThanhToan(){
+      var totalHoaHongDuocDuyet=0; var totalDaThanhToan=0; var totalSoDuTrongThang=0;
+        var soDu = 0;
+        let dataInnerThanhToan = "";
+        for(let i=0; i<dataThanhToan.length;i++){
+          soDu = dataThanhToan[i].hoaHongDuocDuyet - dataThanhToan[i].daThanhToan;
+          dataInnerThanhToan += `<tr>
+                        <td>${dataThanhToan[i].thangDoiSoat.toLocaleString()}</td>
+                        <td>${dataThanhToan[i].hoaHongDuocDuyet.toLocaleString()}</td>
+                        <td>${dataThanhToan[i].daThanhToan.toLocaleString()}</td>
+                        <td>${soDu.toLocaleString()}</td>
+                      </tr>`;
+          totalHoaHongDuocDuyet += dataThanhToan[i].hoaHongDuocDuyet;
+          totalDaThanhToan += dataThanhToan[i].daThanhToan;
+          totalSoDuTrongThang += soDu;
+        innerThanhToan.innerHTML = dataInnerThanhToan;
+        var totalThanhToan = document.getElementById('totalThanhToan');
+        totalThanhToan.innerHTML = `<tr>
+                        <td><span class="font-w-500">Tổng</span></td>
+                        <td><span class="font-w-500">${totalHoaHongDuocDuyet.toLocaleString()}</span></td>
+                        <td><span class="font-w-500">${totalDaThanhToan.toLocaleString()}</span></td>
+                        <td><span class="font-w-500">${totalSoDuTrongThang.toLocaleString()}</span></td>
+                      </tr>`;
+}
+      
 /*=== Chức năng khác ===*/
 document.getElementById('url_product_link').innerHTML = `<a target="_blank" href="https://topvoucher.tk/ctv/tools/create/deep-link/?id=${ctv_id}">https://topvoucher.tk/ctv/tools/create/deep-link/?id=${ctv_id}</a>`;
 
