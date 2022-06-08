@@ -57,7 +57,7 @@ fetch(fetch_doanhthu_url, { headers })
 .then(data => {
   console.log(data.data)
   var lengthData = data.data.length;
-      document.getElementById('totalConversion').innerHTML = `(${lengthData})`; //inner total conversion
+      document.getElementById('totalConversion').innerHTML = ` (${lengthData}) `; //inner total conversion
   let data_camp_donhang = '';
   Object.keys(data.data).forEach(key => {
     data_camp_donhang+= `<tr>
