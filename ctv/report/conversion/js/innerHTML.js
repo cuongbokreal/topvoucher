@@ -44,9 +44,10 @@ document.getElementById('main').innerHTML = `
           </div>
         </div>
         <div class="sm:p-7 p-4">
-          <input type="date" name="start" id="update_time_start" onchange="changeTimeStart()"/>
-          <input type="date" name="end" id="update_time_end" onchange="changeTimeEnd()"/>
-          
+          <div id="setTime">
+            <input type="date" name="start" id="update_time_start" onchange="changeTimeStart()"/>
+            <input type="date" name="end" id="update_time_end" onchange="changeTimeEnd()"/>
+          </div>
           <div class="divTable">
             <table class="table-wrapper donhang">
               <thead id="tableTop">
