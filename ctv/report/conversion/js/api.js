@@ -38,12 +38,12 @@ if(param_time_end.match(matchTime)){update_time_end.setAttribute('value', `${par
 
 if(typeof param_time_start == 'undefined' || param_time_start.length < 10 || param_time_start.length <= 1){
   update_time_start.setAttribute('value', `${thisYear}-${padLeadingZeros(thisMonth,2)}-01`);
-  window.location.replace(`${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}`);
+  window.location.replace(`${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}`);
 }else
 if(param_time_start.match(matchTime)){update_time_start.setAttribute('value', `${param_time_start}`);}
 
 if(typeof merchant == 'undefined' || merchant.length < 2 || merchant == ''){
-  window.location.replace(`${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=shopee`)
+  window.location.replace(`${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=shopee`)
 }
 document.getElementById('merchant').innerHTML = `<span style="color:red">${merchant}</span>`;
 
