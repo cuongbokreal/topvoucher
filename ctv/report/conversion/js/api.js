@@ -59,17 +59,17 @@ fetch(fetch_doanhthu_url, { headers })
   let data_camp_donhang = '';
   Object.keys(data.data).forEach(key => {
     data_camp_donhang+= `<tr>
-                <td class="transaction_time"><span>${data.data[key].transaction_time}</span></td>
-                <td class="transaction_id"><span>${data.data[key].transaction_id}</span></td>
-                <td class="status"><span>${getStatusDonhang(data.data[key].status)}</span></td>
-                <td class="click_referer"><span>${data.data[key]._extra.parameters.click_referer}</span></td>
-                <td class="product_category"><span>${data.data[key].product_category}</span></td>
-                <td class="product_price"><span>${((data.data[key].product_price) * (data.data[key].product_quantity)).toLocaleString()}</span></td>
-                <td class="commission"><span>${(data.data[key].commission * tile).toLocaleString()}</span></td>
-                <td class="merchant"><span>${data.data[key].merchant}</span></td>
-                <td class="reason_rejected"><span>${data.data[key].reason_rejected}</span></td>
-                <td class="device_type"><span>${data.data[key]._extra.device_type}</span></td>
-                <td class="device_brand"><span>${data.data[key]._extra.device_brand}</span></td>
+                <td class="transaction_time" title="${data.data[key].transaction_time}"><span>${data.data[key].transaction_time}</span></td>
+                <td class="transaction_id" title="${data.data[key].transaction_id}"><span>${data.data[key].transaction_id}</span></td>
+                <td class="status" title="${getStatusDonhang(data.data[key].status)}"><span>${getStatusDonhang(data.data[key].status)}</span></td>
+                <td class="click_referer" title="${data.data[key]._extra.parameters.click_referer}"><span>${data.data[key]._extra.parameters.click_referer}</span></td>
+                <td class="product_category" title="${data.data[key].product_category}"><span>${data.data[key].product_category}</span></td>
+                <td class="product_price" title="${((data.data[key].product_price) * (data.data[key].product_quantity)).toLocaleString()}"><span>${((data.data[key].product_price) * (data.data[key].product_quantity)).toLocaleString()}</span></td>
+                <td class="commission" title="${(data.data[key].commission * tile).toLocaleString()}"><span>${(data.data[key].commission * tile).toLocaleString()}</span></td>
+                <td class="merchant" title="${data.data[key].merchant}"><span>${data.data[key].merchant}</span></td>
+                <td class="reason_rejected" title="${data.data[key].reason_rejected}"><span>${data.data[key].reason_rejected}</span></td>
+                <td class="device_type" title="${data.data[key]._extra.device_type}"><span>${data.data[key]._extra.device_type}</span></td>
+                <td class="device_brand" title="${data.data[key]._extra.device_brand}"><span>${data.data[key]._extra.device_brand}</span></td>
                 </tr>`;
   });
   if(lengthData <= 0){innerDonHang.innerHTML = 'Chưa có dữ liệu để hiển thị'}
