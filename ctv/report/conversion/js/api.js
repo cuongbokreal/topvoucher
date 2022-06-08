@@ -83,8 +83,8 @@ fetch(fetch_doanhthu_url, { headers })
 
 /* Function */
 function getStatusDonhang(c){
-  if(c == '0'){return '<span class="text-orange">Chưa duyệt</span>'}else
-  if(c == '1'){return '<span class="text-green">Đã duyệt</span>'}else
+  if(c == '0'){return '<span class="text-orange">Chờ xử lý</span>'}else
+  if(c == '1'){return '<span class="text-green">Tạm duyệt</span>'}else
   if(c == '2'){return '<span class="text-red">Đã hủy</span>'}
 }
 function padLeadingZeros(c, size) {
