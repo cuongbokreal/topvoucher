@@ -20,6 +20,7 @@ var param_time_start = getUrlParameter('update_time_start');
 var merchant = getUrlParameter('merchant');
 var ctv_id = getUrlParameter('ctv_id');
 if(ctv_id.length < 6){window.location.href = '/'}
+document.getElementById('innerPubName').innerHTML = `id: <span class="text-red">${ctv_id}</span>`;
 //&utm_source=ctv&utm_medium=ctv_${ctv_id}
 
 
