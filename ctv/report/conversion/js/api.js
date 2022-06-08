@@ -18,15 +18,10 @@ var getUrlParameter = function getUrlParameter(sParam) {
 var param_time_end = getUrlParameter('update_time_end');
 var param_time_start = getUrlParameter('update_time_start');
 var merchant = getUrlParameter('merchant');
-if(typeof merchant == 'undefined' || merchant.length < 2 || merchant == ''){
-  window.location.replace(`${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=shopee`)
-}
-document.getElementById('merchant').innerHTML = `<span style="color:red">${merchant}</span>`;
-
 var ctv_id = getUrlParameter('ctv_id');
 if(ctv_id.length < 6){window.location.href = '/'}
-
 //&utm_source=ctv&utm_medium=ctv_${ctv_id}
+
 
 var update_time_start = document.getElementById('update_time_start');
 var update_time_end = document.getElementById('update_time_end');
@@ -46,6 +41,11 @@ if(typeof param_time_start == 'undefined' || param_time_start.length < 10 || par
   window.location.replace(`${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}`);
 }else
 if(param_time_start.match(matchTime)){update_time_start.setAttribute('value', `${param_time_start}`);}
+
+if(typeof merchant == 'undefined' || merchant.length < 2 || merchant == ''){
+  window.location.replace(`${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=shopee`)
+}
+document.getElementById('merchant').innerHTML = `<span style="color:red">${merchant}</span>`;
 
 
 var innerDonHang = document.getElementById('innerDonHang');
