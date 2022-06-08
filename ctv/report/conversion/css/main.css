@@ -60,7 +60,7 @@ header {height: 5rem; max-height:fit-content;}
 .table-wrapper {
   padding:5px;
   display:block; 
-  overflow-y:hidden;
+  overflow-y:auto;
   overflow-x:auto;
   scroll-behavior:initial;
   table-layout: fixed;
