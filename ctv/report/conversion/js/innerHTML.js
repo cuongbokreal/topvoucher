@@ -22,7 +22,7 @@ document.getElementById('main').innerHTML = `
           <div class="flex w-full items-center">
             <div class="flex items-center text-lg text-gray-900 dark:text-white">
               <!--img src="https://assets.codepen.io/344846/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1582611188&width=512" class="w-12 mr-4 rounded-full" alt="profile" /-->
-              Overview 
+              Đơn hàng 
             </div>
             <div class="ml-auto items-center justify-end">
               <div class="text-right total">
