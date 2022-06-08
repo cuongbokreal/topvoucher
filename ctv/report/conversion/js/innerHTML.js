@@ -40,7 +40,7 @@ document.getElementById('main').innerHTML = `
           <div id="innerPubName"></div>
           <br/>
           <div class="flex items-center space-x-3 sm:mt-7 mt-4">
-            Báo cáo đơn hàng  <span id="merchant"></span>
+            Báo cáo <span  id="totalConversion"></span> đơn hàng  <span id="merchant"></span>
           </div>
         </div>
         <div class="sm:p-7 p-4">
