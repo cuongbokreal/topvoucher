@@ -70,14 +70,14 @@ document.getElementById('main').innerHTML = `
           </div>
           <p style="font-size: 10px;">* Đơn hàng sẽ được cập nhật vào 12H-22H hôm sau</p>
           <br/>
-          <p class="form-control text-gray-900 text-lg dark:text-white" style="background-color: #e9ecef">Tool Product link: <span id="url_product_link"></span></p>
+          <!--p class="form-control text-gray-900 text-lg dark:text-white" style="background-color: #e9ecef">Tool Product link: <span id="url_product_link"></span></p>
           <br/>
           <div class="doanhthu ">
             <p class="text-gray-900 text-lg dark:text-white">Chính sách thanh toán:</p>
             <p>1. Để thanh toán, doanh thu của Publisher chỉ cần đạt tối thiểu hạn mức 100.000/1 kỳ thanh toán. Sẽ cộng dồn vào tháng tiếp theo nếu chưa đủ hạn mức thanh toán.</p>
             <p>2. Được thanh toán doanh thu phát sinh trực tiếp từ các Dịch vụ hợp tác cùng Bên A trong tháng T0 (từ ngày 1 -30 của tháng) vào ngày T1+22 (vào ngày 22 tháng sau).</p>
             <p>3. Để thanh toán, hãy liên hệ <a target="_blank" href="https://www.facebook.com/107717958481657/?ref=cuongbokit.blogspot.com">Facebook Page</a> hoặc biểu tượng ${messengerLogo} bên cạnh (T2-T7 8H-21H)</p>
-          </div>
+          </div-->
         </div>
         <div id="footer">© 2021 by TopVoucher </div>
       </div>
