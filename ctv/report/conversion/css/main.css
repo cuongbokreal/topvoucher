@@ -8,8 +8,8 @@
   max-width: 15rem;
 }
 .divTable{
-  outline: 7px solid white;
-  outline-offset: -7px;
+  outline: 5px solid white;
+  outline-offset: -5px;
 }
 .donhang{
   height: 30rem;
@@ -24,8 +24,8 @@
 
 @media screen and (max-width: 640px) {
   .divTable{
-    outline: 15px solid white;
-    outline-offset: -10px;
+    outline: 6px solid white;
+    outline-offset: -6px;
   }
 }
 
