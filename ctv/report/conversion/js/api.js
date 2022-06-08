@@ -61,7 +61,7 @@ fetch(fetch_doanhthu_url, { headers })
     data_camp_donhang+= `<tr>
                 <td class="transaction_time" title="${data.data[key].transaction_time}"><span>${data.data[key].transaction_time}</span></td>
                 <td class="transaction_id" title="${data.data[key].transaction_id}"><span>${data.data[key].transaction_id}</span></td>
-                <td class="status" title="${getStatusDonhang(data.data[key].status)}"><span>${getStatusDonhang(data.data[key].status)}</span></td>
+                <td class="status" title=""><span>${getStatusDonhang(data.data[key].status)}</span></td>
                 <td class="click_referer" title="${data.data[key]._extra.parameters.click_referer}"><span>${data.data[key]._extra.parameters.click_referer}</span></td>
                 <td class="product_category" title="${data.data[key].product_category}"><span>${data.data[key].product_category}</span></td>
                 <td class="product_price" title="${((data.data[key].product_price) * (data.data[key].product_quantity)).toLocaleString()}"><span>${((data.data[key].product_price) * (data.data[key].product_quantity)).toLocaleString()}</span></td>
