@@ -76,7 +76,7 @@ fetch(fetch_doanhthu_url, { headers })
               product.product_price = (data.data[key].products.product_price * data.data[key].products.product_quantity).toLocaleString() ;
               product.pub_commission = (data.data[key].products.pub_commission * tile).toLocaleString() ;
               product.reason_rejected = data.data[key].products.reason_rejected ;
-              data_product[i].push(product)
+              data_product.push(product)
         }
         
     data_camp_donhang+= `<tr>
