@@ -62,9 +62,14 @@ fetch(fetch_doanhthu_url, { headers })
       document.getElementById('totalConversion').innerHTML = ` (${lengthData}) `; //inner total conversion
   let data_camp_donhang = '';
   Object.keys(data.data).forEach(key => {
+        var status = [];
+        if(data.data[key].order_pending != 0){status = [0, data.data[key].order_pending]}else
+        if(data.data[key].order_reject != 0){status = [2, data.data[key].order_reject]}else
+        if(data.data[key].order_success != 0){status = [1, data.data[key].order_success]}
+        
     data_camp_donhang+= `<tr>
-                <td class="transaction_time" title="${data.data[key].transaction_time}"><span>${data.data[key].transaction_time}</span></td>
-                <td class="transaction_id">
+                <td class="sales_time" title="${data.data[key].sales_time}"><span>${data.data[key].sales_time}</span></td>
+                <td class="order_id">
                       <span>
                         <a onclick="innerDetails(this)"
                 data-merchant="${data.data[key].merchant}"
@@ -76,12 +81,12 @@ fetch(fetch_doanhthu_url, { headers })
                 data-transaction_time="${data.data[key].transaction_time}"
                 data-product_price="${data.data[key].product_price}"
                 data-commission="${(data.data[key].commission * tile).toLocaleString()}"
-                title="${data.data[key].transaction_id}" href="#popup"
-                        >${data.data[key].transaction_id}</a>
+                title="${data.data[key].order_id}" href="#popup"
+                        >${data.data[key].order_id}</a>
                       </span>
                 </td>
-                <td class="status" title=""><span>${getStatusDonhang(data.data[key].status)}</span></td>
-                <td class="click_referer" title="${data.data[key]._extra.parameters.click_referer}"><span>${data.data[key]._extra.parameters.click_referer}</span></td>
+                <td class="status" title=""><span>${getStatusDonhang(status)}</span></td>
+                <td class="website" title="${data.data[key].website}"><span>${data.data[key].website}</span></td>
                 <td class="product_category" title="${data.data[key].product_category}"><span>${data.data[key].product_category}</span></td>
                 <td class="product_price" title="${((data.data[key].product_price) * (data.data[key].product_quantity)).toLocaleString()}"><span>${((data.data[key].product_price) * (data.data[key].product_quantity)).toLocaleString()}</span></td>
                 <td class="commission" title="${(data.data[key].commission * tile).toLocaleString()}"><span>${(data.data[key].commission * tile).toLocaleString()}</span></td>
@@ -132,9 +137,9 @@ function innerDetails(c){
 
 /* Function */
 function getStatusDonhang(c){
-  if(c == '0'){return '<span class="text-orange">Chờ xử lý</span>'}else
-  if(c == '1'){return '<span class="text-green">Tạm duyệt</span>'}else
-  if(c == '2'){return '<span class="text-red">Đã hủy</span>'}
+  if(c[0] == '0'){return `<span class="text-orange">Chờ xử lý ${c[1]}</span>`}else
+  if(c[0] == '1'){return `<span class="text-green">Tạm duyệt ${c[1]}</span>`}else
+  if(c[0] == '2'){return `<span class="text-red">Đã hủy ${c[1]}</span>`}
 }
 function padLeadingZeros(c, size) {
     return c.toString().padStart(size, '0');
