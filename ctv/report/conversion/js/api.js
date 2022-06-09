@@ -115,10 +115,12 @@ fetch(fetch_doanhthu_url, { headers })
 
 var detailsOrder = document.getElementById('detailsOrder');
 var detailsConversion = document.getElementById('detailsConversion');
-let dataInnerDetailsOrder = '';
-var data_product = '';
-let dataInnerDetailsConversion = '';
+
 function innerDetails(c){
+      let dataInnerDetailsOrder = '';
+      var data_product = '';
+      let dataInnerDetailsConversion = '';
+      
       dataInnerDetails = `<tr><td class="tdTitle">Advertiser:</td>
       <td class="tdDetails">${c.getAttribute('data-merchant')}</td></tr>
       
@@ -149,6 +151,16 @@ function innerDetails(c){
       detailsOrder.innerHTML = dataInnerDetails;
       
       data_product = c.getAttribute('data-products')
+      for(let i=0;  i< data_product.length; i++){
+            dataInnerDetailsConversion += `<tr>
+            <td>${data_product[i].product_id}</td>
+            <td>${data_product[i].product_quantity}</td>
+            <td>${data_product[i].status }</td>
+            <td>${data_product[i].product_price }</td>
+            <td>${data_product[i].pub_commission }</td>
+            <td>${data_product[i].reason_rejected }</td>
+            </tr>`;
+      }
       console.log(data_product)
       
       
