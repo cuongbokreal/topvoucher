@@ -97,31 +97,31 @@ fetch(fetch_doanhthu_url, { headers })
 var detailsConversion = document.getElementById('detailsConversion');
 let dataInnerDetails = '';
 function innerDetails(c){
-      dataInnerDetails = `<tr><td>Advertiser:</td>
+      dataInnerDetails = `<tr><td class="tdTitle">Advertiser:</td>
       <td class="tdDetails">${c.getAttribute('data-merchant')}</td></tr>
       
-      <tr><td>Đường dẫn sản phẩm:</td>
+      <tr><td class="tdTitle">Đường dẫn sản phẩm:</td>
       <td class="tdDetails">${c.getAttribute('data-click_url')}</td></tr>
       
-      <tr><td>Nền tảng thiết bị:</td>
+      <tr><td class="tdTitle">Nền tảng thiết bị:</td>
       <td class="tdDetails">${c.getAttribute('data-device_type')}</td></tr>
       
-      <tr><td>Trình duyệt:</td>
+      <tr><td class="tdTitle">Trình duyệt:</td>
       <td class="tdDetails">${c.getAttribute('data-browser')}</td></tr>
       
-      <tr><td>Mã đơn hàng:</td>
+      <tr><td class="tdTitle">Mã đơn hàng:</td>
       <td class="tdDetails">${c.getAttribute('data-transaction_id')}</td></tr>
       
-      <tr><td>Click:</td>
+      <tr><td class="tdTitle">Click:</td>
       <td class="tdDetails">${c.getAttribute('data-click_time').replaceAll('T', ' ')}</td></tr>
       
-      <tr><td>Thời gian mua:</td>
+      <tr><td class="tdTitle">Thời gian mua:</td>
       <td class="tdDetails">${c.getAttribute('data-transaction_time').replaceAll('T', ' ')}</td></tr>
       
-      <tr><td>Giá trị đơn hàng:</td>
+      <tr><td class="tdTitle">Giá trị đơn hàng:</td>
       <td class="tdDetails">${c.getAttribute('data-product_price')}</td></tr>
       
-      <tr><td>Hoa hồng:</td>
+      <tr><td class="tdTitle">Hoa hồng:</td>
       <td class="tdDetails">${c.getAttribute('data-commission')}</td></tr>
       `;
       detailsConversion.innerHTML = dataInnerDetails;
