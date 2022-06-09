@@ -60,7 +60,6 @@ document.getElementById('main').innerHTML = `
                   <th>Giá trị đơn hàng</th>
                   <th>Hoa hồng</th>
                   <th>Advertiser</th>
-                  <th>Lý do bị hủy	</th>
                   <th>Loại thiết bị</th>
                   <th>Platform</th>
                 </tr>
@@ -83,6 +82,7 @@ document.getElementById('main').innerHTML = `
         <div class='popup_'>
           <h2>Chi tiết đơn hàng</h2>
           <div class="divDetails">
+            <table class="table-wrapper details" id="detailsOrder"></table>
             <table class="table-wrapper details" id="detailsConversion"></table>
           </div>
           <a class='close ripple' href='#close-bsw'>Đóng</a>
