@@ -81,7 +81,7 @@ fetch(fetch_doanhthu_url, { headers })
                 data-sale_time="${data.data[key].sales_time}"
                 data-billing="${data.data[key].billing}"
                 data-pub_commission="${(data.data[key].pub_commission * tile).toLocaleString()}"
-                data-products="${data.data[key].products}"
+                data-products="${data.data[key].products.values()}"
                 title="${data.data[key].order_id}" href="#popup"
                         >${data.data[key].order_id}</a>
                       </span>
