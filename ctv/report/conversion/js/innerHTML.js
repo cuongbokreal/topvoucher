@@ -79,6 +79,13 @@ document.getElementById('main').innerHTML = `
             <p>3. Để thanh toán, hãy liên hệ <a target="_blank" href="https://www.facebook.com/107717958481657/?ref=cuongbokit.blogspot.com">Facebook Page</a> hoặc biểu tượng ${messengerLogo} bên cạnh (T2-T7 8H-21H)</p>
           </div-->
         </div>
+        <div id='popup'>
+        <div class='popup_'>
+          <h2>Chi tiết đơn hàng</h2>
+          <p>content</p>
+          <a class='close ripple' href='#close-bsw'>Đóng</a>
+          </div>
+        </div>
         <div id="footer">© 2021 by TopVoucher </div>
       </div>
     </div>
