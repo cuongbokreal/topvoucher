@@ -101,8 +101,8 @@ fetch(fetch_doanhthu_url, { headers })
 })
 
 
-var detailsConversion = document.getElementById('detailsConversion');
-let dataInnerDetails = '';
+var detailsOrder = document.getElementById('detailsOrder');
+let dataInnerDetailsOrder = '';
 function innerDetails(c){
       dataInnerDetails = `<tr><td class="tdTitle">Advertiser:</td>
       <td class="tdDetails">${c.getAttribute('data-merchant')}</td></tr>
@@ -131,7 +131,7 @@ function innerDetails(c){
       <tr><td class="tdTitle">Hoa hồng:</td>
       <td class="tdDetails">${c.getAttribute('data-pub_commission')}</td></tr>
       `;
-      detailsConversion.innerHTML = dataInnerDetails;
+      detailsOrder.innerHTML = dataInnerDetailsOrder;
 }
 
 
