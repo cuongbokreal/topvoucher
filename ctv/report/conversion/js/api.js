@@ -88,12 +88,11 @@ fetch(fetch_doanhthu_url, { headers })
                 <td class="status" title=""><span>${getStatusDonhang(status)}</span></td>
                 <td class="website" title="${data.data[key].website}"><span>${data.data[key].website}</span></td>
                 <td class="product_category" title="${data.data[key].product_category}"><span>${data.data[key].product_category}</span></td>
-                <td class="product_price" title="${((data.data[key].product_price) * (data.data[key].product_quantity)).toLocaleString()}"><span>${((data.data[key].product_price) * (data.data[key].product_quantity)).toLocaleString()}</span></td>
-                <td class="commission" title="${(data.data[key].commission * tile).toLocaleString()}"><span>${(data.data[key].commission * tile).toLocaleString()}</span></td>
+                <td class="billing" title="${(data.data[key].billing).toLocaleString()}"><span>${(data.data[key].billing).toLocaleString()}</span></td>
+                <td class="pub_commission" title="${(data.data[key].pub_commission * tile).toLocaleString()}"><span>${(data.data[key].pub_commission * tile).toLocaleString()}</span></td>
                 <td class="merchant" title="${data.data[key].merchant}"><span>${data.data[key].merchant}</span></td>
-                <td class="reason_rejected" title="${data.data[key].reason_rejected}"><span>${data.data[key].reason_rejected}</span></td>
-                <td class="device_type" title="${data.data[key]._extra.device_type}"><span>${data.data[key]._extra.device_type}</span></td>
-                <td class="device_brand" title="${data.data[key]._extra.device_brand}"><span>${data.data[key]._extra.device_brand}</span></td>
+                <td class="client_platform" title="${data.data[key].client_platform}"><span>${data.data[key].client_platform}</span></td>
+                <td class="conversion_platform" title="${data.data[key].conversion_platform}"><span>${data.data[key].conversion_platform}</span></td>
                 </tr>`;
   });
   if(lengthData <= 0){innerDonHang.innerHTML = 'Chưa có dữ liệu để hiển thị'}
