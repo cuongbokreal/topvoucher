@@ -67,6 +67,7 @@ fetch(fetch_doanhthu_url, { headers })
         if(data.data[key].order_reject != 0){status = [2, data.data[key].order_reject]}else
         if(data.data[key].order_success != 0){status = [1, data.data[key].order_success]}
         
+        /*
         var data_product = []
         for(let i=0; i<data.data[key].products.length; i++){
               var product = {};
@@ -76,9 +77,8 @@ fetch(fetch_doanhthu_url, { headers })
               product.product_price = (data.data[key].products.product_price * data.data[key].products.product_quantity).toLocaleString() ;
               product.pub_commission = (data.data[key].products.pub_commission * tile).toLocaleString() ;
               product.reason_rejected = data.data[key].products.reason_rejected ;
-              console.log(product)
               data_product.push(product)
-        }
+        }*/
         console.log(JSON.stringify(data.data[key].products))
         
     data_camp_donhang+= `<tr>
