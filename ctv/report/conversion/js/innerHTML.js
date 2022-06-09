@@ -82,7 +82,9 @@ document.getElementById('main').innerHTML = `
         <div id='popup'>
         <div class='popup_'>
           <h2>Chi tiết đơn hàng</h2>
-          <p>content</p>
+          <div class="divDetails">
+            <table class="table-wrapper details"></table>
+          </div>
           <a class='close ripple' href='#close-bsw'>Đóng</a>
           </div>
         </div>
