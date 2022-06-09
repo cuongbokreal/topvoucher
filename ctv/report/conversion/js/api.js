@@ -71,7 +71,7 @@ fetch(fetch_doanhthu_url, { headers })
                 <td class="sales_time" title="${data.data[key].sales_time}"><span>${data.data[key].sales_time}</span></td>
                 <td class="order_id">
                       <span>
-                        <a onclick="innerDetailsOrder(this)"
+                        <a onclick="innerDetails(this)"
                 data-merchant="${data.data[key].merchant}"
                 data-at_product_link="${data.data[key].at_product_link}"
                 data-client_platform="${data.data[key].client_platform}"
@@ -103,7 +103,7 @@ fetch(fetch_doanhthu_url, { headers })
 
 var detailsOrder = document.getElementById('detailsOrder');
 let dataInnerDetailsOrder = '';
-function innerDetailsOrder(c){
+function innerDetails(c){
       dataInnerDetails = `<tr><td class="tdTitle">Advertiser:</td>
       <td class="tdDetails">${c.getAttribute('data-merchant')}</td></tr>
       
