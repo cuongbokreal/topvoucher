@@ -80,7 +80,7 @@ fetch(fetch_doanhthu_url, { headers })
                 data-click_time="${data.data[key].click_time}"
                 data-sale_time="${data.data[key].sales_time}"
                 data-billing="${data.data[key].billing}"
-                data-commission="${(data.data[key].pub_commission * tile).toLocaleString()}"
+                data-pub_commission="${(data.data[key].pub_commission * tile).toLocaleString()}"
                 data-products="${data.data[key].products}"
                 title="${data.data[key].order_id}" href="#popup"
                         >${data.data[key].order_id}</a>
@@ -108,28 +108,28 @@ function innerDetails(c){
       <td class="tdDetails">${c.getAttribute('data-merchant')}</td></tr>
       
       <tr><td class="tdTitle">Đường dẫn sản phẩm:</td>
-      <td class="tdDetails">${c.getAttribute('data-click_url')}</td></tr>
+      <td class="tdDetails">${c.getAttribute('data-at_product_link')}</td></tr>
       
       <tr><td class="tdTitle">Nền tảng thiết bị:</td>
-      <td class="tdDetails">${c.getAttribute('data-device_type')}</td></tr>
+      <td class="tdDetails">${c.getAttribute('data-client_platform')}</td></tr>
       
       <tr><td class="tdTitle">Trình duyệt:</td>
       <td class="tdDetails">${c.getAttribute('data-browser')}</td></tr>
       
       <tr><td class="tdTitle">Mã đơn hàng:</td>
-      <td class="tdDetails">${c.getAttribute('data-transaction_id')}</td></tr>
+      <td class="tdDetails">${c.getAttribute('data-order_id')}</td></tr>
       
       <tr><td class="tdTitle">Click:</td>
       <td class="tdDetails">${c.getAttribute('data-click_time').replaceAll('T', ' ')}</td></tr>
       
       <tr><td class="tdTitle">Thời gian mua:</td>
-      <td class="tdDetails">${c.getAttribute('data-transaction_time').replaceAll('T', ' ')}</td></tr>
+      <td class="tdDetails">${c.getAttribute('data-sale_time').replaceAll('T', ' ')}</td></tr>
       
       <tr><td class="tdTitle">Giá trị đơn hàng:</td>
-      <td class="tdDetails">${c.getAttribute('data-product_price')}</td></tr>
+      <td class="tdDetails">${c.getAttribute('data-billing')}</td></tr>
       
       <tr><td class="tdTitle">Hoa hồng:</td>
-      <td class="tdDetails">${c.getAttribute('data-commission')}</td></tr>
+      <td class="tdDetails">${c.getAttribute('data-pub_commission')}</td></tr>
       `;
       detailsConversion.innerHTML = dataInnerDetails;
 }
