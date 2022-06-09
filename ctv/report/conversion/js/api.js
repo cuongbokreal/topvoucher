@@ -113,10 +113,10 @@ function innerDetails(c){
       <td class="tdDetails">${c.getAttribute('data-transaction_id')}</td></tr>
       
       <tr><td>Click:</td>
-      <td class="tdDetails">${c.getAttribute('data-click_time')}</td></tr>
+      <td class="tdDetails">${c.getAttribute('data-click_time').replaceAll('T', ' ')}</td></tr>
       
       <tr><td>Thời gian mua:</td>
-      <td class="tdDetails">${c.getAttribute('data-transaction_time')}</td></tr>
+      <td class="tdDetails">${c.getAttribute('data-transaction_time').replaceAll('T', ' ')}</td></tr>
       
       <tr><td>Giá trị đơn hàng:</td>
       <td class="tdDetails">${c.getAttribute('data-product_price')}</td></tr>
