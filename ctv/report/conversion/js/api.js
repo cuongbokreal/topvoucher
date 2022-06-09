@@ -134,7 +134,7 @@ function innerDetails(c){
       <tr><td class="tdTitle">Hoa hồng:</td>
       <td class="tdDetails">${c.getAttribute('data-pub_commission')}</td></tr>
       `;
-      detailsOrder.innerHTML = dataInnerDetailsOrder;
+      detailsOrder.innerHTML = dataInnerDetails;
       
       data_product = c.getAttribute('data-products')
       console.log(data_product)
