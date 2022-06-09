@@ -51,7 +51,9 @@ document.getElementById('merchant').innerHTML = `<span style="color:red">${merch
 
 var innerDonHang = document.getElementById('innerDonHang');
 
-var fetch_doanhthu_url = `https://api.accesstrade.vn/v1/transactions?since=${update_time_start.value}T00:00:00Z&until=${update_time_end.value}T00:00:00Z&utm_source=ctv&utm_medium=ctv_${ctv_id}&merchant=${merchant}`;
+//transactions
+
+var fetch_doanhthu_url = `https://api.accesstrade.vn/v1/orders?since=${update_time_start.value}T00:00:00Z&until=${update_time_end.value}T00:00:00Z&utm_source=ctv&utm_medium=ctv_${ctv_id}&merchant=${merchant}`;
 fetch(fetch_doanhthu_url, { headers })
 .then(response => response.json())
 .then(data => {
