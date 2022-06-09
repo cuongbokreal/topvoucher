@@ -67,6 +67,18 @@ fetch(fetch_doanhthu_url, { headers })
         if(data.data[key].order_reject != 0){status = [2, data.data[key].order_reject]}else
         if(data.data[key].order_success != 0){status = [1, data.data[key].order_success]}
         
+        var data_product = []
+        for(let i=0; i<data.data[key].products.length; i++){
+              var product = {};
+              product.product_id = data.data[key].products.product_id ;
+              product.product_quantity = data.data[key].products.product_quantity ;
+              product.status = data.data[key].products.status ;
+              product.product_price = (data.data[key].products.product_price * data.data[key].products.product_quantity).toLocaleString() ;
+              product.pub_commission = (data.data[key].products.pub_commission * tile).toLocaleString() ;
+              product.reason_rejected = data.data[key].products.reason_rejected ;
+              data_product[i].push(product)
+        }
+        
     data_camp_donhang+= `<tr>
                 <td class="sales_time" title="${data.data[key].sales_time}"><span>${data.data[key].sales_time}</span></td>
                 <td class="order_id">
@@ -81,7 +93,7 @@ fetch(fetch_doanhthu_url, { headers })
                 data-sale_time="${data.data[key].sales_time}"
                 data-billing="${data.data[key].billing}"
                 data-pub_commission="${(data.data[key].pub_commission * tile).toLocaleString()}"
-                data-products="${data.data[key].products.value}"
+                data-products="${data_product}"
                 title="${data.data[key].order_id}" href="#popup"
                         >${data.data[key].order_id}</a>
                       </span>
