@@ -164,6 +164,7 @@ function innerDetails(c){
             </tr>`;
       }
       console.log(data_product)
+      detailsConversion.innerHTML = dataInnerDetailsConversion;
       
       
 }
