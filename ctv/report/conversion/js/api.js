@@ -97,14 +97,11 @@ fetch(fetch_doanhthu_url, { headers })
 var detailsConversion = document.getElementById('detailsConversion');
 let dataInnerDetails = '';
 function innerDetails(c){
-      dataInnerDetails = `<tr><td>>Advertiser:</td>
+      dataInnerDetails = `<tr><td>Advertiser:</td>
       <td>${c.getAttribute('data-merchant')}</td></tr>
       
       <tr><td>Đường dẫn sản phẩm:</td>
       <td>${c.getAttribute('data-click_url')}</td></tr>
-      
-      <tr><td></td>
-      <td>${c.getAttribute('')}</td></tr>
       
       <tr><td>Nền tảng thiết bị:</td>
       <td>${c.getAttribute('data-device_type')}</td></tr>
