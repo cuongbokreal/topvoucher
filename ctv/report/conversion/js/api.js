@@ -79,7 +79,7 @@ fetch(fetch_doanhthu_url, { headers })
               product.reason_rejected = data.data[key].products.reason_rejected ;
               data_product.push(product)
         }*/
-        console.log(JSON.parse(data.data[key].products))
+        console.log(JSON.stringify(data.data[key].products))
         
     data_camp_donhang+= `<tr>
                 <td class="sales_time" title="${data.data[key].sales_time}"><span>${data.data[key].sales_time}</span></td>
@@ -95,7 +95,7 @@ fetch(fetch_doanhthu_url, { headers })
                 data-sale_time="${data.data[key].sales_time}"
                 data-billing="${data.data[key].billing}"
                 data-pub_commission="${(data.data[key].pub_commission * tile).toLocaleString()}"
-                data-products='${JSON.parse(data.data[key].products)}'
+                data-products='${JSON.stringify(data.data[key].products)}'
                 title="${data.data[key].order_id}" href="#popup"
                         >${data.data[key].order_id}</a>
                       </span>
