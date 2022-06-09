@@ -73,14 +73,15 @@ fetch(fetch_doanhthu_url, { headers })
                       <span>
                         <a onclick="innerDetails(this)"
                 data-merchant="${data.data[key].merchant}"
-                data-click_url="${data.data[key].click_url}"
-                data-device_type="${data.data[key]._extra.device_type}"
-                data-browser="${data.data[key]._extra.browser}"
-                data-transaction_id="${data.data[key].transaction_id}"
+                data-at_product_link="${data.data[key].at_product_link}"
+                data-client_platform="${data.data[key].client_platform}"
+                data-browser="${data.data[key].browser}"
+                data-order_id="${data.data[key].order_id}"
                 data-click_time="${data.data[key].click_time}"
-                data-transaction_time="${data.data[key].transaction_time}"
-                data-product_price="${data.data[key].product_price}"
-                data-commission="${(data.data[key].commission * tile).toLocaleString()}"
+                data-sale_time="${data.data[key].sales_time}"
+                data-billing="${data.data[key].billing}"
+                data-commission="${(data.data[key].pub_commission * tile).toLocaleString()}"
+                data-products="${data.data[key].products}"
                 title="${data.data[key].order_id}" href="#popup"
                         >${data.data[key].order_id}</a>
                       </span>
