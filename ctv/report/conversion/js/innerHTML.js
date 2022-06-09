@@ -83,7 +83,17 @@ document.getElementById('main').innerHTML = `
           <h2>Chi tiết đơn hàng</h2>
           <div class="divDetails">
             <table class="table-wrapper details" id="detailsOrder"></table>
-            <table class="table-wrapper details" id="detailsConversion"></table>
+            <table class="table-wrapper details">
+              <thead><tr>
+              <td>Mã đơn hàng	</td>
+              <td>Số lượng</td>
+              <td>Trạng thái</td>
+              <td>Giá trị đơn hàng</td>
+              <td>Hoa hồng</td>
+              <td>Lý do bị hủy</td>
+              </tr></thead>
+              <thead id="detailsConversion"></thead>
+            </table>
           </div>
           <a class='close ripple' href='#close-bsw'>Đóng</a>
           </div>
