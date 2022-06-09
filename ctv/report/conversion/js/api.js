@@ -157,9 +157,9 @@ function innerDetails(c){
 
 /* Function */
 function getStatusDonhang(c){
-  if(c[0] == '0'){return `<span class="text-orange">Chờ xử lý ${c[1]}</span>`}else
-  if(c[0] == '1'){return `<span class="text-green">Tạm duyệt ${c[1]}</span>`}else
-  if(c[0] == '2'){return `<span class="text-red">Đã hủy ${c[1]}</span>`}
+  if(c[0] == '0'){return `<span class="text-orange">Chờ xử lý (${c[1]})</span>`}else
+  if(c[0] == '1'){return `<span class="text-green">Tạm duyệt (${c[1]})</span>`}else
+  if(c[0] == '2'){return `<span class="text-red">Đã hủy (${c[1]})</span>`}
 }
 function padLeadingZeros(c, size) {
     return c.toString().padStart(size, '0');
