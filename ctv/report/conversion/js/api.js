@@ -89,7 +89,41 @@ fetch(fetch_doanhthu_url, { headers })
 })
 
 
-
+var detailsConversion = document.getElementById('detailsConversion');
+let dataInnerDetails = '';
+function innerDetails(c){
+      dataInnerDetails = `<tr><td>>Advertiser:</td>
+      <td>${c.getAttribute('data-merchant')}</td></tr>
+      
+      <tr><td>Đường dẫn sản phẩm:</td>
+      <td>${c.getAttribute('data-click_url')}</td></tr>
+      
+      <tr><td></td>
+      <td>${c.getAttribute('')}</td></tr>
+      
+      <tr><td>Nền tảng thiết bị:</td>
+      <td>${c.getAttribute('data-device_type')}</td></tr>
+      
+      <tr><td>Trình duyệt:</td>
+      <td>${c.getAttribute('data-browser')}</td></tr>
+      
+      <tr><td>Mã đơn hàng:</td>
+      <td>${c.getAttribute('data-transaction_id')}</td></tr>
+      
+      <tr><td>Click:</td>
+      <td>${c.getAttribute('data-click_time')}</td></tr>
+      
+      <tr><td>Thời gian mua:</td>
+      <td>${c.getAttribute('data-transaction_time')}</td></tr>
+      
+      <tr><td>Giá trị đơn hàng:</td>
+      <td>${c.getAttribute('data-product_price')}</td></tr>
+      
+      <tr><td>Hoa hồng:</td>
+      <td>${c.getAttribute('data-commission')}</td></tr>
+      `;
+      detailsConversion.innerHTML = dataInnerDetails;
+}
 
 
 /* Function */
