@@ -111,7 +111,8 @@ fetch(fetch_doanhthu_url, { headers })
                 <td class="conversion_platform" title="${data.data[key].conversion_platform}"><span>${data.data[key].conversion_platform}</span></td>
                 </tr>`;
   });
-  if(lengthData <= 0){innerDonHang.innerHTML = 'Chưa có dữ liệu để hiển thị'}
+  if(lengthData <= 0){innerDonHang.innerHTML = 'Chưa có dữ liệu để hiển thị'}else
+  if(data.status && data.status == 'fail'){innerDonHang.innerHTML = 'Chọn khoảng cách không quá 31 ngày'}
   else{innerDonHang.innerHTML = data_camp_donhang}
 })
 
