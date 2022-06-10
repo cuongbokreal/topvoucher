@@ -79,7 +79,7 @@ fetch(fetch_doanhthu_url, { headers })
               product.reason_rejected = data.data[key].products.reason_rejected ;
               data_product.push(product)
         }*/
-        console.log(JSON.stringify(data.data[key].products))
+        console.log([JSON.stringify(data.data[key].products)])
         
     data_camp_donhang+= `<tr>
                 <td class="sales_time" title="${data.data[key].sales_time}"><span>${data.data[key].sales_time}</span></td>
@@ -152,7 +152,7 @@ function innerDetails(c){
       `;
       detailsOrder.innerHTML = dataInnerDetails;
       
-      data_product = c.getAttribute('data-products')
+      data_product = [c.getAttribute('data-products')];
       for(let i=0;  i< data_product.length; i++){
             dataInnerDetailsConversion += `<tr>
             <td>${data_product[i].product_id}</td>
