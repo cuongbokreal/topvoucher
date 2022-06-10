@@ -211,8 +211,8 @@ function changeTimeEnd(){
 
 function quickTime(c){
       console.log(c.value)
-      if(c.value == 'thisMonth'){quickThisMonth()}else
-      if(c.value == 'lastMonth'){quickLastMonth()}
+      if(c.value === 'thisMonth'){quickThisMonth()}else
+      if(c.value === 'lastMonth'){quickLastMonth()}
 }
 
 function quickThisMonth(){
