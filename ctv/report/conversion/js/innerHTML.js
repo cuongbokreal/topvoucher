@@ -90,7 +90,7 @@ document.getElementById('main').innerHTML = `
               <td>Trạng thái</td>
               <td>Giá trị đơn hàng</td>
               <td>Hoa hồng</td>
-              <td>Lý do bị hủy</td>
+              <td>Lý do hủy</td>
               </tr></thead>
               <thead id="detailsConversion"></thead>
             </table>
