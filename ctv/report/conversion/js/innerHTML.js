@@ -48,6 +48,7 @@ document.getElementById('main').innerHTML = `
             <input type="date" name="start" id="update_time_start" onchange="changeTimeStart()"/>
             <input type="date" name="end" id="update_time_end" onchange="changeTimeEnd()"/>
             <select id="quickTime" onchange="quickTime(this)">
+              <option value="none">-- Chọn --</option>
               <option value="thisMonth">Tháng này</option>
               <option value="lastMonth">Tháng trước</option>
             </select>
