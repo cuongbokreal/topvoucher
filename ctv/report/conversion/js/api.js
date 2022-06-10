@@ -210,15 +210,15 @@ function changeTimeEnd(){
 }
 
 function quickTime(c){
-      if(c.value == 'thisMonth'){thisMonth()}else
-      if(c.value == 'lastMonth'){lastMonth()}
+      if(c.value == 'thisMonth'){quickThisMonth()}else
+      if(c.value == 'lastMonth'){quickLastMonth()}
       console.log(c.value)
 }
 
-function thisMonth(){
+function quickThisMonth(){
       window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${thisYear }-${thisMonth}-01&update_time_end=${thisYear}-${thisMonth}-${thisDate}&merchant=${merchant}`;
 }
-function lastMonth(){
+function quickLastMonth(){
       window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${thisYear}-${thisMonth-1}-01&update_time_end=${thisYear}-${thisMonth-1}-${getDayOfMonth(thisMonth-1)}&merchant=${merchant}`;
 }
 
