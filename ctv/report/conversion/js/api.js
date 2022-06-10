@@ -147,7 +147,7 @@ function innerDetails(c){
       <td class="tdDetails">${c.getAttribute('data-billing').toLocaleString()}</td></tr>
       
       <tr><td class="tdTitle">Hoa hồng:</td>
-      <td class="tdDetails">$(c.getAttribute('data-pub_commission').toLocaleString()}</td></tr>
+      <td class="tdDetails">${c.getAttribute('data-pub_commission').toLocaleString()}</td></tr>
       `;
       detailsOrder.innerHTML = dataInnerDetails;
       
