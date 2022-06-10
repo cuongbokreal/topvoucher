@@ -204,7 +204,7 @@ function changeTimeStart(){
       if(split_update_time_start[0] == split_update_time_end[0]){
             if(parseInt(split_update_time_end[1]) - parseInt(split_update_time_start[1]) == 1){
                   if(parseInt(split_update_time_start[2]) < parseInt(split_update_time_end[2])){
-                        update_time_end.value = update_time_end.value.replaceAll(/[0-9]{2}$/g, param_time_start.match(/[0-9]{2}$/g))
+                        update_time_end.value = update_time_end.value.replaceAll(/[0-9]{2}$/g, parseInt(param_time_start.match(/[0-9]{2}$/g)) - 1)
                   }
             }else
             if(parseInt(split_update_time_end[1]) - parseInt(split_update_time_start[1]) >= 2){
@@ -228,7 +228,7 @@ function changeTimeEnd(){
       if(split_update_time_start[0] == split_update_time_end[0]){
             if(parseInt(split_update_time_end[1]) - parseInt(split_update_time_start[1]) == 1){
                   if(parseInt(split_update_time_start[2]) < parseInt(split_update_time_end[2])){
-                        update_time_start.value = update_time_start.value.replaceAll(/[0-9]{2}$/g, param_time_end.match(/[0-9]{2}$/g))
+                        update_time_start.value = update_time_start.value.replaceAll(/[0-9]{2}$/g, parseInt(param_time_end.match(/[0-9]{2}$/g)) + 1)
                   }
             }else
             if(parseInt(split_update_time_end[1]) - parseInt(split_update_time_start[1]) >= 2){
