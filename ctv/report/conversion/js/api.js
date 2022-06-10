@@ -23,18 +23,8 @@ if(ctv_id.length < 6){window.location.href = '/'}
 document.getElementById('innerPubName').innerHTML = `id: <span class="text-red">${ctv_id}</span>`;
 //&utm_source=ctv&utm_medium=ctv_${ctv_id}
 
-
 var update_time_start = document.getElementById('update_time_start');
 var update_time_end = document.getElementById('update_time_end');
-
-var split_update_time_start = update_time_start.value.split('-');
-var split_update_time_end = update_time_end.value.split('-');
-if(split_update_time_start[0] == split_update_time_end[0]){
-      if(parseInt(split_update_time_start[1]) < parseInt(split_update_time_end[1]) && parseInt(split_update_time_start[2]) < parseInt(split_update_time_end[2])){
-            update_time_start.value = param_time_start.replaceAll(/[0-9]{2}$/g, param_time_end.match(/[0-9]{2}$/g))
-      }
-}
-
 
 update_time_start.setAttribute('max', `${thisYear}-${padLeadingZeros(thisMonth,2)}-${padLeadingZeros(thisDate-1,2)}`);
 //update_time_start.setAttribute('min', `${thisYear}-${padLeadingZeros(thisMonth-1,2)}-${padLeadingZeros(thisDate,2)}`);
@@ -199,11 +189,46 @@ function getStatusByNumber(c){
 function padLeadingZeros(c, size) {
     return c.toString().padStart(size, '0');
 }
+
+
 /*On change time*/
+//var split_update_time_start = update_time_start.value.split('-');
+//var split_update_time_end = update_time_end.value.split('-');
+
 function changeTimeStart(){
-  window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}`;
+      var update_time_start = document.getElementById('update_time_start');
+      var update_time_end = document.getElementById('update_time_end');
+      var split_update_time_start = update_time_start.value.split('-');
+      var split_update_time_end = update_time_end.value.split('-');
+      
+      if(split_update_time_start[0] == split_update_time_end[0]){
+            if(parseInt(split_update_time_end[1]) - parseInt(split_update_time_start[1]) == 1){
+                  if(parseInt(split_update_time_start[2]) < parseInt(split_update_time_end[2])){
+                        update_time_end.value = update_time_end.replaceAll(/[0-9]{2}$/g, param_time_start.match(/[0-9]{2}$/g))
+                  }
+            }else
+            if(parseInt(split_update_time_end[1]) - parseInt(split_update_time_start[1]) >= 2){
+                  if(parseInt(split_update_time_start[2]) < parseInt(split_update_time_end[2])){
+                        update_time_end.value = update_time_end.replaceAll(split_update_time_end[2], split_update_time_start[2]).replaceAll(/[0-9]{2}$/g, param_time_start.match(/[0-9]{2}$/g))
+                  }
+            }
+      }
+      
+      var update_time_start = document.getElementById('update_time_start');
+      var update_time_end = document.getElementById('update_time_end');
+      window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}`;
 }
+      
 function changeTimeEnd(){
-  window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}`;
+      if(split_update_time_start[0] == split_update_time_end[0]){
+            if(parseInt(split_update_time_start[1]) < parseInt(split_update_time_end[1])){
+                  if(parseInt(split_update_time_end[2]) - parseInt(split_update_time_start[2]) >= 2){
+                        update_time_start.value = update_time_start.replaceAll(/[0-9]{2}$/g, param_time_end.match(/[0-9]{2}$/g))
+                  }
+            }
+      }
+      var update_time_start = document.getElementById('update_time_start');
+      var update_time_end = document.getElementById('update_time_end');
+      window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}`;
 }
 
