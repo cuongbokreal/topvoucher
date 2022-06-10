@@ -79,6 +79,8 @@ document.getElementById('main').innerHTML = `
           </div-->
         </div>
         <div id='popup'>
+        <a class="close ripple" href="#close-bsw" style="position: absolute;width: 100%;height: 100%;cursor: default;"></a>
+        <!--click outside to close popup-->
         <div class='popup_'>
           <h2>Chi tiết đơn hàng</h2>
           <div class="divDetails">
