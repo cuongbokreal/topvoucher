@@ -37,7 +37,7 @@
 /*=== POPUP ===*/
 #popup{top:0;left:0;right:0;bottom:0;position:fixed;opacity:0;visibility:hidden;transition:.3s;transform:scale(1.015)}
 #popup:target{transform:scale(1);background:rgba(0,0,0,.2);opacity:1;visibility:visible;position:fixed;top:0;left:0;right:0;bottom:0;margin:0;z-index:999999999999;transition:.3s}
-.popup_{background:#fff;border-radius:4px;z-index:999;width:600px;max-width:100%;position:fixed;top:45%;left:50%;transform:translate(-50%,-50%);margin:0;padding:20px;box-sizing:border-box;box-shadow:0 0 100px rgba(0,0,0,.2)}
+.popup_{background:#fff;border-radius:4px;z-index:999;width:600px;max-width:100%;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);margin:0;padding:10px;box-sizing:border-box;box-shadow:0 0 100px rgba(0,0,0,.2)}
 .popup_ h2{margin:0 0 .75em;padding:0;text-align:center;font-weight:700;font-family:Roboto,sans-serif;color:#4267b2}
 .popup_ h3{margin:0 0 5px;padding:0;font:500 15px Roboto;text-transform:uppercase}
 .popup_ p{margin:0;padding:0;font:400 16px Roboto,sans-serif;color:#222;line-height:1.5}
