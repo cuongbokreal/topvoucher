@@ -26,7 +26,14 @@ document.getElementById('innerPubName').innerHTML = `id: <span class="text-red">
 
 var update_time_start = document.getElementById('update_time_start');
 var update_time_end = document.getElementById('update_time_end');
+
+var split_update_time_start = update_time_start.value.split('-');
+var split_update_time_end = split_update_time_end.value.split('-');
+
+
+
 update_time_start.setAttribute('max', `${thisYear}-${padLeadingZeros(thisMonth,2)}-${padLeadingZeros(thisDate-1,2)}`);
+update_time_start.setAttribute('min', `${thisYear}-${padLeadingZeros(thisMonth-1,2)}-${padLeadingZeros(thisDate,2)}`);
 update_time_end.setAttribute('max', `${thisYear}-${padLeadingZeros(thisMonth,2)}-${padLeadingZeros(thisDate,2)}`);
 
 var matchTime = /[0-9]{4}-[0-9]{2}-[0-9]{2}/g;
