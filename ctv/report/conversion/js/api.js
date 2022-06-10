@@ -37,7 +37,7 @@ if(split_update_time_start[0] == split_update_time_end[0]){
 
 
 update_time_start.setAttribute('max', `${thisYear}-${padLeadingZeros(thisMonth,2)}-${padLeadingZeros(thisDate-1,2)}`);
-update_time_start.setAttribute('min', `${thisYear}-${padLeadingZeros(thisMonth-1,2)}-${padLeadingZeros(thisDate,2)}`);
+//update_time_start.setAttribute('min', `${thisYear}-${padLeadingZeros(thisMonth-1,2)}-${padLeadingZeros(thisDate,2)}`);
 update_time_end.setAttribute('max', `${thisYear}-${padLeadingZeros(thisMonth,2)}-${padLeadingZeros(thisDate,2)}`);
 
 var matchTime = /[0-9]{4}-[0-9]{2}-[0-9]{2}/g;
