@@ -156,9 +156,9 @@ function innerDetails(c){
             dataInnerDetailsConversion += `<tr>
             <td>${data_product[i].product_id}</td>
             <td>${data_product[i].product_quantity}</td>
-            <td>${data_product[i].status }</td>
-            <td>${data_product[i].product_price }</td>
-            <td>${data_product[i].pub_commission }</td>
+            <td>${getStatusByNumber(data_product[i].status)}</td>
+            <td>${data_product[i].product_price.toLocaleString()}</td>
+            <td>${(data_product[i].pub_commission * tile).toLocaleString()}</td>
             <td>${data_product[i].reason_rejected }</td>
             </tr>`;
       }
@@ -177,6 +177,13 @@ function getStatusDonhang(c){
   if(c[0] == '1'){return `<span class="text-green">Tạm duyệt (${c[1]})</span>`}else
   if(c[0] == '2'){return `<span class="text-red">Đã hủy (${c[1]})</span>`}
 }
+function getStatusByNumber(c){
+  if(c == 0){return `<span class="text-orange">Chờ xử lý</span>`}else
+  if(c == 1){return `<span class="text-green">Tạm duyệt</span>`}else
+  if(c == 2){return `<span class="text-red">Đã hủy</span>`}
+}
+
+
 function padLeadingZeros(c, size) {
     return c.toString().padStart(size, '0');
 }
