@@ -204,12 +204,24 @@ function padLeadingZeros(c, size) {
 
 function changeTimeStart(){
       window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}`;
-}
-      
+}      
 function changeTimeEnd(){
       window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}`;
 }
 
+function quickTime(c){
+      if(c.value == 'thisMonth'){
+            window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${thisYear }-${thisMonth}-01&update_time_end=${thisYear }-${thisMonth}-${thisDate}&merchant=${merchant}`;
+      }else
+      if(c.value == 'lastMonth'){
+            window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${thisYear}-${thisMonth-1}-01&update_time_end=${thisYear}-${thisMonth-1}-${getDayOfMonth(thisMonth-1)}&merchant=${merchant}`;
+      }
+}
+
+function getDayOfMonth(c){
+      if(c == 2){return 28}else
+      if(c == 1 || c == 3 || c == 5 || c == 7 || c == 8 || c == 10 || c == 12){return 31}else{return 30}
+}
 /*
       var update_time_start = document.getElementById('update_time_start');
       var update_time_end = document.getElementById('update_time_end');
