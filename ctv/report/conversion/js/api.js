@@ -82,7 +82,7 @@ fetch(fetch_doanhthu_url, { headers })
         }*/
         
     data_camp_donhang+= `<tr>
-                <td class="sales_time" title="${data.data[key].sales_time}"><span>${data.data[key].sales_time}</span></td>
+                <td class="sales_time" title="${data.data[key].sales_time.replaceAll('T',' ')}"><span>${data.data[key].sales_time.replaceAll('T',' ')}</span></td>
                 <td class="order_id">
                       <span>
                         <a onclick="innerDetails(this)"
