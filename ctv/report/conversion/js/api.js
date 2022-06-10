@@ -196,30 +196,14 @@ function padLeadingZeros(c, size) {
 //var split_update_time_end = update_time_end.value.split('-');
 
 function changeTimeStart(){
-      var update_time_start = document.getElementById('update_time_start');
-      var update_time_end = document.getElementById('update_time_end');
-      var split_update_time_start = update_time_start.value.split('-');
-      var split_update_time_end = update_time_end.value.split('-');
-      
-      if(split_update_time_start[0] == split_update_time_end[0]){
-            if(parseInt(split_update_time_end[1]) - parseInt(split_update_time_start[1]) == 1){
-                  if(parseInt(split_update_time_start[2]) < parseInt(split_update_time_end[2])){
-                        update_time_end.value = update_time_end.value.replaceAll(/[0-9]{2}$/g, param_time_start.match(/[0-9]{2}$/g) - 1)
-                  }
-            }else
-            if(parseInt(split_update_time_end[1]) - parseInt(split_update_time_start[1]) >= 2){
-                  if(parseInt(split_update_time_start[2]) < parseInt(split_update_time_end[2])){
-                        update_time_end.value = update_time_end.value.replaceAll(split_update_time_end.match(/-[0-9]{2}-/g), `-${split_update_time_start[2]}-`).replaceAll(/[0-9]{2}$/g, param_time_start.match(/[0-9]{2}$/g))
-                  }
-            }
-      }
-      
-      var update_time_start = document.getElementById('update_time_start');
-      var update_time_end = document.getElementById('update_time_end');
       window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}`;
 }
       
 function changeTimeEnd(){
+      window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}`;
+}
+
+/*
       var update_time_start = document.getElementById('update_time_start');
       var update_time_end = document.getElementById('update_time_end');
       var split_update_time_start = update_time_start.value.split('-');
@@ -228,7 +212,7 @@ function changeTimeEnd(){
       if(split_update_time_start[0] == split_update_time_end[0]){
             if(parseInt(split_update_time_end[1]) - parseInt(split_update_time_start[1]) == 1){
                   if(parseInt(split_update_time_start[2]) < parseInt(split_update_time_end[2])){
-                        update_time_start.value = update_time_start.value.replaceAll(/[0-9]{2}$/g, param_time_end.match(/[0-9]{2}$/g) + 1)
+                        update_time_start.value = update_time_start.value.replaceAll(/[0-9]{2}$/g, param_time_end.match(/[0-9]{2}$/g))
                   }
             }else
             if(parseInt(split_update_time_end[1]) - parseInt(split_update_time_start[1]) >= 2){
@@ -238,8 +222,4 @@ function changeTimeEnd(){
             }
       }
       
-      var update_time_start = document.getElementById('update_time_start');
-      var update_time_end = document.getElementById('update_time_end');
-      window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}`;
-}
-
+*/
