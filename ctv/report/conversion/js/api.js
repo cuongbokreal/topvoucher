@@ -144,10 +144,10 @@ function innerDetails(c){
       <td class="tdDetails">${c.getAttribute('data-sale_time').replaceAll('T', ' ')}</td></tr>
       
       <tr><td class="tdTitle">Giá trị đơn hàng:</td>
-      <td class="tdDetails">${c.getAttribute('data-billing')}</td></tr>
+      <td class="tdDetails">${c.getAttribute('data-billing').toLocaleString()}</td></tr>
       
       <tr><td class="tdTitle">Hoa hồng:</td>
-      <td class="tdDetails">${c.getAttribute('data-pub_commission')}</td></tr>
+      <td class="tdDetails">$(c.getAttribute('data-pub_commission').toLocaleString()}</td></tr>
       `;
       detailsOrder.innerHTML = dataInnerDetails;
       
