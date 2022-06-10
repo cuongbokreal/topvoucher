@@ -47,7 +47,7 @@ document.getElementById('main').innerHTML = `
           <div id="setTime">
             <input type="date" name="start" id="update_time_start" onchange="changeTimeStart()"/>
             <input type="date" name="end" id="update_time_end" onchange="changeTimeEnd()"/>
-            <p>*set thời gian không quá 31 ngày</p>
+            <p style="display: inline-block;">*set thời gian không quá 31 ngày</p>
           </div>
           <div class="divTable">
             <table class="table-wrapper donhang">
