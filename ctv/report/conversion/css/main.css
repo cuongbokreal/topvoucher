@@ -1,7 +1,7 @@
 *, ::after, ::before {box-sizing: border-box;}
 
 /*Custom*/
-.click_referer{
+.website{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
