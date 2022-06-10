@@ -211,7 +211,7 @@ function changeTimeEnd(){
 
 function quickTime(c){
       if(c.value == 'thisMonth'){
-            window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${thisYear }-${thisMonth}-01&update_time_end=${thisYear }-${thisMonth}-${thisDate}&merchant=${merchant}`;
+            window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${thisYear }-${thisMonth}-01&update_time_end=${thisYear}-${thisMonth}-${thisDate}&merchant=${merchant}`;
       }else
       if(c.value == 'lastMonth'){
             window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${thisYear}-${thisMonth-1}-01&update_time_end=${thisYear}-${thisMonth-1}-${getDayOfMonth(thisMonth-1)}&merchant=${merchant}`;
