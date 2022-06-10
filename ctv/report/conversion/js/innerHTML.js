@@ -47,7 +47,7 @@ document.getElementById('main').innerHTML = `
           <div id="setTime">
             <input type="date" name="start" id="update_time_start" onchange="changeTimeStart()"/>
             <input type="date" name="end" id="update_time_end" onchange="changeTimeEnd()"/>
-            <select id="quickTime" onchange"quickTime(this)">
+            <select id="quickTime" onchange="quickTime(this)">
               <option value="thisMonth">Tháng này</option>
               <option value="lastMonth">Tháng trước</option>
             </select>
