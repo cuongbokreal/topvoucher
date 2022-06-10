@@ -116,8 +116,8 @@ fetch(fetch_doanhthu_url, { headers })
   else{innerDonHang.innerHTML = data_camp_donhang}
 })
 .catch(error => {
-      console.log(error)
- //if(data.status && data.status == 'fail'){innerDonHang.innerHTML = 'Chọn khoảng cách không quá 31 ngày'}
+      console.log(error);
+      innerDonHang.innerHTML = `Chọn khoảng cách không quá 31 ngày. Mã lỗi: ${error}`;
 });
 
 
