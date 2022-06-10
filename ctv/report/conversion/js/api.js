@@ -29,7 +29,14 @@ var update_time_end = document.getElementById('update_time_end');
 
 var split_update_time_start = update_time_start.value.split('-');
 var split_update_time_end = split_update_time_end.value.split('-');
-
+if(split_update_time_start[0] == split_update_time_end[0]){
+      if(split_update_time_start[1] == split_update_time_end[1]){
+            update_time_start.value = param_time_start.replaceAll(/[0-9]{2}$/g, '01');
+      }else
+      if(split_update_time_start[1] < split_update_time_end[1]){
+            update_time_start.value = param_time_start.replaceAll(/[0-9]{2}$/g, param_time_end.match(/[0-9]{2}$/g))
+      }
+}
 
 
 update_time_start.setAttribute('max', `${thisYear}-${padLeadingZeros(thisMonth,2)}-${padLeadingZeros(thisDate-1,2)}`);
