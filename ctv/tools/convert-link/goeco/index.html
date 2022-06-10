@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="/ctv/tools/convert-link/goeco/main.css" />
+    <script src="/ctv/tools/convert-link/goeco/main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="main">
+      <p>Id CTV: <span class="text-danger" id="ctv_id"></span></p>
+      <div id="form">
+        <label class="titleDiv">Tạo link sản phẩm</label>
+        <div style="margin: 0.5rem; font-size: 0.85rem;">
+          <input type="checkbox" id="createShortenLink"/> Tạo link rút gọn
+        </div>
+        <textarea id="linkSp" name="linkSp" placeholder="Nhập link gốc (hỗ trợ link Shopee.vn, Tiki.vn, Lazada.vn)" onclick="this.select()"></textarea>
+        <p id="thbao" class="text-red">Link sai hoặc lỗi nhập id</p>
+        <button class="button" id="btnDeplink" onclick="getUrlOg()">Tạo</button>
+      </div>
+      
+      <div id="ketqua">
+        <label class="titleDiv">Kết quả (deeplink):</label>
+        <div>
+          <div class="ketqua-group">
+            <span class="pointer copy-icon" onclick="copyValueGroup(this)"><i class="far fa-copy"></i></span>
+            <textarea id="kqDeeplink" placeholder="Link sản phẩm (Nhấn để copy)" onclick="copyValue(this)" readonly=""></textarea>
+          </div>
+          <div class="ketqua-group">
+            <span class="pointer copy-icon" onclick="copyValueGroup(this)"><i class="far fa-copy"></i></span>
+            <textarea id="kqShortlink" placeholder="Link rút gọn (Nhấn để copy)" onclick="copyValue(this)" readonly=""></textarea>
+          </div>
+        </div>
+      </div>
+      
+      <div id="infor_camp"></div>
+      
+    </div>
+    
+    <link href="https://cuongbokreal.github.io/api/widget/toast-message/main.css" rel="stylesheet"/>
+    <div id='toast'></div>
+    <script src="https://cuongbokreal.github.io/api/widget/toast-message/main.js"></script>
+    
+  </body>
+</html>
