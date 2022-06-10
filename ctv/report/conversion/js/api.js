@@ -117,7 +117,7 @@ fetch(fetch_doanhthu_url, { headers })
 })
 .catch(error => {
       console.log(error);
-      innerDonHang.innerHTML = `Chọn khoảng cách không quá 31 ngày. Mã lỗi: ${error}`;
+      innerDonHang.innerHTML = `<span class="text-red" style="font-size: 1rem;font-weight: 500;">Chọn khoảng cách không quá 31 ngày.  ${error}</span>`;
 });
 
 
