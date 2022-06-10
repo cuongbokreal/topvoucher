@@ -209,7 +209,7 @@ function changeTimeStart(){
             }else
             if(parseInt(split_update_time_end[1]) - parseInt(split_update_time_start[1]) >= 2){
                   if(parseInt(split_update_time_start[2]) < parseInt(split_update_time_end[2])){
-                        update_time_end.value = update_time_end.value.replaceAll(split_update_time_end[2], split_update_time_start[2]).replaceAll(/[0-9]{2}$/g, param_time_start.match(/[0-9]{2}$/g))
+                        update_time_end.value = update_time_end.value.replaceAll(split_update_time_end.match(/-[0-9]{2}-/g), `-${split_update_time_start[2]}-`).replaceAll(/[0-9]{2}$/g, param_time_start.match(/[0-9]{2}$/g))
                   }
             }
       }
