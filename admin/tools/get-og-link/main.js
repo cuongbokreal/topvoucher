@@ -23,7 +23,7 @@ function getUrlOg(){
 	var og_txt = document.getElementById('linkSp').value;
 	linkSp = linkSp.match(/\bhttps?:\/\/\S+/g);
 	if(linkSp.length >= 1){
-		for await (let i=0; i<linkSp.length; i++){
+		for (let i=0; i<linkSp.length; i++){
 			console.log(linkSp);
 			request.open("GET", linkSp[i], true);
 			request.send(null);
