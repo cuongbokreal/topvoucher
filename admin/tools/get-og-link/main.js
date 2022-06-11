@@ -48,19 +48,19 @@ async function getUrlOg(){
 					      var evcode = requestHtml.match(/evcode=?([a-zA-Z0-9]+)/g)[0];
 					      var promotionId = requestHtml.match(/&promotionId=?([0-9]+)/g)[0];
 					      var signature = requestHtml.match(/&signature=?([a-zA-Z0-9]+)/g)[0];
-					      finalLink = encodeURIComponent(`https://shopee.vn/search?${evcode}${promotionId}${signature}`);
+					      finalLink = (`https://shopee.vn/search?${evcode}${promotionId}${signature}`);
 					    }else 
 					    if(requestHtml.match(/i\..+\?/g)){
 					      var idSp = requestHtml.match(/i\..+\?/g)[0];
 					      finalLink = `https://shopee.vn/TrumGiamGia.Tk-${idSp}`;
-					      finalLink = encodeURIComponent(finalLink.replaceAll("?",""));
+					      finalLink = (finalLink.replaceAll("?",""));
 					    }else 
 					    if(requestHtml.match(/https:\/\/shopee.vn\/.+\?/)){
 					      finalLink = requestHtml.match(/https:\/\/shopee.vn\/.+\?/);
-					      finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
+					      finalLink = (finalLink[0].replaceAll("?",""));
 					    }else{
 					      finalLink = requestHtml.match(/http.+/g);
-					      finalLink = encodeURIComponent(finalLink[0].replaceAll(/\?.+/g,""));
+					      finalLink = (finalLink[0].replaceAll(/\?.+/g,""));
 					    }
 					  }else
 
@@ -70,28 +70,28 @@ async function getUrlOg(){
 						    if(finalLink.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g)){
 						      finalLink = finalLink.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g);
 						      //add '?referer=at-kol'
-						      finalLink = encodeURIComponent(addRefKolLazada(finalLink[0].replace("laz_trackid"," ").replace(/(\?\s|&\s)/g,"")));
+						      finalLink = (addRefKolLazada(finalLink[0].replace("laz_trackid"," ").replace(/(\?\s|&\s)/g,"")));
 						    }else{
 						      //add '?referer=at-kol'
-						      finalLink = encodeURIComponent(addRefKolLazada(finalLink));
+						      finalLink = (addRefKolLazada(finalLink));
 						    }
 					    }else
 					    if(requestHtml.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g)){
 					      finalLink = requestHtml.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g);
 					      //add '?referer=at-kol'
-					      finalLink = encodeURIComponent(addRefKolLazada(finalLink[0].replace("laz_trackid"," ").replace(/(\?\s|&\s)/g,"")));
+					      finalLink = (addRefKolLazada(finalLink[0].replace("laz_trackid"," ").replace(/(\?\s|&\s)/g,"")));
 					    }else{
 					      //add '?referer=at-kol'
-					      finalLink = encodeURIComponent(addRefKolLazada(finalLink));
+					      finalLink = addRefKolLazada(finalLink);
 					    }
 					  }else
 					  if(requestHtml.match(/tiki\.vn/g)){
 					    if(requestHtml.match(/https:\/\/tiki.vn\/.+\?/)){
 						finalLink = requestHtml.match(/https:\/\/tiki.vn\/.+\?/);
-						finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
+						finalLink = (finalLink[0].replaceAll("?",""));
 					      }else{
 						finalLink = requestHtml.match(/http.+/g);
-						finalLink = encodeURIComponent(finalLink[0].replaceAll(/\?.+/g,""));
+						finalLink = (finalLink[0].replaceAll(/\?.+/g,""));
 					      }
 					  }
 					
