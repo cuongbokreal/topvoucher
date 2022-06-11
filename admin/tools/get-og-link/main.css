@@ -55,8 +55,8 @@ textarea{
       border: 1px solid #bfbfbf;
       border-radius: 2px;
       outline:none;
-            min-height: 7rem;
-          max-height: 10rem;
+            min-height: 10rem;
+          max-height: 15rem;
           min-width: 100%;
 }
 
@@ -70,8 +70,8 @@ textarea{
       border: none;
       border-radius: 2px;
       outline: none;
-      max-height: 3rem;
-      min-height: 3rem;
+      max-height: 15rem;
+      min-height: 12rem;
       min-width: 100%;
 }
 #qrDeeplink{max-width:25%}
