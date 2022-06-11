@@ -35,7 +35,7 @@ async function getUrlOg(){
 		if(timeLeft == 0){clearInterval(innerTimeLeft); document.getElementById('thbao').innerHTML = 'Đã xong!'}
 	}, 1000);
 	
-	if(true){
+	if(linkSp.length >= 1){
 		for (let i=0; i<linkSp.length; i++){
 			console.log(linkSp);
 			request.open("GET", linkSp[i], true);
@@ -66,7 +66,14 @@ async function getUrlOg(){
 
 					  if(requestHtml.match(/lazada\.vn/g)){
 					    if(requestHtml.match(/c\.lazada\.vn/g)){
-					      finalLink = requestHtml.match(/url=\S+/g)[1].replaceAll('url=','').replaceAll(`";`,'');
+						    finalLink = requestHtml.match(/url=\S+/g)[1].replaceAll('url=','').replaceAll(`";`,'');
+						    if(finalLink.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g)){
+						      finalLink = finalLink.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g);
+						      //add '?referer=at-kol'
+						      finalLink = encodeURIComponent(addRefKolLazada(finalLink[0].replace("laz_trackid"," ").replace(/(\?\s|&\s)/g,"")));
+						    }else{
+						      //add '?referer=at-kol'
+						      finalLink = encodeURIComponent(addRefKolLazada(finalLink));
 					    }else
 					    if(requestHtml.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g)){
 					      finalLink = requestHtml.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g);
@@ -74,7 +81,7 @@ async function getUrlOg(){
 					      finalLink = encodeURIComponent(addRefKolLazada(finalLink[0].replace("laz_trackid"," ").replace(/(\?\s|&\s)/g,"")));
 					    }else{
 					      //add '?referer=at-kol'
-					      finalLink = encodeURIComponent(addRefKolLazada(requestHtml));
+					      finalLink = encodeURIComponent(addRefKolLazada(finalLink));
 					    }
 					  }else
 					  if(requestHtml.match(/tiki\.vn/g)){
