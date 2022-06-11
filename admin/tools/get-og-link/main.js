@@ -7,16 +7,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
           }
       }
   };
-var ctv_id = getUrlParameter('id');
-if(typeof ctv_id != 'undefined'){
-  if (ctv_id.length >= 6){document.getElementById('ctv_id').innerHTML = ctv_id;}else
-  if(ctv_id.length < 6){window.location.href = 'https://topvoucher.tk/ctv/tools/create/deep-link/access/'}
-}
-if(typeof ctv_id == 'undefined'){window.location.href = 'https://topvoucher.tk/ctv/tools/create/deep-link/access/'}
-const source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=createDeepLink&utm_content=-`;
 const time_thbao = 3000;
-var bitly_token = "31ae1cab212d8603378badec7a05ad2936a30c6b"; //tha em đừng dùng token tội em hmu hmu
-var deeplink = 'https://go.isclix.com/deep_link/5353514789844343379';
 var createShortenLink = document.getElementById('createShortenLink');
 var thbao = document.getElementById('thbao');
 var btnDeplink = document.getElementById('btnDeplink');
@@ -27,22 +18,6 @@ var infor_camp = document.getElementById('infor_camp');
 
 var kq = '';
 var finalLink = '';
-var data_ad = [
-        {"name":"Shopee",
-         "reg":"shopee",
-         "camp_id":"4751584435713464237"
-        },
-        {"name":"Lazada",
-         "reg":"lazada",
-         "camp_id":"5087153089503673507"
-        },
-        {"name":"Tiki",
-         "reg":"tiki",
-         "camp_id":"4348614231480407268"
-        },
-      ]
-var infor_camp = document.getElementById('infor_camp');
-var data_infor_camp = '';
 
 function makeHttpObject() {
   try {return new XMLHttpRequest();}
@@ -86,12 +61,6 @@ function getUrlOg(){
               finalLink = encodeURIComponent(finalLink[0].replaceAll(/\?.+/g,""));
             }
             kq = `${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`;
-
-            data_infor_camp = `<label class="titleDiv">Thông tin chiến dịch:</label>
-               <p>Tên camp: <span style="color:red">${data_ad[0].name}</span></p> 
-                               <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
-                               <p>Tracking link: <span style="color:red">${kq}</span></p>
-             <p>QR Code:</p><img id="qrDeeplink" src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${kq}" />`;
           }else
 
           if(linkSp.match(/lazada\.vn/g)){
@@ -108,12 +77,6 @@ function getUrlOg(){
               finalLink = encodeURIComponent(addRefKolLazada(linkSp));
             }
             kq = `${deeplink}/${data_ad[1].camp_id}?url=${finalLink}${source}`;
-
-            data_infor_camp = `<label class="titleDiv">Thông tin chiến dịch:</label>
-               <p>Tên camp: <span style="color:red">${data_ad[1].name}</span></p> 
-                               <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
-                               <p>Tracking link: <span style="color:red">${kq}</span></p>
-             <p>QR Code:</p><img id="qrDeeplink" src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${kq}" />`;
           }else
           if(linkSp.match(/tiki\.vn/g)){
             if(linkSp.match(/https:\/\/tiki.vn\/.+\?/)){
@@ -126,12 +89,6 @@ function getUrlOg(){
             //finalLink = linkSp.match(/http.+\?/g);
             //finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
             kq = `${deeplink}/${data_ad[2].camp_id}?url=${finalLink}${source}`;
-
-            data_infor_camp = `<label class="titleDiv">Thông tin chiến dịch:</label>
-               <p>Tên camp: <span style="color:red">${data_ad[2].name}</span></p> 
-                               <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
-                               <p>Tracking link: <span style="color:red">${kq}</span></p>
-             <p>QR Code:</p><img id="qrDeeplink" src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${kq}" />`;
           }
         kqDeeplink.value = kq;
         infor_camp.innerHTML = data_infor_camp;
@@ -150,7 +107,6 @@ function getUrlOg(){
 
 
 //getUrlOg(url) => return [finalLink, kq, data_infor_camp]
-
 
 function addRefKolLazada(c){
 	if(c.match(/(\?|\&)referer=at-kol/g)){}
@@ -185,19 +141,4 @@ function copyValueGroup(c){
 		console.log('Không có dữ liệu để copy!' + valueCopyGroup);
 		toast({title: 'Lỗi', message: `Không có dữ liệu để copy!`, type: "error", duration: time_thbao});
 	}
-}
-function get_short_url(bitly_token, longUrl){
-  fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token}&longUrl=${encodeURIComponent(longUrl)}&format=json`)
-  .then((response) => response.json())
-  .then((data) => {
-  	if(data.status_code == 200 && data.status_txt == 'OK' && data.data.url.length >= 8){kqShortlink.value = data.data.url}
-	  else{kqShortlink.value = '';}
-	console.log(data)
-	  if(kqShortlink.value >= 6){ 
-		qrDeeplink.setAttribute('src', `https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${data.data.url}`)
-	}
-	else{
-		qrDeeplink.setAttribute('src', `https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${kq}`)
-	}
-  })
 }
