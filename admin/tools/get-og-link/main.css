@@ -76,7 +76,7 @@ textarea{
 }
 #qrDeeplink{max-width:25%}
 
-#thbao{display:none}
+#thbao{}
 #refreshFrame{
        cursor:pointer;
        margin:10px 0 0 5px;
