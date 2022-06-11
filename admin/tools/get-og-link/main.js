@@ -7,6 +7,9 @@ var kqDeeplink = document.getElementById('kqDeeplink');
 var kq = '';
 var finalLink = '';
 
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+
 function makeHttpObject() {
   try {return new XMLHttpRequest();}
   catch (error) {}
@@ -18,6 +21,7 @@ function makeHttpObject() {
 }
 var request = makeHttpObject();
 
+var linkSp = '';
 async function getUrlOg(){
 	var og_txt = document.getElementById('linkSp').value;
 	//var og_txt = linkSp;
@@ -28,61 +32,60 @@ async function getUrlOg(){
 			console.log(linkSp);
 			request.open("GET", linkSp[i], true);
 			request.send(null);
-			request.onreadystatechange = function() {
+			request.onreadystatechange = await  function() {
 				if (request.readyState == 4){
-
-					if(linkSp.match(/shopee\.vn/g)){
-
-					    if(linkSp.match(/promotionId/g) || linkSp.match(/signature/g) || linkSp.match(/evcode/g)){
-					      var evcode = linkSp.match(/evcode=?([a-zA-Z0-9]+)/g)[0];
-					      var promotionId = linkSp.match(/&promotionId=?([0-9]+)/g)[0];
-					      var signature = linkSp.match(/&signature=?([a-zA-Z0-9]+)/g)[0];
+          var requestHtml = request.responseText;
+          if(requestHtml.match(/shopee\.vn/g)){
+            if(requestHtml.match(/promotionId/g) || requestHtml.match(/signature/g) || requestHtml.match(/evcode/g)){
+					      var evcode = requestHtml.match(/evcode=?([a-zA-Z0-9]+)/g)[0];
+					      var promotionId = requestHtml.match(/&promotionId=?([0-9]+)/g)[0];
+					      var signature = requestHtml.match(/&signature=?([a-zA-Z0-9]+)/g)[0];
 					      finalLink = encodeURIComponent(`https://shopee.vn/search?${evcode}${promotionId}${signature}`);
 					    }else 
-					    if(linkSp.match(/i\..+\?/g)){
-					      var idSp = linkSp.match(/i\..+\?/g)[0];
+					    if(requestHtml.match(/i\..+\?/g)){
+					      var idSp = requestHtml.match(/i\..+\?/g)[0];
 					      finalLink = `https://shopee.vn/TrumGiamGia.Tk-${idSp}`;
 					      finalLink = encodeURIComponent(finalLink.replaceAll("?",""));
 					    }else 
-					    if(linkSp.match(/https:\/\/shopee.vn\/.+\?/)){
-					      finalLink = linkSp.match(/https:\/\/shopee.vn\/.+\?/);
+					    if(requestHtml.match(/https:\/\/shopee.vn\/.+\?/)){
+					      finalLink = requestHtml.match(/https:\/\/shopee.vn\/.+\?/);
 					      finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
 					    }else{
-					      finalLink = linkSp.match(/http.+/g);
+					      finalLink = requestHtml.match(/http.+/g);
 					      finalLink = encodeURIComponent(finalLink[0].replaceAll(/\?.+/g,""));
 					    }
 					  }else
 
-					  if(linkSp.match(/lazada\.vn/g)){
-					    if(linkSp.match(/c\.lazada\.vn/g)){
-					      finalLink = linkSp.match(/url=\S+/g)[1].replaceAll('url=','');
-					      console.log(linkSp.match(/url=\S+/g))
+					  if(requestHtml.match(/lazada\.vn/g)){
+					    if(requestHtml.match(/c\.lazada\.vn/g)){
+					      finalLink = requestHtml.match(/url=\S+/g)[1].replaceAll('url=','');
 					    }else
-					    if(linkSp.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g)){
-					      finalLink = linkSp.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g);
+					    if(requestHtml.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g)){
+					      finalLink = requestHtml.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g);
 					      //add '?referer=at-kol'
 					      finalLink = encodeURIComponent(addRefKolLazada(finalLink[0].replace("laz_trackid"," ").replace(/(\?\s|&\s)/g,"")));
 					    }else{
 					      //add '?referer=at-kol'
-					      finalLink = encodeURIComponent(addRefKolLazada(linkSp));
+					      finalLink = encodeURIComponent(addRefKolLazada(requestHtml));
 					    }
 					  }else
-					  if(linkSp.match(/tiki\.vn/g)){
-					    if(linkSp.match(/https:\/\/tiki.vn\/.+\?/)){
-						finalLink = linkSp.match(/https:\/\/tiki.vn\/.+\?/);
+					  if(requestHtml.match(/tiki\.vn/g)){
+					    if(requestHtml.match(/https:\/\/tiki.vn\/.+\?/)){
+						finalLink = requestHtml.match(/https:\/\/tiki.vn\/.+\?/);
 						finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
 					      }else{
-						finalLink = linkSp.match(/http.+/g);
+						finalLink = requestHtml.match(/http.+/g);
 						finalLink = encodeURIComponent(finalLink[0].replaceAll(/\?.+/g,""));
 					      }
-					    //finalLink = linkSp.match(/http.+\?/g);
-					    //finalLink = encodeURIComponent(finalLink[0].replaceAll("?",""));
 					  }
+					
 				}//end request done
+        console.log(`Finallink is: ${finalLink}`)
 			}
-			og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(finalLink))
+      await delay(1000)
+			og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(finalLink));
 		}
-		document.getElementById('linkSp').value = og_txt;
+		setTimeout(function(){document.getElementById('kqDeeplink').value = og_txt;}, linkSp.length*500 )
 	}
 }
 
