@@ -1,20 +1,8 @@
-var getUrlParameter = function getUrlParameter(sParam) {
-      var sPageURL = window.location.search.substring(1), sURLVariables = sPageURL.split('&'), sParameterName, i;
-      for (i = 0; i < sURLVariables.length; i++) {
-          sParameterName = sURLVariables[i].split('=');
-          if (sParameterName[0] === sParam) {
-              return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-          }
-      }
-  };
+
 const time_thbao = 3000;
-var createShortenLink = document.getElementById('createShortenLink');
 var thbao = document.getElementById('thbao');
 var btnDeplink = document.getElementById('btnDeplink');
 var kqDeeplink = document.getElementById('kqDeeplink');
-var kqShortlink = document.getElementById('kqShortlink');
-var qrDeeplink = document.getElementById('qrDeeplink');
-var infor_camp = document.getElementById('infor_camp');
 
 var kq = '';
 var finalLink = '';
@@ -32,14 +20,15 @@ var request = makeHttpObject();
 
 function getUrlOg(){
   var linkSp = document.getElementById('linkSp').value;
+	linkSp = linkSp.match(/\bhttps?:\/\/\S+/g);
+	console.log(linkSp)
+	var og_txt = document.getElementById('linkSp').value;
   request.open("GET", linkSp, true);
   request.send(null);
   request.onreadystatechange = function() {
     if (request.readyState == 4){
-      //console.log(request.responseText);
       var linkSp = request.responseText;
-      //kqDeeplink.value = request.responseText;
-    
+	    
         if(linkSp.match(/shopee\.vn/g)){
 
             if(linkSp.match(/promotionId/g) || linkSp.match(/signature/g) || linkSp.match(/evcode/g)){
