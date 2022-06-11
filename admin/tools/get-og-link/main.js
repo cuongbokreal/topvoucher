@@ -82,7 +82,7 @@ async function getUrlOg(){
 				}//end request done
         console.log(`Finallink is: ${finalLink}`)
 			}
-      await delay(1000)
+      await delay(500)
 			og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(finalLink));
 		}
 		setTimeout(function(){document.getElementById('kqDeeplink').value = og_txt;}, linkSp.length*500 )
