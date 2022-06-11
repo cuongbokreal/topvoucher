@@ -29,7 +29,12 @@ async function getUrlOg(){
 	console.log(linkSp.length);
 	var timeLeft = linkSp.length * timeDelay;
 	document.getElementById('thbao').innerHTML = `Dự tính còn <span id="time-left">${timeLeft/1000}</span> giây`;
-	setInterval(function(){document.getElementById('time-left').innerHTML = timeLeft/1000; timeLeft = timeLeft-1000}, 1000)
+	var innerTimeLeft = setInterval(function(){
+		document.getElementById('time-left').innerHTML = timeLeft/1000; 
+		timeLeft = timeLeft-1000; 
+		if(timeLeft == 0){clearInterval(innerTimeLeft); document.getElementById('thbao').innerHTML = 'Đã xong!'}
+	}, 1000);
+	
 	if(true){
 		for (let i=0; i<linkSp.length; i++){
 			console.log(linkSp);
