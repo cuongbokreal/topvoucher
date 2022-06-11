@@ -56,7 +56,7 @@ var innerDonHang = document.getElementById('innerDonHang');
 //transactions
 
 /*=== DATA ORDERS ===*/
-var fetch_doanhthu_url = `https://api.accesstrade.vn/v1/orders?since=${update_time_start.value}T00:00:00Z&until=${update_time_end.value}T00:00:00Z&utm_source=ctv&utm_medium=ctv_${ctv_id}&merchant=${merchant}`;
+var fetch_doanhthu_url = `https://api.accesstrade.vn/v1/orders?since=${update_time_start.value}T00:00:00Z&until=${update_time_end.value}T00:00:00Z&utm_source=ctv&utm_medium=ctv_${ctv_id}&merchant=${getMerchant(merchant)}`;
 fetch(fetch_doanhthu_url, { headers })
 .then(response => response.json())
 .then(data => {
@@ -209,6 +209,18 @@ function changeTimeEnd(){
       window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}`;
 }
 
+function getMerchant(c){
+      if(c.match(/shopee/g)){
+            return 'shopee'
+      }else
+      if(c.match(/lazada/g)){
+            return 'lazada_kol'
+      }else
+      if(c.match(/tiki/g)){
+            return 'tikivn'
+      }else{return ''}
+}
+
 function quickTime(c){
       console.log(c.value)
       if(c.value === 'thisMonth'){quickThisMonth()}else
@@ -221,6 +233,7 @@ function quickThisMonth(){
 function quickLastMonth(){
       window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${thisYear}-${thisMonth-1}-01&update_time_end=${thisYear}-${thisMonth-1}-${getDayOfMonth(thisMonth-1)}&merchant=${merchant}`;
 }
+
 
 
 function getDayOfMonth(c){
