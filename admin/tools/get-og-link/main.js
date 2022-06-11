@@ -93,7 +93,7 @@ async function getUrlOg(){
 			await delay(timeDelay);
 			og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(finalLink));
 		}
-		setTimeout(function(){document.getElementById('kqDeeplink').value = og_txt;}, linkSp.length*500 )
+		setTimeout(function(){document.getElementById('kqDeeplink').value = og_txt;}, 1000) //chạy xong for thì inner 
 	}
 }
 
