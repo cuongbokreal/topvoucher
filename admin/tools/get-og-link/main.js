@@ -66,7 +66,7 @@ async function getUrlOg(){
 
 					  if(requestHtml.match(/lazada\.vn/g)){
 					    if(requestHtml.match(/c\.lazada\.vn/g)){
-					      finalLink = requestHtml.match(/url=\S+/g)[1].replaceAll('url=','');
+					      finalLink = requestHtml.match(/url=\S+/g)[1].replaceAll('url=','').replaceAll(`";`,'');
 					    }else
 					    if(requestHtml.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g)){
 					      finalLink = requestHtml.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g);
