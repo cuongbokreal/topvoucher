@@ -18,7 +18,7 @@ function makeHttpObject() {
 }
 var request = makeHttpObject();
 
-function getUrlOg(){
+async function getUrlOg(){
 	var linkSp = document.getElementById('linkSp').value;
 	var og_txt = document.getElementById('linkSp').value;
 	linkSp = linkSp.match(/\bhttps?:\/\/\S+/g);
