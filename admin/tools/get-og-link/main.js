@@ -74,6 +74,7 @@ async function getUrlOg(){
 						    }else{
 						      //add '?referer=at-kol'
 						      finalLink = encodeURIComponent(addRefKolLazada(finalLink));
+						    }
 					    }else
 					    if(requestHtml.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g)){
 					      finalLink = requestHtml.match(/https:\/\/(pages|www)\.lazada\.vn.+?laz_trackid/g);
