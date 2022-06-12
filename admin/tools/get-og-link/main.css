@@ -39,7 +39,7 @@ textarea{
       margin-top:10px;
       background: #e5e5e5;
       border: 1px solid #cecece;
-      max-width: 100%;
+      max-width: -webkit-fill-available;
 }
 .text-danger, .text-red {color: #e55039!important;
 }
