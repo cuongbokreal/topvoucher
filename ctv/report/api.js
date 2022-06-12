@@ -109,13 +109,24 @@ function fetch_doanhthu(merchant){
           break;
       }
     });
-    let data_doanhthu_camp = `<td><a target="_blank" href="https://topvoucher.tk/ctv/report/conversion/?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}">${data.data[0].merchant}</a></td>
+      if(data.data.length >= 1){
+            var data_doanhthu_camp = `<td><a target="_blank" href="https://topvoucher.tk/ctv/report/conversion/?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}">${data.data[0].merchant}</a></td>
     <td><span class="data_camp_chuyenDoiPhatSinh">${data.data.length}</span></td>
     <td><span class="data_camp_giaTriDonHang">${data_camp_giaTriDonHang.toLocaleString()}</span></td>
     <td><span class="data_camp_hoaHong">${(data_camp_hoaHong * tile).toLocaleString()}</span></td>
     <td><span class="text-green data_camp_duocDuyet">${(data_camp_duocDuyet * tile).toLocaleString()}</span></td>
     <td><span class="text-red data_camp_daHuy">${(data_camp_daHuy * tile).toLocaleString()}</span></td>
     <td><span class="text-orange data_camp_choXuLy">${(data_camp_choXuLy * tile).toLocaleString()}</span></td>`;
+      }else
+      if(data.data.length == 0){
+            var data_doanhthu_camp = `<td><a target="_blank" href="https://topvoucher.tk/ctv/report/conversion/?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}">${merchant}</a></td>
+    <td><span class="data_camp_chuyenDoiPhatSinh">0</span></td>
+    <td><span class="data_camp_giaTriDonHang">0</span></td>
+    <td><span class="data_camp_hoaHong">0</span></td>
+    <td><span class="text-green data_camp_duocDuyet">0</span></td>
+    <td><span class="text-red data_camp_daHuy">0</span></td>
+    <td><span class="text-orange data_camp_choXuLy">0</span></td>`;
+      }
         innerDoanhThu.innerHTML += data_doanhthu_camp;
      
   })
