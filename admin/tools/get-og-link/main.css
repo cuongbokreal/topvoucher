@@ -1,7 +1,7 @@
 html, body{font-family: 'Open Sans', sans-serif;}
 
 #main{padding:10px}
-#main > div {margin-top: 35px;}
+#main > div {margin-top: 35px;max-width:100%}
 
 .input {font-family: "Roboto", sans-serif;
       outline: 0;
