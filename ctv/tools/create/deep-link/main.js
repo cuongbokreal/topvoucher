@@ -23,7 +23,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 const time_thbao = 3000;
       
       const source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=createDeepLink&utm_content=-`;
-      var bitly_token = "46dcf76dc84d19bd90b7ce6b2b4c353a0254d82c"; //tha em đừng dùng token tội em hmu hmu
+      var bitly_token = "b39094e48700c125f4b256c45f668a1986b12be3"; //tha em đừng dùng token tội em hmu hmu
       var deeplink = 'https://go.isclix.com/deep_link/5353514789844343379';
       var thbao = document.getElementById('thbao');
       var btnDeplink = document.getElementById('btnDeplink');
