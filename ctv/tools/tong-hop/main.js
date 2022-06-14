@@ -16,7 +16,7 @@ request.onreadystatechange =  function() {
 	if(request.readyState == 4){
 		document.getElementById('main').innerHTML = replaceBr(request.responseText);
 		$("#main").each(function(){
-		   $(this).html( $(this).html().replace(/((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g, '<input class="og-url" readonly onclick="copyValue(this)" value="$1"></input> '));
+		   $(this).html( $(this).html().replace(/((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g, '<input class="og-url" onfocusin="focusInInput(this)" onfocusout="focusOutInput(this)" readonly onclick="copyValue(this)" value="$1"></input> '));
 		});
 	}
 }
@@ -30,12 +30,18 @@ function copyValue(c){
     c.select();
     document.execCommand("Copy");
     console.log(`Copied: ${c.value}`);
-	  c.style.width = (c.value.length + 1) + 'vh';
     toast({title: 'Thành công', message: `Đã copy <b>${c.value}</b>`, type: "success", duration: time_thbao});
     }else{
 		console.log('Không có dữ liệu để copy!' + c);
 		toast({title: 'Lỗi', message: `Không có dữ liệu để copy!`, type: "error", duration: time_thbao});
 	}
+}
+
+function focusInInput(c){
+	c.style.width = (c.value.length + 1) + 'vh';
+}
+function focusOutInput(c){
+	c.style.width = 'auto';
 }
 
 function replaceBr(c){
