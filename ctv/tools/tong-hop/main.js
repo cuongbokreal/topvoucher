@@ -16,7 +16,7 @@ request.onreadystatechange =  function() {
 	if(request.readyState == 4){
 		document.getElementById('main').innerHTML = replaceBr(request.responseText);
 		$("#main").each(function(){
-		   $(this).html( $(this).html().replace(/((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g, '<input readonly onclick="copyValue(this)" value="$1"></input> '));
+		   $(this).html( $(this).html().replace(/((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g, '<input class="og-url" readonly onclick="copyValue(this)" value="$1"></input> '));
 		});
 	}
 }
