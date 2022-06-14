@@ -1,3 +1,5 @@
+var dataVoucher = '';
+
 function makeHttpObject() {
   try {return new XMLHttpRequest();}
   catch (error) {}
@@ -8,13 +10,13 @@ function makeHttpObject() {
   throw new Error("Could not create HTTP request object.");
 }
 var request = makeHttpObject();
-
 request.open("GET", 'https://topvoucher.tk/ctv/tools/tong-hop/data.js', true);
 request.send(null);
 request.onreadystatechange =  function() {
   if (request.readyState == 4){
-    console.log(request.responseText)
+    dataVoucher = request.responseText;
   }
 }
 
+console.log(dataVoucher)
 
