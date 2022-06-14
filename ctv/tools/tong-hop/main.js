@@ -14,12 +14,14 @@ request.open("GET", 'https://topvoucher.tk/ctv/tools/tong-hop/data.js', true);
 request.send(null);
 request.onreadystatechange =  function() {
 	if(request.readyState == 4){
-		dataVoucher = request.responseText;
-		console.log(dataVoucher)
+		document.getElementById('main').innerHTML = request.responseText;
 	}
 }
 
 
+$("#main").each(function(){
+   $(this).html( $(this).html().replace(/((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g, '<a target="_blank" href="$1">$1</a> ') );
+});
 
 function copyValue(c){
   if(c.value.length >= 1){
