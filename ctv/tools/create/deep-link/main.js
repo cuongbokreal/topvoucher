@@ -192,12 +192,6 @@ function get_short_url(bitly_token, longUrl){
   	if(data.status_code == 200 && data.status_txt == 'OK' && data.data.url.length >= 8){kqShortlink.value = data.data.url}
 	  else{kqShortlink.value = '';}
 	console.log(data)
-	  if(kqShortlink.value >= 6){ 
-		qrDeeplink.setAttribute('src', `https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${data.data.url}`)
-	}
-	else{
-		qrDeeplink.setAttribute('src', `https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${kq}`)
-	}
   })
 }
 
