@@ -1,4 +1,4 @@
-var dataVoucher = '';
+var time_thbao = 3000;
 
 function makeHttpObject() {
   try {return new XMLHttpRequest();}
