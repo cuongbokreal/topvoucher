@@ -121,8 +121,13 @@ const time_thbao = 3000;
 			     <p>QR Code:</p><img id="qrDeeplink" src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${kq}" />`;
         } else{thbao.style.display = 'block';}
         
-        kqDeeplink.value = kq;
-        infor_camp.innerHTML = data_infor_camp;
+	if(linkSp.length >= 10){
+		kqDeeplink.value = kq;
+        	infor_camp.innerHTML = data_infor_camp;
+	}else{
+		kqDeeplink.value = '';
+        	infor_camp.innerHTML = '';
+	}
 	if(createShortenLink.checked == true && linkSp.length >= 10){
 		get_short_url(bitly_token, kq); //get shortlink nếu có
 	}else{kqShortlink.value = '';} //check có tạo short thì tạo, không thì kqShortLink value = '';
