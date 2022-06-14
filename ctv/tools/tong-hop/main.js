@@ -20,3 +20,15 @@ request.onreadystatechange =  function() {
 
 console.log(dataVoucher)
 
+function copyValue(c){
+  if(c.value.length >= 1){
+    c.focus();
+    c.select();
+    document.execCommand("Copy");
+    console.log(`Copied: ${c.value}`);
+    toast({title: 'Thành công', message: `Đã copy <b>${c.value}</b>`, type: "success", duration: time_thbao});
+    }else{
+		console.log('Không có dữ liệu để copy!' + c);
+		toast({title: 'Lỗi', message: `Không có dữ liệu để copy!`, type: "error", duration: time_thbao});
+	}
+}
