@@ -1,90 +1,62 @@
-⏰SHOPEE, LAZADA TỪ 12H - 15H NGÀY 14.6:
-➖➖➖➖SHOPEE➖➖➖➖
-🔥TIÊU DÙNG: Sức khoẻ sắc đẹp(mỹ phẩm,..), bách hoá online, mẹ bé, giặt giũ, thú cưng
-• 12H: Mã giảm 50% tối đa 100K đơn từ 0Đ(đúng giờ load link, mã sẽ hiện ở dưới mã Freeship giảm 70K)
-=> Lưu mã tại: https://shopee.vn/universal-link/m/sieu-sale-nganh-hang
+🔥 Mã + Deal Từ 18h - 21H (14/06)
 .
-🔥MÃ QUỐC TẾ: đúng giờ mới hiện mã (lưu dùng nhanh)
-• 12H: Mã giảm 50% tối đa 20K đơn từ 0Đ(12H load link chọn mục "GIỜ VÀNG SĂN SALE" để tới thẳng vị trí lên mã)
-=> Lưu mã tại: https://shopee.vn/universal-link/m/sieu-sale-hang-quoc-te
+A. SHOPEE
 .
-🚛MIỄN PHÍ VẬN CHUYỂN: canh back lúc 12H
-• 12H: Lưu mã Freeship 0Đ giảm 10K + mã Freeship Xtra tại: https://shopee.vn/universal-link/m/ma-giam-gia-14-06
+🎁 Khung giờ săn sale: https://shopee.vn/universal-link/m/khung-gio-san-sale-13-06
+▶️ 18H: Canh back thêm lượt dùng mã SPPD06221450 giảm 50% tối đa 15K đơn từ 30K toàn sàn Shopee thanh toán bằng ShopeePay. List sản phẩm áp mã: https://shopee.vn/search?evcode=U1BQRDA2MjIxNDUw&promotionId=380584183873536&signature=1839a87407a2a56fcd647809ebe94340b17d248716fa44dae872c22390be5963
+▶️ 18H: SPPD062218H14 giảm 10K đơn từ 50K toàn sàn Shopee thanh toán bằng ShopeePay. List sản phẩm áp mã: https://shopee.vn/search?evcode=U1BQRDA2MjIxOEgxNA&promotionId=380584191066112&signature=17982efe61e4d2b686f3a422fb6670bab9a657c388ed2cd2242c9ed5d0058ef4
+👉 Săn voucher, mã MPVC các khung giờ.
 .
-🔥MÃ TOÀN SÀN - NHẬP TAY:  canh back lúc 12H
-• 11H57-12H03: HUNT156KPH giảm 15% tối đa 156K đơn từ 156K. List sản phẩm áp mã: https://shopee.vn/search?evcode=SFVOVDE1NktQSA&promotionId=377743625060352&signature=7e2e943bb80e5719948786c59106334601e17585be3cde81b6d335e0a896891b (back)
-• 146HOAN10K0PH hoặc 146HOAN10K1PH hoặc 146HOAN10K2PH hoàn 15% tối đa 10K đơn từ 50K
-• 96GIAM40K0PH hoặc 96GIAM40K1PH hoặc 96GIAM40K2PH giảm 5% tối đa 40K đơn từ 500K
-• 96MALL50K0PH hoặc 96MALL50K1PH hoặc 96MALL50K2PH giảm 6% tối đa 50K đơn từ 250K(Mall)
+🎁 Bật Mí Sale 15/06: https://shopee.vn/universal-link/m/san-pham-hot-nhat
+▶️ 18H, 21H: Canh back thêm lượt dùng mã 146HOAN10K0PH hoặc 146HOAN10K1PH hoặc 146HOAN10K2PH hoàn 15% tối đa 10K đơn từ 50K toàn sàn. List sản phẩm áp mã: https://shopee.vn/search?evcode=MTQ2SE9BTjEwSzBQSA&promotionId=377743187558400&signature=8da5933e2501351dc7c5a12891b3cd425019686afcbd8886693afcd958fc01be
+▶️ 18H, 21H: Canh back thêm lượt dùng mã 96GIAM40K0PH hoặc 96GIAM40K1PH hoặc 96GIAM40K2PH giảm 5% tối đa 40k đơn từ 500k toàn sàn. List sản phẩm áp mã: https://shopee.vn/search?evcode=OTZHSUFNNDBLMFBI&promotionId=377743145861120&signature=fa548b2513ddf6edcaa104d94c25491b33adc303c33057eadcfc7c6058e1b5b1
+▶️ 18H, 21H: Canh back lượt sử dụng mã 96MALL50K0PH hoặc 96MALL50K1PH hoặc 96MALL50K2PH giảm 6% tối đa 50k đơn từ 250k cho sp mall
 .
-🔥MÃ ÁP SẢN PHẨM CÓ MÁC “Hoàn Xu Xtra” hoặc “Freeship Xtra”: canh back lúc 12H
-• Mã hoàn 6% tối đa 200K đơn từ 400K(Hoàn Xu Xtra)
-• Mã giảm 5% tối đa 100K đơn từ 500K(Freeship Xtra)
-• Lưu sớm 2 mã hoàn 200K, 300K cho sale 15.6
-=> Lưu mã tại: https://shopee.vn/universal-link/m/shopee-cashback-1406
+📌 Mã áp dụng cho một số sản phẩm: 
+▶️ SKAMNLT06 giảm 20k đơn từ 0đ cho list sản phẩm: https://shopee.vn/search?evcode=U0tBTU5MVDA2&promotionId=373535177801728&signature=847312e8c0b49b7c7f559f3c66d6a9db4e80eee4117509713d49ba77e84d107a
+▶️ AFF66CPNW hoàn 20k đơn từ 50k cho list sản phẩm: https://shopee.vn/search?evcode=QUZGNjZDUE5X&promotionId=374940771827712&signature=748fde97f20064263f80b476b162c02fbabb8e78247b4632c8893cf777ab125b
+▶️ AFF6FSW giảm 20k đơn từ 99k. List sản phẩm áp mã: https://shopee.vn/search?evcode=QUZGNkZTVw&promotionId=380853188706304&signature=2570f6ce124cd2fe5195287b2efcdc11eec1be1a12e90fbc5c77fe37c9e7362c
+▶️ AFF6FMW giảm 20k đơn từ 99k. List sản phẩm áp mã: https://shopee.vn/search?evcode=QUZGNkZNVw&promotionId=380851931447296&signature=f56417638fa6c4f7c30e30576dee16d392c4486c1e296175743f22308ba9ca56
+▶️ AFF6GMVPKB giảm 8% tối đa 100k đơn từ 600k. List sản phẩm áp mã: https://shopee.vn/search?evcode=QUZGNkdNVlBLQg&promotionId=380851938852864&signature=a4fb6bccd0eb5d177e57f95c95bc77a5cc9c8a6ea7dcf6cbeaacbe7a480cbd17
 .
-🔥SỨC KHỎE SẮC ĐẸP: https://shopee.vn/universal-link/m/sieu-sale-my-pham-fmcg1406
-• 12H: Săn mã shop giảm 50% tối đa 50K đơn từ 0Đ - cập nhật sau trên zalo, tele
+🎁 Hoàn Xu Xtra: https://shopee.vn/universal-link/m/shopee-cashback-1406
+▶️ 18H: Lưu trên banner tại link nay https://shopee.vn/universal-link/m/shopee-cashback-1406 + dùng ngay mã CCBBH0614 hoàn 6% tối đa 200K đơn từ 400K cho sp hoàn xu xtra. List sản phẩm áp mã: https://shopee.vn/universal-link/m/shopee-cashback-1406
+▶️ Lưu trước trên banner tại link nay https://shopee.vn/universal-link/m/shopee-cashback-1406 + dùng ngay mã CCBHUNTS0615 hoàn 10% tối đa 300K đơn từ 1tr cho sp hoàn xu xtra (dùng trong ngày 15/6). List sản phẩm áp mã: https://shopee.vn/universal-link/m/shopee-cashback-1406
+▶️ Lưu trước trên banner tại link nay https://shopee.vn/universal-link/m/shopee-cashback-1406 + dùng ngay mã CCBSPIKEH0615 hoàn 7% tối đa 200K đơn từ 400K cho sp hoàn xu xtra (dùng trong ngày 15/6). List sản phẩm áp mã: https://shopee.vn/universal-link/m/shopee-cashback-1406
 .
-🔥Kính Mắt Lily: https://shopee.vn/universal-link/m/lily-1406
-• 12H, 15H, 18H, 21H: Săn mã shop giảm 400K, 600K, 800K, 1tr tại banner
-• 13H, 16H, 19H, 21H: Săn mã shop giảm còn 0Đ tại banner
-• 14H, 17H, 20H, 22H: Săn mã shop giảm còn 14K tại banner
+🎁 ShopeeFood: https://shopee.vn/universal-link/m/dat-do-an-online-shopeefood
+▶️ 18h: FSSPF18K Giảm 18k phí Ship đơn từ 0đ
 .
-🔥MÃ ÁP MỘT SỐ SẢN PHẨM: dùng luôn
-• AFF6FSW giảm 20K đơn từ 99K. List sản phẩm áp mã: https://shopee.vn/search?evcode=QUZGNkZTVw&promotionId=380853188706304&signature=2570f6ce124cd2fe5195287b2efcdc11eec1be1a12e90fbc5c77fe37c9e7362c
-• SPFDEAL1006 hoàn 50K đơn từ 200K. List sản phẩm áp mã: https://shopee.vn/search?evcode=U1BGREVBTDEwMDY&promotionId=375847454572544&signature=ca0cd400ac9b4dcd0e71dc53643d073739c6bf1e1d2100be557e81f0adf81b73
-• LIFEDELI06  giảm 20K đơn từ 0Đ. List sản phẩm áp mã: https://shopee.vn/search?evcode=TElGRURFTEkwNg&promotionId=373464243798032&signature=436004c562f867e6a1f119e12c12541074fba003500bbe20b65dcc39f697aeab
-• I091515K giảm 15K đơn từ 0Đ. List sản phẩm áp mã: https://shopee.vn/search?evcode=STA5MTUxNUs&promotionId=372857914064896&signature=df8f8319ae81bab01a74b8db4d9353f3efaafe24d984fbf77d84febaa09842df
-• SPFDEAL0906 hoàn 25K đơn từ 60K. List sản phẩm áp mã: https://shopee.vn/search?evcode=U1BGREVBTDA5MDY&promotionId=375847447298048&signature=ba0c85c9e736e74268ea0cc38fb77d26dcb1c4bad82e92a4df586508cf8431c6
-• AFF66CPNW hoàn 20K đơn từ 50K. List sản phẩm áp mã: https://shopee.vn/search?evcode=QUZGNjZDUE5X&promotionId=374940771827712&signature=748fde97f20064263f80b476b162c02fbabb8e78247b4632c8893cf777ab125b
-• SKAMNLT06 giảm 20K đơn từ 0Đ. List sản phẩm áp mã: https://shopee.vn/search?evcode=U0tBTU5MVDA2&promotionId=373535177801728&signature=847312e8c0b49b7c7f559f3c66d6a9db4e80eee4117509713d49ba77e84d107a
-@All 
-🔥SHOPEEPAY: https://shopee.vn/universal-link/m/shopeepay 
-• 12H: SPPD06221450 giảm 15K đơn từ 30K(back)
-• SPPD06229H14 giảm 15K đơn từ 30K(ShopeeMall)
-• 18H: SPPD062218H14 giảm 10K đơn từ 50K
-• Lưu sớm mã giảm 50K đơn từ 100K ShopeePay cho 16.6
+🎁 Mỹ phẩm: https://shopee.vn/universal-link/m/sieu-sale-my-pham-fmcg1406
+👉 18H: Săn voucher 50% tối đa 50k đơn từ 0đ.
 .
-🔥SHOPEEFOOD: https://shopee.vn/universal-link/m/dat-do-an-online-shopeefood
-• 11H, 18H: Săn mã giảm 18K phí Ship cho đơn từ 0Đ
-• 15H: QUANMOI30 giảm 30K đơn từ 30K
+🎁 Từ Kính Mắt Lily: https://shopee.vn/universal-link/m/lily-1406
+👉 18H: Săn voucher giảm 800k đơn từ 800K.
+▶️ 19H: LILYLOVE5 (mã shop) giảm còn 0đ cho Gọng kính tròn kim loại 72319: https://shopee.vn/TrumGiamGia.Tk-i.230940122.7659377762
+▶️ 20H: LILYGIFT5 (mã shop) giảm còn 14k cho Gọng kính cận kim loại 29183: https://shopee.vn/TrumGiamGia.Tk-i.230940122.7073893662
+👉 21H: Săn voucher giảm 1 triệu đơn từ 1 triệu.
+▶️ 21H: LILYLOVE6 (mã shop) giảm còn 0đ cho Gọng kính tròn kim loại 6214: https://shopee.vn/TrumGiamGia.Tk-i.230940122.7829700676
+▶️ 22H: LILYGIFT6 (mã shop) giảm còn 14k cho Gọng kính cận mắt mèo 90029: https://shopee.vn/TrumGiamGia.Tk-i.230940122.7930467497
 .
-🔥Lifestyle: https://shopee.vn/universal-link/lifestyles_official_store
-• 12H: LIFE100KS (mã shop) giảm 100K đơn từ 329K. List sản phẩm áp mã: https://shopee.vn/search?evcode=TElGRTEwMEtT&promotionId=382899347357696&signature=a5eb168b6c28a463f3ba7ebd411cfd2546232be890f0de8744a50d043576aee9
+🎁 Đón Chờ Sale 15/06: https://shopee.vn/universal-link/m/don-cho-sieu-sale-09-06
+👉 Lưu trước 1 số mã ngày 15/06
+👉 Xem trước ưu đãi ngày 15/06
 .
-🔥SIÊU SALE VOUCHER: 0H ngày 15.6 dùng
-• Lưu sớm mã giảm 156K/1t5, 15K/50K, 150K/3tr, 10% cho toàn sàn
-• Lưu sớm mã giảm 50K, 100K, 150K, 200K đơn từ 0Đ cho các thương hiệu
-=> Lưu sớm các mã tại: https://shopee.vn/universal-link/m/sieu-sale-voucher-6
+B. ƯU ĐÃI LAZADA
 .
-🔥CHỜ ĐÓN SIÊU SALE 15.6:
-• Lưu sớm mã Freeship 0Đ giảm 15K + mã toàn sàn 70K + ShopeeMall 50K
-=> Lưu sớm mã tại: https://shopee.vn/universal-link/m/don-cho-sieu-sale-09-06
+🎁 20h: Lưu mã 50k thời trang mall: https://pages.lazada.vn/wow/gcp/lazada/channel/vn/thoi-trang/social-women-brands?referer=at-kol
 .
-🔥Mở hộp quà: https://shopee.vn/universal-link/m/sieu-sale-nganh-hang-14-06 (lượt mới 15H)
+🎁 Lưu trước voucher Tích Lũy:
+👉 Lưu Voucher Tích Lũy đến 400K để dùng cho ngày 15/06: https://pages.lazada.vn/wow/gcp/lazada/megascenario/vn/sale-giua-thang-06-2022/voucher-tich-luy-400k?referer=at-kol
 .
-🔥Trả lời câu hỏi nhận xu hoặc voucher: 
-=> Link 1: https://shopee.vn/universal-link/m/sieu-sale-hang-quoc-te-14-6 đáp án: B A C D D
-=> Link 2: https://shopee.vn/universal-link/m/sieu-sale-my-pham-fmcg1406 đán án: D (mở thêm lúc 12H, 18H)
+🎁 Chơi Game Gét Gô: https://pages.lazada.vn/wow/gcp/vn/lazgame/quiz?referer=at-kol
+👉 Tích điểm đổi voucher cực ngon
 .
-➖➖➖➖LAZADA➖➖➖➖
-🔥12H: MÃ NGâN HÀNG: canh back 12H - có thể lên sớm hoặc muộn vài phút
-=> Lưu mã tại: https://pages.lazada.vn/wow/gcp/lazada/channel/vn/partnership/uu-dai-doi-tac?referer=at-kol
+🎁 Ưu đãi đối tác thanh toán: https://pages.lazada.vn/wow/gcp/lazada/channel/vn/partnership/uu-dai-doi-tac?referer=at-kol
+👉 12H, 18H, 20H Back Lưu các mã thẻ ngân hàng, đối tác thanh toán
 .
-🔥ZALOPAY: còn lượt
-=> Lưu mã tại: https://pages.lazada.vn/wow/gcp/lazada/channel/vn/thanh-toan/khongtienmat?referer=at-kol
+🎁 Lưu mã Momo : https://pages.lazada.vn/wow/gcp/lazada/channel/vn/thanh-toan/khuyen-mai-momo?referer=at-kol
 .
-🔥VOUCHER TÍCH LŨY GIẢM TỚI 400K: dùng từ ngày 15.6-19.6
-• Lưu 30K tích luỹ tại: https://pages.lazada.vn/wow/gcp/route/lazada/vn/upr_1000345_lazada/channel/vn/upr-router/vn?hybrid=1&data_prefetch=true&prefetch_replace=1&at_iframe=1&wh_pid=/lazada/megascenario/vn/sale-giua-thang-06-2022/voucher-tich-luy-400k&referer=at-kol
-• Lưu thêm 30K tích luỹ dưới sản phẩm tại: https://www.lazada.vn/products/co-bon-cau-toilet-co-ve-sinh-cao-cap-parroti-silicon-sl01-co-coc-dung-choi-cay-cap-toc-rung-tien-dung-i896122762-s2591888991.html?referer=at-kol
+🎁 Lưu mã Zalopay : https://pages.lazada.vn/wow/gcp/route/lazada/vn/upr_1000345_lazada/channel/vn/upr-router/vn?spm=a2o4n.home.top.dbr9.550d6afePB8hVG&hybrid=1&data_prefetch=true&wh_pid=/lazada/channel/vn/thanh-toan/khuyen-mai-zalopay&referer=at-kol
 .
-🔥FREESHIP:
-• Mã Freeship 15K/49K, 25K/99K, 50K/300K
-=> Lưu mã tại: https://pages.lazada.vn/wow/gcp/lazada/channel/vn/voucher/claimvoucher?referer=at-kol
-.
-🔥LAZMALL GIẢM 60K ĐƠN TỪ 499K:
-=> Lưu mã tại: https://pages.lazada.vn/wow/gcp/lazada/channel/vn/khuyen-mai/LazMall_Hot_Deals?referer=at-kol
-.
-🔥20H: MÃ GIẢM 50K TỪ 6 THƯƠNG HIỆU THỜI TRANG:
-=> Lưu mã tại: https://pages.lazada.vn/wow/gcp/lazada/channel/vn/thoi-trang/social-women-brands?referer=at-kol
+🎁 Đổi xu lấy voucher (canh mã lên) : https://www.lazada.vn/wow/i/vn/miniapp/page?_ariver_appid=2161010045435475&_main_process=true&page=pages/index/index?moduleName=Voucher&spm=a2o4n.gamecenter_homepage.0.0&referer=at-kol
