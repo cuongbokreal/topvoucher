@@ -119,7 +119,11 @@ const time_thbao = 3000;
                              <p>Link gốc: <span style="color:red">${decodeURIComponent(finalLink)}</span></p> 
                              <p>Tracking link: <span style="color:red">${kq}</span></p>
 			     <p>QR Code:</p><img id="qrDeeplink" src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L|0&chl=${kq}" />`;
-        } else{thbao.style.display = 'block';}
+        } else{//nếu không match shopee || lazada || tiki
+		thbao.style.display = 'block';
+		kqDeeplink.value = '';
+        	infor_camp.innerHTML = '';
+	}
         
 	if(linkSp.length >= 10){
 		kqDeeplink.value = kq;
