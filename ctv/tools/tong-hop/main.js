@@ -13,12 +13,13 @@ var request = makeHttpObject();
 request.open("GET", 'https://topvoucher.tk/ctv/tools/tong-hop/data.js', true);
 request.send(null);
 request.onreadystatechange =  function() {
-  if (request.readyState == 4){
-    dataVoucher = request.responseText;
-  }
+	if(request.readyState == 4){
+		dataVoucher = request.responseText;
+		console.log(dataVoucher)
+	}
 }
 
-console.log(dataVoucher)
+
 
 function copyValue(c){
   if(c.value.length >= 1){
