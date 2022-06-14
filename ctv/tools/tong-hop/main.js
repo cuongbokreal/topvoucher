@@ -14,7 +14,7 @@ request.open("GET", 'https://topvoucher.tk/ctv/tools/tong-hop/data.js', true);
 request.send(null);
 request.onreadystatechange =  function() {
 	if(request.readyState == 4){
-		document.getElementById('main').innerHTML = request.responseText;
+		document.getElementById('main').innerHTML = replaceBr(request.responseText);
 		$("#main").each(function(){
 		   $(this).html( $(this).html().replace(/((http|https|ftp):\/\/[\w?=&.\/-;#~%-]+(?![\w\s?&.\/;#~%"=-]*>))/g, '<input onclick="copyValue(this)" value="$1">$1</input> '));
 		});
@@ -35,4 +35,9 @@ function copyValue(c){
 		console.log('Không có dữ liệu để copy!' + c);
 		toast({title: 'Lỗi', message: `Không có dữ liệu để copy!`, type: "error", duration: time_thbao});
 	}
+}
+
+function replaceBr(c){
+	return c.replaceAll(`
+`,'<br/>');
 }
