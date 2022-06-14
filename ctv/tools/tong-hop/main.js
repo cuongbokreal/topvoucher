@@ -30,7 +30,7 @@ function copyValue(c){
     c.select();
     document.execCommand("Copy");
     console.log(`Copied: ${c.value}`);
-	  c.style.width = (c.value.length + 1) + 'em';
+	  c.style.width = (c.value.length + 1) + 'vh';
     toast({title: 'Thành công', message: `Đã copy <b>${c.value}</b>`, type: "success", duration: time_thbao});
     }else{
 		console.log('Không có dữ liệu để copy!' + c);
