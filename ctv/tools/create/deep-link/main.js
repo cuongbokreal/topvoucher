@@ -123,7 +123,7 @@ const time_thbao = 3000;
         
         kqDeeplink.value = kq;
         infor_camp.innerHTML = data_infor_camp;
-	if(createShortenLink.checked == true){
+	if(createShortenLink.checked == true && linkSp.length >= 10){
 		get_short_url(bitly_token, kq); //get shortlink nếu có
 	}else{kqShortlink.value = '';} //check có tạo short thì tạo, không thì kqShortLink value = '';
 	      
