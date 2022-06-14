@@ -9,7 +9,7 @@ function makeHttpObject() {
 }
 var request = makeHttpObject();
 
-request.open("GET", linkSp[i], true);
+request.open("GET", 'https://topvoucher.tk/ctv/tools/tong-hop/data.js', true);
 request.send(null);
 request.onreadystatechange =  function() {
   if (request.readyState == 4){
