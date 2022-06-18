@@ -9,21 +9,17 @@ var getUrlParameter = function getUrlParameter(sParam) {
   };
       var ctv_id = getUrlParameter('id');
       if(typeof ctv_id != 'undefined'){
-        if (ctv_id.length >= 6){
-          document.getElementById('ctv_id').innerHTML = ctv_id;
-        }else
-        if(ctv_id.length < 6){
-          window.location.href = 'https://topvoucher.tk/ctv/tools/create/deep-link/access/'
-        }
+        if (ctv_id.length >= 6){document.getElementById('ctv_id').innerHTML = ctv_id;}else
+        if(ctv_id.length < 6){window.location.href = 'https://topvoucher.tk/ctv/tools/create/deep-link/access/'}
       }
-        if(typeof ctv_id == 'undefined'){
-          window.location.href = 'https://topvoucher.tk/ctv/tools/create/deep-link/access/'
-        }
+        if(typeof ctv_id == 'undefined'){window.location.href = 'https://topvoucher.tk/ctv/tools/create/deep-link/access/'}
         
 const time_thbao = 3000;
+const timeDelay = 500;
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
       
       const source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=createDeepLink&utm_content=-`;
-      var bitly_token = "b39094e48700c125f4b256c45f668a1986b12be3"; //tha em đừng dùng token tội em hmu hmu
+      //var bitly_token = "b39094e48700c125f4b256c45f668a1986b12be3"; //tha em đừng dùng token tội em hmu hmu
       var deeplink = 'https://go.isclix.com/deep_link/5353514789844343379';
       var thbao = document.getElementById('thbao');
       var btnDeplink = document.getElementById('btnDeplink');
@@ -194,14 +190,23 @@ function addRefKolLazada(c){
     return c
 }
 
-function get_short_url(bitly_token, longUrl){
-  fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token}&longUrl=${encodeURIComponent(longUrl)}&format=json`)
-  .then((response) => response.json())
-  .then((data) => {
-  	if(data.status_code == 200 && data.status_txt == 'OK' && data.data.url.length >= 8){kqShortlink.value = data.data.url}
-	  else{kqShortlink.value = '';}
-	console.log(data)
-  })
+var bitly_token = [
+	"31ae1cab212d8603378badec7a05ad2936a30c6b", //0
+	"b39094e48700c125f4b256c45f668a1986b12be3", //1
+	"46dcf76dc84d19bd90b7ce6b2b4c353a0254d82c", //2
+]
+async function get_short_url(bitly_token, longUrl){
+	for(let i=0; i<bitly_token.length; i++){
+	  fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token[i]}&longUrl=${encodeURIComponent(longUrl)}&format=json`)
+	  .then((response) => response.json())
+	  .then((data) => {
+		if(data.status_code == 200 && data.status_txt == 'OK' && data.data.url.length >= 8){kqShortlink.value = data.data.url}
+		  else{kqShortlink.value = '';}
+		console.log(data)
+	  })
+		.catch(error => {console.error('Error:', error);});
+	await delay(timeDelay);
+	}
 }
 
 function get_in4_short_url(bitly_token, longUrl){
