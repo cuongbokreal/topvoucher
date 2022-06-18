@@ -209,6 +209,8 @@ async function get_short_url(bitly_token, longUrl){
 	  })
 		.catch(error => {console.error('Error:', error);});
 	await delay(timeDelay);
+	console.log(document.getElementById('kqShortlink').value.length)
+	if(document.getElementById('kqShortlink').value.length >= 8){break};
 	}
 }
 
