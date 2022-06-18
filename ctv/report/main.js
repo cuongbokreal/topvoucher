@@ -104,3 +104,8 @@ function thanhtoan(){
     document.getElementById('total-2').innerHTML = `<div class="text-xs text-gray-400 dark:text-gray-400">Số dư:</div>
     <div id="innerChuyenDoi" class="text-gray-900 text-lg dark:text-white">${totalSoDuTrongThang.toLocaleString()}</div>`;
   }
+
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+});
