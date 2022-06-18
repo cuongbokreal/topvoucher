@@ -35,8 +35,8 @@
 .tdTitle{font-weight: 500;}
 
 /*=== POPUP ===*/
-#popup{top:0;left:0;right:0;bottom:0;position:fixed;opacity:0;visibility:hidden;transition:.3s;transform:scale(1.015)}
-#popup:target{transform:scale(1);background:rgba(0,0,0,.2);opacity:1;visibility:visible;position:fixed;top:0;left:0;right:0;bottom:0;margin:0;z-index:999999999999;transition:.3s}
+#popup{top:0;left:0;right:0;bottom:0;position:fixed;opacity:0;visibility:hidden;transition:.1s;transform:scale(1.015)}
+#popup:target{transform:scale(1);background:rgba(0,0,0,.2);opacity:1;visibility:visible;position:fixed;top:0;left:0;right:0;bottom:0;margin:0;z-index:999999999999;transition:.1s}
 .popup_{
   background:#fff;
   border-radius:4px;
