@@ -91,7 +91,7 @@ document.getElementById('main').innerHTML = `
           <h2>Chi tiết đơn hàng</h2>
           <div class="divDetails">
             <table class="table-wrapper details" id="detailsOrder"></table>
-            <table class="table-wrapper details" style="margin-top:1rem;">
+            <table class="table-wrapper details" id="detailsOrder2" style="margin-top:1rem;">
               <thead><tr>
               <td>Mã đơn hàng	</td>
               <td>Số lượng</td>
