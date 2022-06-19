@@ -33,7 +33,7 @@
 /*=== DETAILS ===*/
 .tdDetails{text-align: left;}
 .tdTitle{font-weight: 500;}
-#detailsOrder2 td{font-size: 0.56rem;}
+#detailsOrder2 td{font-size: 0.75rem; padding: 0.25rem 0.5rem 0.25rem 0.5rem;}
 
 /*=== POPUP ===*/
 #popup{top:0;left:0;right:0;bottom:0;position:fixed;opacity:0;visibility:hidden;transition:.1s;transform:scale(1.015)}
