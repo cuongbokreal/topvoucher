@@ -33,6 +33,7 @@
 /*=== DETAILS ===*/
 .tdDetails{text-align: left;}
 .tdTitle{font-weight: 500;}
+#detailsConversion tr td{font-size: 0.56rem;}
 
 /*=== POPUP ===*/
 #popup{top:0;left:0;right:0;bottom:0;position:fixed;opacity:0;visibility:hidden;transition:.1s;transform:scale(1.015)}
