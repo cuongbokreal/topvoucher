@@ -71,7 +71,15 @@ header {height: 5rem; max-height:fit-content;}
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-
+.input-ma-giam-gia{
+  width: 30rem;
+    background-color: #e9ecef;
+    color: #4f5467;
+    padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+}
 /*=== Resivepone ===*/
 @media screen and (max-width: 640px){
   .table-wrapper:{position:relative; width:calc(100% + 40px);left:-20px;padding:0 20px; display:flex;overflow-x:scroll;overflow:scroll;}
