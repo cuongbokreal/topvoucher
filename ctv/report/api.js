@@ -22,6 +22,11 @@ if(typeof ctv_id != 'undefined'){
   if(ctv_id.length < 6){window.location.href = '/'}
 }
 if(typeof ctv_id == 'undefined'){window.location.href = '/'}
+document.getElementById('ctv_ma-giam-gia').innerHTML = `
+<div>- SHOPEE: <input onclick="copyValue(this)" value="https://topvoucher.tk/ctv/r/ma-giam-gia/shopee/?ref=${ctv_id}"/></div>
+<div>- LAZADA: <input onclick="copyValue(this)" value="https://topvoucher.tk/ctv/r/ma-giam-gia/lazada/?ref=${ctv_id}"/></div>
+<div>- TIKI: <input onclick="copyValue(this)" value="https://topvoucher.tk/ctv/r/ma-giam-gia/tiki/?ref=${ctv_id}"/></div>
+`;
 
 var tab = getUrlParameter('tab');
 if(typeof tab == 'undefined'){tab = 'doanhthu'}
@@ -311,6 +316,20 @@ function innerSoDuTotal2(){
 window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
 });
+
+function copyValue(c){
+  if(c.value.length >= 1){
+    c.focus();
+    c.select();
+    document.execCommand("Copy");
+    console.log(`Copied: ${c.value}`);
+    toast({title: 'Thành công', message: `Đã copy <b>${c.value}</b>`, type: "success", duration: time_thbao});
+    }else{
+		console.log('Không có dữ liệu để copy!' + c);
+		toast({title: 'Lỗi', message: `Không có dữ liệu để copy!`, type: "error", duration: time_thbao});
+	}
+}
+
 //${thisYear}-${add0ToLess10(thisMonth)}-${add0ToLess10(thisDate)}
 /*
 fetch('https://api.accesstrade.vn/v1/transactions?since=2022-05-01T00:00:00Z&until=2022-05-30T00:00:00Z&utm_source=ctv&utm_medium=ctv_001204', { headers })
