@@ -79,6 +79,7 @@ document.getElementById('main').innerHTML = `
           <br/>
           <p class="form-control text-gray-900 text-lg dark:text-white" style="background-color: #e9ecef">Tool Product link: <span id="url_product_link"></span></p>
           <br/>
+          <div id="ctv_ma-giam-gia"></div>
           <div class="doanhthu ">
             <p class="text-gray-900 text-lg dark:text-white">Chính sách thanh toán:</p>
             <p>1. Để thanh toán, doanh thu của Publisher chỉ cần đạt tối thiểu hạn mức 100.000/1 kỳ thanh toán. Sẽ cộng dồn vào tháng tiếp theo nếu chưa đủ hạn mức thanh toán.</p>
