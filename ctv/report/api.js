@@ -23,9 +23,9 @@ if(typeof ctv_id != 'undefined'){
 }
 if(typeof ctv_id == 'undefined'){window.location.href = '/'}
 document.getElementById('ctv_ma-giam-gia').innerHTML = `
-<div>- SHOPEE: <input onclick="copyValue(this)" value="https://topvoucher.tk/ctv/r/ma-giam-gia/shopee/?ref=${ctv_id}"/></div>
-<div>- LAZADA: <input onclick="copyValue(this)" value="https://topvoucher.tk/ctv/r/ma-giam-gia/lazada/?ref=${ctv_id}"/></div>
-<div>- TIKI: <input onclick="copyValue(this)" value="https://topvoucher.tk/ctv/r/ma-giam-gia/tiki/?ref=${ctv_id}"/></div>
+<div><span>- SHOPEE: </span><input onclick="copyValue(this)" value="https://topvoucher.tk/ctv/r/ma-giam-gia/shopee/?ref=${ctv_id}"/></div>
+<div><span>- LAZADA: </span><input onclick="copyValue(this)" value="https://topvoucher.tk/ctv/r/ma-giam-gia/lazada/?ref=${ctv_id}"/></div>
+<div><span>- TIKI: </span><input onclick="copyValue(this)" value="https://topvoucher.tk/ctv/r/ma-giam-gia/tiki/?ref=${ctv_id}"/></div>
 `;
 
 var tab = getUrlParameter('tab');
