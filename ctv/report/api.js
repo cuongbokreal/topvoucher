@@ -1,5 +1,6 @@
 var headers = {'Authorization': 'Token NJX0ajmdmDlubnsfBHrvCJQjWIehzXcA','Content-Type': 'application/json'}
 var tile = 55/100;
+const time_thbao = 3000;
 
 const updateTime = new Date()
 const thisYear = updateTime.getFullYear();
