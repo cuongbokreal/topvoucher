@@ -86,15 +86,15 @@ function setTab(c){
       window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&tab=${c}`;
 }
 /*On change time*/
-function changeTimeStart(){
+function changeTime(){
 	searchParams.set('update_time_start', update_time_start.value)
 	searchParams.set('update_time_end', update_time_end.value)
   window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?${searchParams.toString()}`;
 }
+/*
 function changeTimeEnd(){
   window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&tab=${tab}`;
-}
-
+}*/
 var doanhthu = document.getElementById('doanhthu');
 var innerDoanhThu = document.getElementById('innerDoanhThu');
 var totalDoanhThu = document.getElementById('totalDoanhThu');
