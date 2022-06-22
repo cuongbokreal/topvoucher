@@ -7,6 +7,10 @@ const thisYear = updateTime.getFullYear();
 const thisMonth = updateTime.getMonth()+1;
 const thisDate = updateTime.getDate();
 
+
+const paramsString = window.location.href.match(/\?.+/g)[0]
+const searchParams = new URLSearchParams(paramsString);
+
 var getUrlParameter = function getUrlParameter(sParam) {
       var sPageURL = window.location.search.substring(1), sURLVariables = sPageURL.split('&'), sParameterName, i;
       for (i = 0; i < sURLVariables.length; i++) {
