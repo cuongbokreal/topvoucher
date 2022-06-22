@@ -86,7 +86,9 @@ function setTab(c){
 }
 /*On change time*/
 function changeTimeStart(){
-  window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&tab=${tab}`;
+	searchParams.set('update_time_start', update_time_start.value)
+	searchParams.set('update_time_end', update_time_end.value)
+  window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?${searchParams.toString()}`;
 }
 function changeTimeEnd(){
   window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&tab=${tab}`;
