@@ -52,13 +52,6 @@ function thanhtoan(){
 var param_time_end = getUrlParameter('update_time_end');
 var param_time_start = getUrlParameter('update_time_start');
 
-var paramsString = window.location.href.match(/\?.+/g)[0]
-var searchParams = new URLSearchParams(paramsString);
-//searchParams.getAll('update_time_start')[0]; searchParams.set('topic', 'More webdev')
-searchParams.get('update_time_start')
-searchParams.get('update_time_end')
-searchParams.get('tab')
-
 /* === Set thời gian bởi params ===*/
 var update_time_start = document.getElementById('update_time_start');
 var update_time_end = document.getElementById('update_time_end');
@@ -81,16 +74,21 @@ if(param_time_start.match(matchTime)){update_time_start.setAttribute('value', `$
 function setTab(c){
       window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&tab=${c}`;
 }
+
+var paramsString = window.location.href.match(/\?.+/g)[0]
+var searchParams = new URLSearchParams(paramsString);
+//searchParams.getAll('update_time_start')[0]; searchParams.set('topic', 'More webdev')
+searchParams.get('update_time_start')
+searchParams.get('update_time_end')
+searchParams.get('tab')
+
 /*On change time*/
 function changeTime(){
 	searchParams.set('update_time_start', update_time_start.value)
 	searchParams.set('update_time_end', update_time_end.value)
   window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?${searchParams.toString()}`;
 }
-/*
-function changeTimeEnd(){
-  window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&tab=${tab}`;
-}*/
+
 var doanhthu = document.getElementById('doanhthu');
 var innerDoanhThu = document.getElementById('innerDoanhThu');
 var totalDoanhThu = document.getElementById('totalDoanhThu');
