@@ -7,16 +7,6 @@ const thisYear = updateTime.getFullYear();
 const thisMonth = updateTime.getMonth()+1;
 const thisDate = updateTime.getDate();
 
-if(window.location.href.match(/\?.+/g)[0]){
-	var paramsString = window.location.href.match(/\?.+/g)[0]
-	var searchParams = new URLSearchParams(paramsString);
-	//searchParams.getAll('update_time_start')[0]; searchParams.set('topic', 'More webdev')
-	searchParams.get('update_time_start')
-	searchParams.get('update_time_end')
-	searchParams.get('tab')
-	console.log(searchParams.toString())
-}
-
 var getUrlParameter = function getUrlParameter(sParam) {
       var sPageURL = window.location.search.substring(1), sURLVariables = sPageURL.split('&'), sParameterName, i;
       for (i = 0; i < sURLVariables.length; i++) {
@@ -62,6 +52,12 @@ function thanhtoan(){
 var param_time_end = getUrlParameter('update_time_end');
 var param_time_start = getUrlParameter('update_time_start');
 
+var paramsString = window.location.href.match(/\?.+/g)[0]
+var searchParams = new URLSearchParams(paramsString);
+//searchParams.getAll('update_time_start')[0]; searchParams.set('topic', 'More webdev')
+searchParams.get('update_time_start')
+searchParams.get('update_time_end')
+searchParams.get('tab')
 
 /* === Set thời gian bởi params ===*/
 var update_time_start = document.getElementById('update_time_start');
