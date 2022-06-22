@@ -10,6 +10,11 @@ const thisDate = updateTime.getDate();
 
 const paramsString = window.location.href.match(/\?.+/g)[0]
 const searchParams = new URLSearchParams(paramsString);
+//searchParams.getAll('update_time_start')[0]; searchParams.set('topic', 'More webdev')
+searchParams.get('update_time_start')
+searchParams.get('update_time_end')
+searchParams.get('tab')
+console.log(searchParams.toString())
 
 var getUrlParameter = function getUrlParameter(sParam) {
       var sPageURL = window.location.search.substring(1), sURLVariables = sPageURL.split('&'), sParameterName, i;
