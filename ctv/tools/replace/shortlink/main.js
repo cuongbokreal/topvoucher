@@ -126,7 +126,7 @@ async function getUrlOg(){
 			console.log(document.getElementById('kqShortlink').value.length);
 			if(document.getElementById('kqShortlink').value.length >= 8){break};
 			}
-			og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(finalLink));
+			//og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(finalLink));
 		}
 		document.getElementById('kqDeeplink').value = og_txt; //chạy xong for thì inner 
 	}
