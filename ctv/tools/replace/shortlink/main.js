@@ -120,7 +120,7 @@ async function getUrlOg(){
 				  else{console.log('Lỗi')}
 				console.log(data)
 			  })
-				  .catch(error => {console.error('Error:', error);});
+				  .catch(error => {console.error('Error:', error)});
 				
 			await delay(timeDelay);
 			console.log(document.getElementById('kqShortlink').value.length);
