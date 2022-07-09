@@ -114,6 +114,7 @@ async function getUrlOg(){
 			  .then((response) => response.json())
 			  .then((data) => {
 				if(data.status_code == 200 && data.status_txt == 'OK' && data.data.url.length >= 8){
+					kqShortLink.value = data.data.url;
 					og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(data.data.url)); 
 				}
 				  else{console.log('Lỗi')}
