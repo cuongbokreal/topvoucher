@@ -15,7 +15,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
         if(typeof ctv_id == 'undefined'){window.location.href = 'https://topvoucher.tk/ctv/tools/create/deep-link/access/'}
         
 const time_thbao = 3000;
-const timeDelay = 500;
+const timeDelay = 1000;
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
       
       const source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=createDeepLink&utm_content=-`;
