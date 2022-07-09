@@ -36,7 +36,7 @@ async function getUrlOg(){
 	//var og_txt = linkSp;
 	linkSp = og_txt.match(/\bhttps?:\/\/\S+/g);
 	console.log(linkSp.length);
-	var timeLeft = linkSp.length * timeDelay;
+	var timeLeft = linkSp.length * timeDelay * 2;
 	document.getElementById('thbao').innerHTML = `Dự tính còn <span id="time-left">${timeLeft/1000}</span> giây`;
 	var innerTimeLeft = setInterval(function(){
 		document.getElementById('time-left').innerHTML = timeLeft/1000; 
