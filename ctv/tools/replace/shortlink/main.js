@@ -114,7 +114,7 @@ async function getUrlOg(){
 			  .then((response) => response.json())
 			  .then((data) => {
 				if(data.status_code == 200 && data.status_txt == 'OK' && data.data.url.length >= 8){
-					kqShortLink.value = data.data.url;
+					document.getElementById('kqShortlink').value = data.data.url;
 					og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(data.data.url)); 
 				}
 				  else{console.log('Lỗi')}
@@ -126,7 +126,7 @@ async function getUrlOg(){
 			console.log(document.getElementById('kqShortlink').value.length);
 			if(document.getElementById('kqShortlink').value.length >= 8){break};
 			}
-			//og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(finalLink));
+			og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(finalLink));
 		}
 		document.getElementById('kqDeeplink').value = og_txt; //chạy xong for thì inner 
 	}
