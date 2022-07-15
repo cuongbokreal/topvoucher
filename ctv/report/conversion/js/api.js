@@ -67,9 +67,9 @@ fetch(fetch_doanhthu_url, { headers })
   let data_camp_donhang = '';
   Object.keys(data.data).forEach(key => {
         var status = [];
-        if(data.data[key].order_pending === 0){status = [0, data.data[key].order_pending]}else
+        if(data.data[key].order_pending === 1){status = [0, data.data[key].order_pending]}else
         if(data.data[key].order_reject === 1){status = [2, data.data[key].order_reject]}else
-        if(data.data[key].is_confirmed === 1){status = [1, data.data[key].order_success]}
+        if(data.data[key].is_confirmed === 1){status = [1, data.data[key].is_confirmed]}
         
         /*
         var data_product = []
@@ -183,9 +183,9 @@ function innerDetails(c){
 
 /* Function */
 function getStatusDonhang(c){
-  if(c[0] == '0'){return `<span class="text-orange">Chờ xử lý (${c[1]})</span>`}else
-  if(c[0] == '1'){return `<span class="text-green">Tạm duyệt (${c[1]})</span>`}else
-  if(c[0] == '2'){return `<span class="text-red">Đã hủy (${c[1]})</span>`}
+  if(c[0] === 0){return `<span class="text-orange">Chờ xử lý (${c[1]})</span>`}else
+  if(c[0] === 1){return `<span class="text-green">Tạm duyệt (${c[1]})</span>`}else
+  if(c[0] === 2){return `<span class="text-red">Đã hủy (${c[1]})</span>`}
 }
 function getStatusByNumber(c){
   if(c == 0){return `<span class="text-orange">Chờ xử lý</span>`}else
