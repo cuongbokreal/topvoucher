@@ -131,7 +131,7 @@ function fetch_doanhthu(merchant){
 
     });
       if(data.data.length >= 1){
-            var data_doanhthu_camp = `<td><a target="_blank" href="https://topvoucher.tk/ctv/report/conversion/?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}">${data.data[0].merchant}</a></td>
+            var data_doanhthu_camp = `<td><a target="_blank" href="https://topvoucher.tk/ctv/report/conversion/?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}">${data.data[0].merchant}</a></td>
     <td><span class="data_camp_chuyenDoiPhatSinh">${data.data.length}</span></td>
     <td><span class="data_camp_giaTriDonHang">${data_camp_giaTriDonHang.toLocaleString()}</span></td>
     <td><span class="data_camp_hoaHong">${(data_camp_hoaHong * tile).toLocaleString()}</span></td>
