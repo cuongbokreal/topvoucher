@@ -204,10 +204,10 @@ function padLeadingZeros(c, size) {
 //var split_update_time_end = update_time_end.value.split('-');
 
 function changeTimeStart(){
-      window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}`;
+      window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}`;
 }      
 function changeTimeEnd(){
-      window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}`;
+      window.location.href = `${window.location.href.replaceAll(/\?.+/g,'')}?update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}`;
 }
 
 function getMerchant(c){
