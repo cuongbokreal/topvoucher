@@ -156,6 +156,7 @@ fetch_doanhthu('shopee');
 fetch_doanhthu('tikivn');
 fetch_doanhthu('lazada_kol');
   
+/*
 function addDoanhThu(){
       let dataInnerDoanhThu = "";
       var choXuly = 0;
@@ -174,6 +175,8 @@ function addDoanhThu(){
       innerDoanhThu.innerHTML += dataInnerDoanhThu;
 }
 addDoanhThu()
+*/
+
 addThanhToan()
 
 function total(){
