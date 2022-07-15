@@ -99,7 +99,7 @@ var totalDoanhThu = document.getElementById('totalDoanhThu');
 
 function fetch_doanhthu(merchant){
   innerDoanhThu.innerHTML = '';
-  var fetch_doanhthu_url = `https://api.accesstrade.vn/v1/transactions?since=${update_time_start.value}T00:00:00Z&until=${update_time_end.value}T00:00:00Z&utm_source=ctv&utm_medium=ctv_${ctv_id}&merchant=${merchant}`;
+  var fetch_doanhthu_url = `https://api.accesstrade.vn/v1/order-list?since=${update_time_start.value}T00:00:00Z&until=${update_time_end.value}T00:00:00Z&utm_source=ctv&utm_medium=ctv_${ctv_id}&merchant=${merchant}`;
   fetch(fetch_doanhthu_url, { headers })
   .then(response => response.json())
   .then(data => {
@@ -111,8 +111,14 @@ function fetch_doanhthu(merchant){
     
     console.log(data.data)
     Object.keys(data.data).forEach(key => {
-      data_camp_giaTriDonHang += data.data[key].product_price;
-      data_camp_hoaHong += data.data[key].commission;
+      data_camp_giaTriDonHang += data.data[key].billing;
+      data_camp_hoaHong += data.data[key].pub_commission;
+	    
+	if(data.data[key].is_confirmed === 1){data_camp_duocDuyet += data.data[key].pub_commission}else
+	if(data.data[key].order_pending === 1){data_camp_choXuLy += data.data[key].pub_commission}else
+	if(data.data[key].order_reject === 1){data_camp_daHuy += data.data[key].pub_commission}
+	 
+	    /*
       console.log(data.data[key].status)
       switch (data.data[key].status){
         case 0: data_camp_choXuLy += data.data[key].commission;
@@ -121,11 +127,12 @@ function fetch_doanhthu(merchant){
           break;
         case 2: data_camp_daHuy += data.data[key].commission;
           break;
-      }
+      }*/
+
     });
       if(data.data.length >= 1){
             var data_doanhthu_camp = `<td><a target="_blank" href="https://topvoucher.tk/ctv/report/conversion/?ctv_id=${ctv_id}&update_time_start=${update_time_start.value}&update_time_end=${update_time_end.value}&merchant=${merchant}">${data.data[0].merchant}</a></td>
-    <td><span class="data_camp_chuyenDoiPhatSinh">${data.data.length}</span></td>
+    <td><span class="data_camp_chuyenDoiPhatSinh">${data.data.total}</span></td>
     <td><span class="data_camp_giaTriDonHang">${data_camp_giaTriDonHang.toLocaleString()}</span></td>
     <td><span class="data_camp_hoaHong">${(data_camp_hoaHong * tile).toLocaleString()}</span></td>
     <td><span class="text-green data_camp_duocDuyet">${(data_camp_duocDuyet * tile).toLocaleString()}</span></td>
