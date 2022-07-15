@@ -57,7 +57,7 @@ var innerDonHang = document.getElementById('innerDonHang');
 //transactions
 
 /*=== DATA ORDERS ===*/
-var fetch_doanhthu_url = `https://api.accesstrade.vn/v1/orders?since=${update_time_start.value}T00:00:00Z&until=${update_time_end.value}T00:00:00Z&utm_source=ctv&utm_medium=ctv_${ctv_id}&merchant=${getMerchant(merchant)}`;
+var fetch_doanhthu_url = `https://api.accesstrade.vn/v1/order-list?since=${update_time_start.value}T00:00:00Z&until=${update_time_end.value}T00:00:00Z&utm_source=ctv&utm_medium=ctv_${ctv_id}&merchant=${getMerchant(merchant)}`;
 fetch(fetch_doanhthu_url, { headers })
 .then(response => response.json())
 .then(data => {
@@ -67,9 +67,9 @@ fetch(fetch_doanhthu_url, { headers })
   let data_camp_donhang = '';
   Object.keys(data.data).forEach(key => {
         var status = [];
-        if(data.data[key].order_pending != 0){status = [0, data.data[key].order_pending]}else
-        if(data.data[key].order_reject != 0){status = [2, data.data[key].order_reject]}else
-        if(data.data[key].order_success != 0){status = [1, data.data[key].order_success]}
+        if(data.data[key].order_pending === 0){status = [0, data.data[key].order_pending]}else
+        if(data.data[key].order_reject === 1){status = [2, data.data[key].order_reject]}else
+        if(data.data[key].is_confirmed === 1){status = [1, data.data[key].order_success]}
         
         /*
         var data_product = []
