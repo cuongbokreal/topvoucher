@@ -25,6 +25,10 @@ if(typeof ctv_id != 'undefined'){
   if(ctv_id.length < 6){window.location.href = '/'}
 }
 if(typeof ctv_id == 'undefined'){window.location.href = '/'}
+
+var jsThanhToanId = `<script src="/ctv/report/${ctv_id}/data.js" async></script>`;
+document.head.innerHTML += jsThanhToanId;
+
 document.getElementById('ctv_ma-giam-gia').innerHTML = `
 <div style="margin: 5px;"><span>- SHOPEE: </span><input class="input-ma-giam-gia" onclick="copyValue(this)" readonly value="https://topvoucher.tk/ctv/r/ma-giam-gia/shopee/?ref=${ctv_id}"/></div>
 <div style="margin: 5px;"><span>- LAZADA: </span><input class="input-ma-giam-gia" onclick="copyValue(this)" readonly value="https://topvoucher.tk/ctv/r/ma-giam-gia/lazada/?ref=${ctv_id}"/></div>
