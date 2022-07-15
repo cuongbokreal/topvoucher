@@ -161,6 +161,7 @@ function innerDetails(c){
       `;
       detailsOrder.innerHTML = dataInnerDetails;
       
+      /*
       data_product = JSON.parse(c.getAttribute('data-products'));
       for(let i=0;  i< data_product.length; i++){
             dataInnerDetailsConversion += `<tr>
@@ -174,9 +175,8 @@ function innerDetails(c){
       }
       console.log(data_product)
       console.log(typeof data_product)
-      
       detailsConversion.innerHTML = dataInnerDetailsConversion;
-      
+      */
       
 }
 
