@@ -9,7 +9,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
   };
 var next = getUrlParameter('next');
 
-if(typeof next != 'undefined' && next.length >= 9){next = next}else{
+if(typeof next != 'undefined' && next.length >= 9){next = decodeURIComponent(next)}else{
   next = `https://${window.location.hostname}/ctv/report`;
 }
 
