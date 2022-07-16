@@ -159,6 +159,7 @@ function fetch_doanhthu(merchant){
 fetch_doanhthu('shopee');
 fetch_doanhthu('tikivn');
 fetch_doanhthu('lazada_kol');
+document.getElementById('loadingShopee').style.display = 'none';
   
 /*
 function addDoanhThu(){
