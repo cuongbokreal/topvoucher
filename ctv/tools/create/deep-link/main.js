@@ -10,7 +10,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
       var ctv_id = getCookie('ctv_id');
       if(typeof ctv_id != 'undefined'){
         if (ctv_id.length >= 6){document.getElementById('ctv_id').innerHTML = ctv_id;}else
-        if(ctv_id === null || ctv_id.length < 6){window.location.href = 'https://topvoucher.tk/ctv/login?next=https://topvoucher.tk/ctv/report/'}
+        if(ctv_id === null){window.location.href = 'https://topvoucher.tk/ctv/login?next=https://topvoucher.tk/ctv/report/'}
       }
         if(typeof ctv_id == 'undefined'){window.location.href = 'https://topvoucher.tk/ctv/login?next=https://topvoucher.tk/ctv/report/'}
         
