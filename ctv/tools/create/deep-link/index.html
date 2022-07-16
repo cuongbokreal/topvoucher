@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     
+    <script async src="https://cuongbokreal.github.io/api/web/js/cookie.js"></script>
   </head>
   <body>
     <div id="main">
@@ -92,17 +93,17 @@
           }
       }
   };
-      var ctv_id = getUrlParameter('id');
+      var ctv_id = getCookie('id');
       if(typeof ctv_id != 'undefined'){
         if (ctv_id.length >= 6){
           document.getElementById('ctv_id').innerHTML = ctv_id;
         }else
         if(ctv_id.length < 6){
-          window.location.href = 'https://topvoucher.tk/ctv/tools/create/deep-link/access/'
+          window.location.href = 'https://topvoucher.tk/ctv/login?next=https://topvoucher.tk/ctv/report/'
         }
       }
         if(typeof ctv_id == 'undefined'){
-          window.location.href = 'https://topvoucher.tk/ctv/tools/create/deep-link/access/'
+          window.location.href = 'https://topvoucher.tk/ctv/login?next=https://topvoucher.tk/ctv/report/'
         }
         
       
