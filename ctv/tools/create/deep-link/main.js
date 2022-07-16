@@ -8,7 +8,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
       }
   };
 var ctv_id = getCookie('ctv_id');
-if(ctv_id === null){window.location.href = 'https://topvoucher.tk/ctv/login?next=https://topvoucher.tk/ctv/report/'}
+if(ctv_id === null){window.location.href = `https://topvoucher.tk/ctv/login?next=${window.location.href}`}
 document.getElementById('ctv_id').innerHTML = ctv_id;
         
 const time_thbao = 3000;
