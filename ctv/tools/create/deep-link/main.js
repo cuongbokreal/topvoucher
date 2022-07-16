@@ -7,12 +7,9 @@ var getUrlParameter = function getUrlParameter(sParam) {
           }
       }
   };
-      var ctv_id = getCookie('ctv_id');
+var ctv_id = getCookie('ctv_id');
 if(ctv_id === null){window.location.href = 'https://topvoucher.tk/ctv/login?next=https://topvoucher.tk/ctv/report/'}
-      if(typeof ctv_id != 'undefined'){
-        if (ctv_id.length >= 6){document.getElementById('ctv_id').innerHTML = ctv_id;}else
-      }
-        if(typeof ctv_id == 'undefined'){window.location.href = 'https://topvoucher.tk/ctv/login?next=https://topvoucher.tk/ctv/report/'}
+document.getElementById('ctv_id').innerHTML = ctv_id;
         
 const time_thbao = 3000;
 const timeDelay = 1000;
