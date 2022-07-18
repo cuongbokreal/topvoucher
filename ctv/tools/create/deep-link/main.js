@@ -192,16 +192,6 @@ function addRefKolLazada(c){
     return c
 }
 
-var bitly_token = [
-	"31ae1cab212d8603378badec7a05ad2936a30c6b", //tet
-	"b39094e48700c125f4b256c45f668a1986b12be3", //0
-	"46dcf76dc84d19bd90b7ce6b2b4c353a0254d82c", //1
-	"308c4e020fee4205fcc103007c63a8fa632d197f", //2
-	"e4245081f447e466106995c0721e8835e5145f21", //3
-	"9d4dc5b797e4b3c7805b4e118d972e98c66b82e4", //4
-	"2913a40a7602114aa91b3e15757a28f8f7d92383", //5
-	"848db2bca49da6a2abed5a59aeab7f0c7af85eae", //6
-]
 async function get_short_url(bitly_token, longUrl){
 	for(let i=0; i<bitly_token.length; i++){
 	  fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token[i]}&longUrl=${encodeURIComponent(longUrl)}&format=json`)
