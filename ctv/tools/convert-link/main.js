@@ -32,7 +32,7 @@ var request = makeHttpObject();
 
 var linkSp = '';
 async function getUrlOg(){
-	//var og_txt = document.getElementById('linkSp').value;
+	var og_txt = document.getElementById('linkSp').value;
 	//var og_txt = linkSp;
 	linkSp = og_txt.match(/\bhttps?:\/\/\S+/g);
 	console.log(linkSp.length);
