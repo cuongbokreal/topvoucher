@@ -118,6 +118,7 @@ async function getUrlOg(){
 							//kqShortlink.value = data.data.url
 							og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(data.data.url));
 							document.getElementById('culi').value = decodeURIComponent(data.data.url);
+							console.log(data.data)
 						}
 						else{console.log('Loi')}
 					})
