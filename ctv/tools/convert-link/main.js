@@ -32,7 +32,7 @@ var request = makeHttpObject();
 
 var linkSp = '';
 async function getUrlOg(){
-	var og_txt = document.getElementById('linkSp').value;
+	//var og_txt = document.getElementById('linkSp').value;
 	//var og_txt = linkSp;
 	linkSp = og_txt.match(/\bhttps?:\/\/\S+/g);
 	console.log(linkSp.length);
@@ -117,6 +117,8 @@ async function getUrlOg(){
 
 
 async function get_short_url(longUrl){
+	var og_txt = document.getElementById('linkSp').value;
+	document.getElementById('culi').value = '';
 	for(let i=0; i<bitly_token.length; i++){
 	  fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token[i]}&longUrl=${encodeURIComponent(longUrl)}&format=json`)
 	  .then((response) => response.json())
@@ -124,13 +126,13 @@ async function get_short_url(longUrl){
 		if(data.status_code == 200 && data.status_txt == 'OK' && data.data.url.length >= 8){
 			//kqShortlink.value = data.data.url
 			og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(data.data.url));
+			document.getElementById('culi').value = decodeURIComponent(data.data.url);
 		}
 		  else{console.log('Loi')}
 	  })
 		.catch(error => {console.error('Error:', error);});
 	await delay(timeDelay);
-	console.log(document.getElementById('kqShortlink').value.length)
-	if(document.getElementById('kqShortlink').value.length >= 8){break};
+	if(document.getElementById('culi').value.length >= 8){break};
 	}
 }
 
