@@ -10,6 +10,15 @@ var finalLink = '';
 const timeDelay = 1000;
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+var bitly_token = [
+	"31ae1cab212d8603378badec7a05ad2936a30c6b", //tet
+	"b39094e48700c125f4b256c45f668a1986b12be3", //0
+	"46dcf76dc84d19bd90b7ce6b2b4c353a0254d82c", //1
+	"308c4e020fee4205fcc103007c63a8fa632d197f", //2
+	"e4245081f447e466106995c0721e8835e5145f21", //3
+	"9d4dc5b797e4b3c7805b4e118d972e98c66b82e4", //4
+]
+
 function makeHttpObject() {
   try {return new XMLHttpRequest();}
   catch (error) {}
@@ -99,12 +108,31 @@ async function getUrlOg(){
        			 	console.log(`Finallink is: ${finalLink}`)
 			}
 			await delay(timeDelay);
-			og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(finalLink));
+			get_short_url(finalLink)
+			//og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(finalLink));
 		}
 		document.getElementById('kqDeeplink').value = og_txt; //chạy xong for thì inner 
 	}
 }
 
+
+async function get_short_url(longUrl){
+	for(let i=0; i<bitly_token.length; i++){
+	  fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token[i]}&longUrl=${encodeURIComponent(longUrl)}&format=json`)
+	  .then((response) => response.json())
+	  .then((data) => {
+		if(data.status_code == 200 && data.status_txt == 'OK' && data.data.url.length >= 8){
+			//kqShortlink.value = data.data.url
+			og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(data.data.url));
+		}
+		  else{console.log('Loi')}
+	  })
+		.catch(error => {console.error('Error:', error);});
+	await delay(timeDelay);
+	console.log(document.getElementById('kqShortlink').value.length)
+	if(document.getElementById('kqShortlink').value.length >= 8){break};
+	}
+}
 
 //getUrlOg(url) => return [finalLink, kq, data_infor_camp]
 
