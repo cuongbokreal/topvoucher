@@ -109,8 +109,8 @@ async function getUrlOg(){
 			await delay(timeDelay);
 			
 			document.getElementById('culi').value = '';
-			for(let i=0; i<bitly_token.length; i++){
-				fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token[i]}&longUrl=${encodeURIComponent(finalLink)}&format=json`)
+			for(let y=0; y<bitly_token.length; i++){
+				fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token[y]}&longUrl=${encodeURIComponent(finalLink)}&format=json`)
 					.then((response) => response.json())
 					.then((data) => {
 						if(data.status_code == 200 && data.status_txt == 'OK' && data.data.url.length >= 8){
