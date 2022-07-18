@@ -1,4 +1,7 @@
-const time_thbao = 3000;
+var ctv_id = getCookie('ctv_id');
+if(ctv_id === null){window.location.href = `https://topvoucher.tk/ctv/login?next=${encodeURIComponent(window.location.href)}`}
+document.getElementById('ctv_id').innerHTML = ctv_id;
+
 var deeplink = 'https://go.isclix.com/deep_link/5353514789844343379';
 const source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=createDeepLink&utm_content=-`;
 var data_ad = [
@@ -15,6 +18,8 @@ var data_ad = [
          "camp_id":"4348614231480407268"
         },
 ]
+
+const time_thbao = 3000;
 var thbao = document.getElementById('thbao');
 var btnDeplink = document.getElementById('btnDeplink');
 var kqDeeplink = document.getElementById('kqDeeplink');
