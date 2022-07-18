@@ -1,4 +1,4 @@
-const tiLe = 60/100;
+const tiLe = 80/100;
 var innerChinhSachHoaHongShopee = `<tr><td>Category</td><td>Khách hàng mới (%)</td><td>Khách hàng cũ (%)</td></tr>`;
   for(let i=0;i<dataChinhSachHoaHong[0].shopee.length;i++){
     innerChinhSachHoaHongShopee +=`<tr><td>${dataChinhSachHoaHong[0].shopee[i].cate}</td><td>${(dataChinhSachHoaHong[0].shopee[i].nc * tiLe).toFixed(1)}</td><td>${(dataChinhSachHoaHong[0].shopee[i].ec * tiLe).toFixed(1)}</td></tr>`;
