@@ -17,7 +17,7 @@ firebase.analytics();
 var getThbao = document.querySelector("#thbao");
 var getSubmit = document.querySelector("#submit");
 
-function writeUserData(name, email, social, username, password){
+function writeUserData(name, email, social, username, password, referral){
   var updateTime = new Date(); //updateTime
   var timeSigup = `${updateTime.getFullYear()}-${addZero(updateTime.getMonth() + 1)}-${addZero(updateTime.getDate())}`;
       firebase.database().ref('users/' + username).set({
@@ -28,7 +28,8 @@ function writeUserData(name, email, social, username, password){
         password: password,
         sigupTime: timeSigup,
         verification: 0,
-        avt : `https://avatars.abstractapi.com/v1/?api_key=8a314bbcb61e421cb964506cda5772e3&name=${name}`
+        avt : `https://avatars.abstractapi.com/v1/?api_key=8a314bbcb61e421cb964506cda5772e3&name=${name}`,
+        referral: referral,
       });
 }
 //writeUserData('Cuongbok', 'ngcuongbok@gmail.com', 'https://fb.me/cuongbok', 'cuongbok', 'cuongbok')
@@ -40,6 +41,7 @@ getSubmit.addEventListener("click", (myFunction) => {
   var getUsername = document.querySelector("#username").value;
   var getPassword = document.querySelector("#password").value;
   var getRepassword = document.querySelector("#repassword").value;
+  var getReferral = document.querySelector("#referral").value;
   
 
     
@@ -61,7 +63,7 @@ getSubmit.addEventListener("click", (myFunction) => {
               getThbao.innerText = '';
                 if(getPassword === getRepassword){
                   //Nhập lại mật khẩu đúng, nhập dữ liệu zo database
-                  writeUserData(getName, getEmail, getSocial, getUsername, getPassword);
+                  writeUserData(getName, getEmail, getSocial, getUsername, getPassword, getReferral);
                   getThbao.innerHTML = 'Đăng kí thành công, đăng nhập <a href="/ctv/login">tại đây</a>';
                   window.location.href= "/ctv/login";
                 }else{
