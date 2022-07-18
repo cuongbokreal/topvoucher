@@ -1,5 +1,20 @@
-
 const time_thbao = 3000;
+var deeplink = 'https://go.isclix.com/deep_link/5353514789844343379';
+const source = `&utm_source=ctv&utm_medium=ctv_${ctv_id}&utm_campaign=createDeepLink&utm_content=-`;
+var data_ad = [
+        {"name":"Shopee",
+         "reg":"shopee",
+         "camp_id":"4751584435713464237"
+        },
+        {"name":"Lazada",
+         "reg":"lazada",
+         "camp_id":"5087153089503673507"
+        },
+        {"name":"Tiki",
+         "reg":"tiki",
+         "camp_id":"4348614231480407268"
+        },
+]
 var thbao = document.getElementById('thbao');
 var btnDeplink = document.getElementById('btnDeplink');
 var kqDeeplink = document.getElementById('kqDeeplink');
@@ -35,7 +50,7 @@ async function getUrlOg(){
 	var og_txt = document.getElementById('linkSp').value;
 	//var og_txt = linkSp;
 	linkSp = og_txt.match(/\bhttps?:\/\/\S+/g);
-	var timeLeft = linkSp.length * timeDelay;
+	var timeLeft = linkSp.length * timeDelay * 2;
 	document.getElementById('thbao').innerHTML = `Dự tính còn <span id="time-left">${timeLeft/1000}</span> giây`;
 	var innerTimeLeft = setInterval(function(){
 		document.getElementById('time-left').innerHTML = timeLeft/1000; 
@@ -70,6 +85,7 @@ async function getUrlOg(){
 					      finalLink = requestHtml.match(/http.+/g);
 					      finalLink = (finalLink[0].replaceAll(/\?.+/g,""));
 					    }
+		  				kq = `${deeplink}/${data_ad[0].camp_id}?url=${finalLink}${source}`;
 					  }else
 
 					  if(requestHtml.match(/lazada\.vn/g)){
@@ -92,6 +108,7 @@ async function getUrlOg(){
 					      //add '?referer=at-kol'
 					      finalLink = addRefKolLazada(finalLink);
 					    }
+						  kq = `${deeplink}/${data_ad[1].camp_id}?url=${finalLink}${source}`;
 					  }else
 					  if(requestHtml.match(/tiki\.vn/g)){
 					    if(requestHtml.match(/https:\/\/tiki.vn\/.+\?/)){
@@ -101,6 +118,7 @@ async function getUrlOg(){
 						finalLink = requestHtml.match(/http.+/g);
 						finalLink = (finalLink[0].replaceAll(/\?.+/g,""));
 					      }
+						  kq = `${deeplink}/${data_ad[2].camp_id}?url=${finalLink}${source}`;
 					  }
 					
 				}//end request done
@@ -110,7 +128,7 @@ async function getUrlOg(){
 			
 			document.getElementById('culi').value = '';
 			for(let y=0; y<bitly_token.length; i++){
-				fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token[y]}&longUrl=${encodeURIComponent(finalLink)}&format=json`)
+				fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token[y]}&longUrl=${encodeURIComponent(kq)}&format=json`)
 					.then((response) => response.json())
 					.then((data) => {
 						if(data.status_code == 200 && data.status_txt == 'OK' && data.data.url.length >= 8){
