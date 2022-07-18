@@ -1,1 +1,48 @@
  
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='UTF-8'/>
+    <meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1' name='viewport'/>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+    <link rel="icon" href="https://i.imgur.com/bZacc3E.jpg"/>
+    <title>Replace link eco</title>
+    <link rel="stylesheet" href="/admin/tools/get-og-link/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="main">
+      <p>Id CTV: <span class="text-danger" id="ctv_id"></span></p>
+      <div id="form">
+        <label class="titleDiv">Replace link eco</label>
+        <p>Chỉ hỗ trợ link goeco.mobi</p>
+        <textarea id="linkSp" name="linkSp" placeholder="Nhập link gốc (hỗ trợ link Shopee.vn, Tiki.vn, Lazada.vn)" onclick="this.select()"></textarea>
+        <p id="thbao" class="text-red">Dự tính thời gian xong</p>
+        <button class="button" id="btnDeplink" onclick="getUrlOg()">Tạo</button>
+      </div>
+      
+      <div id="ketqua">
+        <label class="titleDiv">Kết quả:</label>
+        <div>
+          <div class="ketqua-group">
+            <span class="pointer copy-icon" onclick="copyValueGroup(this)"><i class="far fa-copy"></i></span>
+            <textarea id="kqDeeplink" placeholder="Link đã replace (Nhấn để copy)" onclick="copyValue(this)" readonly=""></textarea>
+          </div>
+        </div>
+      </div>
+      
+      <div id="infor_camp"></div>
+      
+    </div>
+    
+    <link href="https://cuongbokreal.github.io/api/widget/toast-message/main.css" rel="stylesheet"/>
+    <div id='toast'></div>
+    <script src="https://cuongbokreal.github.io/api/widget/toast-message/main.js"></script>
+    
+   <script src="/ctv/tools/convert/main.js" ></script>
+  </body>
+</html>
