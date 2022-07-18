@@ -1,5 +1,4 @@
-var headers = {'Authorization': 'Token NJX0ajmdmDlubnsfBHrvCJQjWIehzXcA','Content-Type': 'application/json'}
-const tile = 55/100;
+const tile = 50/100;
 
 const updateTime = new Date()
 const thisYear = updateTime.getFullYear();
