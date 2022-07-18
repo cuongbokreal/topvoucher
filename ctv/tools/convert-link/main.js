@@ -108,7 +108,24 @@ async function getUrlOg(){
        			 	console.log(`Finallink is: ${finalLink}`)
 			}
 			await delay(timeDelay);
-			get_short_url(finalLink)
+			
+			document.getElementById('culi').value = '';
+			for(let i=0; i<bitly_token.length; i++){
+				fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token[i]}&longUrl=${encodeURIComponent(finalLink)}&format=json`)
+					.then((response) => response.json())
+					.then((data) => {
+						if(data.status_code == 200 && data.status_txt == 'OK' && data.data.url.length >= 8){
+							//kqShortlink.value = data.data.url
+							og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(data.data.url));
+							document.getElementById('culi').value = decodeURIComponent(data.data.url);
+						}
+						else{console.log('Loi')}
+					})
+					.catch(error => {console.error('Error:', error);});
+				await delay(timeDelay);
+				if(document.getElementById('culi').value.length >= 8){break};
+			}
+			
 			//og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(finalLink));
 		}
 		document.getElementById('kqDeeplink').value = og_txt; //chạy xong for thì inner 
