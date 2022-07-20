@@ -152,6 +152,7 @@ function fetch_doanhthu(merchant){
     <td><span class="text-red data_camp_daHuy">0</span></td>
     <td><span class="text-orange data_camp_choXuLy">0</span></td>`;
       }
+	  document.getElementById('loadingShopee').style.display = 'none';
         innerDoanhThu.innerHTML += data_doanhthu_camp;
      
   })
@@ -159,7 +160,7 @@ function fetch_doanhthu(merchant){
 fetch_doanhthu('shopee');
 fetch_doanhthu('tikivn');
 fetch_doanhthu('lazada_kol');
-document.getElementById('loadingShopee').style.display = 'none';
+
   
 /*
 function addDoanhThu(){
