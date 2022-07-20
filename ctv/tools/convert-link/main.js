@@ -134,7 +134,6 @@ async function getUrlOg(){
 							console.log(data.data)
 						}
 						else{
-							y += 1;
 							console.log(data)
 						}
 					})
