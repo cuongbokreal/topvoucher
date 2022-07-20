@@ -9,10 +9,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
   };
 
 var ctv_id = getCookie('ctv_id');
-console.log(ctv_id);
-console.log(typeof ctv_id);
-console.log(ctv_id.length);
-
 if(ctv_id === null){window.location.href = `https://topvoucher.tk/ctv/login?next=${encodeURIComponent(window.location.href)}`}
 document.getElementById('ctv_id').innerHTML = ctv_id;
         
