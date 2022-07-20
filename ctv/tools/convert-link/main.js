@@ -133,7 +133,10 @@ async function getUrlOg(){
 							document.getElementById('culi').value = decodeURIComponent(data.data.url);
 							console.log(data.data)
 						}
-						else{console.log(data)}
+						else{
+							y += 1;
+							console.log(data)
+						}
 					})
 					.catch(error => {console.error('Error:', error);});
 				await delay(timeDelay);
