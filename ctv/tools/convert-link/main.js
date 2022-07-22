@@ -132,6 +132,9 @@ async function getUrlOg(){
 							og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(data.data.url));
 							document.getElementById('culi').value = decodeURIComponent(data.data.url);
 							console.log(data.data)
+						}else
+						if(data.status_code == 429){
+							y += 1;
 						}
 						else{
 							console.log(data)
