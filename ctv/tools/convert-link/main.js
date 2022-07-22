@@ -138,6 +138,7 @@ async function getUrlOg(){
 						}else
 						if(data.status_code == 429){
 							y += 1;
+							i -= 1;
 						}
 						else{
 							console.log(data);
