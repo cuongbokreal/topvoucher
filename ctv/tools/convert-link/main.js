@@ -136,7 +136,7 @@ async function getUrlOg(){
 							document.getElementById('culi').value = decodeURIComponent(data.data.url);
 							console.log(data.data)
 						}else
-						if(data.status_code == 429){
+						if(data.status_code != 200 || data.status_code === 429 || data.status_code === 500){
 							y += 1;
 							i -= 1;
 						}
