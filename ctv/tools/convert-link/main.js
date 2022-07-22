@@ -153,6 +153,7 @@ async function getUrlOg(){
 			//og_txt = og_txt.replaceAll(linkSp[i], decodeURIComponent(finalLink));
 		}
 		document.getElementById('kqDeeplink').value = og_txt; //chạy xong for thì inner 
+		toast({title: 'Thành công', message: `<b>Đã sửa link thành công:</b> ${og_txt}`, type: "success", duration: time_thbao});
 	}
 }
 
