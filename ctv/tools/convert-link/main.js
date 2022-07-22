@@ -42,6 +42,8 @@ function makeHttpObject() {
 var request = makeHttpObject();
 
 var linkSp = '';
+var y=0;
+
 async function getUrlOg(){
 	var og_txt = document.getElementById('linkSp').value;
 	//var og_txt = linkSp;
@@ -123,7 +125,8 @@ async function getUrlOg(){
 			await delay(timeDelay);
 			
 			document.getElementById('culi').value = '';
-			for(let y=0; y<bitly_token.length; i++){
+			
+			for(y; y<bitly_token.length; i++){
 				fetch(`https://api-ssl.bitly.com/v3/shorten?access_token=${bitly_token[y]}&longUrl=${encodeURIComponent(kq)}&format=json`)
 					.then((response) => response.json())
 					.then((data) => {
@@ -137,7 +140,8 @@ async function getUrlOg(){
 							y += 1;
 						}
 						else{
-							console.log(data)
+							console.log(data);
+							document.getElementById('culi').value = '';
 						}
 					})
 					.catch(error => {console.error('Error:', error);});
