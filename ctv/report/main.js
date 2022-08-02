@@ -359,6 +359,7 @@ function logout(){
   eraseCookie('ctv_id');
   window.location.href = '/ctv/login';
 }
+headers = '';
 //${thisYear}-${add0ToLess10(thisMonth)}-${add0ToLess10(thisDate)}
 /*
 fetch('https://api.accesstrade.vn/v1/transactions?since=2022-05-01T00:00:00Z&until=2022-05-30T00:00:00Z&utm_source=ctv&utm_medium=ctv_001204', { headers })
